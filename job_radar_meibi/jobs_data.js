@@ -295,35 +295,32 @@ Meibi Esperanza Mota Mora
 (829) 793-3033 | meibimota@gmail.com`
   },
   {
-    id: "meibi-li-baires-bi",
-    title: "Business Intelligence Associate - Remote Work | REF#308478",
-    company: "BairesDev (vía LinkedIn Jobs Scraper)",
+    id: "meibi-li-visa-vca",
+    title: "Analyst, Visa Consulting & Analytics (VCA) — Caribbean",
+    company: "Visa (vía LinkedIn Jobs Scraper)",
     category: "datos",
-    location: "Remoto (República Dominicana)",
-    modality: "100% Remoto",
-    salaryDOP: "RD$ 90,000 - 120,000 / mes",
-    salaryNote: "Equivalente a USD $1,500 - $2,000 / mes • 100% Remoto",
+    location: "República Dominicana",
+    modality: "Híbrido / Corporativo",
+    salaryDOP: "RD$ 95,000 - 130,000 / mes",
+    salaryNote: "Multinacional financiera líder • Publicada ayer en LinkedIn",
     postedDate: "Ayer · LinkedIn",
     type: "Tiempo Completo",
-    tags: ["Power BI", "Business Intelligence", "LinkedIn", "Data Analysis", "Remoto"],
-    url: "https://do.linkedin.com/jobs/view/business-intelligence-associate-remote-work-ref%23308478-at-bairesdev-4487010772",
-    contactEmail: "careers@bairesdev.com",
-    description: "Vacante recién publicada en LinkedIn para República Dominicana: apoyar la toma de decisiones estratégicas mediante análisis de datos, creación y mantenimiento de dashboards de Business Intelligence (Power BI), identificación de tendencias de negocio y generación de insights accionables.",
+    tags: ["Visa", "Consulting & Analytics", "Power BI", "LinkedIn", "Finanzas"],
+    url: "https://do.linkedin.com/jobs/view/analyst-visa-consulting-analytics-vca-%E2%80%94-caribbean-at-visa-4487033274",
+    contactEmail: "careers@visa.com",
+    description: "Vacante recién publicada en LinkedIn para República Dominicana: consultoría y analítica de datos para el Caribe en Visa, generando insights de consumo, comportamiento de pagos, tableros en Power BI y presentaciones estratégicas para bancos e instituciones financieras.",
     requirements: [
-      "Experiencia comprobable en Business Intelligence y análisis de datos",
-      "Dominio de herramientas de visualización (Power BI, Excel avanzado)",
-      "Capacidad para traducir métricas en recomendaciones estratégicas",
-      "Inglés intermedio para comunicación y documentación"
+      "Licenciatura en Mercadeo, Economía, Ingeniería o afines",
+      "Experiencia sólida en análisis de datos, tendencias de consumo y visualización (Power BI)",
+      "Conocimiento del sector financiero y habilidades de presentación ejecutiva"
     ],
-    coverLetter: `Dear BairesDev Recruiting Team,
+    coverLetter: `Dear Visa Consulting & Analytics (VCA) Recruiting Team,
 
-I am excited to apply for the Business Intelligence Associate (Remote) position in the Dominican Republic.
+I am excited to apply for the Analyst, Visa Consulting & Analytics — Caribbean position in the Dominican Republic.
 
-Currently, I serve as a Senior Data Analyst and Media Analysts Supervisor at Carat Dominicana, where I have spent over 5 years transforming complex marketing and investment datasets into actionable Business Intelligence dashboards using Power BI, Google Analytics, and Microsoft Office 365.
+Currently, I serve as a Senior Data Analyst and Media Analysts Supervisor at Carat Dominicana, with over 5 years of experience analyzing consumer behavior, investment trends, and market insights using Power BI, Google Analytics, and Office 365. Additionally, I hold a Bachelor's degree in Marketing from INTEC, a Diploma in Strategic Planning, and prior banking experience at APAP.
 
-With a Bachelor's degree in Marketing from INTEC and a Diploma in Strategic Planning, I excel at bridging data accuracy with business strategy.
-
-Thank you for your consideration. I look forward to discussing how I can contribute to BairesDev.
+Thank you for your consideration.
 
 Best regards,
 Meibi Esperanza Mota Mora
@@ -363,30 +360,30 @@ Meibi Esperanza Mota Mora
 (829) 793-3033 | meibimota@gmail.com`
   },
   {
-    id: "meibi-li-baires-da",
-    title: "Data Analyst - Remote Work",
-    company: "BairesDev (vía LinkedIn Jobs Scraper)",
+    id: "meibi-ind-zimmer-analyst",
+    title: "Sales & Incentive Senior Data Analyst (En remoto)",
+    company: "Zimmer Biomet (vía Indeed Jobs Scraper)",
     category: "datos",
-    location: "Remoto (República Dominicana)",
+    location: "Remoto (Internacional / En remoto)",
     modality: "100% Remoto",
-    salaryDOP: "RD$ 85,000 - 110,000 / mes",
-    salaryNote: "Contrato remoto internacional en USD",
-    postedDate: "Hace 2 días · LinkedIn",
+    salaryDOP: "RD$ 90,000 - 120,000 / mes",
+    salaryNote: "Contrato remoto internacional • Extraída vía Indeed",
+    postedDate: "Esta semana · Indeed",
     type: "Tiempo Completo",
-    tags: ["Data Analyst", "Power BI", "LinkedIn", "Remoto"],
-    url: "https://do.linkedin.com/jobs/view/data-analyst-python-remote-work-at-bairesdev-4485759961",
-    contactEmail: "careers@bairesdev.com",
-    description: "Análisis e interpretación de conjuntos de datos complejos, elaboración de reportes automatizados, control de calidad de datos y colaboración con equipos multidisciplinarios en modalidad 100% remota.",
+    tags: ["Senior Data Analyst", "Power BI", "Indeed", "Remoto"],
+    url: "https://es.indeed.com/viewjob?jk=fcdfbf8f9de6e1d3",
+    contactEmail: "careers@zimmerbiomet.com",
+    description: "Análisis e interpretación de datos comerciales y de incentivos, elaboración de tableros en Power BI, control de calidad de datos y soporte analítico a unidades de negocio en modalidad 100% remota.",
     requirements: [
       "3+ años de experiencia como Data Analyst",
       "Dominio de visualización de datos en Power BI y hojas de cálculo avanzadas",
-      "Experiencia asegurando calidad e integridad en categorización de datos"
+      "Experiencia asegurando calidad e integridad de datos"
     ],
-    coverLetter: `Estimado Equipo de Selección de BairesDev,
+    coverLetter: `Estimado Equipo de Selección de Zimmer Biomet,
 
-Les escribo para postularme a la vacante de Data Analyst (Remote Work) desde República Dominicana.
+Les escribo para postularme a la vacante de Sales & Incentive Senior Data Analyst (En remoto).
 
-Cuento con más de 5 años de trayectoria en análisis de datos en Carat Dominicana (actualmente como Senior Data Analyst), liderando la validación de calidad de datos, creación de tableros en Power BI y análisis de tendencias de consumo e inversión.
+Cuento con más de 5 años de trayectoria en análisis de datos en Carat Dominicana (actualmente como Senior Data Analyst y Supervisora), liderando la validación de calidad de datos, creación de tableros en Power BI y análisis de métricas comerciales.
 
 Quedo a su entera disposición para conversar en una entrevista.
 
