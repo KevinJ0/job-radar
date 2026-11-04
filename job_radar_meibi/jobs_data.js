@@ -167,7 +167,133 @@ Meibi Esperanza Mota Mora
 (829) 793-3033 | meibimota@gmail.com`
   },
 
-  // --- 2. ANÁLISIS DE DATOS Y BUSINESS INTELLIGENCE (LINKEDIN & GOOGLE JOBS) ---
+  // --- 2. ANÁLISIS DE DATOS Y BUSINESS INTELLIGENCE (LINKEDIN, INDEED & GOOGLE JOBS) ---
+  {
+    id: "meibi-ind-epam-pbi",
+    title: "Power BI Consultant (100% Remoto)",
+    company: "EPAM Systems (vía Indeed Jobs Scraper)",
+    category: "datos",
+    location: "Remoto (Internacional / España - LATAM)",
+    modality: "100% Remoto",
+    salaryDOP: "RD$ 110,000 - 145,000 / mes",
+    salaryNote: "Consultoría global en Power BI • Extraída vía Indeed Scraper",
+    postedDate: "Esta semana · Indeed",
+    type: "Tiempo Completo",
+    tags: ["Power BI", "Indeed", "Business Intelligence", "DAX", "Remoto"],
+    url: "https://es.indeed.com/viewjob?jk=801cdb4f55ee4fe3",
+    contactEmail: "careers@epam.com",
+    description: "Vacante extraída con valig/indeed-jobs-scraper: consultoría especializada en diseño de tableros ejecutivos en Power BI, modelado de datos, transformación de fuentes de información y visualización estratégica en modalidad 100% remota.",
+    requirements: [
+      "Experiencia comprobada diseñando soluciones y dashboards en Power BI",
+      "Capacidad de análisis de negocio y comunicación con clientes",
+      "Manejo de herramientas Microsoft Office 365 y analítica avanzada"
+    ],
+    coverLetter: `Dear EPAM Systems Recruiting Team,
+
+I am writing to apply for the Remote Power BI Consultant position found on Indeed.
+
+With over 5 years of experience at Carat Dominicana—currently serving as Senior Data Analyst and Media Analysts Supervisor—Power BI is at the core of my daily work. I design interactive dashboards, analyze complex advertising investment datasets, and ensure data categorization quality for top-tier brands.
+
+Combined with my Bachelor's in Marketing (INTEC) and Strategic Planning certification, I am ready to deliver high-impact BI solutions at EPAM.
+
+Best regards,
+Meibi Esperanza Mota Mora
+(829) 793-3033 | meibimota@gmail.com`
+  },
+  {
+    id: "meibi-ind-centralzone-media",
+    title: "Paid Media & Campaign Data Specialist (Remoto)",
+    company: "Central Zone (vía Indeed Jobs Scraper)",
+    category: "datos",
+    location: "Remoto (LATAM / Desde casa)",
+    modality: "100% Remoto",
+    salaryDOP: "RD$ 75,000 - 95,000 / mes",
+    salaryNote: "Match 100% con su experiencia en Carat Dominicana • Vía Indeed",
+    postedDate: "Vigente · Indeed",
+    type: "Tiempo Completo",
+    tags: ["Medios & Inversión", "Indeed", "Google Analytics", "Power BI", "Remoto"],
+    url: "https://co.indeed.com/viewjob?jk=a1cbf1d439c8392f",
+    contactEmail: "talent@centralzone.io",
+    description: "Extraída vía Indeed Jobs Scraper: análisis de rendimiento de campañas de medios, inversión publicitaria, métricas digitales (Google Analytics), optimización de presupuestos y reportería en Power BI trabajando 100% desde casa.",
+    requirements: [
+      "Experiencia en agencia de medios o análisis de campañas publicitarias",
+      "Certificación o dominio de Google Analytics, Power BI y Excel",
+      "Formación en Mercadeo o Publicidad"
+    ],
+    coverLetter: `Dear Central Zone Hiring Team,
+
+I am excited to apply for the Remote Paid Media & Campaign Data Specialist role on Indeed.
+
+Having worked at Carat Dominicana since 2019—first as Market Research Analyst Jr. and since 2022 as Senior Data Analyst and Media Analysts Supervisor—I have over 5 years of direct experience analyzing media consumption, advertising investment behavior, competitive landscapes, and Buyer Personas. I am also Google Analytics Certified (2023) and proficient in Power BI.
+
+I would love to bring my media agency expertise to Central Zone.
+
+Warm regards,
+Meibi Esperanza Mota Mora
+(829) 793-3033 | meibimota@gmail.com`
+  },
+  {
+    id: "meibi-ind-kayzen-growth",
+    title: "Growth & Marketing Data Analyst (Remoto)",
+    company: "Kayzen (vía Indeed Jobs Scraper)",
+    category: "datos",
+    location: "Remoto (Global / En remoto)",
+    modality: "100% Remoto",
+    salaryDOP: "RD$ 95,000 - 125,000 / mes",
+    salaryNote: "Empresa global de AdTech / Marketing • Vía Indeed",
+    postedDate: "Vigente · Indeed",
+    type: "Tiempo Completo",
+    tags: ["Growth Analyst", "Mercadeo", "Indeed", "Power BI", "Remoto"],
+    url: "https://es.indeed.com/viewjob?jk=04afbbb2113af45b",
+    contactEmail: "careers@kayzen.io",
+    description: "Extraída vía Indeed Jobs Scraper: análisis de crecimiento, rendimiento de campañas publicitarias, audiencias, tendencias de mercado y generación de insights accionables en modalidad 100% remota.",
+    requirements: [
+      "Experiencia como Data Analyst en el sector de publicidad, medios o mercadeo",
+      "Dominio de herramientas de BI (Power BI), Google Analytics y hojas de cálculo",
+      "Mentalidad analítica orientada al crecimiento de marcas"
+    ],
+    coverLetter: `Dear Kayzen Hiring Team,
+
+I am thrilled to submit my application for the Growth & Marketing Data Analyst (Remote) role.
+
+As a Senior Data Analyst and Media Analysts Supervisor at Carat Dominicana with a Bachelor's degree in Marketing from INTEC, my career has been dedicated to analyzing advertising performance, audience behavior, and market trends using Power BI and Google Analytics.
+
+Thank you for your consideration.
+
+Best regards,
+Meibi Esperanza Mota Mora
+(829) 793-3033 | meibimota@gmail.com`
+  },
+  {
+    id: "meibi-ind-porch-sales",
+    title: "Sales & Marketing Analytics Specialist (Remoto)",
+    company: "Porch Group (vía Indeed Jobs Scraper)",
+    category: "datos",
+    location: "Remoto (LATAM / Desde casa)",
+    modality: "100% Remoto",
+    salaryDOP: "RD$ 80,000 - 105,000 / mes",
+    salaryNote: "Contrato remoto en USD • Extraída vía Indeed Scraper",
+    postedDate: "Ayer · Indeed",
+    type: "Tiempo Completo",
+    tags: ["Sales Analytics", "Power BI", "Indeed", "Mercadeo", "Remoto"],
+    url: "https://co.indeed.com/viewjob?jk=f61d52dafffe7446",
+    contactEmail: "recruiting@porchgroup.com",
+    description: "Publicada ayer en Indeed para trabajo desde casa en Latinoamérica: especialista en analítica comercial y de mercadeo, seguimiento de embudos de conversión, reportes ejecutivos en Power BI y análisis de tendencias.",
+    requirements: [
+      "3+ años de experiencia en análisis de datos comerciales o de mercadeo",
+      "Dominio de Power BI, Excel avanzado y presentación de reportes",
+      "Inglés intermedio-avanzado"
+    ],
+    coverLetter: `Dear Porch Group Recruiting Team,
+
+I am writing to express my interest in the Remote Sales & Marketing Analytics Specialist position.
+
+With 5+ years of experience in data analysis and media supervision at Carat Dominicana, I specialize in turning commercial and marketing data into clear executive dashboards in Power BI.
+
+Sincerely,
+Meibi Esperanza Mota Mora
+(829) 793-3033 | meibimota@gmail.com`
+  },
   {
     id: "meibi-li-baires-bi",
     title: "Business Intelligence Associate - Remote Work | REF#308478",
@@ -363,7 +489,37 @@ Meibi Esperanza Mota Mora
 (829) 793-3033 | meibimota@gmail.com`
   },
 
-  // --- 3. BANCA Y ENTIDADES FINANCIERAS (LA ROMANA & RD - LINKEDIN & GOOGLE JOBS) ---
+  // --- 3. BANCA Y ENTIDADES FINANCIERAS (LA ROMANA & RD - LINKEDIN, INDEED & GOOGLE JOBS) ---
+  {
+    id: "meibi-ind-csg-fin",
+    title: "Financial & Data Analyst II (Remoto LATAM)",
+    company: "CSG (vía Indeed Jobs Scraper)",
+    category: "banco",
+    location: "Remoto (LATAM / Desde casa)",
+    modality: "100% Remoto",
+    salaryDOP: "RD$ 85,000 - 110,000 / mes",
+    salaryNote: "Empresa multinacional • Extraída vía Indeed Scraper",
+    postedDate: "Esta semana · Indeed",
+    type: "Tiempo Completo",
+    tags: ["Financial Analyst", "Indeed", "Power BI", "Finanzas", "Remoto"],
+    url: "https://co.indeed.com/viewjob?jk=63addf5fd927432d",
+    contactEmail: "careers@csgi.com",
+    description: "Vacante extraída con valig/indeed-jobs-scraper: análisis financiero y operativo de cuentas, control de presupuestos, conciliación de datos de facturación e inversión y reportería en Power BI / Excel en modalidad 100% remota.",
+    requirements: [
+      "Experiencia en análisis de datos financieros, inversión o facturación",
+      "Manejo avanzado de Excel, Office 365 y Power BI",
+      "Experiencia previa en sector financiero o corporativo"
+    ],
+    coverLetter: `Dear CSG Recruiting Team,
+
+I am writing to apply for the Remote Financial & Data Analyst II role on Indeed.
+
+My experience combines 5+ years analyzing large-scale investment budgets at Carat Dominicana (as Senior Data Analyst) with prior financial sector experience in Credit Recovery at APAP (Asociación Popular de Ahorros y Préstamos). I am proficient in Power BI and advanced Excel modeling.
+
+Best regards,
+Meibi Esperanza Mota Mora
+(829) 793-3033 | meibimota@gmail.com`
+  },
   {
     id: "meibi-banco-01",
     title: "Oficial de Servicio al Cliente y Operaciones Sucursal",
@@ -617,7 +773,39 @@ Meibi Esperanza Mota Mora
 (829) 793-3033 | meibimota@gmail.com`
   },
 
-  // --- 4. SERVICIO AL CLIENTE (LA ROMANA & REMOTO - LINKEDIN & COMPUTRABAJO DO) ---
+  // --- 4. SERVICIO AL CLIENTE (LA ROMANA & REMOTO - LINKEDIN, INDEED & COMPUTRABAJO DO) ---
+  {
+    id: "meibi-ind-firstimage-support",
+    title: "Training & Customer Support Agent (Remoto)",
+    company: "First Image Consulting (vía Indeed Jobs Scraper)",
+    category: "servicio",
+    location: "Remoto (LATAM / Desde casa)",
+    modality: "100% Remoto",
+    salaryDOP: "RD$ 48,000 - 60,000 / mes",
+    salaryNote: "Capacitación + Soporte al Cliente • Vía Indeed Scraper",
+    postedDate: "Esta semana · Indeed",
+    type: "Tiempo Completo",
+    tags: ["Training & Support", "Indeed", "Psicología", "Liderazgo", "Remoto"],
+    url: "https://co.indeed.com/viewjob?jk=d60879df582cf02b",
+    contactEmail: "seleccion@firstimage.pe",
+    description: "Extraída vía Indeed Jobs Scraper: soporte y acompañamiento en capacitación de usuarios y atención al cliente 100% desde casa. Ideal para perfiles con habilidades pedagógicas, supervisión de equipos y orientación al servicio.",
+    requirements: [
+      "Experiencia supervisando o capacitando personal y atención al cliente",
+      "Estudios en Psicología, Educación, Mercadeo o afines",
+      "Excelentes habilidades de comunicación y empatía"
+    ],
+    coverLetter: `Estimado Equipo de Selección de First Image Consulting,
+
+Les escribo con gran entusiasmo para postularme a la vacante de Training & Customer Support Agent (100% Remoto) publicada en Indeed.
+
+Actualmente curso la Licenciatura en Psicología Escolar y me desempeño como Supervisora de Analistas en Carat Dominicana, donde entreno, acompaño y superviso al equipo analítico, además de contar con experiencia previa en atención al cliente en APAP.
+
+Quedo a su entera disposición para una entrevista virtual.
+
+Atentamente,
+Meibi Esperanza Mota Mora
+(829) 793-3033 | meibimota@gmail.com`
+  },
   {
     id: "meibi-li-helloteam-hr",
     title: "Remote HR & Customer Support Specialist",
