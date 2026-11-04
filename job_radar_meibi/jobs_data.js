@@ -169,34 +169,34 @@ Meibi Esperanza Mota Mora
 
   // --- 2. ANÁLISIS DE DATOS Y BUSINESS INTELLIGENCE (LINKEDIN, INDEED & GOOGLE JOBS) ---
   {
-    id: "meibi-ind-epam-pbi",
-    title: "Power BI Consultant (100% Remoto)",
-    company: "EPAM Systems (vía Indeed Jobs Scraper)",
+    id: "meibi-gj-slaninter-pbi",
+    title: "Analista de Datos y Dashboards (Power BI / Looker Studio)",
+    company: "Slaninter (vía Google Jobs República Dominicana)",
     category: "datos",
-    location: "Remoto (Internacional / España - LATAM)",
-    modality: "100% Remoto",
-    salaryDOP: "RD$ 110,000 - 145,000 / mes",
-    salaryNote: "Consultoría global en Power BI • Extraída vía Indeed Scraper",
-    postedDate: "Esta semana · Indeed",
-    type: "Tiempo Completo",
-    tags: ["Power BI", "Indeed", "Business Intelligence", "DAX", "Remoto"],
-    url: "https://es.indeed.com/viewjob?jk=801cdb4f55ee4fe3",
-    contactEmail: "careers@epam.com",
-    description: "Vacante extraída con valig/indeed-jobs-scraper: consultoría especializada en diseño de tableros ejecutivos en Power BI, modelado de datos, transformación de fuentes de información y visualización estratégica en modalidad 100% remota.",
+    location: "República Dominicana (Remoto / Proyectos)",
+    modality: "Remoto / Híbrido",
+    salaryDOP: "RD$ 60,000 - 80,000 / mes",
+    salaryNote: "Enfocada 100% en Power BI, Excel avanzado e Insights • Vía Google Jobs",
+    postedDate: "Esta semana · Google Jobs",
+    type: "Tiempo Completo / Proyecto",
+    tags: ["Power BI", "Google Jobs", "Excel Avanzado", "Dashboards", "RD"],
+    url: "https://do.jooble.org/jdp/-4618899770949005191",
+    contactEmail: "reclutamiento@slaninter.com",
+    description: "Vacante auditada en texto completo vía Google Jobs Scraper para República Dominicana: creación de dashboards interactivos en Power BI o Looker Studio, manejo de Excel / Google Sheets avanzado y conversión de datos en insights de negocio.",
     requirements: [
-      "Experiencia comprobada diseñando soluciones y dashboards en Power BI",
-      "Capacidad de análisis de negocio y comunicación con clientes",
-      "Manejo de herramientas Microsoft Office 365 y analítica avanzada"
+      "Dominio de Power BI o Looker Studio para creación de dashboards",
+      "Manejo avanzado de Excel (tablas dinámicas, fórmulas y modelado)",
+      "Capacidad demostrada para convertir datos en decisiones estratégicas"
     ],
-    coverLetter: `Dear EPAM Systems Recruiting Team,
+    coverLetter: `Estimado Equipo de Selección de Slaninter,
 
-I am writing to apply for the Remote Power BI Consultant position found on Indeed.
+Les escribo con entusiasmo para postularme a la vacante de Analista de Datos y Dashboards en República Dominicana.
 
-With over 5 years of experience at Carat Dominicana—currently serving as Senior Data Analyst and Media Analysts Supervisor—Power BI is at the core of my daily work. I design interactive dashboards, analyze complex advertising investment datasets, and ensure data categorization quality for top-tier brands.
+Con más de 5 años de experiencia en Carat Dominicana (actualmente como Senior Data Analyst y Supervisora), mi especialidad diaria es el diseño de dashboards en Power BI, el manejo avanzado de Excel/Office 365 y la transformación de datos de mercado en recomendaciones accionables.
 
-Combined with my Bachelor's in Marketing (INTEC) and Strategic Planning certification, I am ready to deliver high-impact BI solutions at EPAM.
+Quedo a su entera disposición para conversar en una entrevista.
 
-Best regards,
+Atentamente,
 Meibi Esperanza Mota Mora
 (829) 793-3033 | meibimota@gmail.com`
   },
