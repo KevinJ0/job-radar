@@ -10,7 +10,6 @@ RATES_TO_DOP = {
     "DOP": 1.0,
     "USD": 60.5,
     "EUR": 65.5,
-    "MXN": 3.05,
     "ARS": 0.06
 }
 
@@ -26,7 +25,10 @@ KEVIN_PROFILE = {
         "maxExperienceYears": 4,
         "excludedRoles": ["Analista", "DevOps", "QA / Tester", "Soporte Técnico", "PLC Industrial"],
         "excludedPortals": ["mx.computrabajo.com", "Computrabajo MX"],
-        "excludedCountries": ["México", "MX"]
+        "apifyActors": [
+            "curious_coder/linkedin-jobs-scraper (hKByXkMQaC5Qt9UMN)",
+            "johnvc/Google-Jobs-Scraper"
+        ]
     },
     "stack": [
         ".NET Core", "C#", "ASP.NET Core", "Flutter", "Dart", "Angular",
@@ -36,6 +38,55 @@ KEVIN_PROFILE = {
 }
 
 INITIAL_JOBS = [
+    # --- NUEVAS VACANTES DE APIFY: LINKEDIN JOBS SCRAPER & GOOGLE JOBS SCRAPER ---
+    {
+        "id": "li-baires-netcore-1",
+        "title": "Semi Senior .NET Core Developer - Remote Work | REF#307815",
+        "company": "BairesDev",
+        "country": "Rep. Dominicana",
+        "countryCode": "DO",
+        "flag": "🇩🇴",
+        "portal": "LinkedIn",
+        "location": "República Dominicana (100% Remoto desde La Romana)",
+        "modality": "100% Remoto",
+        "experienceYears": 3,
+        "experienceLabel": "3 años (≤ 4 años)",
+        "salaryDOP": "RD$ 181,500 - RD$ 242,000 / mes",
+        "salaryDOPYearly": "RD$ 2,178,000 - RD$ 2,904,000 / año",
+        "salaryOriginal": "USD $3,000 - $4,000 / mes (Est. BairesDev)",
+        "salaryNumericDOPMonthly": 211750,
+        "postedAt": "2026-11-03",
+        "postedLabel": "Ayer · LinkedIn",
+        "stack": [".NET Core", "C#", "ASP.NET Core", "SQL Server", "REST API", "Git"],
+        "matchScore": 99,
+        "highlight": "Extraída vía Apify LinkedIn Scraper: busca exactamente 3 años de experiencia en C# y .NET Core, 100% remoto para RD.",
+        "description": "Desarrollo y mantenimiento de aplicaciones web y APIs escalables en .NET Core / C#, trabajando en equipos ágiles distribuidos 100% en remoto.",
+        "url": "https://do.linkedin.com/jobs/view/semi-senior-net-core-developer-remote-work-ref%23307815-at-bairesdev-4487025223"
+    },
+    {
+        "id": "gj-fullstack-net-ang-1",
+        "title": "Full Stack .NET Engineer (Angular) - Remote - Latin America",
+        "company": "FullStack Labs",
+        "country": "Rep. Dominicana",
+        "countryCode": "DO",
+        "flag": "🇩🇴",
+        "portal": "Google Jobs / LinkedIn",
+        "location": "República Dominicana (100% Remoto)",
+        "modality": "100% Remoto",
+        "experienceYears": 4,
+        "experienceLabel": "4 años (≤ 4 años)",
+        "salaryDOP": "RD$ 211,750 - RD$ 272,250 / mes",
+        "salaryDOPYearly": "RD$ 2,541,000 - RD$ 3,267,000 / año",
+        "salaryOriginal": "USD $3,500 - $4,500 / mes (Est. LATAM)",
+        "salaryNumericDOPMonthly": 242000,
+        "postedAt": "2026-10-28",
+        "postedLabel": "Esta semana · Google Jobs",
+        "stack": [".NET Core", "C#", "Angular", "ASP.NET Core", "SQL Server", "REST API"],
+        "matchScore": 98,
+        "highlight": "Extraída vía Google Jobs Scraper: combina exactamente tu stack de .NET Core + C# + Angular con 4 años de experiencia.",
+        "description": "Ingeniería Full Stack desarrollando aplicaciones empresariales con backend en .NET / C# y frontend moderno en Angular, 100% remoto desde Latinoamérica.",
+        "url": "https://do.linkedin.com/jobs/view/full-stack-net-engineer-angular-remote-latin-america-at-fullstack-4473557324"
+    },
     {
         "id": "ij-net-fs-2",
         "title": "Desarrollador/a Senior Full Stack .NET – Teletrabajo 100%",
@@ -59,6 +110,54 @@ INITIAL_JOBS = [
         "highlight": "Pide solo 3 años de experiencia y coincide al 100% con tu stack principal (.NET Core, C#, SQL Server).",
         "description": "Desarrollo Full Stack con ecosistema .NET y bases de datos relacionales en modalidad 100% teletrabajo.",
         "url": "https://www.infojobs.net/madrid/desarrollador-senior-full-stack-.net-teletrabajo-100/of-i1fa4ccf59041c1b318287a3997bc99"
+    },
+    {
+        "id": "li-baires-flutter-1",
+        "title": "Flutter Engineer - Remote Work | REF#307486",
+        "company": "BairesDev",
+        "country": "LATAM Remoto",
+        "countryCode": "LATAM",
+        "flag": "🌎",
+        "portal": "LinkedIn",
+        "location": "LATAM (100% Remoto desde RD)",
+        "modality": "100% Remoto",
+        "experienceYears": 3,
+        "experienceLabel": "3 años (≤ 4 años)",
+        "salaryDOP": "RD$ 181,500 - RD$ 229,900 / mes",
+        "salaryDOPYearly": "RD$ 2,178,000 - RD$ 2,758,800 / año",
+        "salaryOriginal": "USD $3,000 - $3,800 / mes (Est. BairesDev)",
+        "salaryNumericDOPMonthly": 205700,
+        "postedAt": "2026-11-03",
+        "postedLabel": "Ayer · LinkedIn",
+        "stack": ["Flutter", "Dart", "REST API", "SQLite", "Git"],
+        "matchScore": 97,
+        "highlight": "Extraída vía Apify LinkedIn Scraper: pide 3 años de experiencia desarrollando aplicaciones móviles multiplataforma con Flutter y Dart.",
+        "description": "Diseño, desarrollo y despliegue de aplicaciones móviles multiplataforma (iOS/Android) en Flutter, integrando APIs REST y almacenamiento local.",
+        "url": "https://br.linkedin.com/jobs/view/flutter-engineer-remote-work-ref%23307486-at-bairesdev-4487016755"
+    },
+    {
+        "id": "li-baires-flutter-2",
+        "title": "Flutter Developer - Remote Work | REF#307179",
+        "company": "BairesDev",
+        "country": "LATAM Remoto",
+        "countryCode": "LATAM",
+        "flag": "🌎",
+        "portal": "LinkedIn",
+        "location": "LATAM (100% Remoto desde RD)",
+        "modality": "100% Remoto",
+        "experienceYears": 3,
+        "experienceLabel": "3 años (≤ 4 años)",
+        "salaryDOP": "RD$ 169,400 - RD$ 217,800 / mes",
+        "salaryDOPYearly": "RD$ 2,032,800 - RD$ 2,613,600 / año",
+        "salaryOriginal": "USD $2,800 - $3,600 / mes (Est. BairesDev)",
+        "salaryNumericDOPMonthly": 193600,
+        "postedAt": "2026-11-03",
+        "postedLabel": "Ayer · LinkedIn",
+        "stack": ["Flutter", "Dart", "REST API", "SQLite", "Git"],
+        "matchScore": 96,
+        "highlight": "Extraída vía Apify LinkedIn Scraper: vacante 100% remota enfocada en desarrollo móvil con Flutter y arquitectura limpia.",
+        "description": "Construcción de interfaces móviles fluidas en Flutter/Dart, integración con servicios backend y optimización de rendimiento en dispositivos Android e iOS.",
+        "url": "https://br.linkedin.com/jobs/view/flutter-developer-remote-work-ref%23307179-at-bairesdev-4487010723"
     },
     {
         "id": "ij-csharp-cloud-1",
@@ -85,6 +184,30 @@ INITIAL_JOBS = [
         "url": "https://www.infojobs.net/cualquier-ubicacion/programador-c-cloud-teletrabajo-100/of-ic25b81ce53440c9ba4d4de1b45d4ce"
     },
     {
+        "id": "gj-fullstack-blazor-1",
+        "title": "Frontend Developer (.NET + Blazor) - Remote - Latin America",
+        "company": "FullStack Labs",
+        "country": "Rep. Dominicana",
+        "countryCode": "DO",
+        "flag": "🇩🇴",
+        "portal": "Google Jobs / LinkedIn",
+        "location": "República Dominicana (100% Remoto)",
+        "modality": "100% Remoto",
+        "experienceYears": 4,
+        "experienceLabel": "4 años (≤ 4 años)",
+        "salaryDOP": "RD$ 193,600 - RD$ 242,000 / mes",
+        "salaryDOPYearly": "RD$ 2,323,200 - RD$ 2,904,000 / año",
+        "salaryOriginal": "USD $3,200 - $4,000 / mes (Est. LATAM)",
+        "salaryNumericDOPMonthly": 217800,
+        "postedAt": "2026-10-27",
+        "postedLabel": "Esta semana · Google Jobs",
+        "stack": [".NET Core", "C#", "ASP.NET Core", "REST API", "Git"],
+        "matchScore": 95,
+        "highlight": "Extraída vía Google Jobs Scraper: 4 años de experiencia profesional en desarrollo web con ecosistema .NET y C#.",
+        "description": "Desarrollo de aplicaciones web modernas dentro del ecosistema .NET y Blazor trabajando 100% remoto desde República Dominicana.",
+        "url": "https://do.linkedin.com/jobs/view/frontend-developer-net-%2B-blazor-remote-latin-america-at-fullstack-4472098607"
+    },
+    {
         "id": "ij-netcore-fs-3",
         "title": "Fullstack (.NET Core) - Teletrabajo 100%",
         "company": "Second Window",
@@ -107,6 +230,30 @@ INITIAL_JOBS = [
         "highlight": "Pide 3 años de experiencia en desarrollo Full Stack con .NET Core y APIs REST.",
         "description": "Desarrollo Full Stack sobre arquitectura .NET Core trabajando 100% en remoto.",
         "url": "https://www.infojobs.net/madrid/fullstack-react-.net-core-.-teletrabajo-100/of-ib436038c5c42aeafbcd548f1c57132"
+    },
+    {
+        "id": "li-perform-net-1",
+        "title": ".NET Developer",
+        "company": "Perform",
+        "country": "Rep. Dominicana",
+        "countryCode": "DO",
+        "flag": "🇩🇴",
+        "portal": "LinkedIn",
+        "location": "República Dominicana (Remoto)",
+        "modality": "100% Remoto",
+        "experienceYears": 3,
+        "experienceLabel": "3+ años (≤ 4 años)",
+        "salaryDOP": "RD$ 121,000 - RD$ 163,350 / mes",
+        "salaryDOPYearly": "RD$ 1,452,000 - RD$ 1,960,200 / año",
+        "salaryOriginal": "USD $2,000 - $2,700 / mes (Est.)",
+        "salaryNumericDOPMonthly": 142175,
+        "postedAt": "2026-10-16",
+        "postedLabel": "Vigente · LinkedIn",
+        "stack": [".NET Core", "C#", "ASP.NET Core", "SQL Server", "REST API", "Git"],
+        "matchScore": 94,
+        "highlight": "Extraída vía Apify LinkedIn Scraper: pide 3+ años en el framework .NET, C# y SQL Server.",
+        "description": "Diseño y desarrollo de software utilizando el ecosistema .NET, creación de aplicaciones desde cero y soporte de sistemas en producción.",
+        "url": "https://do.linkedin.com/jobs/view/net-developer-at-perform-4415697399"
     },
     {
         "id": "do-ct-backend-1",
@@ -133,6 +280,30 @@ INITIAL_JOBS = [
         "url": "https://do.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-desarrollador-backend-java-o-net-en-santo-domingo-de-guzman-D6F05AA5D735FE5161373E686DCF3405"
     },
     {
+        "id": "li-altimetrik-flutter-1",
+        "title": "Senior Flutter Developer (Remote)",
+        "company": "Altimetrik",
+        "country": "LATAM Remoto",
+        "countryCode": "LATAM",
+        "flag": "🌎",
+        "portal": "LinkedIn",
+        "location": "LATAM (100% Remoto)",
+        "modality": "100% Remoto",
+        "experienceYears": 4,
+        "experienceLabel": "4 años (≤ 4 años)",
+        "salaryDOP": "RD$ 193,600 - RD$ 248,050 / mes",
+        "salaryDOPYearly": "RD$ 2,323,200 - RD$ 2,976,600 / año",
+        "salaryOriginal": "USD $3,200 - $4,100 / mes (Est. LATAM)",
+        "salaryNumericDOPMonthly": 220825,
+        "postedAt": "2026-10-30",
+        "postedLabel": "Hace 5 días · LinkedIn",
+        "stack": ["Flutter", "Dart", "REST API", "Git", "CI/CD"],
+        "matchScore": 93,
+        "highlight": "Extraída vía Apify LinkedIn Scraper: busca desarrollador Flutter/Dart en modalidad 100% remota para Latinoamérica.",
+        "description": "Ingeniería móvil en Flutter y Dart construyendo productos digitales de alto impacto en modalidad 100% remota.",
+        "url": "https://co.linkedin.com/jobs/view/senior-flutter-developer-remote-at-altimetrik-4474523919"
+    },
+    {
         "id": "ij-net-wpf-3",
         "title": "Desarrollador C# .NET con WPF (Escritorio) | Remoto",
         "company": "Experis IT",
@@ -157,28 +328,76 @@ INITIAL_JOBS = [
         "url": "https://www.infojobs.net/madrid/desarrollador-c-.net-con-wpf-excel-remoto-h-m-x/of-idee730dc49408faee53a0c25d81f95"
     },
     {
-        "id": "mx-ct-net-1",
-        "title": "Desarrollador Fullstack .NET y Reportes",
-        "company": "Lumina Software",
-        "country": "México",
-        "countryCode": "MX",
-        "flag": "🇲🇽",
-        "portal": "Computrabajo MX",
-        "location": "Monterrey (100% Remoto)",
+        "id": "li-veta-fs-1",
+        "title": "Full Stack Software Engineer",
+        "company": "Veta Virtual",
+        "country": "Rep. Dominicana",
+        "countryCode": "DO",
+        "flag": "🇩🇴",
+        "portal": "LinkedIn",
+        "location": "República Dominicana (100% Remoto)",
         "modality": "100% Remoto",
         "experienceYears": 3,
         "experienceLabel": "3 años (≤ 4 años)",
-        "salaryDOP": "A convenir en RD$",
-        "salaryDOPYearly": "",
-        "salaryOriginal": "A convenir (MXN)",
-        "salaryNumericDOPMonthly": 0,
-        "postedAt": "2026-10-31",
-        "postedLabel": "Hace 3 días",
-        "stack": [".NET Core", "C#", "SQL Server", "REST API"],
+        "salaryDOP": "RD$ 133,100 - RD$ 181,500 / mes",
+        "salaryDOPYearly": "RD$ 1,597,200 - RD$ 2,178,000 / año",
+        "salaryOriginal": "USD $2,200 - $3,000 / mes (Est.)",
+        "salaryNumericDOPMonthly": 157300,
+        "postedAt": "2026-11-04",
+        "postedLabel": "Hoy · LinkedIn",
+        "stack": [".NET Core", "Python", "REST API", "SQL Server", "Git"],
         "matchScore": 91,
-        "highlight": "Pide 3 años de experiencia en desarrollo fullstack de aplicaciones con .NET y reportería.",
-        "description": "Desarrollo fullstack de aplicaciones empresariales con .NET, modelado de datos y generación de reportes.",
-        "url": "https://mx.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-desarrollador-power-bi-y-net-en-monterrey-927B9AF3D866954361373E686DCF3405"
+        "highlight": "Publicada hoy en LinkedIn para República Dominicana: rol Full Stack 100% remoto con hasta 3-4 años de experiencia.",
+        "description": "Construcción de soluciones de software full-stack de principio a fin, integraciones de APIs y bases de datos relacionales.",
+        "url": "https://do.linkedin.com/jobs/view/full-stack-software-engineer-at-veta-virtual-4478167447"
+    },
+    {
+        "id": "gj-fullstack-py-1",
+        "title": "Python Full Stack Engineer (3 month-long) - Remote - Latin America",
+        "company": "FullStack Labs",
+        "country": "Rep. Dominicana",
+        "countryCode": "DO",
+        "flag": "🇩🇴",
+        "portal": "Google Jobs / LinkedIn",
+        "location": "República Dominicana (100% Remoto)",
+        "modality": "100% Remoto",
+        "experienceYears": 3,
+        "experienceLabel": "3 años (≤ 4 años)",
+        "salaryDOP": "RD$ 181,500 - RD$ 229,900 / mes",
+        "salaryDOPYearly": "RD$ 2,178,000 - RD$ 2,758,800 / año",
+        "salaryOriginal": "USD $3,000 - $3,800 / mes (Est. LATAM)",
+        "salaryNumericDOPMonthly": 205700,
+        "postedAt": "2026-10-30",
+        "postedLabel": "Hace 5 días · Google Jobs",
+        "stack": ["Python", "REST API", "SQL Server", "Git", "CI/CD"],
+        "matchScore": 90,
+        "highlight": "Extraída vía Google Jobs Scraper: pide 3+ años de experiencia profesional en desarrollo con Python.",
+        "description": "Desarrollo Full Stack con Python, diseño de APIs REST y despliegue en la nube en modalidad 100% remota desde República Dominicana.",
+        "url": "https://do.linkedin.com/jobs/view/python-full-stack-engineer-3-month-long-remote-latin-america-at-fullstack-4481788767"
+    },
+    {
+        "id": "li-emapta-py-1",
+        "title": "Python Software Engineer",
+        "company": "Emapta Global",
+        "country": "Rep. Dominicana",
+        "countryCode": "DO",
+        "flag": "🇩🇴",
+        "portal": "LinkedIn",
+        "location": "República Dominicana (Remoto)",
+        "modality": "100% Remoto",
+        "experienceYears": 3,
+        "experienceLabel": "3 años (≤ 4 años)",
+        "salaryDOP": "RD$ 133,100 - RD$ 175,450 / mes",
+        "salaryDOPYearly": "RD$ 1,597,200 - RD$ 2,105,400 / año",
+        "salaryOriginal": "USD $2,200 - $2,900 / mes (Est.)",
+        "salaryNumericDOPMonthly": 154275,
+        "postedAt": "2026-10-29",
+        "postedLabel": "Esta semana · LinkedIn",
+        "stack": ["Python", "REST API", "AWS S3", "SQL Server", "Git"],
+        "matchScore": 89,
+        "highlight": "Extraída vía Apify LinkedIn Scraper: ingeniería de software en Python y servicios AWS para República Dominicana.",
+        "description": "Desarrollo de servicios backend en Python, automatización de flujos de datos e integración con servicios en la nube.",
+        "url": "https://do.linkedin.com/jobs/view/python-software-engineer-at-emapta-global-4484578516"
     },
     {
         "id": "ij-oracle-plsql-4",
@@ -221,36 +440,12 @@ INITIAL_JOBS = [
         "salaryOriginal": "28.000 € - 33.000 € Bruto/año",
         "salaryNumericDOPMonthly": 166477,
         "postedAt": "2026-11-03",
-        "postedLabel": "Hoy",
+        "postedLabel": "Ayer",
         "stack": ["Oracle", "PL/SQL", "SQLite", "SQL Server"],
         "matchScore": 88,
-        "highlight": "Publicada hoy y pide solo 2 años de experiencia. Aprovecha tu dominio de migraciones de esquemas y Oracle/SQL.",
+        "highlight": "Pide solo 2 años de experiencia. Aprovecha tu dominio de migraciones de esquemas y Oracle/SQL.",
         "description": "Desarrollo en base de datos Oracle y migración de esquemas y datos transaccionales en modalidad 100% remota.",
         "url": "https://www.infojobs.net/barcelona/desarrollador-migrador-datos-db2-oracle-100-remoto/of-i8dd3d522fa4eee881827377b992159"
-    },
-    {
-        "id": "mx-ct-mobile-2",
-        "title": "Desarrollador Mobile (Android / iOS)",
-        "company": "Lumina Software",
-        "country": "México",
-        "countryCode": "MX",
-        "flag": "🇲🇽",
-        "portal": "Computrabajo MX",
-        "location": "Monterrey (100% Remoto)",
-        "modality": "100% Remoto",
-        "experienceYears": 3,
-        "experienceLabel": "3 años (≤ 4 años)",
-        "salaryDOP": "A convenir en RD$",
-        "salaryDOPYearly": "",
-        "salaryOriginal": "A convenir (MXN)",
-        "salaryNumericDOPMonthly": 0,
-        "postedAt": "2026-10-31",
-        "postedLabel": "Hace 3 días",
-        "stack": ["Flutter", "Dart", "SQLite", "REST API", "Git"],
-        "matchScore": 86,
-        "highlight": "Pide 3 años de experiencia en desarrollo móvil para Android e iOS con consumo de APIs REST.",
-        "description": "Desarrollo y mantenimiento de aplicaciones móviles para Android e iOS consumiendo APIs REST con control de versiones Git.",
-        "url": "https://mx.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-desarrollador-mobile-android-ios-en-monterrey-20CDC626AFF6C2F461373E686DCF3405"
     },
     {
         "id": "ij-py-est-6",
@@ -424,8 +619,13 @@ INITIAL_JOBS = [
 
 
 def save_payload(jobs_list):
-    # Enforce strict filter: max 4 years of experience
-    filtered_jobs = [j for j in jobs_list if j.get("experienceYears", 0) <= 4]
+    # Enforce strict filter: max 4 years of experience & NEVER allow mx.computrabajo.com
+    filtered_jobs = [
+        j for j in jobs_list
+        if j.get("experienceYears", 0) <= 4
+        and "mx.computrabajo.com" not in j.get("url", "").lower()
+        and j.get("portal", "") != "Computrabajo MX"
+    ]
 
     payload = {
         "lastUpdated": datetime.now().strftime("%Y-%m-%d %H:%M"),
@@ -445,7 +645,7 @@ def save_payload(jobs_list):
         json.dump(payload, f, ensure_ascii=False, indent=2)
         f.write(";\n")
 
-    print(f"Saved {len(filtered_jobs)} jobs (all <= 4 years exp, in RD$) to {json_path} and {js_path}")
+    print(f"Saved {len(filtered_jobs)} jobs (all <= 4 years exp, in RD$, 0 mx.computrabajo.com) to {json_path} and {js_path}")
 
 
 if __name__ == "__main__":

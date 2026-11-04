@@ -134,42 +134,203 @@ Atentamente,
 Meibi Esperanza Mota Mora
 (829) 793-3033 | meibimota@gmail.com`
   },
-
-  // --- 2. ANÁLISIS DE DATOS Y BUSINESS INTELLIGENCE (SU PUESTO ACTUAL) ---
   {
-    id: "meibi-data-01",
-    title: "Senior Data Analyst / Especialista en Power BI",
-    company: "Empresa Consultora / Nearshore Remoto",
-    category: "datos",
-    location: "Remoto (República Dominicana)",
-    modality: "100% Remoto",
-    salaryDOP: "RD$ 65,000 - 85,000 / mes",
-    salaryNote: "Aproximadamente USD $1,100 - $1,400 / mes",
-    postedDate: "Ayer",
+    id: "meibi-gj-romana-01",
+    title: "Analista de Control, Presupuesto y Gestión (La Romana)",
+    company: "Cath Contreras Consulting (vía Google Jobs)",
+    category: "psicologia",
+    location: "La Romana, República Dominicana",
+    modality: "Presencial (La Romana)",
+    salaryDOP: "RD$ 40,000 - 50,000 / mes",
+    salaryNote: "Vacante local en La Romana • Extraída vía Google Jobs",
+    postedDate: "Reciente · Google Jobs",
     type: "Tiempo Completo",
-    tags: ["Power BI", "Google Analytics", "Data Analysis", "Mercadeo", "Remoto"],
-    url: "https://do.computrabajo.com/",
-    contactEmail: "reclutamiento.latam@datagroup.com",
-    description: "Buscamos Senior Data Analyst con sólida experiencia en análisis de inversión, comportamiento de marcas, modelado en Power BI, dashboards ejecutivos y visualización de datos. Ideal perfil con trasfondo en Mercadeo o Ciencias de la Información.",
+    tags: ["Google Jobs", "La Romana", "Análisis", "Control y Reportes"],
+    url: "https://www.tripalis.com/empleo/analista-de-costo-en-obras-en-la-romana-a1fc3e",
+    contactEmail: "reclutamiento@cathcontreras.com",
+    description: "Vacante presencial en La Romana captada por Google Jobs Scraper: análisis de presupuestos, control de datos operativos, elaboración de reportes en Excel/Power BI y seguimiento administrativo en La Romana.",
     requirements: [
-      "Experiencia demostrable como Data Analyst (3+ años)",
-      "Dominio avanzado de Power BI, DAX, Excel y Google Analytics",
-      "Capacidad para extraer insights de negocio, buyer persona y tendencias",
-      "Inglés intermedio para lectura y reportes"
+      "Residir en La Romana, República Dominicana",
+      "Capacidad analítica avanzada y manejo de Excel / reportes",
+      "Organización, seguimiento de presupuestos y trabajo en equipo"
     ],
-    coverLetter: `Estimado Equipo de Selección,
+    coverLetter: `Estimado Equipo de Selección de Cath Contreras Consulting,
 
-Les escribo para presentar mi postulación al puesto de Senior Data Analyst / Especialista en Power BI.
+Les escribo para presentar mi postulación a su vacante de Analista en la ciudad de La Romana.
 
-Actualmente me desempeño como Senior Data Analyst y Supervisora de Analistas de Medios en Carat Dominicana, habiendo iniciado en 2019 como Analista de Investigación de Mercados Jr. Cuento con más de 5 años de experiencia analizando el comportamiento de inversiones publicitarias, consumo de medios, elaboración de Buyer Personas y asegurando la correcta categorización y calidad de grandes volúmenes de datos.
+Resido en La Romana y cuento con más de 5 años de experiencia como Senior Data Analyst en Carat Dominicana, manejando presupuestos, control de inversiones, análisis de variaciones y generación de reportes ejecutivos en Excel avanzado y Power BI.
 
-Cuento con certificación en Google Analytics, Diplomado en Planeación Estratégica (NOGMA) y manejo avanzado de Power BI y Office 365. Además, mi formación como Licenciada en Mercadeo por INTEC me permite conectar los números con decisiones de negocio reales.
-
-Agradezco su atención y me encantaría compartir detalles de mis proyectos en una entrevista.
+Quedo a su entera disposición para una entrevista presencial en La Romana.
 
 Atentamente,
 Meibi Esperanza Mota Mora
-(829) 793-3033 | meibimota@gmail.com | LinkedIn: https://www.linkedin.com`
+(829) 793-3033 | meibimota@gmail.com`
+  },
+
+  // --- 2. ANÁLISIS DE DATOS Y BUSINESS INTELLIGENCE (LINKEDIN & GOOGLE JOBS) ---
+  {
+    id: "meibi-li-baires-bi",
+    title: "Business Intelligence Associate - Remote Work | REF#308478",
+    company: "BairesDev (vía LinkedIn Jobs Scraper)",
+    category: "datos",
+    location: "Remoto (República Dominicana)",
+    modality: "100% Remoto",
+    salaryDOP: "RD$ 90,000 - 120,000 / mes",
+    salaryNote: "Equivalente a USD $1,500 - $2,000 / mes • 100% Remoto",
+    postedDate: "Ayer · LinkedIn",
+    type: "Tiempo Completo",
+    tags: ["Power BI", "Business Intelligence", "LinkedIn", "Data Analysis", "Remoto"],
+    url: "https://do.linkedin.com/jobs/view/business-intelligence-associate-remote-work-ref%23308478-at-bairesdev-4487010772",
+    contactEmail: "careers@bairesdev.com",
+    description: "Vacante recién publicada en LinkedIn para República Dominicana: apoyar la toma de decisiones estratégicas mediante análisis de datos, creación y mantenimiento de dashboards de Business Intelligence (Power BI), identificación de tendencias de negocio y generación de insights accionables.",
+    requirements: [
+      "Experiencia comprobable en Business Intelligence y análisis de datos",
+      "Dominio de herramientas de visualización (Power BI, Excel avanzado)",
+      "Capacidad para traducir métricas en recomendaciones estratégicas",
+      "Inglés intermedio para comunicación y documentación"
+    ],
+    coverLetter: `Dear BairesDev Recruiting Team,
+
+I am excited to apply for the Business Intelligence Associate (Remote) position in the Dominican Republic.
+
+Currently, I serve as a Senior Data Analyst and Media Analysts Supervisor at Carat Dominicana, where I have spent over 5 years transforming complex marketing and investment datasets into actionable Business Intelligence dashboards using Power BI, Google Analytics, and Microsoft Office 365.
+
+With a Bachelor's degree in Marketing from INTEC and a Diploma in Strategic Planning, I excel at bridging data accuracy with business strategy.
+
+Thank you for your consideration. I look forward to discussing how I can contribute to BairesDev.
+
+Best regards,
+Meibi Esperanza Mota Mora
+(829) 793-3033 | meibimota@gmail.com`
+  },
+  {
+    id: "meibi-li-cloudbeds-data",
+    title: "Data Services Reports & Insights Analyst",
+    company: "Cloudbeds (vía LinkedIn Jobs Scraper)",
+    category: "datos",
+    location: "Remoto (República Dominicana)",
+    modality: "100% Remoto",
+    salaryDOP: "RD$ 85,000 - 115,000 / mes",
+    salaryNote: "Pago en USD • Modalidad 100% Remota desde RD",
+    postedDate: "Vigente · LinkedIn",
+    type: "Tiempo Completo",
+    tags: ["Reports & Insights", "Power BI", "LinkedIn", "Data Services", "Remoto"],
+    url: "https://do.linkedin.com/jobs/view/data-services-reports-insights-analyst-at-cloudbeds-4473287512",
+    contactEmail: "jobs@cloudbeds.com",
+    description: "Extraída vía Apify LinkedIn Scraper: creación de reportes personalizados, análisis de tendencias y generación de insights estratégicos para clientes globales en modalidad 100% remota desde República Dominicana.",
+    requirements: [
+      "Experiencia en generación de reportes ejecutivos e insights de datos",
+      "Manejo de herramientas de BI (Power BI / Looker / Tableau / Excel)",
+      "Atención al detalle en validación y calidad de datos",
+      "Comunicación asertiva y orientación al cliente"
+    ],
+    coverLetter: `Dear Cloudbeds Hiring Team,
+
+I am writing to apply for the Data Services Reports & Insights Analyst position in the Dominican Republic.
+
+With over 5 years of experience at Carat Dominicana—currently as Senior Data Analyst and Supervisor—I specialize in designing custom reports, auditing data categorization quality, and delivering strategic market insights using Power BI, Google Analytics, and Excel.
+
+I am passionate about turning raw data into clear visual stories that drive decision-making.
+
+Warm regards,
+Meibi Esperanza Mota Mora
+(829) 793-3033 | meibimota@gmail.com`
+  },
+  {
+    id: "meibi-li-baires-da",
+    title: "Data Analyst - Remote Work",
+    company: "BairesDev (vía LinkedIn Jobs Scraper)",
+    category: "datos",
+    location: "Remoto (República Dominicana)",
+    modality: "100% Remoto",
+    salaryDOP: "RD$ 85,000 - 110,000 / mes",
+    salaryNote: "Contrato remoto internacional en USD",
+    postedDate: "Hace 2 días · LinkedIn",
+    type: "Tiempo Completo",
+    tags: ["Data Analyst", "Power BI", "LinkedIn", "Remoto"],
+    url: "https://do.linkedin.com/jobs/view/data-analyst-python-remote-work-at-bairesdev-4485759961",
+    contactEmail: "careers@bairesdev.com",
+    description: "Análisis e interpretación de conjuntos de datos complejos, elaboración de reportes automatizados, control de calidad de datos y colaboración con equipos multidisciplinarios en modalidad 100% remota.",
+    requirements: [
+      "3+ años de experiencia como Data Analyst",
+      "Dominio de visualización de datos en Power BI y hojas de cálculo avanzadas",
+      "Experiencia asegurando calidad e integridad en categorización de datos"
+    ],
+    coverLetter: `Estimado Equipo de Selección de BairesDev,
+
+Les escribo para postularme a la vacante de Data Analyst (Remote Work) desde República Dominicana.
+
+Cuento con más de 5 años de trayectoria en análisis de datos en Carat Dominicana (actualmente como Senior Data Analyst), liderando la validación de calidad de datos, creación de tableros en Power BI y análisis de tendencias de consumo e inversión.
+
+Quedo a su entera disposición para conversar en una entrevista.
+
+Atentamente,
+Meibi Esperanza Mota Mora
+(829) 793-3033 | meibimota@gmail.com`
+  },
+  {
+    id: "meibi-gj-talentpool-da",
+    title: "Analista de Datos",
+    company: "Empresa Aliada Talent Pool (vía Google Jobs)",
+    category: "datos",
+    location: "República Dominicana (Remoto / Híbrido)",
+    modality: "Remoto / Híbrido",
+    salaryDOP: "RD$ 60,000 - 80,000 / mes",
+    salaryNote: "Captada vía Google Jobs Scraper",
+    postedDate: "Esta semana · Google Jobs",
+    type: "Tiempo Completo",
+    tags: ["Google Jobs", "Analista de Datos", "Power BI", "Indicadores"],
+    url: "https://talent-pool.co/jobs/7969c509-14dd-4511-aaf0-591350dfadc5",
+    contactEmail: "soporte@talent-pool.co",
+    description: "Vacante activa en Google Jobs para República Dominicana: recopilación, limpieza y modelado de datos comerciales para generar indicadores clave de gestión (KPIs) y tableros interactivos.",
+    requirements: [
+      "Formación en Mercadeo, Ingeniería, Estadística o afines",
+      "Experiencia comprobada en Power BI, Excel avanzado y análisis de KPIs",
+      "Capacidad analítica y presentación de resultados a gerencia"
+    ],
+    coverLetter: `Estimado Equipo de Selección de Talent Pool,
+
+Presento con entusiasmo mi postulación a la posición de Analista de Datos en República Dominicana.
+
+Actualmente me desempeño como Senior Data Analyst y Supervisora en Carat Dominicana, donde cuento con más de 5 años de experiencia diseñando tableros en Power BI, analizando KPIs de inversión y consumo, y liderando el aseguramiento de calidad de datos.
+
+Agradezco su consideración y quedo atenta para conversar.
+
+Cordialmente,
+Meibi Esperanza Mota Mora
+(829) 793-3033 | meibimota@gmail.com`
+  },
+  {
+    id: "meibi-li-catador-bi",
+    title: "Analista BI (Business Intelligence)",
+    company: "El Catador (vía LinkedIn Jobs Scraper)",
+    category: "datos",
+    location: "República Dominicana",
+    modality: "Híbrido / Presencial",
+    salaryDOP: "RD$ 55,000 - 70,000 / mes",
+    salaryNote: "Empresa líder comercial en RD + beneficios corporativos",
+    postedDate: "Vigente · LinkedIn",
+    type: "Tiempo Completo",
+    tags: ["Business Intelligence", "Power BI", "Comercial", "LinkedIn", "Mercadeo"],
+    url: "https://do.linkedin.com/jobs/view/analista-bi-at-el-catador-4479822976",
+    contactEmail: "reclutamiento@elcatador.com",
+    description: "Análisis de inteligencia de negocios comercial, comportamiento de ventas, rotación de marcas, segmentación de clientes y visualización en Power BI para apoyar la estrategia de mercadeo y ventas.",
+    requirements: [
+      "Licenciatura en Mercadeo, Administración o Ingeniería",
+      "Dominio avanzado de Power BI y análisis comercial",
+      "Experiencia analizando marcas, tendencias y comportamiento del consumidor"
+    ],
+    coverLetter: `Estimado Departamento de Gestión Humana de El Catador,
+
+Les escribo con gran entusiasmo para postularme a la posición de Analista BI (Business Intelligence).
+
+Como Licenciada en Mercadeo por INTEC y Senior Data Analyst en Carat Dominicana con más de 5 años de experiencia, he trabajado estrechamente en el análisis competitivo de marcas líderes, tendencias de mercado y visualización estratégica en Power BI.
+
+Será un honor aportar mi visión analítica y comercial al equipo de El Catador.
+
+Atentamente,
+Meibi Esperanza Mota Mora
+(829) 793-3033 | meibimota@gmail.com`
   },
   {
     id: "meibi-data-02",
@@ -180,7 +341,7 @@ Meibi Esperanza Mota Mora
     modality: "Híbrido / Remoto",
     salaryDOP: "RD$ 43,000 / mes",
     salaryNote: "Fijo garantizado + seguro complementario",
-    postedDate: "29 Mayo (Vigente)",
+    postedDate: "Vigente · Computrabajo DO",
     type: "Tiempo Completo",
     tags: ["Canales Digitales", "Métricas", "Power BI", "E-Commerce"],
     url: "https://do.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-analista-de-canales-digitales-call-center-en-santo-domingo-este-1FC6E02CA4DB573161373E686DCF3405",
@@ -195,51 +356,14 @@ Meibi Esperanza Mota Mora
 
 Me pongo en contacto con ustedes con motivo de la vacante de Analista de Canales Digitales.
 
-Mi formación en Mercadeo en INTEC combinada con mi experiencia como Senior Data Analyst en Carat Dominicana me ha especializado en el monitoreo y optimización de medios y canales digitales. Manejo Power BI para la construcción de tableros claros que facilitan la toma de decisiones inmediatas.
-
-Estaría encantada de aportar mi experiencia analítica y de supervisión a los objetivos de Steren.
+Mi formación en Mercadeo en INTEC combinada con mi experiencia como Senior Data Analyst en Carat Dominicana me ha especializado en el monitoreo y optimización de medios y canales digitales. Manejo Power BI y Google Analytics Certificado para la construcción de tableros claros que facilitan la toma de decisiones.
 
 Cordialmente,
 Meibi Esperanza Mota Mora
 (829) 793-3033 | meibimota@gmail.com`
   },
-  {
-    id: "meibi-data-03",
-    title: "Analista de Investigación de Mercados & Consumer Insights",
-    company: "Agencia de Medios y Consultoría Regional",
-    category: "datos",
-    location: "Remoto (República Dominicana)",
-    modality: "100% Remoto",
-    salaryDOP: "RD$ 55,000 - 70,000 / mes",
-    salaryNote: "Modalidad remota + bonificaciones por desempeño",
-    postedDate: "Esta semana",
-    type: "Tiempo Completo",
-    tags: ["Investigación de Mercados", "Insights", "Consumo de Medios", "Power BI"],
-    url: "https://www.linkedin.com/",
-    contactEmail: "careers@mediarecruiting.com",
-    description: "Diseño y análisis de panoramas de competencia para marcas de consumo masivo y telecomunicaciones. Elaboración de perfiles de consumidor (Buyer Persona), reporte de tendencias y análisis de inversión publicitaria.",
-    requirements: [
-      "Licenciatura en Mercadeo (INTEC o similar)",
-      "Experiencia previa en agencias de medios (tipo Carat, OMD, Publicis) o firmas de investigación",
-      "Dominio de herramientas de análisis y reportería ejecutiva",
-      "Capacidad de liderazgo y supervisión de equipos"
-    ],
-    coverLetter: `Estimados Directores de Reclutamiento,
 
-Les escribo con gran entusiasmo al ver que buscan un Analista de Investigación de Mercados & Consumer Insights, un área en la que cuento con más de 5 años de trayectoria directa en Carat Dominicana.
-
-Desde mayo de 2019 inicié como Analista Jr. y actualmente me desempeño como Senior Data Analyst y Supervisora de Analistas de Medios. En este rol lidero el análisis del comportamiento de inversión publicitaria, el consumo de medios y la creación de panoramas competitivos y Buyer Personas para marcas líderes en el país.
-
-Mi titulación en Mercadeo (INTEC), diplomado en Planeación Estratégica y certificación en Google Analytics me permiten entregar valor desde el primer día.
-
-Quedo a sus órdenes para una entrevista virtual.
-
-Atentamente,
-Meibi Esperanza Mota Mora
-(829) 793-3033 | meibimota@gmail.com`
-  },
-
-  // --- 3. BANCA Y ENTIDADES FINANCIERAS (LA ROMANA & RD) ---
+  // --- 3. BANCA Y ENTIDADES FINANCIERAS (LA ROMANA & RD - LINKEDIN & GOOGLE JOBS) ---
   {
     id: "meibi-banco-01",
     title: "Oficial de Servicio al Cliente y Operaciones Sucursal",
@@ -277,6 +401,132 @@ Meibi Esperanza Mota Mora
 Ex-pasante Dirección de Recuperación de Créditos APAP`
   },
   {
+    id: "meibi-gj-bpd-da",
+    title: "Analista de Datos Junior (Sector Bancario)",
+    company: "Banco Popular Dominicano (vía Google Jobs)",
+    category: "banco",
+    location: "República Dominicana",
+    modality: "Presencial / Híbrido Bancario",
+    salaryDOP: "RD$ 50,000 - 65,000 / mes",
+    salaryNote: "Sueldo bancario + incentivos anuales + seguro médico",
+    postedDate: "Esta semana · Google Jobs",
+    type: "Tiempo Completo",
+    tags: ["Banco Popular", "Google Jobs", "Analista de Datos", "Power BI"],
+    url: "https://do.trabajo.org/oferta-4112-95b158ef4fe099052469a0053e14531c",
+    contactEmail: "reclutamiento@bpd.com.do",
+    description: "Vacante captada vía Google Jobs Scraper en Banco Popular Dominicano: análisis de datos operativos y comerciales de la banca, generación de tableros de seguimiento y apoyo analítico a las unidades de negocio.",
+    requirements: [
+      "Graduada de Mercadeo, Ingeniería, Economía o carreras afines",
+      "Dominio de Power BI, Excel y análisis estadístico",
+      "Experiencia previa en sector financiero y análisis de datos"
+    ],
+    coverLetter: `Estimado Departamento de Gestión Humana del Banco Popular Dominicano,
+
+Por medio de la presente presento formalmente mi postulación a la posición de Analista de Datos en su prestigiosa institución financiera.
+
+Combino más de 5 años de experiencia en análisis de datos y supervisión en Carat Dominicana (Power BI, Google Analytics, Office 365) con experiencia previa en el sector financiero dominicano (Dirección de Recuperación de Créditos en APAP) y licenciatura en Mercadeo por INTEC.
+
+Agradezco su tiempo y consideración.
+
+Atentamente,
+Meibi Esperanza Mota Mora
+(829) 793-3033 | meibimota@gmail.com`
+  },
+  {
+    id: "meibi-li-scotiabank-bi",
+    title: "Assistant Manager, BI & Process Optimization",
+    company: "Scotiabank (vía LinkedIn Jobs Scraper)",
+    category: "banco",
+    location: "República Dominicana",
+    modality: "Híbrido / Corporativo",
+    salaryDOP: "RD$ 75,000 - 95,000 / mes",
+    salaryNote: "Paquete corporativo multinacional Scotiabank",
+    postedDate: "Hoy · LinkedIn",
+    type: "Tiempo Completo",
+    tags: ["Scotiabank", "BI", "Power BI", "LinkedIn", "Banca"],
+    url: "https://do.linkedin.com/jobs/view/assistant-manager-bi-process-optimization-at-scotiabank-4486509041",
+    contactEmail: "careers.do@scotiabank.com",
+    description: "Publicada hoy en LinkedIn: liderazgo y apoyo en Inteligencia de Negocios (BI) y optimización de procesos bancarios, desarrollando dashboards en Power BI y automatizando reportes para la toma de decisiones.",
+    requirements: [
+      "3+ años de experiencia en Business Intelligence, análisis de datos y mejora de procesos",
+      "Dominio avanzado de Power BI y herramientas de Office 365",
+      "Experiencia supervisando analistas o coordinando entregas ejecutivas"
+    ],
+    coverLetter: `Estimado Equipo de Selección de Scotiabank República Dominicana,
+
+Me complace postularme a la vacante de Assistant Manager, BI & Process Optimization publicada en LinkedIn.
+
+Desde 2022 me desempeño como Senior Data Analyst y Supervisora de Analistas en Carat Dominicana, liderando equipos analíticos, optimizando flujos de categorización de datos y creando dashboards ejecutivos en Power BI. Asimismo, cuento con experiencia previa en el sector financiero (APAP) y formación en Planeación Estratégica.
+
+Quedo a su entera disposición para una entrevista.
+
+Cordialmente,
+Meibi Esperanza Mota Mora
+(829) 793-3033 | meibimota@gmail.com`
+  },
+  {
+    id: "meibi-li-bhd-servicio",
+    title: "Asesor de Servicio al Cliente Bancario",
+    company: "Banco BHD (vía LinkedIn Jobs Scraper)",
+    category: "banco",
+    location: "República Dominicana",
+    modality: "Presencial / Sucursal",
+    salaryDOP: "RD$ 38,000 - 46,000 / mes",
+    salaryNote: "Beneficios bancarios BHD + bonificación anual",
+    postedDate: "Hace 5 días · LinkedIn",
+    type: "Tiempo Completo",
+    tags: ["Banco BHD", "Servicio al Cliente", "LinkedIn", "Banca"],
+    url: "https://do.linkedin.com/jobs/view/asesor-de-servicio-al-cliente-at-banco-bhd-4484876764",
+    contactEmail: "reclutamiento@bhd.com.do",
+    description: "Vacante activa en LinkedIn para Banco BHD: brindar asesoría integral a los clientes del banco, gestión de requerimientos, reclamos, productos financieros y atención con empatía y excelencia.",
+    requirements: [
+      "Licenciatura en Mercadeo, Administración, Psicología o afines",
+      "Vocación de servicio al cliente y habilidades de comunicación",
+      "Experiencia previa en atención al cliente o banca"
+    ],
+    coverLetter: `Estimado Equipo de Gestión de Talento del Banco BHD,
+
+Les escribo con entusiasmo para presentar mi postulación como Asesora de Servicio al Cliente.
+
+Soy Licenciada en Mercadeo (INTEC), estudiante de Psicología y cuento con experiencia previa en el sector bancario (APAP) atendiendo clientes, desarrollando planes de pago y brindando asistencia personalizada. Me identifico profundamente con los valores humanos y de excelencia del Banco BHD.
+
+Atentamente,
+Meibi Esperanza Mota Mora
+(829) 793-3033 | meibimota@gmail.com`
+  },
+  {
+    id: "meibi-li-bpd-infocentro",
+    title: "Representante de Ventas y Servicios (Infocentro)",
+    company: "Banco Popular Dominicano (vía LinkedIn Jobs Scraper)",
+    category: "banco",
+    location: "República Dominicana",
+    modality: "Presencial / Híbrido",
+    salaryDOP: "RD$ 36,000 - 45,000 / mes",
+    salaryNote: "Comisiones + beneficios colectivos Banco Popular",
+    postedDate: "Esta semana · LinkedIn",
+    type: "Tiempo Completo",
+    tags: ["Banco Popular", "Infocentro", "Servicio y Ventas", "LinkedIn"],
+    url: "https://do.linkedin.com/jobs/view/representante-de-ventas-y-servicios-call-center-infocentro-at-banco-popular-dominicano-4483225476",
+    contactEmail: "reclutamiento@bpd.com.do",
+    description: "Atención telefónica y digital a clientes del Banco Popular a través del Infocentro, ofreciendo soluciones financieras, asistencia en cuentas y colocación de productos bancarios.",
+    requirements: [
+      "Estudios universitarios en Mercadeo, Administración o Psicología",
+      "Experiencia en asistencia telefónica bancaria, cobros o servicio",
+      "Excelente dicción, empatía y orientación a resultados"
+    ],
+    coverLetter: `Estimado Equipo de Selección del Banco Popular Dominicano,
+
+Presento mi postulación para la posición de Representante de Ventas y Servicios (Infocentro).
+
+Mi experiencia previa en asistencia telefónica de cuentas por cobrar y servicio al cliente en APAP, sumada a mi título en Mercadeo por INTEC, me brindan las herramientas ideales para ofrecer una atención cálida, ágil y efectiva a los clientes del Banco Popular.
+
+Quedo a su entera disposición.
+
+Atentamente,
+Meibi Esperanza Mota Mora
+(829) 793-3033 | meibimota@gmail.com`
+  },
+  {
     id: "meibi-banco-02",
     title: "Oficial de Negocios y Atención al Cliente",
     company: "Banreservas (Banco de Reservas)",
@@ -301,11 +551,7 @@ Ex-pasante Dirección de Recuperación de Créditos APAP`
 
 Me complace presentar mi hoja de vida para las vacantes de Oficial de Negocios / Atención en las sucursales de La Romana del Banco de Reservas.
 
-Como Licenciada en Mercadeo por INTEC, cuento con sólida formación en conducta del consumidor y experiencia previa en el sector financiero mutualista en gestión de créditos y servicio al cliente. En mi trayectoria profesional he desarrollado un alto nivel de responsabilidad, liderazgo y destrezas comunicativas orientadas a generar confianza en los clientes.
-
-Radico en La Romana y me llena de entusiasmo la oportunidad de representar a la institución financiera más grande de nuestro país.
-
-Quedo a su entera disposición.
+Como Licenciada en Mercadeo por INTEC, cuento con sólida formación en conducta del consumidor y experiencia previa en el sector financiero mutualista en gestión de créditos y servicio al cliente. Radico en La Romana y me llena de entusiasmo la oportunidad de representar a Banreservas.
 
 Meibi Esperanza Mota Mora
 (829) 793-3033 | meibimota@gmail.com`
@@ -334,9 +580,7 @@ Meibi Esperanza Mota Mora
 
 Les escribo para manifestar mi interés en la vacante de Oficial de Servicios en su sucursal de La Romana.
 
-Cuento con experiencia en el sector de asociaciones de ahorros y préstamos (habiendo laborado en recuperación de créditos y servicio al cliente en APAP), sumado a mi título en Mercadeo por INTEC. Mi enfoque está centrado en ofrecer una experiencia de cliente empática y resolutiva.
-
-Será un honor conversar sobre cómo mis competencias pueden beneficiar a la institución.
+Cuento con experiencia en el sector de asociaciones de ahorros y préstamos (habiendo laborado en recuperación de créditos y servicio al cliente en APAP), sumado a mi título en Mercadeo por INTEC.
 
 Atentamente,
 Meibi Esperanza Mota Mora
@@ -351,12 +595,12 @@ Meibi Esperanza Mota Mora
     modality: "Presencial (La Romana)",
     salaryDOP: "RD$ 30,000 / mes",
     salaryNote: "Salario base + beneficios de ley",
-    postedDate: "15 Octubre (Vigente)",
+    postedDate: "Vigente · Computrabajo DO",
     type: "Tiempo Completo",
     tags: ["Caja", "Servicio", "Manejo de Efectivo", "La Romana"],
     url: "https://do.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-cajeroa-en-la-romana-3BF3B3C27005845261373E686DCF3405",
     contactEmail: "rh@incorpserv.com",
-    description: "Recepción y desembolso de fondos, cobro de cuotas, cuadre diario de caja, atención directa al público y soporte en servicio al cliente.",
+    description: "Recepción y desembolso de fondos, cobro de cuotas, cuadre diario de caja, atención directa al público y soporte en servicio al cliente en La Romana.",
     requirements: [
       "Experiencia en caja o atención al cliente",
       "Puntualidad, honestidad y alto sentido de responsabilidad",
@@ -366,16 +610,138 @@ Meibi Esperanza Mota Mora
 
 Presento mi postulación para el puesto de Cajera / Atención al Cliente en La Romana.
 
-Soy una profesional sumamente responsable, meticulosa y orientada al detalle, con experiencia en entidades financieras (APAP) y atención al cliente. Mi compromiso con la excelencia y el trato respetuoso al público garantizan un servicio eficiente y transparente en cada transacción.
-
-Resido en La Romana y cuento con disponibilidad inmediata.
+Soy una profesional sumamente responsable, meticulosa y orientada al detalle, con experiencia en entidades financieras (APAP) y atención al cliente. Resido en La Romana y cuento con disponibilidad inmediata.
 
 Atentamente,
 Meibi Esperanza Mota Mora
 (829) 793-3033 | meibimota@gmail.com`
   },
 
-  // --- 4. SERVICIO AL CLIENTE (LA ROMANA & REMOTO) ---
+  // --- 4. SERVICIO AL CLIENTE (LA ROMANA & REMOTO - LINKEDIN & COMPUTRABAJO DO) ---
+  {
+    id: "meibi-li-helloteam-hr",
+    title: "Remote HR & Customer Support Specialist",
+    company: "The Hello Team (vía LinkedIn Jobs Scraper)",
+    category: "servicio",
+    location: "Remoto (República Dominicana)",
+    modality: "100% Remoto",
+    salaryDOP: "RD$ 60,000 - 75,000 / mes",
+    salaryNote: "Pago en USD • 100% Remoto desde La Romana",
+    postedDate: "Ayer · LinkedIn",
+    type: "Tiempo Completo",
+    tags: ["HR & Customer Support", "Psicología", "LinkedIn", "Remoto"],
+    url: "https://do.linkedin.com/jobs/view/remote-hr-customer-support-specialist-at-the-hello-team-4487038543",
+    contactEmail: "careers@thehelloteam.com",
+    description: "Publicada ayer en LinkedIn para República Dominicana: combinación ideal de Gestión Humana (HR) y Soporte al Cliente en modalidad 100% remota. Seguimiento de personal, atención a consultas, coordinación y reportes.",
+    requirements: [
+      "Formación o estudios en Psicología, Recursos Humanos, Mercadeo o afines",
+      "Experiencia liderando equipos o brindando soporte al cliente",
+      "Inglés intermedio-avanzado y manejo de Office 365"
+    ],
+    coverLetter: `Dear Hiring Team at The Hello Team,
+
+I am thrilled to apply for the Remote HR & Customer Support Specialist position in the Dominican Republic.
+
+My background uniquely combines Psychology studies, a Bachelor's degree in Marketing (INTEC), and over 3 years of supervisory experience as Media Analysts Supervisor at Carat Dominicana—alongside customer support experience in financial services (APAP).
+
+I bring empathy, strong organizational skills, and a people-first mindset to remote HR and customer support.
+
+Best regards,
+Meibi Esperanza Mota Mora
+(829) 793-3033 | meibimota@gmail.com`
+  },
+  {
+    id: "meibi-li-helloteam-patient",
+    title: "Remote Patient Care Specialist (English / Spanish)",
+    company: "The Hello Team (vía LinkedIn Jobs Scraper)",
+    category: "servicio",
+    location: "Remoto (República Dominicana)",
+    modality: "100% Remoto",
+    salaryDOP: "RD$ 58,000 - 72,000 / mes",
+    salaryNote: "Pago en USD • 100% Remoto",
+    postedDate: "Ayer · LinkedIn",
+    type: "Tiempo Completo",
+    tags: ["Patient Care", "Salud y Empatía", "Bilingüe", "LinkedIn", "Remoto"],
+    url: "https://do.linkedin.com/jobs/view/remote-patient-care-specialist-english-spanish-at-the-hello-team-4486880286",
+    contactEmail: "careers@thehelloteam.com",
+    description: "Atención empática a pacientes en español e inglés, coordinación de citas, seguimiento de bienestar y soporte administrativo desde casa.",
+    requirements: [
+      "Vocación de servicio, escucha activa y empatía (ideal perfil Psicología)",
+      "Comunicación en español e inglés",
+      "Experiencia en atención al cliente o asistencia telefónica"
+    ],
+    coverLetter: `Dear Hiring Team at The Hello Team,
+
+I am writing to express my strong interest in the Remote Patient Care Specialist role.
+
+As a current Psychology student with a corporate career in customer service and data coordination, providing compassionate, attentive support to patients comes naturally to me. I am based in the Dominican Republic with a dedicated home office ready for immediate start.
+
+Warm regards,
+Meibi Esperanza Mota Mora
+(829) 793-3033 | meibimota@gmail.com`
+  },
+  {
+    id: "meibi-li-eva-retention",
+    title: "Bilingual Customer Engagement & Retention Specialist",
+    company: "Everything Virtual Assistant - EVA (vía LinkedIn)",
+    category: "servicio",
+    location: "Remoto (República Dominicana)",
+    modality: "100% Remoto",
+    salaryDOP: "RD$ 55,000 - 70,000 / mes",
+    salaryNote: "100% Teletrabajo desde República Dominicana",
+    postedDate: "Reciente · LinkedIn",
+    type: "Tiempo Completo",
+    tags: ["Customer Engagement", "Retención", "Mercadeo", "LinkedIn", "Remoto"],
+    url: "https://do.linkedin.com/jobs/view/bilingual-customer-engagement-retention-specialist-at-everything-virtual-assistant-eva-4484646909",
+    contactEmail: "recruiting@evavirtual.com",
+    description: "Especialista en fidelización, retención y atención cercana a clientes en modalidad 100% remota. Seguimiento de satisfacción, resolución proactiva de casos y fortalecimiento de relaciones.",
+    requirements: [
+      "Formación en Mercadeo, Psicología o Comunicación",
+      "Experiencia en retención de clientes, cobranzas preventivas o soporte",
+      "Manejo de herramientas digitales y CRM"
+    ],
+    coverLetter: `Dear EVA Recruiting Team,
+
+I am excited to apply for the Bilingual Customer Engagement & Retention Specialist role.
+
+With my Bachelor's in Marketing from INTEC, my experience in customer payment plans and retention at APAP, and my analytical background at Carat Dominicana, I understand how to keep clients engaged, heard, and satisfied.
+
+Thank you for your time and consideration.
+
+Sincerely,
+Meibi Esperanza Mota Mora
+(829) 793-3033 | meibimota@gmail.com`
+  },
+  {
+    id: "meibi-li-cloudbeds-hypercare",
+    title: "Hypercare Representative (LATAM Remote)",
+    company: "Cloudbeds (vía LinkedIn Jobs Scraper)",
+    category: "servicio",
+    location: "Remoto (República Dominicana)",
+    modality: "100% Remoto",
+    salaryDOP: "RD$ 65,000 - 80,000 / mes",
+    salaryNote: "Empresa global • 100% Remoto desde RD",
+    postedDate: "Vigente · LinkedIn",
+    type: "Tiempo Completo",
+    tags: ["Customer Success", "Hypercare", "LinkedIn", "Remoto"],
+    url: "https://do.linkedin.com/jobs/view/hypercare-representative-latam-at-cloudbeds-4480968144",
+    contactEmail: "jobs@cloudbeds.com",
+    description: "Acompañamiento intensivo (Hypercare) a nuevos clientes durante su etapa de adopción, resolviendo dudas, monitoreando indicadores de uso y asegurando una experiencia de servicio sobresaliente.",
+    requirements: [
+      "3 años de experiencia en atención al cliente, onboarding o análisis de cuentas",
+      "Excelentes habilidades interpersonales y resolución de problemas",
+      "Capacidad para trabajar 100% remoto en Latinoamérica"
+    ],
+    coverLetter: `Estimado Equipo de Cloudbeds LATAM,
+
+Presento con entusiasmo mi postulación a la posición de Hypercare Representative (LATAM) desde República Dominicana.
+
+Cuento con más de 5 años de experiencia acompañando cuentas clave, supervisando procesos de calidad y brindando atención personalizada tanto en Carat Dominicana como en el sector financiero (APAP). Mi formación en Mercadeo y Psicología me permite guiar a cada cliente con paciencia, claridad y empatía.
+
+Atentamente,
+Meibi Esperanza Mota Mora
+(829) 793-3033 | meibimota@gmail.com`
+  },
   {
     id: "meibi-serv-01",
     title: "Representante de Servicio al Cliente (AFP / ARS / Seguros)",
@@ -385,12 +751,12 @@ Meibi Esperanza Mota Mora
     modality: "Presencial (La Romana)",
     salaryDOP: "RD$ 29,000 / mes",
     salaryNote: "Salario base + incentivos + seguro de salud",
-    postedDate: "Esta semana",
+    postedDate: "Esta semana · Computrabajo DO",
     type: "Tiempo Completo",
     tags: ["Servicio al Cliente", "Salud", "AFP", "ARS", "La Romana"],
     url: "https://do.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-servicio-al-cliente-experiencia-en-afp-ars-seguros-en-la-romana-ADBFA5226531D28C61373E686DCF3405",
     contactEmail: "empleos.laromana@sectorprevision.com",
-    description: "Orientación al afiliado sobre coberturas de seguro médico, autorizaciones médicas, trámites de fondos de pensiones y resolución de dudas con calidez y prontitud.",
+    description: "Orientación al afiliado sobre coberturas de seguro médico, autorizaciones médicas, trámites de fondos de pensiones y resolución de dudas con calidez y prontitud en La Romana.",
     requirements: [
       "Experiencia previa en servicio al cliente en salud, seguros o banca",
       "Habilidades de comunicación asertiva, escucha activa y empatía",
@@ -401,11 +767,7 @@ Meibi Esperanza Mota Mora
 
 Les escribo para presentar mi candidatura a la posición de Representante de Servicio al Cliente en La Romana.
 
-Cuento con una amplia trayectoria en atención al público y comunicación asertiva, iniciada en el sector de servicios financieros de crédito y cobranzas (APAP). Actualmente también estudio Psicología, lo cual fortalece mi empatía y comprensión para acompañar a los usuarios en trámites de salud, seguros y bienestar social.
-
-Vivir en La Romana me permite incorporarme de inmediato con total disponibilidad y compromiso.
-
-Agradezco su atención y quedo a sus órdenes.
+Cuento con una amplia trayectoria en atención al público y comunicación asertiva, iniciada en el sector de servicios financieros (APAP). Actualmente también estudio Psicología, lo cual fortalece mi empatía para acompañar a los usuarios en La Romana.
 
 Meibi Esperanza Mota Mora
 (829) 793-3033 | meibimota@gmail.com`
@@ -419,14 +781,14 @@ Meibi Esperanza Mota Mora
     modality: "100% Remoto",
     salaryDOP: "RD$ 60,000 / mes",
     salaryNote: "Equivalente a USD $1,000 / mes garantizado",
-    postedDate: "Reciente",
+    postedDate: "Reciente · Computrabajo DO",
     type: "Tiempo Completo",
     tags: ["Bilingüe", "Customer Support", "Salud", "Remoto"],
     url: "https://do.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-care-coordinator-specialist-bilingue-en-republica-dominicana-9DE73C0E0025B8B761373E686DCF3405",
     contactEmail: "latam.recruitment@carehealth.us",
     description: "Coordinación telefónica y por chat de citas médicas, seguimiento al paciente, verificación de elegibilidad y resolución de dudas de cobertura.",
     requirements: [
-      "Nivel de inglés intermedio-avanzado (B2/C1)",
+      "Nivel de inglés intermedio-avanzado",
       "Experiencia en servicio al cliente o coordinación",
       "Empatía, organización y capacidad para trabajar desde casa"
     ],
@@ -435,10 +797,6 @@ Meibi Esperanza Mota Mora
 I am writing to express my strong interest in the Care Coordinator Specialist position.
 
 With a background in Marketing (INTEC), current studies in Psychology, and years of corporate experience managing customer relationships and data workflows, I possess the active listening skills and empathetic approach required to support patients with care and efficiency.
-
-My English proficiency (Intermedio I / Dominico Americano) and familiarity with digital collaboration tools make me ready to excel in this remote role.
-
-Thank you for your time and consideration.
 
 Best regards,
 Meibi Esperanza Mota Mora
@@ -453,7 +811,7 @@ Meibi Esperanza Mota Mora
     modality: "Híbrido / Presencial",
     salaryDOP: "RD$ 28,000 / mes",
     salaryNote: "Fijo + comisiones por atención a cuentas clave",
-    postedDate: "21 Octubre (Vigente)",
+    postedDate: "Vigente · Computrabajo DO",
     type: "Tiempo Completo",
     tags: ["Atención al Cliente", "Ventas Directas", "Seguimiento"],
     url: "https://do.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-analista-de-atencion-al-cliente-y-ventas-directas-en-santo-domingo-de-guzman-6DE784A9568306BC61373E686DCF3405",
@@ -468,9 +826,7 @@ Meibi Esperanza Mota Mora
 
 Me pongo en contacto para postularme a la vacante de Analista de Atención al Cliente y Relaciones Comerciales.
 
-Mi formación en Mercadeo (INTEC) y mi experiencia profesional en seguimiento de marcas y atención a usuarios me permiten gestionar cuentas comerciales con proactividad, resolviendo cada necesidad con rapidez y cordialidad.
-
-Quedo a su disposición para conversar sobre cómo sumar al equipo.
+Mi formación en Mercadeo (INTEC) y mi experiencia profesional en seguimiento de marcas y atención a usuarios me permiten gestionar cuentas comerciales con proactividad y cordialidad.
 
 Cordialmente,
 Meibi Esperanza Mota Mora
@@ -485,7 +841,7 @@ Meibi Esperanza Mota Mora
     modality: "100% Remoto",
     salaryDOP: "RD$ 25,000 - 32,000 / mes",
     salaryNote: "Fijo + bono de conectividad + incentivos de calidad",
-    postedDate: "26 Octubre (Vigente)",
+    postedDate: "Vigente · Computrabajo DO",
     type: "Tiempo Completo",
     tags: ["Call Center", "Remoto", "Atención al Cliente", "Servicio"],
     url: "https://do.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-asesor-comercial-telefonico-remoto-ventas-consultivas-ventas-a-empresas-en-santo-domingo-de-guzman-1A0F66F0F895E2AA61373E686DCF3405",
@@ -500,9 +856,7 @@ Meibi Esperanza Mota Mora
 
 Me dirijo a ustedes para presentar mi postulación como Asesora de Atención Telefónica Remota.
 
-Cuento con experiencia en asistencia telefónica y negociación con clientes adquirida en el área de crédito y cobranzas en APAP, además de una sólida carrera en análisis y comunicación corporativa. Me caracterizo por mi tono afable, paciencia, empatía y habilidad para resolver problemas en el primer contacto.
-
-Cuento con infraestructura óptima para teletrabajo y disponibilidad inmediata.
+Cuento con experiencia en asistencia telefónica y negociación con clientes adquirida en el área de crédito y cobranzas en APAP, además de una sólida carrera en análisis y comunicación corporativa.
 
 Atentamente,
 Meibi Esperanza Mota Mora
