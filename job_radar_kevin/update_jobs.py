@@ -24,7 +24,9 @@ KEVIN_PROFILE = {
         "presencialAllowedOnlyIn": "La Romana, RD",
         "otherLocationsModality": "100% Remoto",
         "maxExperienceYears": 4,
-        "excludedRoles": ["Analista", "DevOps", "QA / Tester", "Soporte Técnico", "PLC Industrial"]
+        "excludedRoles": ["Analista", "DevOps", "QA / Tester", "Soporte Técnico", "PLC Industrial"],
+        "excludedPortals": ["mx.computrabajo.com", "Computrabajo MX"],
+        "excludedCountries": ["México", "MX"]
     },
     "stack": [
         ".NET Core", "C#", "ASP.NET Core", "Flutter", "Dart", "Angular",
