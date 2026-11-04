@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Job Radar · Kevin Rosario — Postulación Rápida (RD$)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#fff7ed',
+              400: '#fb923c',
+              500: '#f97316',
+              600: '#ea580c',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: radial-gradient(circle at top right, #1e293b 0%, #0f172a 45%, #020617 100%);
+      min-height: 100vh;
+    }
+    .glass {
+      background: rgba(15, 23, 42, 0.78);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(148, 163, 184, 0.14);
+    }
+    .job-card {
+      transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+    }
+    .job-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(249, 115, 22, 0.45);
+      box-shadow: 0 12px 30px -10px rgba(249, 115, 22, 0.18);
+    }
+  </style>
+</head>
+<body class="text-slate-100 antialiased selection:bg-orange-500 selection:text-white">
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed bottom-5 right-5 z-50 hidden max-w-md glass border border-emerald-500/50 rounded-2xl p-4 shadow-2xl text-sm text-white transition">
+    <div class="flex items-start gap-3">
+      <span class="text-2xl" id="toastIcon">📋</span>
+      <div>
+        <div class="font-bold text-emerald-400" id="toastTitle">Copiado al portapapeles</div>
+        <div id="toastMsg" class="text-xs text-slate-200 mt-0.5">Carta de presentación lista para pegar.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Top Accent Bar -->
+  <div class="h-1.5 w-full bg-gradient-to-r from-orange-600 via-amber-500 to-emerald-500"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+    <!-- Header / Profile Banner -->
+    <header class="glass rounded-2xl p-6 mb-6 shadow-2xl">
+      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+        <div>
+          <div class="flex flex-wrap items-center gap-2 mb-2.5">
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-orange-500/20 text-orange-400 border border-orange-500/30">
+              Radar de Empleo Activo
+            </span>
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
+              📍 Presencial: Solo La Romana, RD
+            </span>
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-sky-500/15 text-sky-300 border border-sky-500/30">
+              🌐 Resto: 100% Remoto
+            </span>
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-500/15 text-amber-300 border border-amber-500/30">
+              ⏱️ Experiencia: Máx. 4 años
+            </span>
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-indigo-500/15 text-indigo-300 border border-indigo-500/30">
+              💵 Moneda: Pesos Dominicanos (RD$)
+            </span>
+          </div>
+          <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
+            KEVIN ROSARIO <span class="text-orange-400 font-normal text-lg sm:text-xl">· Radar & Postulación Directa</span>
+          </h1>
+          <p class="text-slate-400 text-sm mt-1">
+            Ingeniero en Sistemas y Computación · 4 años exp. (.NET Core, C#, Flutter/Dart, Angular, SQL Server, Oracle PL/SQL, Python)
+          </p>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-2.5">
+          <button onclick="copyGeneralCoverLetter()" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-orange-600 hover:bg-orange-500 text-white text-xs sm:text-sm font-semibold shadow-lg shadow-orange-600/25 transition">
+            <span>📋</span> Copiar Carta de Presentación
+          </button>
+          <button onclick="openTopMatches()" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs sm:text-sm font-semibold shadow-lg shadow-emerald-600/25 transition">
+            <span>🚀</span> Abrir Top 3 Mejores Ofertas
+          </button>
+          <button onclick="exportCSV()" class="inline-flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-xs sm:text-sm font-medium transition">
+            <span>📥</span> CSV (RD$)
+          </button>
+          <a href="CV_Kevin_Rosario.pdf" target="_blank" class="inline-flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-xs sm:text-sm font-medium transition">
+            <span>📄</span> Ver CV (PDF)
+          </a>
+        </div>
+      </div>
+
+      <!-- Interactive CV Stack Bar -->
+      <div class="mt-5 pt-4 border-t border-slate-800/80">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">
+            Tecnologías de tu CV (Haz clic para filtrar):
+          </span>
+          <button onclick="clearTechFilter()" id="clearTechBtn" class="hidden text-xs text-orange-400 hover:underline">
+            Limpiar filtro de tecnología ✕
+          </button>
+        </div>
+        <div id="cvStackContainer" class="flex flex-wrap gap-1.5"></div>
+      </div>
+    </header>
+
+    <!-- KPI Cards -->
+    <section class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+      <div class="glass rounded-xl p-4">
+        <div class="text-xs text-slate-400 uppercase font-medium">Vacantes Disponibles</div>
+        <div id="kpiTotal" class="text-2xl sm:text-3xl font-extrabold text-white mt-1">0</div>
+        <div class="text-xs text-emerald-400 mt-1">≤ 4 años de experiencia</div>
+      </div>
+      <div class="glass rounded-xl p-4">
+        <div class="text-xs text-slate-400 uppercase font-medium">Match Promedio CV</div>
+        <div id="kpiMatch" class="text-2xl sm:text-3xl font-extrabold text-orange-400 mt-1">0%</div>
+        <div class="text-xs text-slate-400 mt-1">Alineado con tu stack</div>
+      </div>
+      <div class="glass rounded-xl p-4">
+        <div class="text-xs text-slate-400 uppercase font-medium">Sueldo Promedio (RD$ / Mes)</div>
+        <div id="kpiAvgSalaryDOP" class="text-xl sm:text-2xl font-extrabold text-emerald-400 mt-1">RD$ 0</div>
+        <div class="text-xs text-slate-400 mt-1">Tasa ref: 1 EUR ≈ RD$ 65.50</div>
+      </div>
+      <div class="glass rounded-xl p-4">
+        <div class="text-xs text-slate-400 uppercase font-medium">Favoritas / Postuladas</div>
+        <div id="kpiTracked" class="text-2xl sm:text-3xl font-extrabold text-amber-400 mt-1">0</div>
+        <div class="text-xs text-slate-400 mt-1">Guardadas en tu navegador</div>
+      </div>
+    </section>
+
+    <!-- Controls & Filters -->
+    <section class="glass rounded-2xl p-4 sm:p-5 mb-6">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
+        <!-- Search Input -->
+        <div class="md:col-span-3 relative">
+          <input
+            id="searchInput"
+            type="text"
+            oninput="renderJobs()"
+            placeholder="Buscar .NET, C#, Oracle, Python..."
+            class="w-full pl-9 pr-3 py-2.5 rounded-xl bg-slate-900/90 border border-slate-700/80 text-xs sm:text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:border-orange-500"
+          />
+          <span class="absolute left-3 top-2.5 text-slate-500">🔍</span>
+        </div>
+
+        <!-- Country Tabs -->
+        <div class="md:col-span-5 flex flex-wrap gap-1.5" id="countryTabs">
+          <button onclick="setCountry('ALL')" data-country="ALL" class="country-btn px-3 py-2 rounded-xl text-xs font-semibold bg-orange-600 text-white transition">
+            🌎 Todos
+          </button>
+          <button onclick="setCountry('DO')" data-country="DO" class="country-btn px-3 py-2 rounded-xl text-xs font-semibold bg-slate-800/90 text-slate-300 hover:bg-slate-700 transition">
+            🇩🇴 RD / La Romana
+          </button>
+          <button onclick="setCountry('ES')" data-country="ES" class="country-btn px-3 py-2 rounded-xl text-xs font-semibold bg-slate-800/90 text-slate-300 hover:bg-slate-700 transition">
+            🇪🇸 España
+          </button>
+          <button onclick="setCountry('MX')" data-country="MX" class="country-btn px-3 py-2 rounded-xl text-xs font-semibold bg-slate-800/90 text-slate-300 hover:bg-slate-700 transition">
+            🇲🇽 México
+          </button>
+          <button onclick="setCountry('AR')" data-country="AR" class="country-btn px-3 py-2 rounded-xl text-xs font-semibold bg-slate-800/90 text-slate-300 hover:bg-slate-700 transition">
+            🇦🇷 Argentina
+          </button>
+        </div>
+
+        <!-- Experience, Status & Sort -->
+        <div class="md:col-span-4 grid grid-cols-3 gap-2">
+          <select id="expFilter" onchange="renderJobs()" class="px-2.5 py-2.5 rounded-xl bg-slate-900/90 border border-slate-700/80 text-xs text-slate-200 focus:outline-none focus:border-orange-500">
+            <option value="4">⏱️ Máx. 4 años</option>
+            <option value="3">⏱️ Máx. 3 años</option>
+            <option value="2">⏱️ Máx. 2 años</option>
+          </select>
+          <select id="statusFilter" onchange="renderJobs()" class="px-2.5 py-2.5 rounded-xl bg-slate-900/90 border border-slate-700/80 text-xs text-slate-200 focus:outline-none focus:border-orange-500">
+            <option value="ACTIVE">Activas</option>
+            <option value="ALL">Todas</option>
+            <option value="FAV">⭐ Favoritas</option>
+            <option value="APPLIED">✅ Postuladas</option>
+          </select>
+          <select id="sortSelect" onchange="renderJobs()" class="px-2.5 py-2.5 rounded-xl bg-slate-900/90 border border-slate-700/80 text-xs text-slate-200 focus:outline-none focus:border-orange-500">
+            <option value="MATCH">Orden: % Match</option>
+            <option value="SALARY">Orden: Mayor RD$</option>
+            <option value="EXP">Orden: Menor Exp.</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- Jobs Grid -->
+    <main id="jobsContainer" class="grid grid-cols-1 md:grid-cols-2 gap-5"></main>
+
+    <!-- Empty State -->
+    <div id="emptyState" class="hidden glass rounded-2xl p-12 text-center my-6">
+      <div class="text-4xl mb-3">🔎</div>
+      <h3 class="text-lg font-bold text-white">No hay vacantes que coincidan con este filtro</h3>
+      <p class="text-slate-400 text-sm mt-1">Prueba limpiando el filtro de tecnología o ampliando el rango.</p>
+      <button onclick="resetAllFilters()" class="mt-4 px-4 py-2 rounded-xl bg-orange-600 hover:bg-orange-500 text-white text-sm font-semibold">
+        Restablecer filtros
+      </button>
+    </div>
+  </div>
+
+  <script src="jobs_data.js"></script>
+  <script>
+    let appData = window.JOBS_DATA || { lastUpdated: '—', profile: { stack: [] }, jobs: [] };
+    let selectedCountry = 'ALL';
+    let selectedTech = null;
+    const STORAGE_KEY = 'kevin_job_radar_status_v1';
+
+    const GENERAL_COVER_LETTER = 
+`Hola, estimado equipo de selección:
+
+Mi nombre es Kevin Rosario, Ingeniero en Sistemas y Computación con más de 4 años de experiencia construyendo software full-stack de punta a punta (web, móvil y escritorio) en producción.
+
+Cuento con sólido dominio técnico en:
+• Backend: C#, .NET Core / ASP.NET Core, Python, Java SE, APIs REST, JWT, SignalR.
+• Frontend & Móvil: Angular, Flutter, Dart, TypeScript.
+• Bases de datos: SQL Server, Oracle (Forms / PL-SQL), SQLite, Firebird.
+• Buenas prácticas: Arquitecturas offline-first, sincronización en tiempo real, CI/CD, Git.
+
+Actualmente curso la Maestría en Ingeniería de Software y Sistemas Informáticos en UNIR (México) y resido en La Romana, República Dominicana, con total disponibilidad y equipamiento para modalidad 100% remota.
+
+Me entusiasma mucho su vacante y considero que mi perfil técnico y enfoque orientado a resolver problemas de negocio aportarán valor inmediato a su equipo. Adjunto mi CV para su consideración.
+
+Quedo a su entera disposición para conversar en una entrevista.
+
+Atentamente,
+Kevin Rosario
+Ingeniero en Sistemas y Computación
+Tel: 829-985-4341 | Email: kevinjooo59@gmail.com
+La Romana, República Dominicana`;
+
+    function showToast(title, msg, icon = '📋') {
+      const t = document.getElementById('toast');
+      document.getElementById('toastTitle').textContent = title;
+      document.getElementById('toastMsg').textContent = msg;
+      document.getElementById('toastIcon').textContent = icon;
+      t.classList.remove('hidden');
+      setTimeout(() => t.classList.add('hidden'), 5000);
+    }
+
+    function copyGeneralCoverLetter() {
+      navigator.clipboard.writeText(GENERAL_COVER_LETTER);
+      showToast('¡Carta copiada al portapapeles!', 'Pégala directamente en el portal al enviar tu postulación.');
+    }
+
+    function copyCustomCoverLetter(jobTitle, company) {
+      const customLetter = GENERAL_COVER_LETTER.replace(
+        'su vacante', 
+        `la posición de ${jobTitle} en ${company}`
+      );
+      navigator.clipboard.writeText(customLetter);
+      showToast(`¡Carta adaptada para ${company}!`, 'Lista para pegar con el nombre del puesto y la empresa.');
+    }
+
+    function openTopMatches() {
+      const list = getFilteredJobs().slice(0, 3);
+      if (list.length === 0) return;
+      copyGeneralCoverLetter();
+      list.forEach(j => {
+        window.open(j.url, '_blank');
+        setJobStatus(j.id, 'APPLIED');
+      });
+      showToast('🚀 3 Ofertas abiertas', 'Tu carta de presentación ya está copiada. Solo pulsa Inscribirte/Postularte.');
+    }
+
+    function getSavedStatuses() {
+      try {
+        return JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+      } catch (e) {
+        return {};
+      }
+    }
+
+    function setJobStatus(jobId, status) {
+      const map = getSavedStatuses();
+      if (map[jobId] === status) {
+        delete map[jobId];
+      } else {
+        map[jobId] = status;
+      }
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(map));
+      renderJobs();
+    }
+
+    function setCountry(code) {
+      selectedCountry = code;
+      document.querySelectorAll('.country-btn').forEach(btn => {
+        if (btn.dataset.country === code) {
+          btn.className = 'country-btn px-3 py-2 rounded-xl text-xs font-semibold bg-orange-600 text-white transition';
+        } else {
+          btn.className = 'country-btn px-3 py-2 rounded-xl text-xs font-semibold bg-slate-800/90 text-slate-300 hover:bg-slate-700 transition';
+        }
+      });
+      renderJobs();
+    }
+
+    function toggleTech(tech) {
+      selectedTech = (selectedTech === tech) ? null : tech;
+      document.getElementById('clearTechBtn').classList.toggle('hidden', !selectedTech);
+      renderStackBar();
+      renderJobs();
+    }
+
+    function clearTechFilter() {
+      selectedTech = null;
+      document.getElementById('clearTechBtn').classList.add('hidden');
+      renderStackBar();
+      renderJobs();
+    }
+
+    function resetAllFilters() {
+      selectedCountry = 'ALL';
+      selectedTech = null;
+      document.getElementById('searchInput').value = '';
+      document.getElementById('expFilter').value = '4';
+      document.getElementById('statusFilter').value = 'ACTIVE';
+      document.getElementById('clearTechBtn').classList.add('hidden');
+      setCountry('ALL');
+      renderStackBar();
+      renderJobs();
+    }
+
+    function renderStackBar() {
+      const container = document.getElementById('cvStackContainer');
+      const stack = (appData.profile && appData.profile.stack) || [];
+      container.innerHTML = stack.map(tech => {
+        const isSelected = selectedTech && selectedTech.toLowerCase() === tech.toLowerCase();
+        const cls = isSelected
+          ? 'bg-orange-500 text-white border-orange-400 shadow-md shadow-orange-500/20'
+          : 'bg-slate-800/80 text-slate-300 border-slate-700/80 hover:border-orange-500/50 hover:text-white';
+        return `<button onclick="toggleTech('${tech.replace(/'/g, "\\'")}')" class="px-2.5 py-1 rounded-lg text-xs font-medium border transition ${cls}">
+          ${tech}
+        </button>`;
+      }).join('');
+    }
+
+    function getFilteredJobs() {
+      const q = (document.getElementById('searchInput').value || '').trim().toLowerCase();
+      const maxExp = parseInt(document.getElementById('expFilter').value || '4', 10);
+      const statusFilter = document.getElementById('statusFilter').value;
+      const sortBy = document.getElementById('sortSelect').value;
+      const statuses = getSavedStatuses();
+
+      let list = (appData.jobs || []).filter(job => {
+        const expYears = job.experienceYears || 0;
+        if (expYears > 4 || expYears > maxExp) return false;
+
+        const st = statuses[job.id] || 'PENDING';
+        if (statusFilter === 'ACTIVE' && st === 'DISMISSED') return false;
+        if (statusFilter === 'FAV' && st !== 'FAV') return false;
+        if (statusFilter === 'APPLIED' && st !== 'APPLIED') return false;
+
+        if (selectedCountry !== 'ALL' && job.countryCode !== selectedCountry) return false;
+
+        if (selectedTech) {
+          const hasTech = (job.stack || []).some(t => t.toLowerCase().includes(selectedTech.toLowerCase())) ||
+                          (job.title || '').toLowerCase().includes(selectedTech.toLowerCase()) ||
+                          (job.description || '').toLowerCase().includes(selectedTech.toLowerCase());
+          if (!hasTech) return false;
+        }
+
+        if (q) {
+          const hay = [
+            job.title, job.company, job.country, job.portal,
+            job.location, job.salaryDOP, job.salaryOriginal, job.description, ...(job.stack || [])
+          ].join(' ').toLowerCase();
+          if (!hay.includes(q)) return false;
+        }
+        return true;
+      });
+
+      list.sort((a, b) => {
+        if (sortBy === 'SALARY') return (b.salaryNumericDOPMonthly || 0) - (a.salaryNumericDOPMonthly || 0);
+        if (sortBy === 'EXP') return (a.experienceYears || 0) - (b.experienceYears || 0);
+        return (b.matchScore || 0) - (a.matchScore || 0);
+      });
+
+      return list;
+    }
+
+    function renderJobs() {
+      const list = getFilteredJobs();
+      const statuses = getSavedStatuses();
+      const container = document.getElementById('jobsContainer');
+      const emptyState = document.getElementById('emptyState');
+
+      document.getElementById('kpiTotal').textContent = list.length;
+      const avgMatch = list.length
+        ? Math.round(list.reduce((acc, j) => acc + (j.matchScore || 80), 0) / list.length)
+        : 0;
+      document.getElementById('kpiMatch').textContent = avgMatch + '%';
+
+      const jobsWithSalary = list.filter(j => (j.salaryNumericDOPMonthly || 0) > 0);
+      if (jobsWithSalary.length > 0) {
+        const avgDOP = Math.round(jobsWithSalary.reduce((acc, j) => acc + j.salaryNumericDOPMonthly, 0) / jobsWithSalary.length);
+        document.getElementById('kpiAvgSalaryDOP').textContent = 'RD$ ' + avgDOP.toLocaleString('en-US');
+      } else {
+        document.getElementById('kpiAvgSalaryDOP').textContent = 'A convenir';
+      }
+
+      const trackedCount = Object.values(statuses).filter(v => v === 'FAV' || v === 'APPLIED').length;
+      document.getElementById('kpiTracked').textContent = trackedCount;
+
+      if (list.length === 0) {
+        container.innerHTML = '';
+        emptyState.classList.remove('hidden');
+        return;
+      }
+      emptyState.classList.add('hidden');
+
+      container.innerHTML = list.map(job => {
+        const st = statuses[job.id] || 'PENDING';
+        const matchColor = job.matchScore >= 90
+          ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40'
+          : 'bg-amber-500/20 text-amber-300 border-amber-500/40';
+
+        const statusBadge = st === 'APPLIED'
+          ? '<span class="px-2 py-0.5 rounded-md text-[11px] font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">✅ Postulado</span>'
+          : st === 'FAV'
+          ? '<span class="px-2 py-0.5 rounded-md text-[11px] font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/30">⭐ Favorito</span>'
+          : st === 'DISMISSED'
+          ? '<span class="px-2 py-0.5 rounded-md text-[11px] font-semibold bg-rose-500/20 text-rose-300 border border-rose-500/30">❌ Descartado</span>'
+          : '';
+
+        const escapedTitle = (job.title || '').replace(/'/g, "\\'");
+        const escapedCompany = (job.company || '').replace(/'/g, "\\'");
+
+        return `
+        <article class="glass job-card rounded-2xl p-5 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <div class="flex items-center gap-2 flex-wrap">
+                <span class="text-lg">${job.flag || '🌐'}</span>
+                <span class="text-xs font-semibold uppercase tracking-wider px-2.5 py-0.5 rounded-md bg-slate-800 text-slate-300 border border-slate-700">
+                  ${job.portal}
+                </span>
+                <span class="text-xs font-medium px-2.5 py-0.5 rounded-md bg-sky-500/15 text-sky-300 border border-sky-500/30">
+                  ${job.modality}
+                </span>
+                <span class="text-xs font-semibold px-2.5 py-0.5 rounded-md bg-amber-500/15 text-amber-300 border border-amber-500/30">
+                  ⏱️ Exp: ${job.experienceLabel || (job.experienceYears + ' años')}
+                </span>
+                ${statusBadge}
+              </div>
+              <span class="px-2.5 py-1 rounded-lg text-xs font-bold border ${matchColor}">
+                ⚡ ${job.matchScore}% Match CV
+              </span>
+            </div>
+
+            <h2 class="text-lg font-bold text-white leading-snug mb-1">
+              <a href="${job.url}" target="_blank" rel="noopener noreferrer" class="hover:text-orange-400 transition">
+                ${job.title}
+              </a>
+            </h2>
+            <div class="text-sm text-slate-300 font-medium flex flex-wrap items-center gap-2 mb-3">
+              <span>🏢 ${job.company}</span>
+              <span class="text-slate-600">•</span>
+              <span class="text-slate-400 text-xs">📍 ${job.location}</span>
+              <span class="text-slate-600">•</span>
+              <span class="text-slate-400 text-xs">🕒 ${job.postedLabel || job.postedAt}</span>
+            </div>
+
+            <div class="mb-3 px-3.5 py-2.5 rounded-xl bg-slate-900/85 border border-slate-800 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+              <div>
+                <span class="text-xs text-slate-400 font-medium block">💵 Sueldo en Pesos Dominicanos:</span>
+                ${job.salaryOriginal ? `<span class="text-[11px] text-slate-500">Moneda original: ${job.salaryOriginal}</span>` : ''}
+              </div>
+              <div class="text-right">
+                <span class="text-sm sm:text-base font-extrabold ${(job.salaryNumericDOPMonthly || 0) > 0 ? 'text-emerald-400' : 'text-slate-300'} block">
+                  ${job.salaryDOP || 'A convenir en RD$'}
+                </span>
+                ${job.salaryDOPYearly ? `<span class="text-[11px] text-emerald-500/80 font-medium block">${job.salaryDOPYearly}</span>` : ''}
+              </div>
+            </div>
+
+            ${job.highlight ? `
+              <div class="mb-3 px-3 py-2 rounded-xl bg-orange-500/10 border border-orange-500/20 text-xs text-orange-200">
+                🎯 <strong>Por qué encaja contigo:</strong> ${job.highlight}
+              </div>
+            ` : ''}
+
+            <p class="text-xs text-slate-400 leading-relaxed mb-4">
+              ${job.description || ''}
+            </p>
+
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              ${(job.stack || []).map(t => `
+                <button onclick="toggleTech('${t.replace(/'/g, "\\'")}')" class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-800 hover:bg-orange-500/20 text-slate-200 hover:text-orange-300 border border-slate-700 transition">
+                  ${t}
+                </button>
+              `).join('')}
+            </div>
+          </div>
+
+          <div class="pt-3 border-t border-slate-800/80 flex flex-wrap items-center justify-between gap-2">
+            <div class="flex items-center gap-1.5">
+              <button onclick="setJobStatus('${job.id}', 'FAV')" title="Marcar como Favorito" class="px-2.5 py-1.5 rounded-lg text-xs font-medium border transition ${st === 'FAV' ? 'bg-amber-500/25 border-amber-400 text-amber-200' : 'bg-slate-800/70 border-slate-700 text-slate-300 hover:bg-slate-700'}">
+                ⭐
+              </button>
+              <button onclick="setJobStatus('${job.id}', 'APPLIED')" title="Marcar como Postulado" class="px-2.5 py-1.5 rounded-lg text-xs font-medium border transition ${st === 'APPLIED' ? 'bg-emerald-500/25 border-emerald-400 text-emerald-200' : 'bg-slate-800/70 border-slate-700 text-slate-300 hover:bg-slate-700'}">
+                ✅
+              </button>
+              <button onclick="setJobStatus('${job.id}', 'DISMISSED')" title="Descartar oferta" class="px-2.5 py-1.5 rounded-lg text-xs font-medium border transition ${st === 'DISMISSED' ? 'bg-rose-500/25 border-rose-400 text-rose-200' : 'bg-slate-800/70 border-slate-700 text-slate-400 hover:bg-slate-700'}">
+                ✕
+              </button>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <button onclick="copyCustomCoverLetter('${escapedTitle}', '${escapedCompany}')" class="inline-flex items-center gap-1 px-3 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-xs font-medium transition" title="Copiar carta personalizada para esta empresa">
+                📋 Copiar Carta
+              </button>
+              <a href="${job.url}" target="_blank" rel="noopener noreferrer" onclick="setJobStatus('${job.id}', 'APPLIED')" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-orange-600 hover:bg-orange-500 text-white text-xs font-bold shadow-md shadow-orange-600/20 transition">
+                Postularme Aquí ↗
+              </a>
+            </div>
+          </div>
+        </article>
+        `;
+      }).join('');
+    }
+
+    function exportCSV() {
+      const list = getFilteredJobs();
+      const headers = ['Puesto', 'Empresa', 'Pais', 'Portal', 'Modalidad', 'Experiencia_Requerida', 'Sueldo_Mensual_DOP', 'Sueldo_Anual_DOP', 'Moneda_Original', 'Stack', 'Match_CV', 'Enlace'];
+      const rows = list.map(j => [
+        `"${(j.title || '').replace(/"/g, '""')}"`,
+        `"${(j.company || '').replace(/"/g, '""')}"`,
+        `"${(j.country || '').replace(/"/g, '""')}"`,
+        `"${(j.portal || '').replace(/"/g, '""')}"`,
+        `"${(j.modality || '').replace(/"/g, '""')}"`,
+        `"${(j.experienceLabel || '').replace(/"/g, '""')}"`,
+        `"${(j.salaryDOP || '').replace(/"/g, '""')}"`,
+        `"${(j.salaryDOPYearly || '').replace(/"/g, '""')}"`,
+        `"${(j.salaryOriginal || '').replace(/"/g, '""')}"`,
+        `"${(j.stack || []).join(', ').replace(/"/g, '""')}"`,
+        `"${j.matchScore || ''}%"`,
+        `"${j.url || ''}"`
+      ].join(','));
+      const csvContent = '\uFEFF' + [headers.join(','), ...rows].join('\n');
+      const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `vacantes_kevin_rosario_DOP_${new Date().toISOString().slice(0,10)}.csv`;
+      a.click();
+    }
+
+    function initUI() {
+      renderStackBar();
+      renderJobs();
+    }
+
+    initUI();
+  </script>
+</body>
+</html>
