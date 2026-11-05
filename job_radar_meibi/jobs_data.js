@@ -1224,22 +1224,39 @@ Meibi Esperanza Mota Mora
 // Profile data for Meibi
 const MEIBI_PROFILE = {
   name: "Meibi Esperanza Mota Mora",
-  title: "Mercadóloga • Senior Data Analyst • Cursando 2do Cuatrimestre en Psicología Escolar",
+  title: "Mercadóloga • Senior Data Analyst (Carat) • Psicología Escolar (O&M)",
   phone: "(829) 793-3033",
   email: "meibimota@gmail.com",
   location: "La Romana, República Dominicana",
+  cvVersions: {
+    marketing: {
+      title: "CV Analítica · Investigación · Marketing",
+      pdf: "cv/CV_Meibi_Mota_Analitica_Marketing.pdf",
+      docx: "cv/CV_Meibi_Mota_Analitica_Marketing.docx",
+      targetRoles: "Data Analyst, Research, Marketing Intelligence, Audiencias, Tendencias y Buyer Persona"
+    },
+    admin: {
+      title: "CV Administrativo · Financiero · Operaciones",
+      pdf: "cv/CV_Meibi_Mota_Administrativo_Financiero.pdf",
+      docx: "cv/CV_Meibi_Mota_Administrativo_Financiero.docx",
+      targetRoles: "Operaciones, Banca, Cuentas por Cobrar, Cobranzas (APAP), Auditoría y Servicio al Cliente"
+    }
+  },
   education: [
-    { degree: "Lic. en Mercadeo", school: "Universidad INTEC", period: "2016 - 2020" },
-    { degree: "Lic. en Psicología Escolar (Cursando 2do Cuatrimestre)", school: "Formación Universitaria", period: "En curso (2do Cuatrimestre)" }
+    { degree: "Licenciatura en Mercadeo", school: "Instituto Tecnológico de Santo Domingo (INTEC)", period: "Desde 2016 · En proceso de titulación" },
+    { degree: "Licenciatura en Psicología Escolar", school: "Universidad Dominicana O&M", period: "En curso (2do Cuatrimestre)" },
+    { degree: "Diplomado en Planeación Estratégica", school: "Escuela NOGMA", period: "2022" },
+    { degree: "Certificación Google Analytics", school: "Google", period: "2023" }
   ],
   experience: [
-    { role: "Senior Data Analyst / Supervisora de Analistas de Medios", company: "Carat Dominicana", period: "Agosto 2022 - Actualidad" },
-    { role: "Analista de Investigación de Mercados Jr.", company: "Carat Dominicana", period: "Mayo 2019 - Agosto 2022" },
-    { role: "Pasantía Dirección de Recuperación de Créditos", company: "APAP (Asoc. Popular de Ahorros y Préstamos)", period: "Sep 2015 - Nov 2015" }
+    { role: "Senior Data Analyst / Supervisora de Analistas de Medios", company: "Carat Dominicana", period: "Agosto 2022 – Actualidad (Más de 6 años en Carat)" },
+    { role: "Analista Jr. de Investigación de Mercados", company: "Carat Dominicana", period: "Mayo 2019 – Agosto 2022" },
+    { role: "Pasante – Dirección de Recuperación de Créditos", company: "Asociación Popular de Ahorros y Préstamos (APAP)", period: "Septiembre 2015 – Noviembre 2015" }
   ],
   skills: [
-    "Power BI", "Google Analytics", "Microsoft Office 365", "Investigación de Mercados",
-    "Psicología Escolar & Orientación (En Formación)", "Servicio al Cliente", "Gestión Bancaria & Cobranzas",
-    "Análisis de Tendencias & Buyer Persona", "Liderazgo & Trabajo en Equipo"
+    "Power BI", "Google Analytics", "Microsoft Office 365 (PowerPoint Avanzado, Excel Intermedio)", "Asana", "Miro",
+    "Investigación de Mercados & Inversión Publicitaria", "Panoramas Competitivos & Buyer Persona",
+    "Recuperación de Créditos & Cuentas por Cobrar (APAP)", "Atención al Cliente & Comunicación Asertiva",
+    "Psicología Escolar & Orientación (O&M, 2do Cuatrimestre)", "Supervisión de Equipos & Calidad de Datos"
   ]
 };

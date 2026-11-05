@@ -136,14 +136,18 @@
       </div>
 
       <!-- Quick Action Buttons -->
-      <div class="flex flex-row sm:flex-col gap-2.5 w-full sm:w-auto">
-        <a href="CV_Meibi_Mota.pdf" target="_blank" class="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white font-medium text-xs sm:text-sm shadow-md shadow-rose-200 transition">
+      <div class="flex flex-wrap sm:flex-nowrap gap-2 w-full sm:w-auto items-center">
+        <a href="cv/CV_Meibi_Mota_Analitica_Marketing.pdf" target="_blank" class="flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white font-medium text-xs shadow-md shadow-rose-200 transition" title="Ver CV de Analítica, Investigación y Marketing en PDF">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-          Ver CV en PDF
+          <span>CV Marketing (PDF)</span>
         </a>
-        <button onclick="openModal('profile-info')" class="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-700 font-medium text-xs sm:text-sm border border-rose-200 transition">
+        <a href="cv/CV_Meibi_Mota_Administrativo_Financiero.pdf" target="_blank" class="flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-medium text-xs shadow-md shadow-purple-200 transition" title="Ver CV Administrativo, Financiero y Operaciones en PDF">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          <span>CV Financiero (PDF)</span>
+        </a>
+        <button onclick="openModal('profile-info')" class="flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-700 font-medium text-xs border border-rose-200 transition">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
-          Ver Perfil Completo
+          <span>Ver Perfil & Word</span>
         </button>
       </div>
     </header>
@@ -306,47 +310,89 @@
 
       <div class="text-center mb-6">
         <h3 class="text-xl font-serif font-bold text-slate-900">Perfil Profesional de Meibi</h3>
-        <p class="text-xs text-rose-600 font-medium">Resumen curricular estructurado</p>
+        <p class="text-xs text-rose-600 font-medium">Resumen curricular & Currículums Vitae especializados</p>
       </div>
 
       <div class="space-y-5 text-sm">
+        <!-- SECCIÓN DE DESCARGAS DE CVs -->
+        <div class="bg-gradient-to-r from-rose-50 via-purple-50 to-indigo-50 p-4 rounded-2xl border border-rose-200 shadow-sm">
+          <h4 class="font-bold text-slate-800 mb-2 flex items-center gap-2">📄 Currículums Vitae Disponibles</h4>
+          <p class="text-[11px] text-slate-500 mb-3">Versiones adaptadas y optimizadas para postulación según el perfil de la vacante:</p>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <!-- CV Marketing -->
+            <div class="bg-white p-3 rounded-xl border border-rose-100 shadow-xs flex flex-col justify-between">
+              <div>
+                <p class="text-xs font-bold text-rose-700">Analítica · Investigación · Marketing</p>
+                <p class="text-[10px] text-slate-500 mt-0.5">Enfoque: Research, Insights, Buyer Persona, Consumo de Medios y Tendencias.</p>
+              </div>
+              <div class="flex items-center gap-2 mt-2 pt-2 border-t border-rose-50">
+                <a href="cv/CV_Meibi_Mota_Analitica_Marketing.pdf" target="_blank" class="flex-1 text-center py-1.5 px-2 bg-rose-500 hover:bg-rose-600 text-white text-[11px] font-semibold rounded-lg transition">
+                  Descargar PDF
+                </a>
+                <a href="cv/CV_Meibi_Mota_Analitica_Marketing.docx" download class="flex-1 text-center py-1.5 px-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-[11px] font-semibold rounded-lg border border-slate-200 transition">
+                  Word (.docx)
+                </a>
+              </div>
+            </div>
+
+            <!-- CV Administrativo -->
+            <div class="bg-white p-3 rounded-xl border border-purple-100 shadow-xs flex flex-col justify-between">
+              <div>
+                <p class="text-xs font-bold text-purple-700">Administrativo · Financiero · Operaciones</p>
+                <p class="text-[10px] text-slate-500 mt-0.5">Enfoque: Banca (APAP), Cobranzas, Cuentas por Cobrar, Operaciones y Servicio.</p>
+              </div>
+              <div class="flex items-center gap-2 mt-2 pt-2 border-t border-purple-50">
+                <a href="cv/CV_Meibi_Mota_Administrativo_Financiero.pdf" target="_blank" class="flex-1 text-center py-1.5 px-2 bg-purple-600 hover:bg-purple-700 text-white text-[11px] font-semibold rounded-lg transition">
+                  Descargar PDF
+                </a>
+                <a href="cv/CV_Meibi_Mota_Administrativo_Financiero.docx" download class="flex-1 text-center py-1.5 px-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-[11px] font-semibold rounded-lg border border-slate-200 transition">
+                  Word (.docx)
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="bg-rose-50/50 p-4 rounded-2xl border border-rose-100">
           <h4 class="font-bold text-slate-800 mb-2 flex items-center gap-2">🎓 Educación & Formación</h4>
           <ul class="space-y-1.5 text-xs text-slate-600">
-            <li>• <strong>Licenciatura en Psicología Escolar:</strong> Formación Universitaria (Cursando 2do cuatrimestre).</li>
-            <li>• <strong>Licenciatura en Mercadeo:</strong> Universidad INTEC (2016 – 2020, Graduada).</li>
+            <li>• <strong>Licenciatura en Mercadeo:</strong> Instituto Tecnológico de Santo Domingo (INTEC) — <em>Desde 2016 · En proceso de titulación</em>.</li>
+            <li>• <strong>Licenciatura en Psicología Escolar:</strong> Universidad Dominicana O&M — <em>En curso (2do cuatrimestre)</em>.</li>
             <li>• <strong>Diplomado en Planeación Estratégica:</strong> Escuela de Planeación Estratégica NOGMA (2022).</li>
-            <li>• <strong>Google Analytics Certification:</strong> Google (2023).</li>
-            <li>• <strong>Inglés:</strong> Nivel Intermedio I (Instituto Cultural Dominico Americano).</li>
+            <li>• <strong>Certificación Google Analytics:</strong> Google (2023).</li>
+            <li>• <strong>Idiomas:</strong> Español (Nativo) · Inglés (Básico / Intermedio I ICDA).</li>
           </ul>
         </div>
 
         <div class="bg-purple-50/50 p-4 rounded-2xl border border-purple-100">
-          <h4 class="font-bold text-slate-800 mb-2 flex items-center gap-2">💼 Experiencia Clave</h4>
+          <h4 class="font-bold text-slate-800 mb-2 flex items-center gap-2">💼 Trayectoria Profesional Clave</h4>
           <div class="space-y-2 text-xs text-slate-600">
             <div>
               <p class="font-semibold text-slate-800">Senior Data Analyst & Supervisora de Medios • Carat Dominicana</p>
-              <p class="text-[11px] text-slate-500">Agosto 2022 – Actualidad (Inició como Analista Jr. en Mayo 2019)</p>
-              <p class="mt-0.5">Análisis de inversión publicitaria, tendencias de mercado, elaboración de Buyer Personas y visualización de datos en Power BI.</p>
+              <p class="text-[11px] text-slate-500">Agosto 2022 – Actualidad (Más de 6 años en Carat · Analista Jr. desde Mayo 2019)</p>
+              <p class="mt-0.5">Análisis del comportamiento de la industria publicitaria e inversión por marcas; elaboración de panoramas de competencia, Buyer Personas, tendencias de consumo de medios y supervisión de calidad de datos.</p>
             </div>
             <div class="pt-2 border-t border-purple-100">
               <p class="font-semibold text-slate-800">Pasantía Dirección de Recuperación de Créditos • APAP</p>
-              <p class="text-[11px] text-slate-500">Septiembre 2015 – Noviembre 2015</p>
-              <p class="mt-0.5">Localización de clientes, desarrollo de planes de pago, asistencia telefónica en cobranzas y cuentas por cobrar.</p>
+              <p class="text-[11px] text-slate-500">Septiembre 2015 – Noviembre 2015 (Asociación Popular de Ahorros y Préstamos)</p>
+              <p class="mt-0.5">Localización de clientes con cuotas vencidas, gestiones de contacto y asistencia telefónica en cobranzas, planes de pago y cuentas por cobrar.</p>
             </div>
           </div>
         </div>
 
         <div class="bg-pink-50/50 p-4 rounded-2xl border border-pink-100">
-          <h4 class="font-bold text-slate-800 mb-2 flex items-center gap-2">⚡ Competencias & Herramientas</h4>
+          <h4 class="font-bold text-slate-800 mb-2 flex items-center gap-2">⚡ Herramientas & Competencias</h4>
           <div class="flex flex-wrap gap-1.5">
             <span class="px-2.5 py-1 bg-white rounded-lg text-[11px] font-medium text-slate-700 border border-pink-200">Power BI</span>
             <span class="px-2.5 py-1 bg-white rounded-lg text-[11px] font-medium text-slate-700 border border-pink-200">Google Analytics</span>
-            <span class="px-2.5 py-1 bg-white rounded-lg text-[11px] font-medium text-slate-700 border border-pink-200">Office 365 / Excel Avanzado</span>
-            <span class="px-2.5 py-1 bg-white rounded-lg text-[11px] font-medium text-slate-700 border border-pink-200">Psicología Escolar & Orientación</span>
-            <span class="px-2.5 py-1 bg-white rounded-lg text-[11px] font-medium text-slate-700 border border-pink-200">Servicio al Cliente & Banca</span>
-            <span class="px-2.5 py-1 bg-white rounded-lg text-[11px] font-medium text-slate-700 border border-pink-200">Recuperación de Créditos</span>
-            <span class="px-2.5 py-1 bg-white rounded-lg text-[11px] font-medium text-slate-700 border border-pink-200">Liderazgo & Trabajo en Equipo</span>
+            <span class="px-2.5 py-1 bg-white rounded-lg text-[11px] font-medium text-slate-700 border border-pink-200">Microsoft Office 365 (PowerPoint Avanzado, Excel)</span>
+            <span class="px-2.5 py-1 bg-white rounded-lg text-[11px] font-medium text-slate-700 border border-pink-200">Asana & Miro</span>
+            <span class="px-2.5 py-1 bg-white rounded-lg text-[11px] font-medium text-slate-700 border border-pink-200">Investigación de Mercados & Inversión</span>
+            <span class="px-2.5 py-1 bg-white rounded-lg text-[11px] font-medium text-slate-700 border border-pink-200">Buyer Persona & Tendencias</span>
+            <span class="px-2.5 py-1 bg-white rounded-lg text-[11px] font-medium text-slate-700 border border-pink-200">Cobranzas & Cuentas por Cobrar (APAP)</span>
+            <span class="px-2.5 py-1 bg-white rounded-lg text-[11px] font-medium text-slate-700 border border-pink-200">Psicología Escolar (O&M, 2do Cuatrimestre)</span>
+            <span class="px-2.5 py-1 bg-white rounded-lg text-[11px] font-medium text-slate-700 border border-pink-200">Supervisión & Trabajo Colaborativo</span>
           </div>
         </div>
       </div>
