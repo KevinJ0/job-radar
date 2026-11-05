@@ -1051,6 +1051,173 @@ Cuento con experiencia en asistencia telefónica y negociación con clientes adq
 Atentamente,
 Meibi Esperanza Mota Mora
 (829) 793-3033 | meibimota@gmail.com`
+  },
+  {
+    id: "meibi-li-bpd-01",
+    title: "Auditor Junior de Análisis de Datos",
+    company: "Banco Popular Dominicano",
+    category: "banco",
+    location: "Santo Domingo / Híbrido-Remoto (República Dominicana)",
+    modality: "Híbrido / Remoto RD",
+    salaryDOP: "RD$ 55,000 - 70,000 / mes",
+    salaryNote: "Beneficios bancarios de ley + bonos por desempeño institucional",
+    postedDate: "Esta semana · LinkedIn",
+    type: "Tiempo Completo",
+    tags: ["Banco Popular", "Análisis de Datos", "Banca", "Auditoría"],
+    url: "https://do.linkedin.com/jobs/view/auditor-junior-de-an%C3%A1lisis-de-datos-at-banco-popular-dominicano-4482520788",
+    contactEmail: "talento@bpd.com.do",
+    description: "Automatización de pruebas de auditoría a través de análisis de datos, visualización y desarrollo de indicadores de riesgos en operaciones de negocio. Detección de patrones y recomendaciones para fortalecer el control de la entidad bancaria.",
+    requirements: [
+      "Licenciatura en Mercadeo, Finanzas, Administración o afines con sólida formación en análisis de datos",
+      "Manejo de herramientas de visualización de datos (Power BI, Excel avanzado) y reportes de indicadores",
+      "Experiencia en el sector financiero o créditos y cobranzas (valorada pasantía bancaria previa en APAP)",
+      "Atención al detalle, ética profesional y capacidad analítica"
+    ],
+    coverLetter: `Estimado Equipo de Selección del Banco Popular Dominicano,
+
+Les escribo con gran entusiasmo para presentar mi postulación a la posición de Auditor Junior de Análisis de Datos.
+
+Soy Licenciada en Mercadeo egresada de INTEC y cuento con más de 5 años de experiencia liderando y supervisando análisis de datos cuantitativos y elaboración de tableros interactivos en Power BI en Carat Dominicana. Asimismo, realicé mi pasantía laboral en la Dirección de Recuperación de Créditos de APAP, lo que me brindó un conocimiento directo de los procesos operativos, transaccionales y de control interno del sistema financiero dominicano.
+
+Mi perfil integra rigor metodológico, pensamiento analítico, orientación a la prevención y una ética laboral sólida para aportar valor a la auditoría interna del banco.
+
+Agradezco su atención y me pongo a su entera disposición para una entrevista.
+
+Atentamente,
+Meibi Esperanza Mota Mora
+(829) 793-3033 | meibimota@gmail.com`
+  },
+  {
+    id: "meibi-li-newlink-01",
+    title: "Analista de Insights & Estrategia de Audiencias",
+    company: "Newlink®",
+    category: "datos",
+    location: "Santo Domingo / Remoto (República Dominicana)",
+    modality: "100% Remoto / Híbrido",
+    salaryDOP: "RD$ 65,000 - 85,000 / mes",
+    salaryNote: "Consultora multinacional + paquete competitivo de beneficios",
+    postedDate: "Esta semana · LinkedIn",
+    type: "Tiempo Completo",
+    tags: ["Newlink", "Insights", "Investigación de Mercados", "Power BI"],
+    url: "https://do.linkedin.com/jobs/view/analista-de-insights-at-newlink%C2%AE-4468675126",
+    contactEmail: "careers@newlink-group.com",
+    description: "Generación de insights estratégicos a partir del análisis cuantitativo y cualitativo de comportamiento de audiencias y marcas. Elaboración de dashboards interactivos en Power BI, análisis de tendencias y Buyer Personas para cuentas internacionales.",
+    requirements: [
+      "Licenciatura en Mercadeo (INTEC o afines)",
+      "3+ años de experiencia en investigación de mercados, análisis de medios y dashboards (Power BI, Google Analytics)",
+      "Capacidad de traducir datos complejos en recomendaciones claras de negocio y comunicación",
+      "Creatividad analítica, redacción ejecutiva y trabajo en equipo"
+    ],
+    coverLetter: `Estimado Equipo de Talento de Newlink®,
+
+Me dirijo a ustedes con mucho entusiasmo para presentar mi candidatura a la posición de Analista de Insights.
+
+Como Licenciada en Mercadeo egresada de INTEC y actualmente Senior Data Analyst y Supervisora en Carat Dominicana (donde acumulo más de 5 años de trayectoria en investigación de mercados, modelado de Buyer Personas y diseño de tableros en Power BI), conecto profundamente con el propósito de Newlink de crear conexiones de valor.
+
+Aporto dominio avanzado de herramientas analíticas, sensibilidad estratégica para descubrir patrones de consumo y una comunicación clara y ejecutiva para colaborar con equipos multidisciplinarios.
+
+Quedo a su disposición para coordinar una entrevista.
+
+Cordialmente,
+Meibi Esperanza Mota Mora
+(829) 793-3033 | meibimota@gmail.com`
+  },
+  {
+    id: "meibi-li-exp-01",
+    title: "Customer Service Representative – Collections & Accounts",
+    company: "Exp. Group. LLC",
+    category: "servicio",
+    location: "Remoto (República Dominicana)",
+    modality: "100% Remoto",
+    salaryDOP: "RD$ 45,000 - 60,000 / mes",
+    salaryNote: "Remuneración competitiva + equipo de teletrabajo",
+    postedDate: "Esta semana · LinkedIn",
+    type: "Tiempo Completo",
+    tags: ["Cobranzas", "Cuentas por Cobrar", "Servicio al Cliente", "Remoto"],
+    url: "https://do.linkedin.com/jobs/view/customer-service-representative-%E2%80%93-collections-accounts-at-exp-group-llc-4465607987",
+    contactEmail: "hr@expgroup.us",
+    description: "Atención a clientes comerciales, seguimiento estructurado de cuentas por cobrar, conciliación de pagos, gestión de acuerdos y resolución de controversias en modalidad 100% remota.",
+    requirements: [
+      "Experiencia comprobada en servicio al cliente, cobranzas y recuperación de cartera (experiencia previa en APAP)",
+      "Habilidades de comunicación empática, negociación asertiva y resolución de problemas",
+      "Manejo de herramientas de oficina, CRM y reportes de seguimiento",
+      "Responsabilidad y organización en teletrabajo"
+    ],
+    coverLetter: `Estimado Equipo de Selección de Exp. Group. LLC,
+
+Les escribo para postularme a la vacante de Customer Service Representative – Collections & Accounts en modalidad remota.
+
+Cuento con experiencia directa en el área de crédito y cobranzas adquirida durante mi paso por la Asociación Popular de Ahorros y Préstamos (APAP), complementada con una trayectoria de más de 5 años en análisis, atención a cuentas clave y resolución asertiva de situaciones comerciales. Poseo un trato cercano, empático y profesional que facilita acuerdos de pago beneficiosos para ambas partes.
+
+Agradezco de antemano su atención y consideración.
+
+Atentamente,
+Meibi Esperanza Mota Mora
+(829) 793-3033 | meibimota@gmail.com`
+  },
+  {
+    id: "meibi-li-cloudbeds-01",
+    title: "Data Services Reports & Insights Analyst",
+    company: "Cloudbeds",
+    category: "datos",
+    location: "Remoto (República Dominicana / LATAM)",
+    modality: "100% Remoto",
+    salaryDOP: "RD$ 70,000 - 95,000 / mes",
+    salaryNote: "Empresa 100% remota global + seguro y estipendios",
+    postedDate: "Reciente · LinkedIn",
+    type: "Tiempo Completo",
+    tags: ["Cloudbeds", "Data Reports", "Insights", "Power BI", "Remoto"],
+    url: "https://do.linkedin.com/jobs/view/data-services-reports-insights-analyst-at-cloudbeds-4473287512",
+    contactEmail: "talent@cloudbeds.com",
+    description: "Diseño y mantenimiento de reportes operativos y estratégicos para clientes hoteleros a nivel global. Extracción y análisis de métricas clave, visualización de datos en dashboards y soporte analítico a equipos de producto.",
+    requirements: [
+      "Experiencia demostrada en generación de reportes, métricas y visualización de datos (Power BI, Google Analytics, Excel avanzado)",
+      "Perfil analítico con habilidades de comunicación para explicar hallazgos",
+      "Autonomía para el trabajo 100% remoto en equipo multicultural"
+    ],
+    coverLetter: `Estimado Equipo de Talento de Cloudbeds,
+
+Me dirijo a ustedes para presentar mi candidatura a la posición de Data Services Reports & Insights Analyst.
+
+Como Supervisora y Senior Data Analyst en Carat Dominicana con más de 5 años de experiencia diseñando tableros de control en Power BI, analizando métricas de rendimiento y transformando grandes volúmenes de datos en visualizaciones comprensibles, me entusiasma la oportunidad de sumarme al equipo remoto global de Cloudbeds.
+
+Aporto autonomía, agilidad analítica y un compromiso constante con la calidad de los reportes.
+
+Saludos cordiales,
+Meibi Esperanza Mota Mora
+(829) 793-3033 | meibimota@gmail.com`
+  },
+  {
+    id: "meibi-gj-atlantica-01",
+    title: "Programadora de Power BI & Reportes de Inteligencia",
+    company: "Atlántica Seguros",
+    category: "datos",
+    location: "Santo Domingo / Remoto (República Dominicana)",
+    modality: "Remoto / Híbrido RD",
+    salaryDOP: "RD$ 55,000 - 75,000 / mes",
+    salaryNote: "Beneficios corporativos de ley + seguro médico complementario",
+    postedDate: "Esta semana · Google Jobs",
+    type: "Tiempo Completo",
+    tags: ["Power BI", "Atlántica Seguros", "Inteligencia de Negocios", "Google Jobs"],
+    url: "https://www.google.com.do/search?ibp=htl;jobs&q=Programador+.NET+OR+C%23+OR+Flutter+Remoto+Rep%C3%BAblica+Dominicana&htidocid=2w-bTPSDYH-w0ccrAAAAAA%3D%3D",
+    contactEmail: "recursoshumanos@atlantica.do",
+    description: "Desarrollo y mantenimiento de tableros de control y dashboards en Power BI para el seguimiento de siniestralidad, primas, clientes y metas comerciales de la aseguradora. Modelado de datos y reportes ejecutivos.",
+    requirements: [
+      "Dominio avanzado de Power BI: modelado de datos, DAX y diseño de dashboards limpios e intuitivos",
+      "Licenciatura en Mercadeo, Estadística, Administración o afines con sólida base analítica",
+      "Capacidad de interlocución con áreas directivas y comerciales"
+    ],
+    coverLetter: `Estimado Equipo de Gestión Humana de Atlántica Seguros,
+
+Les escribo para presentar mi postulación a la posición de Programadora de Power BI & Reportes de Inteligencia.
+
+Cuento con más de 5 años de experiencia como Senior Data Analyst en Carat Dominicana especializándome en la creación, parametrización y optimización de tableros interactivos en Power BI, modelado de indicadores de rendimiento y análisis cuantitativo de mercado. Poseo gran destreza en la estructuración de métricas y presentación clara de informes para la toma de decisiones.
+
+Agradezco su consideración y quedo a su disposición para conversar personalmente.
+
+Atentamente,
+Meibi Esperanza Mota Mora
+(829) 793-3033 | meibimota@gmail.com`
   }
 ];
 

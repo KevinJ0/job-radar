@@ -1,5 +1,5 @@
 window.JOBS_DATA = {
-  "lastUpdated": "2026-11-05 08:27",
+  "lastUpdated": "2026-11-05 08:43",
   "exchangeRatesNote": "1 EUR ≈ RD$ 65.50 | 1 USD ≈ RD$ 60.50",
   "profile": {
     "name": "Kevin Rosario",
@@ -73,7 +73,7 @@ window.JOBS_DATA = {
       "CI/CD"
     ]
   },
-  "totalJobs": 20,
+  "totalJobs": 22,
   "jobs": [
     {
       "id": "ij-net-fs-2",
@@ -667,6 +667,69 @@ window.JOBS_DATA = {
       "highlight": "Acepta perfiles de 1 a 3 años de experiencia para desarrollo de producto 100% remoto.",
       "description": "Equipos de implementación y desarrollo de producto en Java para operaciones industriales.",
       "url": "https://www.bumeran.com.ar/empleos/job-1118368050.html"
+    },
+    {
+      "id": "gj-ailogic-net-1",
+      "title": "Full Stack .NET Developer (C# / Angular / ASP.NET Core)",
+      "company": "AILogic",
+      "country": "República Dominicana",
+      "countryCode": "DO",
+      "flag": "🇩🇴",
+      "portal": "Google Jobs",
+      "location": "Santo Domingo (100% Remoto)",
+      "modality": "100% Remoto",
+      "experienceYears": 3,
+      "experienceLabel": "3+ años (≤ 4 años)",
+      "salaryDOP": "RD$ 120,000 - 160,000 / mes",
+      "salaryDOPYearly": "RD$ 1,440,000 - 1,920,000 / año",
+      "salaryOriginal": "Salario competitivo según experiencia",
+      "salaryNumericDOPMonthly": 140000,
+      "postedAt": "2026-11-05",
+      "postedLabel": "Hoy · Google Jobs",
+      "stack": [
+        ".NET Core",
+        "C#",
+        "ASP.NET Core",
+        "Angular",
+        "SQL Server",
+        "REST API",
+        "Git"
+      ],
+      "matchScore": 98,
+      "highlight": "Vacante en RD 100% remota con C#, ASP.NET Core, Angular y SQL Server. Cero nube compleja.",
+      "description": "Desarrollo y optimización de microservicios backend y portales web en .NET, C#, ASP.NET Core, Angular y bases de datos SQL Server.",
+      "url": "https://www.google.com.do/search?ibp=htl;jobs&q=Programador+.NET+OR+C%23+OR+Flutter+Remoto+Rep%C3%BAblica+Dominicana&htidocid=7WqJxwZD14YgKGZUAAAAAA%3D%3D"
+    },
+    {
+      "id": "li-azumo-flutter-1",
+      "title": "Flutter / Dart Systems Engineer (Remote LATAM)",
+      "company": "Azumo",
+      "country": "Estados Unidos / LATAM",
+      "countryCode": "US",
+      "flag": "🇺🇸",
+      "portal": "LinkedIn",
+      "location": "Remoto (América Latina)",
+      "modality": "100% Remoto",
+      "experienceYears": 3,
+      "experienceLabel": "3 - 4 años exp.",
+      "salaryDOP": "RD$ 169,400 - 229,900 / mes",
+      "salaryDOPYearly": "RD$ 2,032,800 - 2,758,800 / año",
+      "salaryOriginal": "$2,800 - $3,800 USD / mes",
+      "salaryNumericDOPMonthly": 199650,
+      "postedAt": "2026-11-05",
+      "postedLabel": "Esta semana · LinkedIn",
+      "stack": [
+        "Flutter",
+        "Dart",
+        "SQLite",
+        "PowerShell",
+        "REST API",
+        "Windows Integration"
+      ],
+      "matchScore": 96,
+      "highlight": "Puesto 100% remoto para LATAM pagado en USD; desarrollo en Flutter, Dart e integración a nivel de sistema.",
+      "description": "Ingeniería de software multiplataforma con Flutter/Dart y automatización/integración con sistema operativo.",
+      "url": "https://www.linkedin.com/jobs/view/flutter-dart-engineer-latin-america-remote-at-azumo-4462161603"
     }
   ]
 };
