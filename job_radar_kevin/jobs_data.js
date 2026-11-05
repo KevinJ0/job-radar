@@ -1,5 +1,5 @@
 window.JOBS_DATA = {
-  "lastUpdated": "2026-11-04 17:11",
+  "lastUpdated": "2026-11-05 08:27",
   "exchangeRatesNote": "1 EUR ≈ RD$ 65.50 | 1 USD ≈ RD$ 60.50",
   "profile": {
     "name": "Kevin Rosario",
@@ -35,7 +35,16 @@ window.JOBS_DATA = {
       "excludedTech": [
         "AWS",
         "Amazon Web Services",
-        "Azure"
+        "Azure",
+        "GCP",
+        "Google Cloud Platform",
+        "Unix",
+        "Linux Sysadmin",
+        "Spring Boot",
+        "Ruby on Rails",
+        "PHP",
+        "C++",
+        "Kubernetes"
       ],
       "apifyActors": [
         "curious_coder/linkedin-jobs-scraper (hKByXkMQaC5Qt9UMN)",
@@ -64,7 +73,7 @@ window.JOBS_DATA = {
       "CI/CD"
     ]
   },
-  "totalJobs": 22,
+  "totalJobs": 20,
   "jobs": [
     {
       "id": "ij-net-fs-2",
@@ -156,67 +165,6 @@ window.JOBS_DATA = {
       "highlight": "Auditada en texto completo: busca exactamente lo que has creado en producción (apps Flutter con modo offline-first, caché local, colas de sincronización y uso de Claude Code). Sin AWS ni Azure.",
       "description": "Diseño y desarrollo de aplicaciones móviles en Flutter y Dart con persistencia de datos local (offline-first), sincronización en segundo plano y resolución de conflictos.",
       "url": "https://cr.linkedin.com/jobs/view/senior-flutter-dart-mobile-engineer-at-sparq-4483319090"
-    },
-    {
-      "id": "ind-itpartner-py-sql-1",
-      "title": "Desarrollador/a Python, SQL Server y Oracle (En remoto)",
-      "company": "IT Partner España",
-      "country": "España",
-      "countryCode": "ES",
-      "flag": "🇪🇸",
-      "portal": "Indeed",
-      "location": "España (100% En remoto)",
-      "modality": "100% Remoto",
-      "experienceYears": 2,
-      "experienceLabel": "Mín. 2 años (≤ 4 años)",
-      "salaryDOP": "RD$ 152,830 - RD$ 196,500 / mes",
-      "salaryDOPYearly": "RD$ 1,834,000 - RD$ 2,358,000 / año",
-      "salaryOriginal": "28.000 € - 36.000 € Bruto/año (Est.)",
-      "salaryNumericDOPMonthly": 174665,
-      "postedAt": "2026-11-03",
-      "postedLabel": "Ayer · Indeed",
-      "stack": [
-        "Python",
-        "SQL Server",
-        "Oracle",
-        "REST API",
-        "Git",
-        "CI/CD"
-      ],
-      "matchScore": 97,
-      "highlight": "Extraída vía Indeed Scraper (texto verificado): pide exactamente 'Mínimo 2 años trabajando con SQL Server y Oracle' + Python + APIs + Git, sin pedir AWS ni Azure.",
-      "description": "Desarrollo y evolución de circuitos de conciliación operativa y contable utilizando Python, bases de datos SQL Server y Oracle, APIs y microservicios.",
-      "url": "https://es.indeed.com/viewjob?jk=005651bf1192fe6e"
-    },
-    {
-      "id": "ind-datamon-backend-1",
-      "title": "Desarrollador/a Backend (Java / Oracle / SQL / C#) con IA",
-      "company": "DATAMONPLUS",
-      "country": "España",
-      "countryCode": "ES",
-      "flag": "🇪🇸",
-      "portal": "Indeed",
-      "location": "España / LATAM (100% En remoto)",
-      "modality": "100% Remoto",
-      "experienceYears": 2,
-      "experienceLabel": "Mín. 2 años (≤ 4 años)",
-      "salaryDOP": "RD$ 163,750 - RD$ 264,730 / mes",
-      "salaryDOPYearly": "RD$ 1,965,000 - RD$ 3,176,750 / año",
-      "salaryOriginal": "30.000 € - 48.500 € Bruto/año",
-      "salaryNumericDOPMonthly": 214240,
-      "postedAt": "2026-10-29",
-      "postedLabel": "Esta semana · Indeed",
-      "stack": [
-        "Java",
-        "C#",
-        "Oracle",
-        "SQL Server",
-        "REST API"
-      ],
-      "matchScore": 96,
-      "highlight": "Extraída vía Indeed Scraper (texto verificado): pide solo 2 años de experiencia, bases de datos Oracle y SQL, APIs RESTful y valora explícitamente experiencia en C#. Sueldo publicado hasta 48.500 €.",
-      "description": "Desarrollo de servicios backend y APIs RESTful con Java, integración de modelos de IA, gestión de bases de datos Oracle/SQL y valoración de conocimientos en C#.",
-      "url": "https://es.indeed.com/viewjob?jk=bbbef099d4ed2bff"
     },
     {
       "id": "li-cruzayala-fs-1",

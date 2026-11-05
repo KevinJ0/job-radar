@@ -1,35 +1,35 @@
 const JOBS_DATA = [
-  // --- 1. PSICOLOGÍA ESCOLAR Y EDUCACIÓN (LA ROMANA) ---
+  // --- 1. GESTIÓN ESCOLAR, COMUNITARIA Y CLIMA ORGANIZACIONAL (LA ROMANA) ---
   {
     id: "meibi-psi-01",
-    title: "Orientadora / Psicóloga Escolar",
+    title: "Coordinadora de Admisiones y Atención a Familias",
     company: "Colegio Internacional Saint John",
     category: "psicologia",
     location: "La Romana, República Dominicana",
     modality: "Presencial (La Romana)",
-    salaryDOP: "RD$ 35,000 - 45,000 / mes",
-    salaryNote: "Beneficios de ley + almuerzo + ambiente bilingüe",
+    salaryDOP: "RD$ 38,000 - 48,000 / mes",
+    salaryNote: "Beneficios de ley + almuerzo escolar + ambiente bilingüe",
     postedDate: "Esta semana",
     type: "Tiempo Completo",
-    tags: ["Psicología Escolar", "Orientación", "Acompañamiento", "La Romana"],
+    tags: ["Admisiones", "Atención a Familias", "Mercadeo Educativo", "La Romana"],
     url: "https://saintjohn.edu.do/trabaja-con-nosotros/",
     contactEmail: "talento@saintjohn.edu.do",
-    description: "Buscamos profesional o estudiante avanzada de Psicología Escolar / Orientación Educativa para brindar acompañamiento psicopedagógico a estudiantes de primaria y secundaria, evaluación de dificultades de aprendizaje, orientación vocacional y enlace con padres y docentes.",
+    description: "Coordinación integral del proceso de admisiones de nuevas familias y estudiantes: recorridos por el campus, atención empática a padres, recopilación y gestión de expedientes escolares, asesoría del proyecto pedagógico y apoyo en iniciativas de fidelización y clima escolar.",
     requirements: [
-      "Estudiante de término o graduada en Psicología Escolar / Educativa",
-      "Habilidades de comunicación, empatía y resolución de conflictos",
-      "Manejo de registros e informes de seguimiento",
+      "Licenciatura en Mercadeo o Administración, con fuerte afinidad e inicio en Psicología/Educación (cursando 2do cuatrimestre)",
+      "Habilidades excepcionales de comunicación, empatía, escucha activa y resolución de consultas",
+      "Manejo fluido de Microsoft Office 365, elaboración de reportes y seguimiento de leads",
       "Residencia en La Romana o disponibilidad inmediata"
     ],
     coverLetter: `Estimado Equipo de Gestión Humana de Colegio Internacional Saint John,
 
-Mi nombre es Meibi Esperanza Mota Mora. Les escribo con gran entusiasmo para presentar mi postulación a la posición de Orientadora / Psicóloga Escolar en su prestigiosa institución en La Romana.
+Mi nombre es Meibi Esperanza Mota Mora. Les escribo con gran entusiasmo para presentar mi postulación a la posición de Coordinadora de Admisiones y Atención a Familias en su prestigiosa institución en La Romana.
 
-Actualmente curso la carrera de Psicología Escolar, complementando mi formación previa como Licenciada en Mercadeo (INTEC). Cuento con una sólida trayectoria en análisis de conducta, empatía, escucha activa y resolución asertiva de situaciones, además de una gran vocación por el bienestar socioemocional y el desarrollo integral de los niños y adolescentes.
+Soy Licenciada en Mercadeo egresada de INTEC y actualmente me encuentro cursando mi 2do cuatrimestre de la Licenciatura en Psicología Escolar. Mi perfil combina una sólida experiencia profesional en gestión de proyectos, análisis de tendencias y atención al usuario, con una vocación genuina por el ámbito formativo y el trato empático y comprensivo con familias, docentes y estudiantes.
 
-Resido en La Romana y me caracterizo por mi capacidad de adaptación, responsabilidad, liderazgo empático y trabajo colaborativo con docentes y familias. Sería un honor sumar mis competencias para fortalecer el departamento de orientación del colegio.
+Resido en La Romana y me caracterizo por mi calidez en el trato humano, organización rigurosa y habilidad para comunicar el valor pedagógico del colegio a las familias interesadas.
 
-Agradezco de antemano su consideración y quedo a su total disposición para una entrevista.
+Agradezco de antemano su consideración y quedo a su disposición para coordinar una entrevista.
 
 Atentamente,
 Meibi Esperanza Mota Mora
@@ -47,25 +47,25 @@ La Romana, República Dominicana`
     salaryNote: "Salario competitivo + beneficios académicos",
     postedDate: "Reciente",
     type: "Tiempo Completo",
-    tags: ["Educación Superior", "Psicología", "Atención Estudiantil", "La Romana"],
+    tags: ["Educación Superior", "Gestión Académica", "Atención Estudiantil", "La Romana"],
     url: "https://uniromana.edu.do/",
     contactEmail: "gestionhumana@uniromana.edu.do",
-    description: "Apoyo en el departamento de bienestar estudiantil y registro académico. Seguimiento a casos de adaptación universitaria, talleres de desarrollo socioemocional y coordinación de actividades con el alumnado.",
+    description: "Apoyo en el departamento de bienestar estudiantil y registro académico: asistencia en programas de orientación y adaptación universitaria, soporte en talleres extracurriculares, gestión de encuestas de satisfacción estudiantil y reportes administrativos.",
     requirements: [
-      "Estudios en Psicología Escolar, Clínica o Educación",
-      "Manejo fluido de Microsoft Office 365 y elaboración de reportes",
-      "Trato afable, liderazgo y vocación de servicio",
-      "Vivir en La Romana"
+      "Lic. en Mercadeo o afines, cursando sus primeros cuatrimestres (2do cuatrimestre) en Psicología Escolar o Educación",
+      "Manejo fluido de Microsoft Office 365, Power BI y elaboración de reportes estructurados",
+      "Trato afable, vocación de servicio, empatía y confidencialidad",
+      "Residencia en La Romana"
     ],
     coverLetter: `Estimado Departamento de Gestión Humana de UNIROMANA,
 
-Me dirijo a ustedes para postularme a las oportunidades en el área de Bienestar Estudiantil y Apoyo Psicoeducativo de la Universidad de La Romana.
+Me dirijo a ustedes para postularme a la posición de Asistente de Apoyo Psicoeducativo y Gestión Académica en la Universidad de La Romana.
 
-Soy Meibi Esperanza Mota Mora, estudiante de Psicología Escolar y Licenciada en Mercadeo egresada de INTEC. Mi perfil integra lo mejor de dos mundos: la calidez y comprensión humana que requiere la psicología, y el rigor analítico en gestión de datos (Power BI, Office 365, elaboración de informes detallados) adquirido en mi experiencia laboral.
+Soy Meibi Esperanza Mota Mora, Licenciada en Mercadeo egresada de INTEC y estudiante que cursa actualmente el 2do cuatrimestre de la Licenciatura en Psicología Escolar. Cuento con más de 5 años de experiencia laboral en análisis de datos, elaboración de reportes y coordinación de proyectos en Carat Dominicana, lo cual me permite combinar rigor metodológico con una vocación activa por el acompañamiento y servicio al estudiante.
 
-Viviendo en La Romana, me motiva profundamente aportar al crecimiento académico y emocional de la comunidad universitaria.
+Viviendo en La Romana, me motiva profundamente integrarme a una institución universitaria que impulsa el desarrollo de nuestra región.
 
-Quedo a su disposición para coordinar un encuentro.
+Quedo a su disposición para conversar personalmente sobre mi perfil.
 
 Saludos cordiales,
 Meibi Esperanza Mota Mora
@@ -73,7 +73,7 @@ Meibi Esperanza Mota Mora
   },
   {
     id: "meibi-psi-03",
-    title: "Consejera y Facilitadora de Programas Comunitarios",
+    title: "Asistente de Programas Comunitarios y Atención al Usuario",
     company: "Clínica de Familia La Romana",
     category: "psicologia",
     location: "La Romana, República Dominicana",
@@ -82,53 +82,58 @@ Meibi Esperanza Mota Mora
     salaryNote: "Beneficios de ley + seguro complementario",
     postedDate: "Esta semana",
     type: "Tiempo Completo",
-    tags: ["Salud y Bienestar", "Consejería", "Adolescentes", "La Romana"],
+    tags: ["Salud y Bienestar", "Atención Comunitaria", "Gestión Social", "La Romana"],
     url: "https://clinicadefamilia.org.do/",
     contactEmail: "empleo@clinicadefamilia.org.do",
-    description: "Facilitación de sesiones educativas, apoyo psicoemocional a adolescentes y familias en programas comunitarios de salud integral. Elaboración de estadísticas y seguimiento de casos.",
+    description: "Apoyo operativo en proyectos comunitarios de salud integral y acompañamiento familiar: registro y recepción cálida de beneficiarios, organización de actividades psicoeducativas de prevención, gestión de bases de datos y reportes de cobertura en la comunidad.",
     requirements: [
-      "Estudiante de Psicología (Escolar, Social o Clínica)",
-      "Alta sensibilidad social y habilidades interpersonales",
-      "Organización de expedientes y reportes estadísticos"
+      "Licenciada en Mercadeo / Administración, cursando estudios iniciales en Psicología (2do cuatrimestre)",
+      "Alta sensibilidad social, escucha empática y facilidad para el diálogo comunitario",
+      "Organización metódica de expedientes, bases de datos y seguimiento de indicadores",
+      "Residencia en La Romana"
     ],
     coverLetter: `Estimado Equipo de Selección, Clínica de Familia La Romana,
 
-Con gran motivación les presento mi hoja de vida para formar parte de su equipo en programas de consejería y apoyo psicoemocional.
+Con gran motivación les presento mi hoja de vida para formar parte de su equipo en programas comunitarios y atención al usuario.
 
-Como estudiante de Psicología Escolar con experiencia profesional en atención y seguimiento de personas, me identifico plenamente con la misión humanitaria y de servicio integral de la Clínica de Familia en nuestra ciudad de La Romana. Cuento con excelentes destrezas para la escucha empática, manejo de grupos y registro estructurado de datos.
+Como profesional en Mercadeo (INTEC) y estudiante que actualmente inicia su carrera cursando el 2do cuatrimestre de Psicología Escolar, me identifico plenamente con la misión humanitaria y de servicio integral de la Clínica de Familia en nuestra comunidad de La Romana. Mi experiencia profesional supervisando procesos de análisis de datos y brindando atención personalizada me permite gestionar proyectos con orden, sensibilidad ética y empatía hacia los usuarios.
 
 Agradezco su atención y espero tener la oportunidad de conversar personalmente con ustedes.
 
+Atentamente,
 Meibi Esperanza Mota Mora
 (829) 793-3033 | meibimota@gmail.com`
   },
   {
     id: "meibi-psi-04",
-    title: "Concurso y Registro de Elegibles - Orientación y Psicología",
-    company: "MINERD - Distrito Educativo 05-03 La Romana",
+    title: "Asistente de Gestión Humana y Clima Organizacional",
+    company: "Centro Educativo / Organización Social (La Romana)",
     category: "psicologia",
     location: "La Romana, República Dominicana",
-    modality: "Presencial (Escuelas y Liceos)",
-    salaryDOP: "RD$ 45,000 - 55,000 / mes",
-    salaryNote: "Salario docente oficial + seguro médico SEMMA + cooperativa",
-    postedDate: "Convocatoria Oficial",
-    type: "Fijo Sector Público",
-    tags: ["MINERD", "Orientación Escolar", "Docencia", "La Romana"],
-    url: "https://www.ministeriodeeducacion.gob.do/",
-    contactEmail: "contacto@minerd.gob.do",
-    description: "Apertura de registro y banco de elegibles para plazas de Orientación y Psicología Escolar en los centros educativos públicos de la provincia de La Romana. Evaluación y seguimiento socioeducativo.",
+    modality: "Presencial (La Romana)",
+    salaryDOP: "RD$ 32,000 - 42,000 / mes",
+    salaryNote: "Beneficios de ley + almuerzo institucional + ambiente colaborativo",
+    postedDate: "Esta semana",
+    type: "Tiempo Completo",
+    tags: ["Gestión Humana", "Clima Laboral", "Psicología Organizacional", "La Romana"],
+    url: "https://do.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-asistente-de-gestion-humana-en-la-romana-la-romana-67C8DF",
+    contactEmail: "empleos@laromanaeduca.do",
+    description: "Apoyo al departamento de gestión humana y bienestar del personal: seguimiento al clima de trabajo, apoyo en procesos de reclutamiento e inducción, control de expedientes de colaboradores, coordinación de eventos de integración interna y bienestar laboral.",
     requirements: [
-      "Graduada o estudiante de término en Psicología Escolar",
-      "Habilitación docente o pensum completado",
-      "Compromiso ético con la educación nacional"
+      "Licenciatura en Mercadeo o Administración, o estudiante en curso de Psicología (2do cuatrimestre)",
+      "Capacidad de mediación, confidencialidad, empatía y habilidades interpersonales",
+      "Manejo ordenado de documentación, herramientas de Microsoft Office y reportes de RRHH",
+      "Residir en La Romana"
     ],
-    coverLetter: `A la atención del Comité de Selección y Distrito Educativo 05-03 La Romana,
+    coverLetter: `Estimado Equipo de Selección,
 
-Por medio de la presente manifiesto mi firme interés en participar en el banco de elegibles para las plazas de Orientación y Psicología Escolar en los centros del distrito.
+Les escribo para presentar mi postulación a la posición de Asistente de Gestión Humana y Clima Organizacional en su institución en La Romana.
 
-Mi vocación por la psicología escolar está guiada por el deseo de transformar realidades en las aulas, apoyando a los niños y jóvenes en su desarrollo cognitivo, emocional y social. Cuento con una sólida formación ética, habilidades organizativas y gran sentido del deber ciudadano.
+Soy Meibi Esperanza Mota Mora, Licenciada en Mercadeo egresada de INTEC y estudiante que actualmente cursa su segundo cuatrimestre de Licenciatura en Psicología Escolar. Mi trayectoria profesional en Carat Dominicana y mi paso por el sector financiero me han dotado de sólidas competencias en análisis, gestión de datos, comunicación asertiva y un trato respetuoso y humano con equipos de trabajo.
 
-Resido en La Romana y me pongo a la entera disposición de las autoridades educativas.
+Me entusiasma aplicar mis destrezas organizativas y mi vocación por el bienestar de las personas para fortalecer la cohesión interna y el ambiente laboral de la organización en La Romana.
+
+Agradezco de antemano su atención y consideración.
 
 Atentamente,
 Meibi Esperanza Mota Mora
@@ -1052,13 +1057,13 @@ Meibi Esperanza Mota Mora
 // Profile data for Meibi
 const MEIBI_PROFILE = {
   name: "Meibi Esperanza Mota Mora",
-  title: "Mercadóloga • Senior Data Analyst • Estudiante de Psicología Escolar",
+  title: "Mercadóloga • Senior Data Analyst • Cursando 2do Cuatrimestre en Psicología Escolar",
   phone: "(829) 793-3033",
   email: "meibimota@gmail.com",
   location: "La Romana, República Dominicana",
   education: [
     { degree: "Lic. en Mercadeo", school: "Universidad INTEC", period: "2016 - 2020" },
-    { degree: "Actualmente cursando Lic. en Psicología Escolar", school: "Formación Universitaria", period: "En curso" }
+    { degree: "Lic. en Psicología Escolar (Cursando 2do Cuatrimestre)", school: "Formación Universitaria", period: "En curso (2do Cuatrimestre)" }
   ],
   experience: [
     { role: "Senior Data Analyst / Supervisora de Analistas de Medios", company: "Carat Dominicana", period: "Agosto 2022 - Actualidad" },
@@ -1067,7 +1072,7 @@ const MEIBI_PROFILE = {
   ],
   skills: [
     "Power BI", "Google Analytics", "Microsoft Office 365", "Investigación de Mercados",
-    "Psicología Escolar & Orientación", "Servicio al Cliente", "Gestión Bancaria & Cobranzas",
+    "Psicología Escolar & Orientación (En Formación)", "Servicio al Cliente", "Gestión Bancaria & Cobranzas",
     "Análisis de Tendencias & Buyer Persona", "Liderazgo & Trabajo en Equipo"
   ]
 };
