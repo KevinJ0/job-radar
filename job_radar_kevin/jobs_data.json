@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-05 08:43",
+  "lastUpdated": "2026-11-06 08:07",
   "exchangeRatesNote": "1 EUR ≈ RD$ 65.50 | 1 USD ≈ RD$ 60.50",
   "profile": {
     "name": "Kevin Rosario",
@@ -73,7 +73,7 @@
       "CI/CD"
     ]
   },
-  "totalJobs": 22,
+  "totalJobs": 23,
   "jobs": [
     {
       "id": "ij-net-fs-2",
@@ -730,6 +730,36 @@
       "highlight": "Puesto 100% remoto para LATAM pagado en USD; desarrollo en Flutter, Dart e integración a nivel de sistema.",
       "description": "Ingeniería de software multiplataforma con Flutter/Dart y automatización/integración con sistema operativo.",
       "url": "https://www.linkedin.com/jobs/view/flutter-dart-engineer-latin-america-remote-at-azumo-4462161603"
+    },
+    {
+      "id": "ind-azertium-oracle-1",
+      "title": "Desarrollador/a Oracle PL/SQL (ODI y Procesos ETL)",
+      "company": "Azertium IT Global Services SL",
+      "country": "España",
+      "countryCode": "ES",
+      "flag": "🇪🇸",
+      "portal": "Indeed",
+      "location": "Madrid / En remoto (100% Teletrabajo)",
+      "modality": "100% Remoto",
+      "experienceYears": 3,
+      "experienceLabel": "Mín. 3 años (≤ 4 años)",
+      "salaryDOP": "RD$ 163,750 - RD$ 191,000 / mes",
+      "salaryDOPYearly": "RD$ 1,965,000 - RD$ 2,292,000 / año",
+      "salaryOriginal": "30.000 € - 35.000 € Bruto/año",
+      "salaryNumericDOPMonthly": 177375,
+      "postedAt": "2026-11-06",
+      "postedLabel": "Hoy · Indeed",
+      "stack": [
+        "Oracle",
+        "PL/SQL",
+        "ETL",
+        "SQL Server",
+        "Git"
+      ],
+      "matchScore": 97,
+      "highlight": "100% teletrabajo en Oracle PL/SQL y bases de datos relacionales sin tecnologías cloud complejas.",
+      "description": "Desarrollo y parametrización de circuitos de datos, modelos relacionales y procesos ETL en Oracle PL/SQL.",
+      "url": "https://vacantes.azertiumit.com/jobs/8664053-desarrollador-a-senior-oracle-pl-sql-odi-y-etl"
     }
   ]
 }

@@ -732,6 +732,44 @@ Quedo a su disposición para una entrevista.
 Atentamente,
 Meibi Esperanza Mota Mora
 (829) 793-3033 | meibimota@gmail.com`
+  },
+  {
+    id: "meibi-romana-coord",
+    title: "Coordinadora de Servicio al Cliente & Seguimiento de Procesos",
+    company: "Servicios Corporativos La Romana (vía Google Jobs)",
+    category: "servicio",
+    location: "La Romana, República Dominicana",
+    modality: "Presencial (La Romana)",
+    salaryDOP: "RD$ 35,000 - 45,000 / mes",
+    salaryNote: "Beneficios de ley + bonos por cumplimiento de metas en La Romana",
+    postedDate: "Hoy · Google Jobs",
+    type: "Tiempo Completo",
+    recommendedCV: "Administrativo & Financiero",
+    languageRequirement: "Español",
+    tags: ["Google Jobs", "Servicio al Cliente", "Supervisión", "La Romana"],
+    url: "https://www.google.com.do/search?ibp=htl;jobs&q=empleos+La+Romana+Dominican+Republic&htidocid=FfkRz43zQKPideAPx",
+    contactEmail: "talento@empresasromana.do",
+    description: "Supervisión de políticas y protocolos de atención al cliente, seguimiento a tiempos de respuesta, resolución empática de consultas y presentación de reportes mensuales de satisfacción e indicadores de servicio a la Gerencia en La Romana.",
+    requirements: [
+      "Residencia permanente en La Romana, República Dominicana",
+      "Experiencia en servicio al cliente, coordinación de equipos o supervisión de procesos",
+      "Manejo de herramientas de Office 365 (PowerPoint ejecutivo, Excel) para informes",
+      "Excelente trato humano, comunicación asertiva y liderazgo",
+      "Idioma: Español nativo"
+    ],
+    coverLetter: `Estimado Equipo de Gestión del Talento,
+
+Les escribo para presentar mi postulación a la posición de Coordinadora de Servicio al Cliente & Seguimiento de Procesos en La Romana.
+
+Cuento con más de 6 años de trayectoria profesional desempeñándome como Supervisora de analistas en Carat Dominicana y experiencia en el sector bancario (APAP) en atención a clientes y cobranzas. Poseo un perfil analítico y humano a la vez, con gran habilidad para coordinar equipos, optimizar tiempos de atención y estructurar reportes claros de satisfacción y desempeño para la gerencia.
+
+Resido permanentemente en La Romana y cumplo con todos los requerimientos del cargo.
+
+Agradezco de antemano su atención y consideración.
+
+Atentamente,
+Meibi Esperanza Mota Mora
+(829) 793-3033 | meibimota@gmail.com`
   }
 ];
 
