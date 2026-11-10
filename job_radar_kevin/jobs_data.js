@@ -1,5 +1,5 @@
 window.JOBS_DATA = {
-  "lastUpdated": "2026-11-06 08:07",
+  "lastUpdated": "2026-11-10 09:45",
   "exchangeRatesNote": "1 EUR ≈ RD$ 65.50 | 1 USD ≈ RD$ 60.50",
   "profile": {
     "name": "Kevin Rosario",
@@ -73,8 +73,39 @@ window.JOBS_DATA = {
       "CI/CD"
     ]
   },
-  "totalJobs": 23,
+  "totalJobs": 24,
   "jobs": [
+    {
+      "id": "do-empleado-preccs-1",
+      "title": "Desarrollador Jr .NET (C# / APIs / SQL Server)",
+      "company": "PRECCS SRL",
+      "country": "Rep. Dominicana",
+      "countryCode": "DO",
+      "flag": "🇩🇴",
+      "portal": "Emplea.do / Trabajos Diarios",
+      "location": "República Dominicana (100% Remoto)",
+      "modality": "100% Remoto",
+      "experienceYears": 2,
+      "experienceLabel": "1 - 2 años (Jr/Mid ≤ 4 años)",
+      "salaryDOP": "RD$ 80,000 - RD$ 115,000 / mes (Est.)",
+      "salaryDOPYearly": "RD$ 960,000 - RD$ 1,380,000 / año",
+      "salaryOriginal": "A convenir en RD$ / Tiempo Indefinido",
+      "salaryNumericDOPMonthly": 95000,
+      "postedAt": "2026-11-10",
+      "postedLabel": "Hoy · 10 de Noviembre 2026",
+      "stack": [
+        ".NET Core",
+        "C#",
+        "REST API",
+        "SQL Server",
+        "MySQL",
+        "Git"
+      ],
+      "matchScore": 99,
+      "highlight": "Vacante 100% remota en RD auditada hoy: .NET Core, APIs, SQL Server y GitHub. Cero AWS ni Azure.",
+      "description": "Desarrollo de sistemas internos en .NET Core, creación y consumo de APIs, integraciones y bases de datos relacionales SQL Server en horario de lunes a viernes.",
+      "url": "https://www.emplea.do/empleos/4816-desarrollador-jr-net-preccs-srl"
+    },
     {
       "id": "ij-net-fs-2",
       "title": "Desarrollador/a Senior Full Stack .NET – Teletrabajo 100%",
@@ -675,7 +706,7 @@ window.JOBS_DATA = {
       "country": "República Dominicana",
       "countryCode": "DO",
       "flag": "🇩🇴",
-      "portal": "Google Jobs",
+      "portal": "Trabajo.org / Google Jobs",
       "location": "Santo Domingo (100% Remoto)",
       "modality": "100% Remoto",
       "experienceYears": 3,
@@ -698,7 +729,7 @@ window.JOBS_DATA = {
       "matchScore": 98,
       "highlight": "Vacante en RD 100% remota con C#, ASP.NET Core, Angular y SQL Server. Cero nube compleja.",
       "description": "Desarrollo y optimización de microservicios backend y portales web en .NET, C#, ASP.NET Core, Angular y bases de datos SQL Server.",
-      "url": "https://www.google.com.do/search?ibp=htl;jobs&q=Programador+.NET+OR+C%23+OR+Flutter+Remoto+Rep%C3%BAblica+Dominicana&htidocid=7WqJxwZD14YgKGZUAAAAAA%3D%3D"
+      "url": "https://do.trabajo.org/oferta-4047-36994b3c89d50370fa5cd4223c021963"
     },
     {
       "id": "li-azumo-flutter-1",
