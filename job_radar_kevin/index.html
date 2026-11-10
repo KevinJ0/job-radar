@@ -187,10 +187,11 @@
             <option value="2">⏱️ Máx. 2 años</option>
           </select>
           <select id="statusFilter" onchange="renderJobs()" class="px-2.5 py-2.5 rounded-xl bg-slate-900/90 border border-slate-700/80 text-xs text-slate-200 focus:outline-none focus:border-orange-500">
-            <option value="ACTIVE">Activas</option>
-            <option value="ALL">Todas</option>
+            <option value="ALL">Todas (Pendientes primero)</option>
+            <option value="ACTIVE">Solo pendientes</option>
+            <option value="APPLIED">✅ Ya postuladas</option>
+            <option value="DISMISSED">❌ No interesantes</option>
             <option value="FAV">⭐ Favoritas</option>
-            <option value="APPLIED">✅ Postuladas</option>
           </select>
           <select id="sortSelect" onchange="renderJobs()" class="px-2.5 py-2.5 rounded-xl bg-slate-900/90 border border-slate-700/80 text-xs text-slate-200 focus:outline-none focus:border-orange-500">
             <option value="MATCH">Orden: % Match</option>
@@ -291,11 +292,27 @@ La Romana, República Dominicana`;
       const map = getSavedStatuses();
       if (map[jobId] === status) {
         delete map[jobId];
+        showToast('↩️ Estado restaurado', 'La oferta volvió a su posición en la lista principal.');
       } else {
         map[jobId] = status;
+        if (status === 'APPLIED') {
+          showToast('✅ Marcada como postulada', 'Se guardó y se movió al final de la lista para no postular 2 veces.');
+        } else if (status === 'DISMISSED') {
+          showToast('✕ Marcada como no interesante', 'Se movió al final de la lista para no verla.');
+        } else if (status === 'FAV') {
+          showToast('⭐ Marcada como favorita', 'Destacada en tu radar.');
+        }
       }
       localStorage.setItem(STORAGE_KEY, JSON.stringify(map));
       renderJobs();
+    }
+
+    function handleApplyClick(jobId) {
+      const map = getSavedStatuses();
+      map[jobId] = 'APPLIED';
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(map));
+      showToast('✅ Postulación abierta y guardada', 'Se movió al final de tu lista para evitar duplicados.');
+      setTimeout(renderJobs, 300);
     }
 
     function setCountry(code) {
@@ -362,9 +379,10 @@ La Romana, República Dominicana`;
         if (expYears > 4 || expYears > maxExp) return false;
 
         const st = statuses[job.id] || 'PENDING';
-        if (statusFilter === 'ACTIVE' && st === 'DISMISSED') return false;
+        if (statusFilter === 'ACTIVE' && (st === 'APPLIED' || st === 'DISMISSED')) return false;
         if (statusFilter === 'FAV' && st !== 'FAV') return false;
         if (statusFilter === 'APPLIED' && st !== 'APPLIED') return false;
+        if (statusFilter === 'DISMISSED' && st !== 'DISMISSED') return false;
 
         if (selectedCountry !== 'ALL' && job.countryCode !== selectedCountry) return false;
 
@@ -386,6 +404,11 @@ La Romana, República Dominicana`;
       });
 
       list.sort((a, b) => {
+        // Status rank: PENDING/FAV = 0 (TOP), APPLIED = 1 (BOTTOM), DISMISSED = 2 (VERY BOTTOM)
+        const rankA = statuses[a.id] === 'DISMISSED' ? 2 : (statuses[a.id] === 'APPLIED' ? 1 : 0);
+        const rankB = statuses[b.id] === 'DISMISSED' ? 2 : (statuses[b.id] === 'APPLIED' ? 1 : 0);
+        if (rankA !== rankB) return rankA - rankB;
+
         if (sortBy === 'SALARY') return (b.salaryNumericDOPMonthly || 0) - (a.salaryNumericDOPMonthly || 0);
         if (sortBy === 'EXP') return (a.experienceYears || 0) - (b.experienceYears || 0);
         return (b.matchScore || 0) - (a.matchScore || 0);
@@ -426,23 +449,33 @@ La Romana, República Dominicana`;
 
       container.innerHTML = list.map(job => {
         const st = statuses[job.id] || 'PENDING';
+        const isApplied = st === 'APPLIED';
+        const isDismissed = st === 'DISMISSED';
+        const isFav = st === 'FAV';
+
         const matchColor = job.matchScore >= 90
           ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40'
           : 'bg-amber-500/20 text-amber-300 border-amber-500/40';
 
-        const statusBadge = st === 'APPLIED'
-          ? '<span class="px-2 py-0.5 rounded-md text-[11px] font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">✅ Postulado</span>'
-          : st === 'FAV'
-          ? '<span class="px-2 py-0.5 rounded-md text-[11px] font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/30">⭐ Favorito</span>'
-          : st === 'DISMISSED'
-          ? '<span class="px-2 py-0.5 rounded-md text-[11px] font-semibold bg-rose-500/20 text-rose-300 border border-rose-500/30">❌ Descartado</span>'
+        const statusBadge = isApplied
+          ? '<span class="px-2.5 py-0.5 rounded-md text-[11px] font-bold bg-emerald-500/25 text-emerald-300 border border-emerald-500/40">✅ Ya postulado (al final)</span>'
+          : isFav
+          ? '<span class="px-2.5 py-0.5 rounded-md text-[11px] font-bold bg-amber-500/25 text-amber-300 border border-amber-500/40">⭐ Favorito</span>'
+          : isDismissed
+          ? '<span class="px-2.5 py-0.5 rounded-md text-[11px] font-bold bg-rose-500/25 text-rose-300 border border-rose-500/40">❌ No interesante (al final)</span>'
           : '';
+
+        const cardExtraClass = isDismissed
+          ? 'border-slate-800 opacity-60 grayscale-[35%] bg-slate-900/40'
+          : isApplied
+          ? 'border-emerald-500/50 bg-emerald-950/15 opacity-85'
+          : 'border-slate-800';
 
         const escapedTitle = (job.title || '').replace(/'/g, "\\'");
         const escapedCompany = (job.company || '').replace(/'/g, "\\'");
 
         return `
-        <article class="glass job-card rounded-2xl p-5 flex flex-col justify-between">
+        <article class="glass job-card rounded-2xl p-5 flex flex-col justify-between ${cardExtraClass}">
           <div>
             <div class="flex items-center justify-between gap-2 mb-3">
               <div class="flex items-center gap-2 flex-wrap">
@@ -509,15 +542,15 @@ La Romana, República Dominicana`;
           </div>
 
           <div class="pt-3 border-t border-slate-800/80 flex flex-wrap items-center justify-between gap-2">
-            <div class="flex items-center gap-1.5">
-              <button onclick="setJobStatus('${job.id}', 'FAV')" title="Marcar como Favorito" class="px-2.5 py-1.5 rounded-lg text-xs font-medium border transition ${st === 'FAV' ? 'bg-amber-500/25 border-amber-400 text-amber-200' : 'bg-slate-800/70 border-slate-700 text-slate-300 hover:bg-slate-700'}">
+            <div class="flex items-center gap-1.5 flex-wrap">
+              <button onclick="setJobStatus('${job.id}', 'FAV')" title="Marcar como Favorito" class="px-2.5 py-1.5 rounded-lg text-xs font-medium border transition ${isFav ? 'bg-amber-500/25 border-amber-400 text-amber-200' : 'bg-slate-800/70 border-slate-700 text-slate-300 hover:bg-slate-700'}">
                 ⭐
               </button>
-              <button onclick="setJobStatus('${job.id}', 'APPLIED')" title="Marcar como Postulado" class="px-2.5 py-1.5 rounded-lg text-xs font-medium border transition ${st === 'APPLIED' ? 'bg-emerald-500/25 border-emerald-400 text-emerald-200' : 'bg-slate-800/70 border-slate-700 text-slate-300 hover:bg-slate-700'}">
-                ✅
+              <button onclick="setJobStatus('${job.id}', 'APPLIED')" title="${isApplied ? 'Desmarcar de postulados' : 'Marcar como ya postulado (se mueve al final)'}" class="px-3 py-1.5 rounded-lg text-xs font-semibold border transition flex items-center gap-1 ${isApplied ? 'bg-emerald-600 border-emerald-400 text-white' : 'bg-slate-800/70 border-slate-700 text-slate-300 hover:bg-emerald-950/40 hover:text-emerald-300'}">
+                <span>${isApplied ? '✅ Ya postulé' : '✓ Ya postulé'}</span>
               </button>
-              <button onclick="setJobStatus('${job.id}', 'DISMISSED')" title="Descartar oferta" class="px-2.5 py-1.5 rounded-lg text-xs font-medium border transition ${st === 'DISMISSED' ? 'bg-rose-500/25 border-rose-400 text-rose-200' : 'bg-slate-800/70 border-slate-700 text-slate-400 hover:bg-slate-700'}">
-                ✕
+              <button onclick="setJobStatus('${job.id}', 'DISMISSED')" title="${isDismissed ? 'Restaurar a pendientes' : 'Marcar como no interesante (se mueve al final)'}" class="px-2.5 py-1.5 rounded-lg text-xs font-semibold border transition flex items-center gap-1 ${isDismissed ? 'bg-rose-600 border-rose-400 text-white' : 'bg-slate-800/70 border-slate-700 text-slate-400 hover:bg-rose-950/40 hover:text-rose-300'}">
+                <span>${isDismissed ? '↩️ Restaurar' : '✕ No me interesa'}</span>
               </button>
             </div>
 
@@ -525,7 +558,7 @@ La Romana, República Dominicana`;
               <button onclick="copyCustomCoverLetter('${escapedTitle}', '${escapedCompany}')" class="inline-flex items-center gap-1 px-3 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-xs font-medium transition" title="Copiar carta personalizada para esta empresa">
                 📋 Copiar Carta
               </button>
-              <a href="${job.url}" target="_blank" rel="noopener noreferrer" onclick="setJobStatus('${job.id}', 'APPLIED')" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-orange-600 hover:bg-orange-500 text-white text-xs font-bold shadow-md shadow-orange-600/20 transition">
+              <a href="${job.url}" target="_blank" rel="noopener noreferrer" onclick="handleApplyClick('${job.id}')" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-orange-600 hover:bg-orange-500 text-white text-xs font-bold shadow-md shadow-orange-600/20 transition">
                 Postularme Aquí ↗
               </a>
             </div>
