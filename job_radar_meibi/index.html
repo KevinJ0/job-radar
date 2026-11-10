@@ -124,16 +124,16 @@
       transform: scale(1) translateY(0);
     }
 
-    /* Scroll Reveal Animation */
-    .reveal-on-scroll {
+    /* Granular micro-animations */
+    .reveal-item, .reveal-on-scroll {
       opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      transform: translateY(14px) scale(0.98);
+      transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1), transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
       will-change: opacity, transform;
     }
-    .reveal-on-scroll.is-visible {
+    .reveal-item.is-visible, .reveal-on-scroll.is-visible {
       opacity: 1;
-      transform: translateY(0);
+      transform: translateY(0) scale(1);
     }
 
   </style>
@@ -152,10 +152,10 @@
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
 
     <!-- HERO HEADER -->
-    <header class="reveal-on-scroll mb-10 text-center sm:text-left flex flex-col lg:flex-row items-center lg:items-center justify-between gap-6 bg-white/90 p-6 sm:p-8 rounded-[2.5rem] shadow-sm border border-rose-100">
+    <header class="mb-10 text-center sm:text-left flex flex-col lg:flex-row items-center lg:items-center justify-between gap-6 bg-white/90 p-6 sm:p-8 rounded-[2.5rem] shadow-sm border border-rose-100">
       <div class="flex flex-col sm:flex-row items-center gap-5 min-w-0 max-w-full">
         <!-- Avatar / Photo placeholder -->
-        <div class="relative shrink-0">
+        <div class="relative shrink-0 reveal-item" style="transition-delay: 50ms;">
           <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full p-1 bg-gradient-to-tr from-rose-400 via-pink-400 to-purple-500 shadow-lg">
             <div class="w-full h-full rounded-full bg-rose-50 flex items-center justify-center overflow-hidden border-2 border-white">
               <span class="text-3xl font-serif font-bold text-rose-600">MM</span>
@@ -164,7 +164,7 @@
           <span class="absolute bottom-1 right-1 w-6 h-6 bg-emerald-500 border-2 border-white rounded-full flex items-center justify-center text-white text-[10px] shadow" title="Perfil Activo">✓</span>
         </div>
 
-        <div class="min-w-0">
+        <div class="min-w-0 reveal-item" style="transition-delay: 100ms;">
           <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-100 text-rose-700 text-xs font-semibold mb-2">
             <i data-lucide="sparkles" class="w-3.5 h-3.5 text-rose-500"></i>
             <span>Candidata Destacada</span>
@@ -189,15 +189,15 @@
 
       <!-- Quick Action Buttons -->
       <div class="flex flex-wrap items-center justify-center sm:justify-start lg:justify-end gap-2.5 w-full lg:w-auto shrink-0">
-        <a href="cv/CV_Meibi_Mota_Analitica_Marketing.pdf" target="_blank" class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white font-medium text-xs shadow-md shadow-rose-200 transition whitespace-nowrap" title="Ver CV de Analítica, Investigación y Marketing en PDF">
+        <a href="cv/CV_Meibi_Mota_Analitica_Marketing.pdf" target="_blank" class="reveal-item inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-gradient-to-r from-rose-500 to-pink-500" style="transition-delay: 150ms;" hover:from-rose-600 hover:to-pink-600 text-white font-medium text-xs shadow-md shadow-rose-200 transition whitespace-nowrap" title="Ver CV de Analítica, Investigación y Marketing en PDF">
           <i data-lucide="file-text" class="w-4 h-4 shrink-0"></i>
           <span>CV Marketing (PDF)</span>
         </a>
-        <a href="cv/CV_Meibi_Mota_Administrativo_Financiero.pdf" target="_blank" class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-medium text-xs shadow-md shadow-purple-200 transition whitespace-nowrap" title="Ver CV Administrativo, Financiero y Operaciones en PDF">
+        <a href="cv/CV_Meibi_Mota_Administrativo_Financiero.pdf" target="_blank" class="reveal-item inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600" style="transition-delay: 200ms;" hover:from-purple-700 hover:to-indigo-700 text-white font-medium text-xs shadow-md shadow-purple-200 transition whitespace-nowrap" title="Ver CV Administrativo, Financiero y Operaciones en PDF">
           <i data-lucide="file-text" class="w-4 h-4 shrink-0"></i>
           <span>CV Financiero (PDF)</span>
         </a>
-        <button onclick="openModal('profile-info')" class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-rose-50 hover:bg-rose-100 text-rose-700 font-medium text-xs border border-rose-200 transition whitespace-nowrap">
+        <button onclick="openModal('profile-info')" class="reveal-item inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-rose-50 hover:bg-rose-100 text-rose-700" style="transition-delay: 250ms;" font-medium text-xs border border-rose-200 transition whitespace-nowrap">
           <i data-lucide="user-check" class="w-4 h-4 shrink-0"></i>
           <span>Ver Perfil & Word</span>
         </button>
@@ -205,8 +205,8 @@
     </header>
 
     <!-- METRICS BAR -->
-    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mb-8 reveal-on-scroll">
-      <div class="bg-white/95 p-4 rounded-[2rem] border border-rose-100 shadow-sm flex items-center gap-3.5 p-4 sm:p-5">
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mb-8">
+      <div class="reveal-item bg-white/95 p-4 rounded-[2rem] border border-rose-100 shadow-sm flex items-center gap-3.5 p-4 sm:p-5" style="transition-delay: 0ms;">
         <div class="w-12 h-12 rounded-full aspect-square bg-rose-100 text-rose-600 flex items-center justify-center text-xl shrink-0">
           <i data-lucide="graduation-cap" class="w-5 h-5"></i>
         </div>
@@ -216,7 +216,7 @@
         </div>
       </div>
 
-      <div class="bg-white/95 p-4 rounded-[2rem] border border-pink-100 shadow-sm flex items-center gap-3.5 p-4 sm:p-5">
+      <div class="reveal-item bg-white/95 p-4 rounded-[2rem] border border-pink-100 shadow-sm flex items-center gap-3.5 p-4 sm:p-5" style="transition-delay: 70ms;">
         <div class="w-12 h-12 rounded-full aspect-square bg-pink-100 text-pink-600 flex items-center justify-center text-xl shrink-0">
           <i data-lucide="bar-chart-3" class="w-5 h-5"></i>
         </div>
@@ -226,7 +226,7 @@
         </div>
       </div>
 
-      <div class="bg-white/95 p-4 rounded-[2rem] border border-purple-100 shadow-sm flex items-center gap-3.5 p-4 sm:p-5">
+      <div class="reveal-item bg-white/95 p-4 rounded-[2rem] border border-purple-100 shadow-sm flex items-center gap-3.5 p-4 sm:p-5" style="transition-delay: 140ms;">
         <div class="w-12 h-12 rounded-full aspect-square bg-purple-100 text-purple-600 flex items-center justify-center text-xl shrink-0">
           <i data-lucide="landmark" class="w-5 h-5"></i>
         </div>
@@ -236,7 +236,7 @@
         </div>
       </div>
 
-      <div class="bg-white/95 p-4 rounded-[2rem] border border-amber-100 shadow-sm flex items-center gap-3.5 p-4 sm:p-5">
+      <div class="reveal-item bg-white/95 p-4 rounded-[2rem] border border-amber-100 shadow-sm flex items-center gap-3.5 p-4 sm:p-5" style="transition-delay: 210ms;">
         <div class="w-12 h-12 rounded-full aspect-square bg-amber-100 text-amber-600 flex items-center justify-center text-xl shrink-0">
           <i data-lucide="headphones" class="w-5 h-5"></i>
         </div>
@@ -248,7 +248,7 @@
     </div>
 
     <!-- FILTER & SEARCH BAR -->
-    <div class="reveal-on-scroll bg-white/95 p-5 sm:p-6 rounded-[2.2rem] border border-rose-100 shadow-sm mb-8 space-y-4">
+    <div class="bg-white/95 p-5 sm:p-6 rounded-[2.2rem] border border-rose-100 shadow-sm mb-8 space-y-4">
       <div class="flex flex-col md:flex-row gap-3 items-stretch md:items-center justify-between">
         <!-- Search input -->
         <div class="relative flex-1">
@@ -287,19 +287,19 @@
 
       <!-- Category Filter Pills -->
       <div class="flex flex-wrap gap-2 pt-2 border-t border-rose-100">
-        <button onclick="setCategory('all')" id="tab-all" class="category-pill pill-active px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition inline-flex items-center gap-1.5">
+        <button onclick="setCategory('all')" id="tab-all" class="category-pill reveal-item pill-active px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition inline-flex items-center gap-1.5" style="transition-delay: 0ms;">
           <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Todas (<span id="count-all">15</span>)
         </button>
-        <button onclick="setCategory('psicologia')" id="tab-psicologia" class="category-pill bg-rose-50 hover:bg-rose-100 text-slate-700 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition inline-flex items-center gap-1.5">
+        <button onclick="setCategory('psicologia')" id="tab-psicologia" class="category-pill reveal-item bg-rose-50 hover:bg-rose-100 text-slate-700 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition inline-flex items-center gap-1.5" style="transition-delay: 40ms;">
           <i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Psicología Escolar & Educación
         </button>
-        <button onclick="setCategory('datos')" id="tab-datos" class="category-pill bg-rose-50 hover:bg-rose-100 text-slate-700 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition inline-flex items-center gap-1.5">
+        <button onclick="setCategory('datos')" id="tab-datos" class="category-pill reveal-item bg-rose-50 hover:bg-rose-100 text-slate-700 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition inline-flex items-center gap-1.5" style="transition-delay: 80ms;">
           <i data-lucide="bar-chart-3" class="w-3.5 h-3.5"></i> Análisis de Datos & Power BI
         </button>
-        <button onclick="setCategory('banco')" id="tab-banco" class="category-pill bg-rose-50 hover:bg-rose-100 text-slate-700 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition inline-flex items-center gap-1.5">
+        <button onclick="setCategory('banco')" id="tab-banco" class="category-pill reveal-item bg-rose-50 hover:bg-rose-100 text-slate-700 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition inline-flex items-center gap-1.5" style="transition-delay: 120ms;">
           <i data-lucide="landmark" class="w-3.5 h-3.5"></i> Banca & Entidades Financieras
         </button>
-        <button onclick="setCategory('servicio')" id="tab-servicio" class="category-pill bg-rose-50 hover:bg-rose-100 text-slate-700 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition inline-flex items-center gap-1.5">
+        <button onclick="setCategory('servicio')" id="tab-servicio" class="category-pill reveal-item bg-rose-50 hover:bg-rose-100 text-slate-700 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition inline-flex items-center gap-1.5" style="transition-delay: 160ms;">
           <i data-lucide="headphones" class="w-3.5 h-3.5"></i> Servicio al Cliente & Asistencia
         </button>
       </div>
@@ -687,7 +687,7 @@
       }
 
       empty.classList.add('hidden');
-      container.innerHTML = jobs.map(job => {
+      container.innerHTML = jobs.map((job, idx) => {
         const st = statuses[job.id] || 'PENDING';
         const isApplied = st === 'APPLIED';
         const isDismissed = st === 'DISMISSED';
@@ -709,7 +709,7 @@
           : '';
 
         return `
-        <div class="glass-card rounded-[2.5rem] p-6 sm:p-7 flex flex-col justify-between relative overflow-hidden reveal-on-scroll ${cardExtraClass}">
+        <div class="glass-card rounded-[2.5rem] p-6 sm:p-7 flex flex-col justify-between relative overflow-hidden reveal-item ${cardExtraClass}" style="transition-delay: ${(idx % 4) * 75}ms;">
           
           <!-- Top badge row -->
           <div>
@@ -884,7 +884,7 @@
     let revealObserver;
     function initScrollReveal() {
       if (!('IntersectionObserver' in window)) {
-        document.querySelectorAll('.reveal-on-scroll').forEach(el => el.classList.add('is-visible'));
+        document.querySelectorAll('.reveal-item, .reveal-on-scroll').forEach(el => el.classList.add('is-visible'));
         return;
       }
       if (revealObserver) {
@@ -899,7 +899,7 @@
         });
       }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
 
-      document.querySelectorAll('.reveal-on-scroll:not(.is-visible)').forEach(el => {
+      document.querySelectorAll('.reveal-item:not(.is-visible), .reveal-on-scroll:not(.is-visible)').forEach(el => {
         revealObserver.observe(el);
       });
     }

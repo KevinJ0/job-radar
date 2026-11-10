@@ -59,16 +59,16 @@
       box-shadow: 0 12px 30px -10px rgba(249, 115, 22, 0.18);
     }
 
-    /* Scroll Reveal Animation */
-    .reveal-on-scroll {
+    /* Granular micro-animations */
+    .reveal-item, .reveal-on-scroll {
       opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      transform: translateY(14px) scale(0.98);
+      transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1), transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
       will-change: opacity, transform;
     }
-    .reveal-on-scroll.is-visible {
+    .reveal-item.is-visible, .reveal-on-scroll.is-visible {
       opacity: 1;
-      transform: translateY(0);
+      transform: translateY(0) scale(1);
     }
 
   </style>
@@ -94,10 +94,10 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-10">
 
     <!-- Header / Profile Banner -->
-    <header class="reveal-on-scroll glass rounded-[2.5rem] p-6 sm:p-8 mb-6 shadow-2xl border border-slate-700/50">
+    <header class="glass rounded-[2.5rem] p-6 sm:p-8 mb-6 shadow-2xl border border-slate-700/50">
       <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
         <div>
-          <div class="flex flex-wrap items-center gap-2 mb-2.5">
+          <div class="flex flex-wrap items-center gap-2 mb-2.5 reveal-item" style="transition-delay: 50ms;">
             <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-orange-500/20 text-orange-400 border border-orange-500/30">
               <i data-lucide="radar" class="w-3.5 h-3.5"></i> Radar Activo
             </span>
@@ -114,25 +114,25 @@
               <i data-lucide="banknote" class="w-3.5 h-3.5"></i> Moneda: Pesos Dominicanos (RD$)
             </span>
           </div>
-          <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-white flex items-center gap-2.5">
+          <h1 class="reveal-item text-2xl sm:text-3xl font-extrabold tracking-tight text-white flex items-center gap-2.5" style="transition-delay: 100ms;">
             <span>KEVIN ROSARIO</span> <span class="text-orange-400 font-normal text-lg sm:text-xl">· Radar & Postulación Directa</span>
           </h1>
-          <p class="text-slate-400 text-sm mt-1">
+          <p class="reveal-item text-slate-400 text-sm mt-1" style="transition-delay: 150ms;">
             Ingeniero en Sistemas y Computación · 4 años exp. (.NET Core, C#, Flutter/Dart, Angular, SQL Server, Oracle PL/SQL, Python)
           </p>
         </div>
 
         <div class="flex flex-wrap items-center gap-2.5">
-          <button onclick="copyGeneralCoverLetter()" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-orange-600 hover:bg-orange-500 text-white text-xs sm:text-sm font-semibold shadow-lg shadow-orange-600/25 transition">
+          <button onclick="copyGeneralCoverLetter()" class="reveal-item inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-orange-600" style="transition-delay: 200ms;"  hover:bg-orange-500 text-white text-xs sm:text-sm font-semibold shadow-lg shadow-orange-600/25 transition">
             <i data-lucide="clipboard-copy" class="w-4 h-4"></i> Copiar Carta de Presentación
           </button>
-          <button onclick="openTopMatches()" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white text-xs sm:text-sm font-semibold shadow-lg shadow-emerald-600/25 transition">
+          <button onclick="openTopMatches()" class="reveal-item inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-emerald-600" style="transition-delay: 250ms;"  hover:bg-emerald-500 text-white text-xs sm:text-sm font-semibold shadow-lg shadow-emerald-600/25 transition">
             <i data-lucide="rocket" class="w-4 h-4"></i> Abrir Top 3 Ofertas
           </button>
-          <button onclick="exportCSV()" class="inline-flex items-center gap-2 px-3.5 py-2.5 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-xs sm:text-sm font-medium transition">
+          <button onclick="exportCSV()" class="reveal-item inline-flex items-center gap-2 px-3.5 py-2.5 rounded-full bg-slate-800" style="transition-delay: 300ms;"  hover:bg-slate-700 text-slate-200 border border-slate-700 text-xs sm:text-sm font-medium transition">
             <i data-lucide="download" class="w-4 h-4"></i> CSV (RD$)
           </button>
-          <a href="CV_Kevin_Rosario.pdf" target="_blank" class="inline-flex items-center gap-2 px-3.5 py-2.5 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-xs sm:text-sm font-medium transition">
+          <a href="CV_Kevin_Rosario.pdf" target="_blank" class="reveal-item inline-flex items-center gap-2 px-3.5 py-2.5 rounded-full bg-slate-800" style="transition-delay: 350ms;"  hover:bg-slate-700 text-slate-200 border border-slate-700 text-xs sm:text-sm font-medium transition">
             <i data-lucide="file-text" class="w-4 h-4"></i> Ver CV (PDF)
           </a>
         </div>
@@ -153,8 +153,8 @@
     </header>
 
     <!-- KPI Cards -->
-    <section class="reveal-on-scroll grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-      <div class="glass rounded-[2rem] p-5 border border-slate-800">
+    <section class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+      <div class="reveal-item glass rounded-[2rem] p-5 border border-slate-800" style="transition-delay: 0ms;">
         <div class="flex items-center justify-between">
           <div class="text-xs text-slate-400 uppercase font-medium">Vacantes Disponibles</div>
           <div class="w-8 h-8 rounded-full aspect-square bg-slate-800 flex items-center justify-center"><i data-lucide="briefcase" class="w-4 h-4 text-slate-400"></i></div>
@@ -162,7 +162,7 @@
         <div id="kpiTotal" class="text-2xl sm:text-3xl font-extrabold text-white mt-1">0</div>
         <div class="text-xs text-emerald-400 mt-1">≤ 4 años de experiencia</div>
       </div>
-      <div class="glass rounded-[2rem] p-5 border border-slate-800">
+      <div class="reveal-item glass rounded-[2rem] p-5 border border-slate-800" style="transition-delay: 75ms;">
         <div class="flex items-center justify-between">
           <div class="text-xs text-slate-400 uppercase font-medium">Match Promedio CV</div>
           <div class="w-8 h-8 rounded-full aspect-square bg-orange-500/20 flex items-center justify-center"><i data-lucide="zap" class="w-4 h-4 text-orange-400"></i></div>
@@ -170,7 +170,7 @@
         <div id="kpiMatch" class="text-2xl sm:text-3xl font-extrabold text-orange-400 mt-1">0%</div>
         <div class="text-xs text-slate-400 mt-1">Alineado con tu stack</div>
       </div>
-      <div class="glass rounded-[2rem] p-5 border border-slate-800">
+      <div class="reveal-item glass rounded-[2rem] p-5 border border-slate-800" style="transition-delay: 150ms;">
         <div class="flex items-center justify-between">
           <div class="text-xs text-slate-400 uppercase font-medium">Sueldo Promedio (RD$ / Mes)</div>
           <div class="w-8 h-8 rounded-full aspect-square bg-emerald-500/20 flex items-center justify-center"><i data-lucide="banknote" class="w-4 h-4 text-emerald-400"></i></div>
@@ -178,7 +178,7 @@
         <div id="kpiAvgSalaryDOP" class="text-xl sm:text-2xl font-extrabold text-emerald-400 mt-1">RD$ 0</div>
         <div class="text-xs text-slate-400 mt-1">Tasa ref: 1 EUR ≈ RD$ 65.50</div>
       </div>
-      <div class="glass rounded-[2rem] p-5 border border-slate-800">
+      <div class="reveal-item glass rounded-[2rem] p-5 border border-slate-800" style="transition-delay: 225ms;">
         <div class="flex items-center justify-between">
           <div class="text-xs text-slate-400 uppercase font-medium">Favoritas / Postuladas</div>
           <div class="w-8 h-8 rounded-full aspect-square bg-amber-500/20 flex items-center justify-center"><i data-lucide="star" class="w-4 h-4 text-amber-400"></i></div>
@@ -189,7 +189,7 @@
     </section>
 
     <!-- Controls & Filters -->
-    <section class="reveal-on-scroll glass rounded-[2.2rem] p-5 sm:p-6 mb-6 border border-slate-800">
+    <section class="glass rounded-[2.2rem] p-5 sm:p-6 mb-6 border border-slate-800">
       <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
         <!-- Search Input -->
         <div class="md:col-span-3 relative">
@@ -205,19 +205,19 @@
 
         <!-- Country Tabs -->
         <div class="md:col-span-5 flex flex-wrap gap-1.5" id="countryTabs">
-          <button onclick="setCountry('ALL')" data-country="ALL" class="country-btn px-4 py-2 rounded-full text-xs font-semibold bg-orange-600 text-white transition inline-flex items-center gap-1.5">
+          <button onclick="setCountry('ALL')" data-country="ALL" class="country-btn reveal-item px-4 py-2 rounded-full text-xs font-semibold bg-orange-600 text-white transition inline-flex items-center gap-1.5" style="transition-delay: 0ms;" style="transition-delay: 0ms; text-xs font-semibold bg-orange-600 text-white transition inline-flex items-center gap-1.5">
             <i data-lucide="globe" class="w-3.5 h-3.5"></i> Todos
           </button>
-          <button onclick="setCountry('DO')" data-country="DO" class="country-btn px-4 py-2 rounded-full text-xs font-semibold bg-slate-800/90 text-slate-300 hover:bg-slate-700 transition inline-flex items-center gap-1.5">
+          <button onclick="setCountry('DO')" data-country="DO" class="country-btn reveal-item px-4 py-2 rounded-full text-xs font-semibold bg-slate-800/90 text-slate-300 hover:bg-slate-700 transition inline-flex items-center gap-1.5" style="transition-delay: 40ms;" style="transition-delay: 40ms; text-xs font-semibold bg-slate-800/90 text-slate-300 hover:bg-slate-700 transition inline-flex items-center gap-1.5">
             <span class="font-bold">🇩🇴</span> RD / La Romana
           </button>
-          <button onclick="setCountry('ES')" data-country="ES" class="country-btn px-4 py-2 rounded-full text-xs font-semibold bg-slate-800/90 text-slate-300 hover:bg-slate-700 transition inline-flex items-center gap-1.5">
+          <button onclick="setCountry('ES')" data-country="ES" class="country-btn reveal-item px-4 py-2 rounded-full text-xs font-semibold bg-slate-800/90 text-slate-300 hover:bg-slate-700 transition inline-flex items-center gap-1.5" style="transition-delay: 80ms;" style="transition-delay: 80ms; text-xs font-semibold bg-slate-800/90 text-slate-300 hover:bg-slate-700 transition inline-flex items-center gap-1.5">
             <span class="font-bold">🇪🇸</span> España
           </button>
-          <button onclick="setCountry('LATAM')" data-country="LATAM" class="country-btn px-4 py-2 rounded-full text-xs font-semibold bg-slate-800/90 text-slate-300 hover:bg-slate-700 transition inline-flex items-center gap-1.5">
+          <button onclick="setCountry('LATAM')" data-country="LATAM" class="country-btn reveal-item px-4 py-2 rounded-full text-xs font-semibold bg-slate-800/90 text-slate-300 hover:bg-slate-700 transition inline-flex items-center gap-1.5" style="transition-delay: 120ms;" style="transition-delay: 120ms; text-xs font-semibold bg-slate-800/90 text-slate-300 hover:bg-slate-700 transition inline-flex items-center gap-1.5">
             <i data-lucide="compass" class="w-3.5 h-3.5"></i> LATAM Remoto
           </button>
-          <button onclick="setCountry('AR')" data-country="AR" class="country-btn px-4 py-2 rounded-full text-xs font-semibold bg-slate-800/90 text-slate-300 hover:bg-slate-700 transition inline-flex items-center gap-1.5">
+          <button onclick="setCountry('AR')" data-country="AR" class="country-btn reveal-item px-4 py-2 rounded-full text-xs font-semibold bg-slate-800/90 text-slate-300 hover:bg-slate-700 transition inline-flex items-center gap-1.5" style="transition-delay: 160ms;" style="transition-delay: 160ms; text-xs font-semibold bg-slate-800/90 text-slate-300 hover:bg-slate-700 transition inline-flex items-center gap-1.5">
             <span class="font-bold">🇦🇷</span> Argentina
           </button>
         </div>
@@ -417,9 +417,9 @@ La Romana, República Dominicana`;
       selectedCountry = code;
       document.querySelectorAll('.country-btn').forEach(btn => {
         if (btn.dataset.country === code) {
-          btn.className = 'country-btn px-4 py-2 rounded-full text-xs font-semibold bg-orange-600 text-white transition';
+          btn.className = 'country-btn px-4 py-2 rounded-full text-xs font-semibold bg-orange-600 text-white transition inline-flex items-center gap-1.5 is-visible';
         } else {
-          btn.className = 'country-btn px-4 py-2 rounded-full text-xs font-semibold bg-slate-800/90 text-slate-300 hover:bg-slate-700 transition';
+          btn.className = 'country-btn px-4 py-2 rounded-full text-xs font-semibold bg-slate-800/90 text-slate-300 hover:bg-slate-700 transition inline-flex items-center gap-1.5 is-visible';
         }
       });
       renderJobs();
@@ -454,15 +454,16 @@ La Romana, República Dominicana`;
     function renderStackBar() {
       const container = document.getElementById('cvStackContainer');
       const stack = (appData.profile && appData.profile.stack) || [];
-      container.innerHTML = stack.map(tech => {
+      container.innerHTML = stack.map((tech, idx) => {
         const isSelected = selectedTech && selectedTech.toLowerCase() === tech.toLowerCase();
         const cls = isSelected
           ? 'bg-orange-500 text-white border-orange-400 shadow-md shadow-orange-500/20'
           : 'bg-slate-800/80 text-slate-300 border-slate-700/80 hover:border-orange-500/50 hover:text-white';
-        return `<button onclick="toggleTech('${tech.replace(/'/g, "\\'")}')" class="px-2.5 py-1 rounded-lg text-xs font-medium border transition ${cls}">
+        return `<button onclick="toggleTech('${tech.replace(/'/g, "\\'")}')" class="reveal-item px-3 py-1 rounded-full text-xs font-medium border transition ${cls}" style="transition-delay: ${(idx % 8) * 35}ms;">
           ${tech}
         </button>`;
       }).join('');
+      initScrollReveal();
     }
 
     function getFilteredJobs() {
@@ -545,7 +546,7 @@ La Romana, República Dominicana`;
       }
       emptyState.classList.add('hidden');
 
-      container.innerHTML = list.map(job => {
+      container.innerHTML = list.map((job, idx) => {
         const st = statuses[job.id] || 'PENDING';
         const isApplied = st === 'APPLIED';
         const isDismissed = st === 'DISMISSED';
@@ -577,7 +578,7 @@ La Romana, República Dominicana`;
         const targetUrl = formatApplyUrl(job.url);
 
         return `
-        <article class="glass job-card rounded-[2.5rem] p-6 sm:p-7 flex flex-col justify-between reveal-on-scroll ${cardExtraClass}">
+        <article class="glass job-card rounded-[2.5rem] p-6 sm:p-7 flex flex-col justify-between reveal-item ${cardExtraClass}" style="transition-delay: ${(idx % 4) * 75}ms;">
           <div>
             <div class="flex items-center justify-between gap-2 mb-3">
               <div class="flex items-center gap-2 flex-wrap">
