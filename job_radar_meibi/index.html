@@ -463,6 +463,30 @@
       setTimeout(filterJobs, 350);
     }
 
+    function toggleExpandDesc(jobId) {
+      const descEl = document.getElementById('desc-' + jobId);
+      const reqsEl = document.getElementById('reqs-' + jobId);
+      const previewEl = document.getElementById('reqs-preview-' + jobId);
+      const btnEl = document.getElementById('btn-expand-' + jobId);
+      if (!descEl || !btnEl) return;
+
+      const isExpanded = descEl.classList.contains('line-clamp-none');
+
+      if (isExpanded) {
+        descEl.classList.remove('line-clamp-none');
+        descEl.classList.add('line-clamp-3');
+        if (reqsEl) reqsEl.classList.add('hidden');
+        if (previewEl) previewEl.classList.remove('hidden');
+        btnEl.innerHTML = '<span>👁️ Ver descripción completa ▾</span>';
+      } else {
+        descEl.classList.remove('line-clamp-3');
+        descEl.classList.add('line-clamp-none');
+        if (reqsEl) reqsEl.classList.remove('hidden');
+        if (previewEl) previewEl.classList.add('hidden');
+        btnEl.innerHTML = '<span>▴ Ver menos</span>';
+      }
+    }
+
     function init() {
       filterJobs();
       updateCounts();
@@ -622,19 +646,36 @@
               ${job.salaryNote ? `<p class="text-[10px] text-slate-500 mt-0.5">${job.salaryNote}</p>` : ''}
             </div>
 
-            <!-- Description -->
-            <p class="text-xs text-slate-600 line-clamp-3 mb-4 leading-relaxed">
-              ${job.description}
-            </p>
+            <!-- Description & Requirements with Expand Button -->
+            <div class="mb-4">
+              <div id="desc-${job.id}" class="text-xs text-slate-600 line-clamp-3 leading-relaxed transition-all duration-200">
+                ${job.description}
+              </div>
 
-            <!-- Requirements bullet snippet -->
-            <div class="mb-4 space-y-1">
-              ${job.requirements.slice(0, 2).map(r => `
-                <div class="flex items-start gap-1.5 text-[11px] text-slate-500">
-                  <span class="text-rose-500 font-bold">•</span>
-                  <span class="line-clamp-1">${r}</span>
-                </div>
-              `).join('')}
+              <!-- Requisitos detallados completos (se revelan al pulsar Ver descripción completa) -->
+              <div id="reqs-${job.id}" class="hidden mt-3 pt-3 border-t border-rose-100/80 space-y-1.5">
+                <p class="text-[11px] font-bold text-slate-800">Requisitos y funciones completas:</p>
+                ${(job.requirements || []).map(r => `
+                  <div class="flex items-start gap-1.5 text-[11px] text-slate-600">
+                    <span class="text-rose-500 font-bold">•</span>
+                    <span>${r}</span>
+                  </div>
+                `).join('')}
+              </div>
+
+              <!-- Vista previa compacta inicial de 2 requisitos -->
+              <div id="reqs-preview-${job.id}" class="mt-2 space-y-1">
+                ${(job.requirements || []).slice(0, 2).map(r => `
+                  <div class="flex items-start gap-1.5 text-[11px] text-slate-500">
+                    <span class="text-rose-500 font-bold">•</span>
+                    <span class="line-clamp-1">${r}</span>
+                  </div>
+                `).join('')}
+              </div>
+
+              <button onclick="toggleExpandDesc('${job.id}')" id="btn-expand-${job.id}" class="mt-2 text-[11px] font-semibold text-rose-600 hover:text-rose-700 hover:underline flex items-center gap-1 transition">
+                <span>👁️ Ver descripción completa ▾</span>
+              </button>
             </div>
 
             <!-- Tags -->

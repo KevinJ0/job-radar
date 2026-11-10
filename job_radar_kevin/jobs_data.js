@@ -104,7 +104,8 @@ window.JOBS_DATA = {
       "matchScore": 99,
       "highlight": "Vacante 100% remota en RD auditada hoy: .NET Core, APIs, SQL Server y GitHub. Cero AWS ni Azure.",
       "description": "Desarrollo de sistemas internos en .NET Core, creación y consumo de APIs, integraciones y bases de datos relacionales SQL Server en horario de lunes a viernes.",
-      "url": "https://www.emplea.do/empleos/4816-desarrollador-jr-net-preccs-srl"
+      "url": "https://www.emplea.do/empleos/4816-desarrollador-jr-net-preccs-srl",
+      "details": "<strong>Responsabilidades del puesto:</strong><br>\n• Desarrollo y mantenimiento de sistemas empresariales internos sobre .NET Core.<br>\n• Construcción y consumo de APIs REST seguras y optimizadas.<br>\n• Integración con plataformas externas (Zoho CRM, Zoho Voice y Zoho Desk).<br>\n• Modelado y optimización de consultas SQL Server y MySQL.<br>\n• Participación en mejoras continuas y nuevos módulos con GitHub.<br><br>\n<strong>Requisitos:</strong> .NET Core, C#, APIs REST, SQL Server, MySQL, Git. 100% Remoto en RD."
     },
     {
       "id": "ij-net-fs-2",
@@ -135,7 +136,8 @@ window.JOBS_DATA = {
       "matchScore": 99,
       "highlight": "Pide exactamente 3 años de experiencia y coincide al 100% con tu stack (.NET Core, C#, SQL Server, Angular) sin pedir AWS ni Azure.",
       "description": "Desarrollo Full Stack con ecosistema .NET y bases de datos relacionales SQL Server en modalidad 100% teletrabajo.",
-      "url": "https://www.infojobs.net/madrid/desarrollador-senior-full-stack-.net-teletrabajo-100/of-i1fa4ccf59041c1b318287a3997bc99"
+      "url": "https://www.infojobs.net/madrid/desarrollador-senior-full-stack-.net-teletrabajo-100/of-i1fa4ccf59041c1b318287a3997bc99",
+      "details": "<strong>Responsabilidades del puesto:</strong><br>\n• Desarrollo Full Stack sobre arquitectura .NET Core y lenguaje C#.<br>\n• Implementación de frontend responsivo con Angular y consumo de endpoints REST.<br>\n• Parametrización y optimización de bases de datos relacionales SQL Server.<br>\n• Trabajo colaborativo en equipo bajo metodologías ágiles (Scrum).<br><br>\n<strong>Requisitos:</strong> Mínimo 3 años con .NET Core, C#, SQL Server y Angular. Cero AWS/Azure."
     },
     {
       "id": "gj-dametrabajo-net-1",
@@ -165,7 +167,8 @@ window.JOBS_DATA = {
       "matchScore": 98,
       "highlight": "Auditada en texto completo vía Google Jobs: pide .NET, .NET Core, APIs, XML/XSD y Facturación Electrónica DGII en RD (sin AWS/Azure).",
       "description": "Mantenimiento y expansión de servicios de facturación electrónica en República Dominicana (DGII) con .NET Core, C#, APIs y validaciones XML/XSD.",
-      "url": "https://dametrabajo.com/aviso/desarrollador-junior-net-empresa-de-servicios-de-facturacion-electroni-50937aafc2cd1eb6"
+      "url": "https://dametrabajo.com/aviso/desarrollador-junior-net-empresa-de-servicios-de-facturacion-electroni-50937aafc2cd1eb6",
+      "details": "<strong>Responsabilidades del puesto:</strong><br>\n• Mantenimiento y evolución de servicios de facturación electrónica en República Dominicana (e-CF DGII).<br>\n• Validación rigurosa de esquemas XML / XSD y firmado digital de comprobantes.<br>\n• Creación de microservicios y APIs REST en .NET Core y C# con persistencia en SQL Server.<br><br>\n<strong>Requisitos:</strong> 2-3 años en .NET Core, C#, APIs REST, XML/XSD y conocimiento de normativas DGII."
     },
     {
       "id": "li-sparq-flutter-1",
@@ -195,7 +198,8 @@ window.JOBS_DATA = {
       "matchScore": 98,
       "highlight": "Auditada en texto completo: busca exactamente lo que has creado en producción (apps Flutter con modo offline-first, caché local, colas de sincronización y uso de Claude Code). Sin AWS ni Azure.",
       "description": "Diseño y desarrollo de aplicaciones móviles en Flutter y Dart con persistencia de datos local (offline-first), sincronización en segundo plano y resolución de conflictos.",
-      "url": "https://cr.linkedin.com/jobs/view/senior-flutter-dart-mobile-engineer-at-sparq-4483319090"
+      "url": "https://cr.linkedin.com/jobs/view/senior-flutter-dart-mobile-engineer-at-sparq-4483319090",
+      "details": "<strong>Responsabilidades del puesto:</strong><br>\n• Desarrollo de aplicaciones móviles multiplataforma en Flutter y Dart.<br>\n• Arquitectura offline-first con persistencia local en SQLite y colas de sincronización en segundo plano.<br>\n• Consumo e integración con APIs RESTful y manejo de estados.<br>\n• Resolución de conflictos de datos y pruebas automatizadas.<br><br>\n<strong>Requisitos:</strong> 3-4 años en Flutter/Dart, SQLite, Git y consumo de APIs. Cero cloud complejo."
     },
     {
       "id": "li-cruzayala-fs-1",
@@ -223,7 +227,8 @@ window.JOBS_DATA = {
       "matchScore": 95,
       "highlight": "Auditada en texto completo: pide 'Approximately 2 years of hands-on web development experience', APIs REST y bases de datos en RD (sin AWS ni Azure).",
       "description": "Desarrollo Full Stack de aplicaciones web, lógica de servidor, validación de datos, autenticación y APIs REST en República Dominicana.",
-      "url": "https://do.linkedin.com/jobs/view/full-stack-engineer-at-cruz-ayala-4483442863"
+      "url": "https://do.linkedin.com/jobs/view/full-stack-engineer-at-cruz-ayala-4483442863",
+      "details": "<strong>Responsabilidades del puesto:</strong><br>\n• Desarrollo Full Stack de soluciones web empresariales en República Dominicana.<br>\n• Lógica de servidor, validaciones de seguridad, autenticación y endpoints REST.<br>\n• Modelado y mantenimiento de bases de datos en SQL Server.<br><br>\n<strong>Requisitos:</strong> ~2 años de experiencia web demostrable, APIs REST, SQL Server y Git."
     },
     {
       "id": "ij-netcore-fs-3",
@@ -254,7 +259,8 @@ window.JOBS_DATA = {
       "matchScore": 95,
       "highlight": "Pide 3 años de experiencia en desarrollo Full Stack con .NET Core, C# y SQL Server.",
       "description": "Desarrollo Full Stack sobre arquitectura .NET Core trabajando 100% en remoto.",
-      "url": "https://www.infojobs.net/madrid/fullstack-react-.net-core-.-teletrabajo-100/of-ib436038c5c42aeafbcd548f1c57132"
+      "url": "https://www.infojobs.net/madrid/fullstack-react-.net-core-.-teletrabajo-100/of-ib436038c5c42aeafbcd548f1c57132",
+      "details": "<strong>Responsabilidades del puesto:</strong><br>\n• Programación y mantenimiento de aplicaciones web con .NET Core y C#.<br>\n• Consumo y diseño de interfaces con componentes web y APIs REST.<br>\n• Creación de scripts, consultas complejas y procedimientos en SQL Server.<br><br>\n<strong>Requisitos:</strong> Mínimo 3 años en desarrollo sobre .NET Core, C#, SQL Server y control con Git."
     },
     {
       "id": "do-ct-backend-1",
@@ -285,7 +291,8 @@ window.JOBS_DATA = {
       "matchScore": 94,
       "highlight": "Vacante en República Dominicana 100% remota para trabajar desde La Romana con .NET / Java.",
       "description": "Diseñar, implementar y mejorar servicios de backend escalables y seguros, API REST, CI/CD y control de calidad.",
-      "url": "https://do.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-desarrollador-backend-java-o-net-en-santo-domingo-de-guzman-D6F05AA5D735FE5161373E686DCF3405"
+      "url": "https://do.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-desarrollador-backend-java-o-net-en-santo-domingo-de-guzman-D6F05AA5D735FE5161373E686DCF3405",
+      "details": "<strong>Responsabilidades del puesto:</strong><br>\n• Diseño y despliegue de microservicios de backend escalables y de alto rendimiento.<br>\n• Implementación de APIs RESTful seguras con autenticación JWT.<br>\n• Integración continua y pruebas automatizadas (CI/CD) con Git.<br><br>\n<strong>Requisitos:</strong> 2-3 años en desarrollo backend con .NET / C# o Java, APIs REST y bases de datos relacionales."
     },
     {
       "id": "li-evopoint-mobile-1",
@@ -315,7 +322,8 @@ window.JOBS_DATA = {
       "matchScore": 94,
       "highlight": "Auditada en texto completo: pide 'Mínimo 3 años de experiencia en desarrollo de aplicaciones móviles, consumo de APIs RESTful y Git' en RD (sin AWS/Azure).",
       "description": "Desarrollo de aplicaciones móviles para Android e iOS, integración con APIs RESTful y control de versiones Git.",
-      "url": "https://do.linkedin.com/jobs/view/mobile-developer-android-ios-at-evopoint-solutions-4486445174"
+      "url": "https://do.linkedin.com/jobs/view/mobile-developer-android-ios-at-evopoint-solutions-4486445174",
+      "details": "<strong>Responsabilidades del puesto:</strong><br>\n• Desarrollo y publicación de aplicaciones móviles para Android e iOS.<br>\n• Integración ágil con APIs RESTful y servicios externos.<br>\n• Optimización de rendimiento móvil, caché local y control de versiones con Git.<br><br>\n<strong>Requisitos:</strong> Mínimo 3 años en aplicaciones móviles (Flutter/Dart o nativo), APIs REST y Git en RD."
     },
     {
       "id": "li-altimetrik-flutter-1",
@@ -345,7 +353,8 @@ window.JOBS_DATA = {
       "matchScore": 93,
       "highlight": "Auditada en texto completo: pide exactamente '4+ years of Mobile Development experience, Strong experience with Flutter, Git' (sin pedir AWS ni Azure).",
       "description": "Desarrollo de aplicaciones móviles escalables en Flutter y Dart dentro de entornos de microservicios y equipos ágiles 100% remotos.",
-      "url": "https://co.linkedin.com/jobs/view/senior-flutter-developer-remote-at-altimetrik-4474523919"
+      "url": "https://co.linkedin.com/jobs/view/senior-flutter-developer-remote-at-altimetrik-4474523919",
+      "details": "<strong>Responsabilidades del puesto:</strong><br>\n• Construcción de módulos móviles robustos en Flutter y Dart dentro de equipos ágiles distribuidos.<br>\n• Integración con microservicios y protocolos de comunicación en tiempo real.<br>\n• Buenas prácticas de ingeniería de software, arquitectura limpia y pruebas unitarias.<br><br>\n<strong>Requisitos:</strong> 4 años de experiencia en desarrollo móvil, dominio de Flutter/Dart y Git."
     },
     {
       "id": "li-trackfield-flutter-1",
@@ -374,7 +383,8 @@ window.JOBS_DATA = {
       "matchScore": 92,
       "highlight": "Auditada en texto completo: posición nivel Pleno (Mid-Level) desarrollando y evolucionando apps móviles en Flutter e integraciones API (sin AWS ni Azure).",
       "description": "Desarrollar y mantener funcionalidades móviles en Flutter para la plataforma TFSports, conduciendo integraciones con sistemas internos y de terceros.",
-      "url": "https://br.linkedin.com/jobs/view/mobile-developer-pleno-track-field-at-track-field-4478664977"
+      "url": "https://br.linkedin.com/jobs/view/mobile-developer-pleno-track-field-at-track-field-4478664977",
+      "details": "<strong>Responsabilidades del puesto:</strong><br>\n• Mantenimiento y nuevas funcionalidades en la aplicación móvil corporativa con Flutter.<br>\n• Consumo de APIs, persistencia de datos local y optimización de interfaces de usuario.<br>\n• Participación en revisiones de código y despliegues continuos.<br><br>\n<strong>Requisitos:</strong> Nivel pleno (2-4 años) en Flutter, Dart, APIs REST y control de versiones Git."
     },
     {
       "id": "ij-net-wpf-3",
@@ -403,7 +413,8 @@ window.JOBS_DATA = {
       "matchScore": 92,
       "highlight": "Pide 3 años de experiencia; ideal por tu experiencia creando apps de escritorio e integraciones en C# (sin Cloud).",
       "description": "Desarrollo y mantenimiento de aplicaciones de escritorio en entorno Windows utilizando C# y .NET en modalidad 100% remota.",
-      "url": "https://www.infojobs.net/madrid/desarrollador-c-.net-con-wpf-excel-remoto-h-m-x/of-idee730dc49408faee53a0c25d81f95"
+      "url": "https://www.infojobs.net/madrid/desarrollador-c-.net-con-wpf-excel-remoto-h-m-x/of-idee730dc49408faee53a0c25d81f95",
+      "details": "<strong>Responsabilidades del puesto:</strong><br>\n• Desarrollo y mantenimiento de aplicaciones de escritorio en C# .NET con WPF y XAML.<br>\n• Integración con motores de datos relacionales y librerías de automatización de reportes Excel.<br>\n• Depuración y optimización de código legado hacia estándares modernos de C#.<br><br>\n<strong>Requisitos:</strong> Experiencia demostrable en C#, .NET, WPF/Desktop y bases de datos relacionales."
     },
     {
       "id": "gj-proland-fs-1",
@@ -433,7 +444,8 @@ window.JOBS_DATA = {
       "matchScore": 91,
       "highlight": "Auditada en texto completo: pide exactamente 'Mínimo 3 años de experiencia en desarrollo Full Stack' en empresa dominicana (sin AWS ni Azure).",
       "description": "Desarrollo y mantenimiento de sistemas empresariales Full Stack y bases de datos relacionales en República Dominicana.",
-      "url": "https://do.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-programador-full-stack-senior-en-santo-domingo-este-BA45529C50691C5F61373E686DCF3405"
+      "url": "https://do.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-programador-full-stack-senior-en-santo-domingo-este-BA45529C50691C5F61373E686DCF3405",
+      "details": "<strong>Responsabilidades del puesto:</strong><br>\n• Desarrollo de software Full Stack para automatización de operaciones empresariales.<br>\n• Integración de backend relacional con interfaces interactivas para usuarios finales.<br>\n• Documentación técnica y aseguramiento de calidad de código.<br><br>\n<strong>Requisitos:</strong> 3-4 años de experiencia full stack, backend relacional, APIs y control con Git."
     },
     {
       "id": "gj-talentpool-sw-1",
@@ -463,7 +475,8 @@ window.JOBS_DATA = {
       "matchScore": 90,
       "highlight": "Extraída vía Google Jobs Scraper para República Dominicana: desarrollo de software y automatización de datos sin pedir AWS ni Azure.",
       "description": "Desarrollo de soluciones tecnológicas, integración de bases de datos SQL y automatización de procesos internos en República Dominicana.",
-      "url": "https://talent-pool.co/jobs/129a8da0-bf88-44b2-b7d5-ea0c3a46b60c"
+      "url": "https://talent-pool.co/jobs/129a8da0-bf88-44b2-b7d5-ea0c3a46b60c",
+      "details": "<strong>Responsabilidades del puesto:</strong><br>\n• Análisis de requerimientos funcionales y diseño de soluciones de software escalables.<br>\n• Implementación de servicios web y consumo de bases de datos relacionales.<br>\n• Monitoreo, pruebas de integración y resolución de incidencias.<br><br>\n<strong>Requisitos:</strong> Formación en ingeniería de sistemas o afines, experiencia en desarrollo de software y Git."
     },
     {
       "id": "ij-oracle-plsql-4",
@@ -492,7 +505,8 @@ window.JOBS_DATA = {
       "matchScore": 89,
       "highlight": "Pide 3 años de experiencia; encaja con tu etapa en Central Romana desarrollando con Oracle / PL-SQL.",
       "description": "Programación avanzada en entornos Oracle PL/SQL, integración de datos y procedimientos almacenados en modalidad 100% teletrabajo.",
-      "url": "https://www.infojobs.net/madrid/programador-senior-oracle-pl-sql-odi-etl/of-i7b25a0e89d4f28b3d28f271aa127fa"
+      "url": "https://www.infojobs.net/madrid/programador-senior-oracle-pl-sql-odi-etl/of-i7b25a0e89d4f28b3d28f271aa127fa",
+      "details": "<strong>Responsabilidades del puesto:</strong><br>\n• Desarrollo y optimización de procedimientos almacenados, paquetes y triggers en Oracle PL/SQL.<br>\n• Creación de procesos ETL para extracción, transformación y carga de datos.<br>\n• Análisis de planes de ejecución y afinamiento de consultas de alto volumen.<br><br>\n<strong>Requisitos:</strong> Experiencia sólida en Oracle PL/SQL, estructuras relacionales y procesos de datos."
     },
     {
       "id": "ij-oracle-mig-5",
@@ -521,7 +535,8 @@ window.JOBS_DATA = {
       "matchScore": 88,
       "highlight": "Pide solo 2 años de experiencia. Aprovecha tu dominio de migraciones de esquemas y Oracle/SQL.",
       "description": "Desarrollo en base de datos Oracle y migración de esquemas y datos transaccionales en modalidad 100% remota.",
-      "url": "https://www.infojobs.net/barcelona/desarrollador-migrador-datos-db2-oracle-100-remoto/of-i8dd3d522fa4eee881827377b992159"
+      "url": "https://www.infojobs.net/barcelona/desarrollador-migrador-datos-db2-oracle-100-remoto/of-i8dd3d522fa4eee881827377b992159",
+      "details": "<strong>Responsabilidades del puesto:</strong><br>\n• Ejecución y validación de planes de migración de datos hacia motores Oracle Database.<br>\n• Normalización de modelos relacionales, scripts de conversión y validaciones de integridad.<br>\n• Parametrización de esquemas de datos y reportes de control.<br><br>\n<strong>Requisitos:</strong> Conocimiento profundo de bases de datos relacionales, SQL y Oracle PL/SQL."
     },
     {
       "id": "ij-py-est-6",
@@ -551,7 +566,8 @@ window.JOBS_DATA = {
       "matchScore": 85,
       "highlight": "Pide 3 años de experiencia, horario compatible con RD y sueldo equivalente a ~RD$ 262k/mes.",
       "description": "Desarrollo Full Stack con backend en Python e integración de servicios web en modalidad 100% remota.",
-      "url": "https://www.infojobs.net/madrid/full-stack-developer-python-react-5-00-am-2-00-pm-100-teletrabajo/of-iab374d9e2c494c88c7ad8e4f35b472"
+      "url": "https://www.infojobs.net/madrid/full-stack-developer-python-react-5-00-am-2-00-pm-100-teletrabajo/of-iab374d9e2c494c88c7ad8e4f35b472",
+      "details": "<strong>Responsabilidades del puesto:</strong><br>\n• Desarrollo de servicios backend con Python y endpoints RESTful.<br>\n• Integración con interfaces de usuario y bases de datos relacionales.<br>\n• Horario intensivo matutino (5:00 am - 2:00 pm hora España / compatible en remoto).<br><br>\n<strong>Requisitos:</strong> Experiencia en desarrollo con Python, APIs REST y bases de datos relacionales."
     },
     {
       "id": "ij-ai-swe-9",
@@ -581,7 +597,8 @@ window.JOBS_DATA = {
       "matchScore": 84,
       "highlight": "Pide solo 2 años de experiencia y ofrece la banda salarial más alta (hasta RD$ 360,250 / mes).",
       "description": "Ingeniería de software full-stack e integración de servicios modernos en modalidad 100% teletrabajo.",
-      "url": "https://www.infojobs.net/madrid/desarrollador-software-ai-software-engineer-m-f-d/of-id8ef3b066c42de84ddd9e2e7341954"
+      "url": "https://www.infojobs.net/madrid/desarrollador-software-ai-software-engineer-m-f-d/of-id8ef3b066c42de84ddd9e2e7341954",
+      "details": "<strong>Responsabilidades del puesto:</strong><br>\n• Integración de modelos de inteligencia artificial y automatizaciones con servicios de backend.<br>\n• Desarrollo de utilidades y pipelines de procesamiento con Python y APIs.<br>\n• Pruebas de integración y control de calidad de software.<br><br>\n<strong>Requisitos:</strong> Experiencia práctica en desarrollo de software, Python y consumo de APIs de IA."
     },
     {
       "id": "ij-py-dev-7",
@@ -610,7 +627,8 @@ window.JOBS_DATA = {
       "matchScore": 82,
       "highlight": "Pide solo 2 años de experiencia en desarrollo Python trabajando 100% en remoto.",
       "description": "Desarrollo de aplicaciones y servicios backend en Python trabajando 100% en remoto.",
-      "url": "https://www.infojobs.net/alcobendas/python-deveoper-100-remoto/of-ie69567c6bd463c84120c7ee6cf7044"
+      "url": "https://www.infojobs.net/alcobendas/python-deveoper-100-remoto/of-ie69567c6bd463c84120c7ee6cf7044",
+      "details": "<strong>Responsabilidades del puesto:</strong><br>\n• Desarrollo y mantenimiento de microservicios orientados a datos con Python.<br>\n• Implementación de endpoints seguros y conexión con bases de datos relacionales.<br>\n• Trabajo 100% en remoto dentro de un equipo técnico multidisciplinar.<br><br>\n<strong>Requisitos:</strong> Experiencia en Python, desarrollo de backend y control de versiones con Git."
     },
     {
       "id": "ar-bum-py-1",
@@ -639,7 +657,8 @@ window.JOBS_DATA = {
       "matchScore": 81,
       "highlight": "Compañía digital global con presencia en 18 países contratando Software Engineers en remoto.",
       "description": "Ingeniería de software con Python e integración de servicios y APIs en equipos distribuidos.",
-      "url": "https://www.bumeran.com.ar/empleos/job-1118492322.html"
+      "url": "https://www.bumeran.com.ar/empleos/job-1118492322.html",
+      "details": "<strong>Responsabilidades del puesto:</strong><br>\n• Desarrollo de software de backend y módulos de integración con Python.<br>\n• Automatización de flujos de datos y consumo de servicios inteligentes.<br>\n• Participación en sprints ágiles y revisiones técnicas de código.<br><br>\n<strong>Requisitos:</strong> Experiencia en programación Python, APIs y bases de datos relacionales."
     },
     {
       "id": "ij-java-jr-10",
@@ -668,7 +687,8 @@ window.JOBS_DATA = {
       "matchScore": 79,
       "highlight": "Pide solo 2 años de experiencia en programación Java y bases de datos SQL/Oracle.",
       "description": "Programación y mantenimiento de aplicaciones en Java en modalidad 100% teletrabajo.",
-      "url": "https://www.infojobs.net/madrid/programador-junior-java-teletrabajo/of-ib6f7be1bb2461594b2e566013e64db"
+      "url": "https://www.infojobs.net/madrid/programador-junior-java-teletrabajo/of-ib6f7be1bb2461594b2e566013e64db",
+      "details": "<strong>Responsabilidades del puesto:</strong><br>\n• Desarrollo y soporte de módulos de software empresarial en lenguaje Java.<br>\n• Creación de consultas SQL para consulta y manipulación de datos relacionales.<br>\n• Mantenimiento evolutivo de servicios y resolución de tickets técnicos.<br><br>\n<strong>Requisitos:</strong> Bases sólidas en Java SE, programación orientada a objetos, SQL y Git."
     },
     {
       "id": "ar-bum-java-2",
@@ -697,7 +717,8 @@ window.JOBS_DATA = {
       "matchScore": 78,
       "highlight": "Acepta perfiles de 1 a 3 años de experiencia para desarrollo de producto 100% remoto.",
       "description": "Equipos de implementación y desarrollo de producto en Java para operaciones industriales.",
-      "url": "https://www.bumeran.com.ar/empleos/job-1118368050.html"
+      "url": "https://www.bumeran.com.ar/empleos/job-1118368050.html",
+      "details": "<strong>Responsabilidades del puesto:</strong><br>\n• Mantenimiento y desarrollo de funcionalidades en aplicaciones Java.<br>\n• Integración con bases de datos transaccionales y servicios web.<br>\n• Documentación y pruebas unitarias de software.<br><br>\n<strong>Requisitos:</strong> Experiencia en Java, SQL relacional y disposición para trabajo en equipo remoto."
     },
     {
       "id": "gj-ailogic-net-1",
@@ -729,7 +750,8 @@ window.JOBS_DATA = {
       "matchScore": 98,
       "highlight": "Vacante en RD 100% remota con C#, ASP.NET Core, Angular y SQL Server. Cero nube compleja.",
       "description": "Desarrollo y optimización de microservicios backend y portales web en .NET, C#, ASP.NET Core, Angular y bases de datos SQL Server.",
-      "url": "https://do.trabajo.org/oferta-4047-36994b3c89d50370fa5cd4223c021963"
+      "url": "https://do.trabajo.org/oferta-4047-36994b3c89d50370fa5cd4223c021963",
+      "details": "<strong>Responsabilidades del puesto:</strong><br>\n• Desarrollo Full Stack con .NET Core, C# y frontend en Angular.<br>\n• Diseño de APIs RESTful con autenticación y gestión de estado.<br>\n• Persistencia y optimización de procedimientos almacenados en SQL Server.<br><br>\n<strong>Requisitos:</strong> Experiencia demostrable en .NET Core, C#, Angular y SQL Server. Cero AWS/Azure."
     },
     {
       "id": "li-azumo-flutter-1",
@@ -760,7 +782,8 @@ window.JOBS_DATA = {
       "matchScore": 96,
       "highlight": "Puesto 100% remoto para LATAM pagado en USD; desarrollo en Flutter, Dart e integración a nivel de sistema.",
       "description": "Ingeniería de software multiplataforma con Flutter/Dart y automatización/integración con sistema operativo.",
-      "url": "https://www.linkedin.com/jobs/view/flutter-dart-engineer-latin-america-remote-at-azumo-4462161603"
+      "url": "https://www.linkedin.com/jobs/view/flutter-dart-engineer-latin-america-remote-at-azumo-4462161603",
+      "details": "<strong>Responsabilidades del puesto:</strong><br>\n• Desarrollo de interfaces dinámicas y componentes de cliente móvil con Flutter y Dart.<br>\n• Integración con servicios backend RESTful y librerías de persistencia local.<br>\n• Pruebas de integración y aseguramiento de rendimiento en Android e iOS.<br><br>\n<strong>Requisitos:</strong> Experiencia en Flutter, Dart, consumo de APIs y Git en modalidad remota LATAM."
     },
     {
       "id": "ind-azertium-oracle-1",
@@ -790,7 +813,8 @@ window.JOBS_DATA = {
       "matchScore": 97,
       "highlight": "100% teletrabajo en Oracle PL/SQL y bases de datos relacionales sin tecnologías cloud complejas.",
       "description": "Desarrollo y parametrización de circuitos de datos, modelos relacionales y procesos ETL en Oracle PL/SQL.",
-      "url": "https://vacantes.azertiumit.com/jobs/8664053-desarrollador-a-senior-oracle-pl-sql-odi-y-etl"
+      "url": "https://vacantes.azertiumit.com/jobs/8664053-desarrollador-a-senior-oracle-pl-sql-odi-y-etl",
+      "details": "<strong>Responsabilidades del puesto:</strong><br>\n• Parametrización y construcción de modelos relacionales en Oracle Database.<br>\n• Programación de procedimientos almacenados, packages y jobs en PL/SQL.<br>\n• Diseño y mantenimiento de flujos ETL para migración y carga masiva de datos.<br><br>\n<strong>Requisitos:</strong> Experiencia con Oracle PL/SQL, optimización de consultas SQL y procesos ETL."
     }
   ]
 };

@@ -315,6 +315,27 @@ La Romana, República Dominicana`;
       setTimeout(renderJobs, 300);
     }
 
+    function toggleExpandDesc(jobId) {
+      const descEl = document.getElementById('desc-' + jobId);
+      const detailsEl = document.getElementById('details-' + jobId);
+      const btnEl = document.getElementById('btn-expand-' + jobId);
+      if (!descEl || !btnEl) return;
+
+      const isExpanded = descEl.classList.contains('line-clamp-none');
+
+      if (isExpanded) {
+        descEl.classList.remove('line-clamp-none');
+        descEl.classList.add('line-clamp-3');
+        if (detailsEl) detailsEl.classList.add('hidden');
+        btnEl.innerHTML = '<span>👁️ Ver descripción completa ▾</span>';
+      } else {
+        descEl.classList.remove('line-clamp-3');
+        descEl.classList.add('line-clamp-none');
+        if (detailsEl) detailsEl.classList.remove('hidden');
+        btnEl.innerHTML = '<span>▴ Ver menos</span>';
+      }
+    }
+
     function setCountry(code) {
       selectedCountry = code;
       document.querySelectorAll('.country-btn').forEach(btn => {
@@ -528,9 +549,19 @@ La Romana, República Dominicana`;
               </div>
             ` : ''}
 
-            <p class="text-xs text-slate-400 leading-relaxed mb-4">
-              ${job.description || ''}
-            </p>
+            <div class="mb-4">
+              <div id="desc-${job.id}" class="text-xs text-slate-300 leading-relaxed line-clamp-3 transition-all duration-200">
+                ${job.description || ''}
+              </div>
+              ${job.details ? `
+                <div id="details-${job.id}" class="hidden mt-2 pt-2 border-t border-slate-800/80 text-xs text-slate-300 space-y-1.5 leading-relaxed">
+                  ${job.details}
+                </div>
+              ` : ''}
+              <button onclick="toggleExpandDesc('${job.id}')" id="btn-expand-${job.id}" class="mt-2 text-[11px] font-semibold text-orange-400 hover:text-orange-300 hover:underline flex items-center gap-1 transition">
+                <span>👁️ Ver descripción completa ▾</span>
+              </button>
+            </div>
 
             <div class="flex flex-wrap gap-1.5 mb-4">
               ${(job.stack || []).map(t => `
