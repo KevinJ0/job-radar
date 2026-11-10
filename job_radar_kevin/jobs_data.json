@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-10 16:55 (≤ 4 días de publicación)",
+  "lastUpdated": "2026-11-10 17:15 (≤ 4 días · 100% Scrape Real)",
   "exchangeRatesNote": "1 EUR ≈ RD$ 65.50 | 1 USD ≈ RD$ 60.50",
   "profile": {
     "name": "Kevin Rosario",
@@ -68,40 +68,8 @@
       "CI/CD"
     ]
   },
-  "totalJobs": 11,
+  "totalJobs": 9,
   "jobs": [
-    {
-      "id": "do-empleado-preccs-1",
-      "title": "Desarrollador Jr .NET (C# / APIs / SQL Server)",
-      "company": "PRECCS SRL",
-      "country": "Rep. Dominicana",
-      "countryCode": "DO",
-      "flag": "🇩🇴",
-      "portal": "Emplea.do / Trabajos Diarios",
-      "location": "República Dominicana (100% Remoto)",
-      "modality": "100% Remoto",
-      "experienceYears": 2,
-      "experienceLabel": "1 - 2 años (Jr/Mid ≤ 4 años)",
-      "salaryDOP": "RD$ 80,000 - RD$ 115,000 / mes (Est.)",
-      "salaryDOPYearly": "RD$ 960,000 - RD$ 1,380,000 / año",
-      "salaryOriginal": "A convenir en RD$ / Tiempo Indefinido",
-      "salaryNumericDOPMonthly": 95000,
-      "postedAt": "2026-11-10",
-      "postedLabel": "Hoy · 10 de Noviembre 2026",
-      "stack": [
-        ".NET Core",
-        "C#",
-        "REST API",
-        "SQL Server",
-        "MySQL",
-        "Git"
-      ],
-      "matchScore": 99,
-      "highlight": "Vacante 100% remota en RD auditada hoy: .NET Core, APIs, SQL Server y GitHub. Cero AWS ni Azure.",
-      "description": "Desarrollo de sistemas internos en .NET Core, creación y consumo de APIs, integraciones y bases de datos relacionales SQL Server en horario de lunes a viernes.",
-      "url": "https://www.emplea.do/empleos/4816-desarrollador-jr-net-preccs-srl",
-      "details": "<strong>Responsabilidades del puesto:</strong><br>• Desarrollo y mantenimiento de sistemas empresariales internos sobre .NET Core.<br>• Construcción y consumo de APIs REST seguras y optimizadas.<br>• Integración con plataformas externas (Zoho CRM, Zoho Voice y Zoho Desk).<br>• Modelado y optimización de consultas SQL Server y MySQL.<br>• Participación en mejoras continuas y nuevos módulos con GitHub.<br><br><strong>Requisitos:</strong> .NET Core, C#, APIs REST, SQL Server, MySQL, Git. 100% Remoto en RD."
-    },
     {
       "id": "li-lde-flutter-1",
       "title": "Desarrollador Mobile (Flutter) - Modalidad Retainer B2B",
@@ -167,38 +135,6 @@
       "description": "Desarrollo de servicios y APIs REST utilizando Microsoft .NET Core y C#, arquitectura por capas, Repository y Unit of Work, persistencia con Entity Framework Core y SQL Server.",
       "url": "https://pe.linkedin.com/jobs/view/desarrollador-net-at-stefanini-latam-4487916833",
       "details": "<strong>Responsabilidades:</strong><br>• Desarrollo de servicios y APIs REST utilizando Microsoft .NET y C#.<br>• Arquitectura por capas (Domain, Application, Infrastructure y WebAPI).<br>• Persistencia y consultas complejas mediante Entity Framework Core y SQL Server.<br>• Procesos de integración y datos con SQL Server Integration Services (SSIS).<br>• Pruebas unitarias con xUnit y Moq.<br><br><strong>Requisitos:</strong> Mínimo 2 años de experiencia como desarrollador .NET, C#, SQL Server, EF Core y Git."
-    },
-    {
-      "id": "ind-azertium-oracle-1",
-      "title": "Desarrollador/a Oracle PL/SQL (ODI y Procesos ETL)",
-      "company": "Azertium IT Global Services SL",
-      "country": "España",
-      "countryCode": "ES",
-      "flag": "🇪🇸",
-      "portal": "Indeed",
-      "location": "Remoto (España / LATAM)",
-      "modality": "100% Remoto",
-      "experienceYears": 2,
-      "experienceLabel": "2 - 3 años (≤ 4 años)",
-      "salaryDOP": "RD$ 152,833 - RD$ 180,125 / mes",
-      "salaryDOPYearly": "RD$ 1,834,000 - RD$ 2,161,500 / año",
-      "salaryOriginal": "28.000 € - 33.000 € Bruto/año",
-      "salaryNumericDOPMonthly": 166479,
-      "postedAt": "2026-11-06",
-      "postedLabel": "Hace 4 días · 6 de Noviembre 2026",
-      "stack": [
-        "Oracle",
-        "PL/SQL",
-        "ODI",
-        "ETL",
-        "SQL Server",
-        "Git"
-      ],
-      "matchScore": 97,
-      "highlight": "Oferta de teletrabajo 100% auditada: desarrollo y optimización de procedimientos almacenados Oracle PL/SQL y procesos ETL. Máximo 3 años requeridos.",
-      "description": "Construcción de procedimientos almacenados, packages y triggers en Oracle PL/SQL, optimización de consultas SQL y flujos de integración ETL.",
-      "url": "https://es.indeed.com/viewjob?jk=7b461fc484e56994",
-      "details": "<strong>Responsabilidades:</strong><br>• Programación avanzada en Oracle PL/SQL (packages, triggers, stored procedures).<br>• Análisis de rendimiento, optimización de índices y planes de ejecución.<br>• Configuración y mantenimiento de flujos ETL para migración y carga masiva de datos.<br><br><strong>Requisitos:</strong> Experiencia con Oracle PL/SQL, optimización de consultas SQL y procesos ETL."
     },
     {
       "id": "gj-pop-frontend-qik",
