@@ -6,7 +6,13 @@
   <title>Job Radar · Kevin Rosario — Postulación Rápida (RD$)</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Lucide Icons (Local + CDN fallback) -->
+  <script src="lucide.min.js"></script>
+  <script>
+    if (!window.lucide) {
+      document.write('<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"><\/script>');
+    }
+  </script>
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -494,6 +500,8 @@ La Romana, República Dominicana`;
         const isApplied = st === 'APPLIED';
         const isDismissed = st === 'DISMISSED';
         const isFav = st === 'FAV';
+        const appliedIcon = isApplied ? 'check-circle-2' : 'check';
+        const dismissedIcon = isDismissed ? 'rotate-ccw' : 'x';
 
         const matchColor = job.matchScore >= 90
           ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40'
@@ -604,11 +612,11 @@ La Romana, República Dominicana`;
                 <i data-lucide="star" class="w-4 h-4 ${isFav ? 'fill-amber-400 text-amber-300' : ''}"></i>
               </button>
               <button onclick="setJobStatus('${job.id}', 'APPLIED')" title="${isApplied ? 'Desmarcar de postulados' : 'Marcar como ya postulado (se mueve al final)'}" class="px-3 py-1.5 rounded-lg text-xs font-semibold border transition inline-flex items-center gap-1.5 ${isApplied ? 'bg-emerald-600 border-emerald-400 text-white' : 'bg-slate-800/70 border-slate-700 text-slate-300 hover:bg-emerald-950/40 hover:text-emerald-300'}">
-                <i data-lucide="${isApplied ? 'check-circle-2' : 'check'}" class="w-3.5 h-3.5"></i>
+                <i data-lucide="${appliedIcon}" class="w-3.5 h-3.5"></i>
                 <span>${isApplied ? 'Ya postulé' : 'Ya postulé'}</span>
               </button>
               <button onclick="setJobStatus('${job.id}', 'DISMISSED')" title="${isDismissed ? 'Restaurar a pendientes' : 'Marcar como no interesante (se mueve al final)'}" class="px-2.5 py-1.5 rounded-lg text-xs font-semibold border transition inline-flex items-center gap-1.5 ${isDismissed ? 'bg-rose-600 border-rose-400 text-white' : 'bg-slate-800/70 border-slate-700 text-slate-400 hover:bg-rose-950/40 hover:text-rose-300'}">
-                <i data-lucide="${isDismissed ? 'rotate-ccw' : 'x'}" class="w-3.5 h-3.5"></i>
+                <i data-lucide="${dismissedIcon}" class="w-3.5 h-3.5"></i>
                 <span>${isDismissed ? 'Restaurar' : 'No me interesa'}</span>
               </button>
             </div>

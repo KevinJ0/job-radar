@@ -7,8 +7,13 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Lucide Icons (Local + CDN fallback) -->
+  <script src="lucide.min.js"></script>
+  <script>
+    if (!window.lucide) {
+      document.write('<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"><\/script>');
+    }
+  </script>
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -613,6 +618,8 @@
         const st = statuses[job.id] || 'PENDING';
         const isApplied = st === 'APPLIED';
         const isDismissed = st === 'DISMISSED';
+        const appliedIcon = isApplied ? 'check-circle-2' : 'check';
+        const dismissedIcon = isDismissed ? 'rotate-ccw' : 'x';
 
         const statusBadge = isApplied
           ? '<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-300"><i data-lucide="check-circle-2" class="w-3 h-3"></i> Ya postulado (al final)</span>'
@@ -724,11 +731,11 @@
                 <span>Carta</span>
               </button>
               <button onclick="setJobStatus('${job.id}', 'APPLIED')" class="py-2 px-2.5 rounded-xl text-xs font-semibold transition inline-flex items-center justify-center gap-1.5 ${isApplied ? 'bg-emerald-600 text-white shadow-sm' : 'bg-slate-100 hover:bg-emerald-50 text-slate-700 hover:text-emerald-700 border border-slate-200'}" title="${isApplied ? 'Desmarcar de postulados' : 'Marcar como ya postulado (se mueve al final)'}">
-                <i data-lucide="${isApplied ? 'check-circle-2' : 'check'}" class="w-3.5 h-3.5"></i>
+                <i data-lucide="${appliedIcon}" class="w-3.5 h-3.5"></i>
                 <span>${isApplied ? 'Ya postulé' : 'Ya postulé'}</span>
               </button>
               <button onclick="setJobStatus('${job.id}', 'DISMISSED')" class="py-2 px-2.5 rounded-xl text-xs font-semibold transition inline-flex items-center justify-center gap-1.5 ${isDismissed ? 'bg-rose-600 text-white shadow-sm' : 'bg-slate-100 hover:bg-rose-50 text-slate-600 hover:text-rose-700 border border-slate-200'}" title="${isDismissed ? 'Restaurar a pendientes' : 'Marcar como no interesante (se mueve al final)'}">
-                <i data-lucide="${isDismissed ? 'rotate-ccw' : 'x'}" class="w-3.5 h-3.5"></i>
+                <i data-lucide="${dismissedIcon}" class="w-3.5 h-3.5"></i>
                 <span>${isDismissed ? 'Restaurar' : 'Descartar'}</span>
               </button>
             </div>
