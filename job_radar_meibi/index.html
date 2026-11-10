@@ -65,82 +65,18 @@
   </script>
   <style>
     body {
-      background-color: #fff8f9;
+      background: linear-gradient(180deg, #fff5f7 0%, #fffbfb 100%);
       min-height: 100vh;
-      position: relative;
-      overflow-x: hidden;
-    }
-    
-    /* Animated Soft Ambient Glows */
-    @keyframes meibiOrb1 {
-      0%, 100% { transform: translate3d(0, 0, 0) scale(1); opacity: 0.22; }
-      50% { transform: translate3d(45px, 35px, 0) scale(1.16); opacity: 0.32; }
-    }
-    @keyframes meibiOrb2 {
-      0%, 100% { transform: translate3d(0, 0, 0) scale(1.06); opacity: 0.18; }
-      50% { transform: translate3d(-35px, -25px, 0) scale(0.92); opacity: 0.28; }
-    }
-    @keyframes meibiOrb3 {
-      0%, 100% { transform: translate3d(0, 0, 0) scale(0.94); opacity: 0.16; }
-      50% { transform: translate3d(30px, -40px, 0) scale(1.18); opacity: 0.26; }
-    }
-    .meibi-orb1 {
-      position: fixed;
-      top: -100px;
-      right: -80px;
-      width: 520px;
-      height: 520px;
-      background: radial-gradient(circle, #fb7185 0%, rgba(251, 113, 133, 0) 70%);
-      filter: blur(80px);
-      animation: meibiOrb1 15s ease-in-out infinite;
-      pointer-events: none;
-      z-index: 0;
-      will-change: transform, opacity;
-    }
-    .meibi-orb2 {
-      position: fixed;
-      bottom: -120px;
-      left: -80px;
-      width: 580px;
-      height: 580px;
-      background: radial-gradient(circle, #c084fc 0%, rgba(192, 132, 252, 0) 70%);
-      filter: blur(88px);
-      animation: meibiOrb2 19s ease-in-out infinite;
-      pointer-events: none;
-      z-index: 0;
-      will-change: transform, opacity;
-    }
-    .meibi-orb3 {
-      position: fixed;
-      top: 35%;
-      left: 20%;
-      width: 440px;
-      height: 440px;
-      background: radial-gradient(circle, #fdba74 0%, rgba(253, 186, 116, 0) 70%);
-      filter: blur(82px);
-      animation: meibiOrb3 22s ease-in-out infinite;
-      pointer-events: none;
-      z-index: 0;
-      will-change: transform, opacity;
-    }
-    .meibi-grid-pattern {
-      position: fixed;
-      inset: 0;
-      background-image: radial-gradient(rgba(244, 63, 94, 0.05) 1px, transparent 1px);
-      background-size: 28px 28px;
-      pointer-events: none;
-      z-index: 0;
     }
 
     .glass-card {
-      background: rgba(255, 255, 255, 0.88);
-      backdrop-filter: blur(14px);
-      border: 1px solid rgba(254, 205, 211, 0.65);
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid rgba(254, 205, 211, 0.7);
+      transition: all 0.2s ease;
     }
     .glass-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 20px 25px -5px rgba(244, 63, 94, 0.1), 0 8px 10px -6px rgba(244, 63, 94, 0.05);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px -6px rgba(244, 63, 94, 0.12);
       border-color: rgba(251, 113, 133, 0.8);
     }
     .pill-active {
@@ -157,16 +93,10 @@
     }
   </style>
 </head>
-<body class="text-slate-800 antialiased font-sans flex flex-col justify-between relative">
-
-  <!-- Ambient Animated Glowing Background -->
-  <div class="meibi-orb1" aria-hidden="true"></div>
-  <div class="meibi-orb2" aria-hidden="true"></div>
-  <div class="meibi-orb3" aria-hidden="true"></div>
-  <div class="meibi-grid-pattern" aria-hidden="true"></div>
+<body class="text-slate-800 antialiased font-sans flex flex-col justify-between">
 
   <!-- TOP NOTIFICATION BANNER -->
-  <div class="bg-gradient-to-r from-rose-500 via-pink-500 to-purple-600 text-white text-xs sm:text-sm py-2 px-4 text-center font-medium shadow-sm flex items-center justify-center gap-2 relative z-10">
+  <div class="bg-gradient-to-r from-rose-500 via-pink-500 to-purple-600 text-white text-xs sm:text-sm py-2 px-4 text-center font-medium shadow-sm flex items-center justify-center gap-2">
     <span class="inline-flex items-center gap-1.5">
       <i data-lucide="sparkles" class="w-4 h-4 text-rose-200"></i>
       <strong>Panel Personalizado para Meibi Esperanza Mota Mora</strong> • Actualizado para La Romana & Modalidad Remota
@@ -344,12 +274,6 @@
       <p class="text-sm text-slate-500 mt-1 max-w-md mx-auto">Prueba a buscar con otra palabra clave o selecciona la categoría "Todas".</p>
       <button onclick="resetFilters()" class="mt-4 px-4 py-2 bg-rose-500 text-white rounded-xl text-xs font-semibold shadow hover:bg-rose-600 transition inline-flex items-center gap-1.5">
         <i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i> Restablecer Filtros
-      </button>
-    </div>
-      <h3 class="text-lg font-bold text-slate-800">No encontramos vacantes con estos filtros</h3>
-      <p class="text-sm text-slate-500 mt-1 max-w-md mx-auto">Prueba a buscar con otra palabra clave o selecciona la categoría "Todas".</p>
-      <button onclick="resetFilters()" class="mt-4 px-4 py-2 bg-rose-500 text-white rounded-xl text-xs font-semibold shadow hover:bg-rose-600 transition">
-        Restablecer Filtros
       </button>
     </div>
 
@@ -822,7 +746,6 @@
       if (window.lucide) {
         lucide.createIcons();
       }
-    }
     }
 
     function resetFilters() {
