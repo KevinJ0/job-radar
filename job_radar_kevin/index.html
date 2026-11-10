@@ -193,7 +193,7 @@
           <input
             id="searchInput"
             type="text"
-            oninput="renderJobs()"
+            oninput="handleSearchInput()"
             placeholder="Buscar .NET, C#, Oracle, Python..."
             class="w-full pl-9 pr-3 py-2.5 rounded-full bg-slate-900/90 border border-slate-700/80 text-xs sm:text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:border-orange-500"
           />
@@ -221,19 +221,19 @@
 
         <!-- Experience, Status & Sort -->
         <div class="md:col-span-4 grid grid-cols-3 gap-2">
-          <select id="expFilter" onchange="renderJobs()" class="px-3 py-2.5 rounded-full bg-slate-900/90 border border-slate-700/80 text-xs text-slate-200 focus:outline-none focus:border-orange-500">
+          <select id="expFilter" onchange="scheduleTask(renderJobs)" class="px-3 py-2.5 rounded-full bg-slate-900/90 border border-slate-700/80 text-xs text-slate-200 focus:outline-none focus:border-orange-500">
             <option value="4">Exp: Máx. 4 años</option>
             <option value="3">Exp: Máx. 3 años</option>
             <option value="2">Exp: Máx. 2 años</option>
           </select>
-          <select id="statusFilter" onchange="renderJobs()" class="px-3 py-2.5 rounded-full bg-slate-900/90 border border-slate-700/80 text-xs text-slate-200 focus:outline-none focus:border-orange-500">
+          <select id="statusFilter" onchange="scheduleTask(renderJobs)" class="px-3 py-2.5 rounded-full bg-slate-900/90 border border-slate-700/80 text-xs text-slate-200 focus:outline-none focus:border-orange-500">
             <option value="ALL">Todas (Pendientes primero)</option>
             <option value="ACTIVE">Solo pendientes</option>
             <option value="APPLIED">Ya postuladas</option>
             <option value="DISMISSED">No interesantes</option>
             <option value="FAV">Favoritas</option>
           </select>
-          <select id="sortSelect" onchange="renderJobs()" class="px-3 py-2.5 rounded-full bg-slate-900/90 border border-slate-700/80 text-xs text-slate-200 focus:outline-none focus:border-orange-500">
+          <select id="sortSelect" onchange="scheduleTask(renderJobs)" class="px-3 py-2.5 rounded-full bg-slate-900/90 border border-slate-700/80 text-xs text-slate-200 focus:outline-none focus:border-orange-500">
             <option value="MATCH">Orden: % Match</option>
             <option value="SALARY">Orden: Mayor RD$</option>
             <option value="EXP">Orden: Menor Exp.</option>
@@ -293,7 +293,7 @@ La Romana, República Dominicana`;
       document.getElementById('toastTitle').textContent = title;
       document.getElementById('toastMsg').textContent = msg;
       t.classList.remove('hidden');
-      if (window.lucide) lucide.createIcons();
+      if (window.lucide) lucide.createIcons({ root: t });
       setTimeout(() => t.classList.add('hidden'), 5000);
     }
 
@@ -346,7 +346,7 @@ La Romana, República Dominicana`;
         }
       }
       localStorage.setItem(STORAGE_KEY, JSON.stringify(map));
-      renderJobs();
+      scheduleTask(renderJobs);
     }
 
     function formatApplyUrl(rawUrl) {
@@ -383,7 +383,7 @@ La Romana, República Dominicana`;
       map[jobId] = 'APPLIED';
       localStorage.setItem(STORAGE_KEY, JSON.stringify(map));
       showToast('✅ Postulación abierta y guardada', 'Se movió al final de tu lista para evitar duplicados.');
-      setTimeout(renderJobs, 300);
+      scheduleTask(renderJobs);
     }
 
     function toggleExpandDesc(jobId) {
@@ -398,7 +398,7 @@ La Romana, República Dominicana`;
         descEl.classList.remove('line-clamp-none');
         descEl.classList.add('line-clamp-3');
         if (detailsEl) detailsEl.classList.add('hidden');
-        btnEl.innerHTML = '<i data-lucide="eye" class="w-3.5 h-3.5"></i> <span>Ver descripción completa</span> <i data-lucide="chevron-down" class="w-3 h-3"></i>';
+        btnEl.innerHTML = '${icon("eye", "w-3.5 h-3.5")} <span>Ver descripción completa</span> ${icon("chevron-down", "w-3 h-3")}';
       } else {
         descEl.classList.remove('line-clamp-3');
         descEl.classList.add('line-clamp-none');
@@ -406,7 +406,7 @@ La Romana, República Dominicana`;
         btnEl.innerHTML = '<i data-lucide="chevron-up" class="w-3 h-3"></i> <span>Ver menos</span>';
       }
       if (window.lucide) {
-        lucide.createIcons();
+        lucide.createIcons({ root: container });
       }
     }
 
@@ -419,7 +419,7 @@ La Romana, República Dominicana`;
           btn.className = 'country-btn px-4 py-2 rounded-full text-xs font-semibold bg-slate-800/90 text-slate-300 hover:bg-slate-700 transition inline-flex items-center gap-1.5 is-visible';
         }
       });
-      renderJobs();
+      scheduleTask(renderJobs);
     }
 
     function toggleTech(tech) {
@@ -579,11 +579,11 @@ La Romana, República Dominicana`;
           : 'bg-amber-500/20 text-amber-300 border-amber-500/40';
 
         const statusBadge = isApplied
-          ? '<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/25 text-emerald-300 border border-emerald-500/40"><i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i> Ya postulado (al final)</span>'
+          ? '<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/25 text-emerald-300 border border-emerald-500/40">${icon("check-circle-2", "w-3.5 h-3.5")} Ya postulado (al final)</span>'
           : isFav
-          ? '<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-amber-500/25 text-amber-300 border border-amber-500/40"><i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i> Favorito</span>'
+          ? '<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-amber-500/25 text-amber-300 border border-amber-500/40">${icon("star", "w-3.5 h-3.5 fill-amber-400")} Favorito</span>'
           : isDismissed
-          ? '<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-rose-500/25 text-rose-300 border border-rose-500/40"><i data-lucide="x-circle" class="w-3.5 h-3.5"></i> No interesante (al final)</span>'
+          ? '<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-rose-500/25 text-rose-300 border border-rose-500/40">${icon("x-circle", "w-3.5 h-3.5")} No interesante (al final)</span>'
           : '';
 
         const cardExtraClass = isDismissed
@@ -607,15 +607,15 @@ La Romana, República Dominicana`;
                   ${job.portal}
                 </span>
                 <span class="inline-flex items-center gap-1 text-xs font-medium px-2.5 py-0.5 rounded-full bg-sky-500/15 text-sky-300 border border-sky-500/30">
-                  <i data-lucide="laptop" class="w-3 h-3"></i> ${job.modality}
+                  ${icon("laptop", "w-3 h-3")} ${job.modality}
                 </span>
                 <span class="inline-flex items-center gap-1 text-xs font-semibold px-2.5 py-0.5 rounded-full bg-amber-500/15 text-amber-300 border border-amber-500/30">
-                  <i data-lucide="clock" class="w-3 h-3"></i> Exp: ${job.experienceLabel || (job.experienceYears + ' años')}
+                  ${icon("clock", "w-3 h-3")} Exp: ${job.experienceLabel || (job.experienceYears + ' años')}
                 </span>
                 ${statusBadge}
               </div>
               <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-bold border ${matchColor}">
-                <i data-lucide="zap" class="w-3.5 h-3.5 fill-current"></i> ${job.matchScore}% Match CV
+                ${icon("zap", "w-3.5 h-3.5 fill-current")} ${job.matchScore}% Match CV
               </span>
             </div>
 
@@ -625,17 +625,17 @@ La Romana, República Dominicana`;
               </a>
             </h2>
             <div class="text-sm text-slate-300 font-medium flex flex-wrap items-center gap-2 mb-3">
-              <span class="inline-flex items-center gap-1.5"><i data-lucide="building-2" class="w-3.5 h-3.5 text-slate-400"></i> ${job.company}</span>
+              <span class="inline-flex items-center gap-1.5">${icon("building-2", "w-3.5 h-3.5 text-slate-400")} ${job.company}</span>
               <span class="text-slate-600">•</span>
-              <span class="inline-flex items-center gap-1 text-slate-400 text-xs"><i data-lucide="map-pin" class="w-3 h-3 text-slate-500"></i> ${job.location}</span>
+              <span class="inline-flex items-center gap-1 text-slate-400 text-xs">${icon("map-pin", "w-3 h-3 text-slate-500")} ${job.location}</span>
               <span class="text-slate-600">•</span>
-              <span class="inline-flex items-center gap-1 text-slate-400 text-xs"><i data-lucide="calendar" class="w-3 h-3 text-slate-500"></i> ${job.postedLabel || job.postedAt}</span>
+              <span class="inline-flex items-center gap-1 text-slate-400 text-xs">${icon("calendar", "w-3 h-3 text-slate-500")} ${job.postedLabel || job.postedAt}</span>
             </div>
 
             <div class="mb-3 px-3.5 py-2.5 rounded-[1.4rem] bg-slate-900/85 border border-slate-800 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
               <div>
                 <span class="inline-flex items-center gap-1 text-xs text-slate-400 font-medium block">
-                  <i data-lucide="banknote" class="w-3.5 h-3.5 text-emerald-400"></i> Sueldo en Pesos Dominicanos:
+                  ${icon("banknote", "w-3.5 h-3.5 text-emerald-400")} Sueldo en Pesos Dominicanos:
                 </span>
                 ${job.salaryOriginal ? `<span class="text-[11px] text-slate-500">Moneda original: ${job.salaryOriginal}</span>` : ''}
               </div>
@@ -649,7 +649,7 @@ La Romana, República Dominicana`;
 
             ${job.highlight ? `
               <div class="mb-3 px-3 py-2 rounded-[1.4rem] bg-orange-500/10 border border-orange-500/20 text-xs text-orange-200 flex items-start gap-1.5">
-                <i data-lucide="target" class="w-4 h-4 text-orange-400 shrink-0 mt-0.5"></i>
+                ${icon("target", "w-4 h-4 text-orange-400 shrink-0 mt-0.5")}
                 <div><strong>Por qué encaja contigo:</strong> ${job.highlight}</div>
               </div>
             ` : ''}
@@ -664,9 +664,9 @@ La Romana, República Dominicana`;
                 </div>
               ` : ''}
               <button onclick="toggleExpandDesc('${job.id}')" id="btn-expand-${job.id}" class="mt-2 text-[11px] font-semibold text-orange-400 hover:text-orange-300 hover:underline inline-flex items-center gap-1 transition">
-                <i data-lucide="eye" class="w-3.5 h-3.5"></i>
+                ${icon("eye", "w-3.5 h-3.5")}
                 <span>Ver descripción completa</span>
-                <i data-lucide="chevron-down" class="w-3 h-3"></i>
+                ${icon("chevron-down", "w-3 h-3")}
               </button>
             </div>
 
@@ -685,21 +685,21 @@ La Romana, República Dominicana`;
                 <i data-lucide="star" class="w-4 h-4 ${isFav ? 'fill-amber-400 text-amber-300' : ''}"></i>
               </button>
               <button onclick="setJobStatus('${job.id}', 'APPLIED')" title="${isApplied ? 'Desmarcar de postulados' : 'Marcar como ya postulado (se mueve al final)'}" class="px-3 py-1.5 rounded-lg text-xs font-semibold border transition inline-flex items-center gap-1.5 ${isApplied ? 'bg-emerald-600 border-emerald-400 text-white' : 'bg-slate-800/70 border-slate-700 text-slate-300 hover:bg-emerald-950/40 hover:text-emerald-300'}">
-                <i data-lucide="${appliedIcon}" class="w-3.5 h-3.5"></i>
+                ${icon(appliedIcon, "w-3.5 h-3.5")}
                 <span>${isApplied ? 'Ya postulé' : 'Ya postulé'}</span>
               </button>
               <button onclick="setJobStatus('${job.id}', 'DISMISSED')" title="${isDismissed ? 'Restaurar a pendientes' : 'Marcar como no interesante (se mueve al final)'}" class="px-3.5 py-2 rounded-full text-xs font-semibold border transition inline-flex items-center gap-1.5 ${isDismissed ? 'bg-rose-600 border-rose-400 text-white' : 'bg-slate-800/70 border-slate-700 text-slate-400 hover:bg-rose-950/40 hover:text-rose-300'}">
-                <i data-lucide="${dismissedIcon}" class="w-3.5 h-3.5"></i>
+                ${icon(dismissedIcon, "w-3.5 h-3.5")}
                 <span>${isDismissed ? 'Restaurar' : 'No me interesa'}</span>
               </button>
             </div>
 
             <div class="flex items-center gap-2">
               <button onclick="copyCustomCoverLetter('${escapedTitle}', '${escapedCompany}')" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-xs font-medium transition" title="Copiar carta personalizada para esta empresa">
-                <i data-lucide="clipboard-copy" class="w-3.5 h-3.5"></i> Copiar Carta
+                ${icon("clipboard-copy", "w-3.5 h-3.5")} Copiar Carta
               </button>
               <a href="${targetUrl}" target="_blank" rel="noopener noreferrer" onclick="handleApplyClick('${job.id}')" class="inline-flex items-center gap-1.5 px-5 py-2 rounded-full ${isEmailApply ? 'bg-red-600 hover:bg-red-500 shadow-red-600/20' : 'bg-orange-600 hover:bg-orange-500 shadow-orange-600/20'} text-white text-xs font-bold shadow-md transition" title="${isEmailApply ? 'Abrir borrador en Gmail con la carta y asunto listos' : 'Ir al portal de postulación'}">
-                <i data-lucide="${isEmailApply ? 'mail' : 'external-link'}" class="w-3.5 h-3.5"></i>
+                ${icon(isEmailApply ? "mail" : "external-link", "w-3.5 h-3.5")}
                 <span>${isEmailApply ? 'Enviar por Gmail' : 'Postularme'}</span>
               </a>
             </div>

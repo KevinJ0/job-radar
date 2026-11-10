@@ -253,7 +253,7 @@
           <i data-lucide="search" class="w-5 h-5 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none"></i>
           <input type="text" id="searchInput" placeholder="Buscar por cargo, empresa (APAP, Saint John...), destreza..." 
                  class="w-full pl-11 pr-4 py-2.5 rounded-full bg-rose-50/50 border border-rose-200 text-sm focus:outline-none focus:ring-2 focus:ring-rose-400 focus:bg-white transition"
-                 oninput="filterJobs()">
+                 oninput="handleSearchInput()">
         </div>
 
         <!-- Status & Modality selectors -->
@@ -262,7 +262,7 @@
             <label class="text-xs font-semibold text-slate-500 uppercase tracking-wider flex items-center gap-1">
               <i data-lucide="filter" class="w-3.5 h-3.5"></i> Estado:
             </label>
-            <select id="statusFilter" onchange="filterJobs()" class="py-2.5 px-3 rounded-2xl bg-rose-50/50 border border-rose-200 text-xs sm:text-sm font-medium text-slate-700 focus:outline-none focus:ring-2 focus:ring-rose-400">
+            <select id="statusFilter" onchange="scheduleTask(filterJobs)" class="py-2.5 px-3 rounded-2xl bg-rose-50/50 border border-rose-200 text-xs sm:text-sm font-medium text-slate-700 focus:outline-none focus:ring-2 focus:ring-rose-400">
               <option value="all">Todas (Pendientes primero)</option>
               <option value="pending">Solo pendientes</option>
               <option value="applied">Ya postuladas</option>
@@ -274,7 +274,7 @@
             <label class="text-xs font-semibold text-slate-500 uppercase tracking-wider flex items-center gap-1">
               <i data-lucide="map-pin" class="w-3.5 h-3.5"></i> Modalidad:
             </label>
-            <select id="modalityFilter" onchange="filterJobs()" class="py-2.5 px-3 rounded-2xl bg-rose-50/50 border border-rose-200 text-xs sm:text-sm font-medium text-slate-700 focus:outline-none focus:ring-2 focus:ring-rose-400">
+            <select id="modalityFilter" onchange="scheduleTask(filterJobs)" class="py-2.5 px-3 rounded-2xl bg-rose-50/50 border border-rose-200 text-xs sm:text-sm font-medium text-slate-700 focus:outline-none focus:ring-2 focus:ring-rose-400">
               <option value="all">Todas las modalidades</option>
               <option value="La Romana">Presencial en La Romana</option>
               <option value="Remoto">100% Remoto Nacional</option>
@@ -289,16 +289,16 @@
           <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Todas (<span id="count-all">15</span>)
         </button>
         <button onclick="setCategory('psicologia')" id="tab-psicologia" class="category-pill reveal-item bg-rose-50 hover:bg-rose-100 text-slate-700 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition inline-flex items-center gap-1.5" style="transition-delay: 40ms;">
-          <i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Psicología Escolar & Educación
+          ${icon("graduation-cap", "w-3.5 h-3.5")} Psicología Escolar & Educación
         </button>
         <button onclick="setCategory('datos')" id="tab-datos" class="category-pill reveal-item bg-rose-50 hover:bg-rose-100 text-slate-700 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition inline-flex items-center gap-1.5" style="transition-delay: 80ms;">
-          <i data-lucide="bar-chart-3" class="w-3.5 h-3.5"></i> Análisis de Datos & Power BI
+          ${icon("bar-chart-3", "w-3.5 h-3.5")} Análisis de Datos & Power BI
         </button>
         <button onclick="setCategory('banco')" id="tab-banco" class="category-pill reveal-item bg-rose-50 hover:bg-rose-100 text-slate-700 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition inline-flex items-center gap-1.5" style="transition-delay: 120ms;">
-          <i data-lucide="landmark" class="w-3.5 h-3.5"></i> Banca & Entidades Financieras
+          ${icon("landmark", "w-3.5 h-3.5")} Banca & Entidades Financieras
         </button>
         <button onclick="setCategory('servicio')" id="tab-servicio" class="category-pill reveal-item bg-rose-50 hover:bg-rose-100 text-slate-700 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition inline-flex items-center gap-1.5" style="transition-delay: 160ms;">
-          <i data-lucide="headphones" class="w-3.5 h-3.5"></i> Servicio al Cliente & Asistencia
+          ${icon("headphones", "w-3.5 h-3.5")} Servicio al Cliente & Asistencia
         </button>
       </div>
     </div>
@@ -519,7 +519,7 @@
         }
       }
       localStorage.setItem(STORAGE_KEY, JSON.stringify(map));
-      filterJobs();
+      scheduleTask(filterJobs);
     }
 
     function formatApplyUrl(rawUrl) {
@@ -556,7 +556,7 @@
       map[jobId] = 'APPLIED';
       localStorage.setItem(STORAGE_KEY, JSON.stringify(map));
       showToast('✅ Postulación abierta y guardada: se movió al final de la lista');
-      setTimeout(filterJobs, 350);
+      scheduleTask(filterJobs);
     }
 
     function toggleExpandDesc(jobId) {
@@ -573,7 +573,7 @@
         descEl.classList.add('line-clamp-3');
         if (reqsEl) reqsEl.classList.add('hidden');
         if (previewEl) previewEl.classList.remove('hidden');
-        btnEl.innerHTML = '<i data-lucide="eye" class="w-3.5 h-3.5"></i> <span>Ver descripción completa</span> <i data-lucide="chevron-down" class="w-3 h-3"></i>';
+        btnEl.innerHTML = '${icon("eye", "w-3.5 h-3.5")} <span>Ver descripción completa</span> ${icon("chevron-down", "w-3 h-3")}';
       } else {
         descEl.classList.remove('line-clamp-3');
         descEl.classList.add('line-clamp-none');
@@ -582,7 +582,7 @@
         btnEl.innerHTML = '<i data-lucide="chevron-up" class="w-3 h-3"></i> <span>Ver menos</span>';
       }
       if (window.lucide) {
-        lucide.createIcons();
+        lucide.createIcons({ root: container });
       }
     }
 
@@ -613,7 +613,7 @@
         activeBtn.classList.remove('bg-rose-50', 'text-slate-700');
         activeBtn.classList.add('pill-active');
       }
-      filterJobs();
+      scheduleTask(filterJobs);
     }
 
     function filterJobs() {
@@ -669,7 +669,7 @@
         case 'servicio':
           return '<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-semibold bg-pink-100 text-pink-700"><i data-lucide="headphones" class="w-3.5 h-3.5"></i> Servicio al Cliente</span>';
         default:
-          return '<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-semibold bg-slate-100 text-slate-700"><i data-lucide="briefcase" class="w-3.5 h-3.5"></i> Empleo</span>';
+          return '<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-semibold bg-slate-100 text-slate-700">${icon("briefcase", "w-3.5 h-3.5")} Empleo</span>';
       }
     }
 
@@ -695,9 +695,9 @@
         const targetUrl = formatApplyUrl(job.url);
 
         const statusBadge = isApplied
-          ? '<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-300"><i data-lucide="check-circle-2" class="w-3 h-3"></i> Ya postulado (al final)</span>'
+          ? '<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-300">${icon("check-circle-2", "w-3 h-3")} Ya postulado (al final)</span>'
           : isDismissed
-          ? '<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-200 text-slate-700 border border-slate-300"><i data-lucide="x-circle" class="w-3 h-3"></i> No interesante (al final)</span>'
+          ? '<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-200 text-slate-700 border border-slate-300">${icon("x-circle", "w-3 h-3")} No interesante (al final)</span>'
           : '';
 
         const cardExtraClass = isDismissed
@@ -717,7 +717,7 @@
                 ${statusBadge}
               </div>
               <span class="inline-flex items-center gap-1 text-[11px] font-medium text-slate-400">
-                <i data-lucide="calendar" class="w-3 h-3"></i> ${job.postedDate}
+                ${icon("calendar", "w-3 h-3")} ${job.postedDate}
               </span>
             </div>
 
@@ -726,31 +726,31 @@
               ${job.title}
             </h3>
             <p class="text-xs sm:text-sm font-semibold text-rose-600 mt-1 mb-2 inline-flex items-center gap-1.5">
-              <i data-lucide="building-2" class="w-3.5 h-3.5"></i> ${job.company}
+              ${icon("building-2", "w-3.5 h-3.5")} ${job.company}
             </p>
 
             <!-- CV & Language Badges -->
             <div class="flex flex-wrap items-center gap-1.5 mb-2.5">
               ${job.recommendedCV ? `
                 <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-lg text-[10px] font-semibold ${job.recommendedCV.includes('Marketing') ? 'bg-rose-50 text-rose-700 border border-rose-200' : 'bg-purple-50 text-purple-700 border border-purple-200'}">
-                  <i data-lucide="file-text" class="w-3 h-3"></i> CV: ${job.recommendedCV}
+                  ${icon("file-text", "w-3 h-3")} CV: ${job.recommendedCV}
                 </span>
               ` : ''}
               <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-lg text-[10px] font-medium bg-emerald-50 text-emerald-700 border border-emerald-200">
-                <i data-lucide="languages" class="w-3 h-3"></i> ${job.languageRequirement || 'Español'}
+                ${icon("languages", "w-3 h-3")} ${job.languageRequirement || 'Español'}
               </span>
             </div>
 
             <!-- Location & Modality -->
             <div class="flex items-center gap-1.5 text-xs text-slate-500 mb-3">
-              <i data-lucide="map-pin" class="w-3.5 h-3.5 text-rose-400 shrink-0"></i>
+              ${icon("map-pin", "w-3.5 h-3.5 text-rose-400 shrink-0")}
               <span>${job.modality}</span>
             </div>
 
             <!-- Salary tag -->
             <div class="bg-gradient-to-r from-rose-50 to-pink-50 border border-rose-100 rounded-[1.4rem] p-3 mb-3.5">
               <p class="inline-flex items-center gap-1 text-[11px] font-medium text-slate-500 uppercase tracking-wider">
-                <i data-lucide="banknote" class="w-3 h-3 text-rose-500"></i> Compensación estimada
+                ${icon("banknote", "w-3 h-3 text-rose-500")} Compensación estimada
               </p>
               <p class="text-xs sm:text-sm font-bold text-slate-900">${job.salaryDOP}</p>
               ${job.salaryNote ? `<p class="text-[10px] text-slate-500 mt-0.5">${job.salaryNote}</p>` : ''}
@@ -784,9 +784,9 @@
               </div>
 
               <button onclick="toggleExpandDesc('${job.id}')" id="btn-expand-${job.id}" class="mt-2.5 px-3 py-1 rounded-full bg-rose-50 hover:bg-rose-100 text-rose-600 hover:text-rose-700 text-[11px] font-semibold border border-rose-200/60 inline-flex items-center gap-1 transition">
-                <i data-lucide="eye" class="w-3.5 h-3.5"></i>
+                ${icon("eye", "w-3.5 h-3.5")}
                 <span>Ver descripción completa</span>
-                <i data-lucide="chevron-down" class="w-3 h-3"></i>
+                ${icon("chevron-down", "w-3 h-3")}
               </button>
             </div>
 
@@ -800,21 +800,21 @@
           <div class="pt-4 border-t border-rose-100 flex flex-wrap items-center justify-between gap-2">
             <div class="flex items-center gap-1.5 flex-wrap">
               <button onclick="openLetterModal('${job.id}')" class="py-2 px-3 rounded-full bg-rose-50 hover:bg-rose-100 text-rose-700 text-xs font-semibold transition inline-flex items-center justify-center gap-1.5" title="Ver carta de presentación adaptada">
-                <i data-lucide="clipboard-copy" class="w-3.5 h-3.5"></i>
+                ${icon("clipboard-copy", "w-3.5 h-3.5")}
                 <span>Carta</span>
               </button>
               <button onclick="setJobStatus('${job.id}', 'APPLIED')" class="py-2 px-3 rounded-full text-xs font-semibold transition inline-flex items-center justify-center gap-1.5 ${isApplied ? 'bg-emerald-600 text-white shadow-sm' : 'bg-slate-100 hover:bg-emerald-50 text-slate-700 hover:text-emerald-700 border border-slate-200'}" title="${isApplied ? 'Desmarcar de postulados' : 'Marcar como ya postulado (se mueve al final)'}">
-                <i data-lucide="${appliedIcon}" class="w-3.5 h-3.5"></i>
+                ${icon(appliedIcon, "w-3.5 h-3.5")}
                 <span>${isApplied ? 'Ya postulé' : 'Ya postulé'}</span>
               </button>
               <button onclick="setJobStatus('${job.id}', 'DISMISSED')" class="py-2 px-3 rounded-full text-xs font-semibold transition inline-flex items-center justify-center gap-1.5 ${isDismissed ? 'bg-rose-600 text-white shadow-sm' : 'bg-slate-100 hover:bg-rose-50 text-slate-600 hover:text-rose-700 border border-slate-200'}" title="${isDismissed ? 'Restaurar a pendientes' : 'Marcar como no interesante (se mueve al final)'}">
-                <i data-lucide="${dismissedIcon}" class="w-3.5 h-3.5"></i>
+                ${icon(dismissedIcon, "w-3.5 h-3.5")}
                 <span>${isDismissed ? 'Restaurar' : 'Descartar'}</span>
               </button>
             </div>
 
             <a href="${targetUrl}" target="_blank" rel="noopener noreferrer" onclick="handleApplyClick('${job.id}')" class="py-2 px-5 rounded-full ${isEmailApply ? 'bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 shadow-red-200' : 'bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 shadow-rose-200'} text-white text-xs font-bold transition text-center shadow-sm inline-flex items-center gap-1.5" title="${isEmailApply ? 'Abrir borrador en Gmail con la carta y asunto listos' : 'Ir al portal de postulación'}">
-              <i data-lucide="${isEmailApply ? 'mail' : 'external-link'}" class="w-3.5 h-3.5"></i>
+              ${icon(isEmailApply ? "mail" : "external-link", "w-3.5 h-3.5")}
               <span>${isEmailApply ? 'Enviar por Gmail' : 'Postular'}</span>
             </a>
           </div>
@@ -910,7 +910,7 @@
         el.classList.add('is-active');
       });
       document.body.style.overflow = 'hidden';
-      if (window.lucide) lucide.createIcons();
+      if (window.lucide) lucide.createIcons({ root: el });
     }
 
     function closeModal(id) {
@@ -930,7 +930,7 @@
       document.getElementById('toastMsg').innerText = msg;
       toast.classList.remove('translate-y-20', 'opacity-0');
       toast.classList.add('translate-y-0', 'opacity-100');
-      if (window.lucide) lucide.createIcons();
+      if (window.lucide) lucide.createIcons({ root: toast });
       setTimeout(() => {
         toast.classList.add('translate-y-20', 'opacity-0');
         toast.classList.remove('translate-y-0', 'opacity-100');
