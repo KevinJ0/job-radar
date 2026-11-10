@@ -497,6 +497,41 @@
     let currentCategory = 'all';
     const STORAGE_KEY = 'meibi_job_radar_status_v1';
 
+    const SVG_CACHE = {};
+    function icon(name, cls = 'w-4 h-4') {
+      const key = name + '|' + cls;
+      if (SVG_CACHE[key]) return SVG_CACHE[key];
+      if (window.lucide && window.lucide.icons) {
+        const pascal = name.split('-').map(s => s.charAt(0).toUpperCase() + s.slice(1)).join('');
+        const def = window.lucide.icons[pascal];
+        if (def && window.lucide.createElement) {
+          const el = window.lucide.createElement(def, { class: cls });
+          const svg = el.outerHTML;
+          SVG_CACHE[key] = svg;
+          return svg;
+        }
+      }
+      return '<i data-lucide="' + name + '" class="' + cls + '"></i>';
+    }
+
+    function scheduleTask(fn) {
+      if (window.scheduler && window.scheduler.yield) {
+        window.scheduler.yield().then(fn);
+      } else {
+        requestAnimationFrame(() => {
+          setTimeout(fn, 0);
+        });
+      }
+    }
+
+    let searchDebounceTimer;
+    function handleSearchInput() {
+      clearTimeout(searchDebounceTimer);
+      searchDebounceTimer = setTimeout(() => {
+        scheduleTask(filterJobs);
+      }, 120);
+    }
+
     function getSavedStatuses() {
       try {
         return JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
