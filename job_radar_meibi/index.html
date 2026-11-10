@@ -355,7 +355,12 @@
         <pre id="modalLetterText" class="text-xs sm:text-sm text-slate-700 whitespace-pre-wrap font-sans leading-relaxed"></pre>
       </div>
 
-      <div class="flex flex-col sm:flex-row gap-3 justify-end">
+      <div id="modalApplyInfo" class="mb-4 p-3 rounded-2xl bg-amber-50/80 border border-amber-200 text-xs text-amber-900 flex items-start gap-2.5">
+        <i data-lucide="info" class="w-4 h-4 text-amber-600 shrink-0 mt-0.5"></i>
+        <div id="modalApplyInfoText" class="leading-relaxed font-medium"></div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-2.5 justify-end items-stretch sm:items-center">
         <button onclick="closeModal('letterModal')" class="px-5 py-2.5 rounded-full border border-slate-200 text-slate-600 text-xs sm:text-sm font-semibold hover:bg-slate-50 transition">
           Cerrar
         </button>
@@ -363,6 +368,10 @@
           <i data-lucide="clipboard-copy" class="w-4 h-4"></i>
           <span>Copiar al Portapapeles</span>
         </button>
+        <a id="modalPortalBtn" href="#" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white text-xs sm:text-sm font-semibold shadow-md transition inline-flex items-center justify-center gap-2">
+          <i data-lucide="external-link" class="w-4 h-4"></i>
+          <span id="modalPortalBtnText">Ir al Portal a Postularme</span>
+        </a>
         <a id="modalGmailBtn" href="#" target="_blank" rel="noopener noreferrer" class="hidden px-5 py-2.5 rounded-full bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 text-white text-xs sm:text-sm font-semibold shadow-md shadow-red-200 transition inline-flex items-center justify-center gap-2">
           <i data-lucide="mail" class="w-4 h-4"></i>
           <span>Abrir en Gmail</span>
@@ -731,8 +740,25 @@
         const isDismissed = st === 'DISMISSED';
         const appliedIcon = isApplied ? 'check-circle-2' : 'check';
         const dismissedIcon = isDismissed ? 'rotate-ccw' : 'x';
-        const isEmailApply = Boolean(job.url && job.url.startsWith('mailto:'));
-        const targetUrl = formatApplyUrl(job.url);
+        const hasVerifiedEmail = Boolean(job.contactEmail);
+        let targetUrl = job.url;
+        let applyBtnText = 'Postular';
+        let isEmailApply = false;
+        let applyBtnTitle = 'Ir al portal de postulación';
+
+        if (hasVerifiedEmail) {
+          targetUrl = 'https://mail.google.com/mail/?view=cm&fs=1' +
+                      '&to=' + encodeURIComponent(job.contactEmail) +
+                      '&su=' + encodeURIComponent('Postulación ' + job.title + ' - Meibi Mota') +
+                      '&body=' + encodeURIComponent(job.coverLetter || '');
+          applyBtnText = 'Enviar por Gmail';
+          applyBtnTitle = 'Enviar correo directo verificado a ' + job.contactEmail;
+          isEmailApply = true;
+        } else {
+          const p = job.portal || 'Portal';
+          applyBtnText = 'Postular en ' + p;
+          applyBtnTitle = 'Abrir formulario oficial en ' + p;
+        }
 
         const statusBadge = isApplied
           ? `<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-300">${icon("check-circle-2", "w-3 h-3")} Ya postulado (al final)</span>`
@@ -853,9 +879,9 @@
               </button>
             </div>
 
-            <a href="${targetUrl}" target="_blank" rel="noopener noreferrer" onclick="handleApplyClick('${job.id}')" class="py-2 px-5 rounded-full ${isEmailApply ? 'bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 shadow-red-200' : 'bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 shadow-rose-200'} text-white text-xs font-bold transition text-center shadow-sm inline-flex items-center gap-1.5" title="${isEmailApply ? 'Abrir borrador en Gmail con la carta y asunto listos' : 'Ir al portal de postulación'}">
+            <a href="${targetUrl}" target="_blank" rel="noopener noreferrer" onclick="handleApplyClick('${job.id}')" class="py-2 px-5 rounded-full ${isEmailApply ? 'bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 shadow-red-200' : 'bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 shadow-rose-200'} text-white text-xs font-bold transition text-center shadow-sm inline-flex items-center gap-1.5" title="${applyBtnTitle}">
               ${icon(isEmailApply ? "mail" : "external-link", "w-3.5 h-3.5")}
-              <span>${isEmailApply ? 'Enviar por Gmail' : 'Postular'}</span>
+              <span>${applyBtnText}</span>
             </a>
           </div>
 
@@ -886,22 +912,38 @@
       document.getElementById('modalLetterText').innerText = job.coverLetter;
       activeLetterText = job.coverLetter;
 
+      const infoEl = document.getElementById('modalApplyInfoText');
+      const portalBtn = document.getElementById('modalPortalBtn');
+      const portalBtnText = document.getElementById('modalPortalBtnText');
       const gmailBtn = document.getElementById('modalGmailBtn');
-      if (gmailBtn) {
-        if (job.url && job.url.startsWith('mailto:')) {
-          gmailBtn.href = formatApplyUrl(job.url);
+
+      if (job.contactEmail) {
+        if (infoEl) infoEl.innerHTML = '<strong>Correo verificado de la vacante:</strong> <code class="px-1.5 py-0.5 rounded bg-amber-100 font-mono text-[11px]">' + job.contactEmail + '</code>.<br>Pulsa <strong>"Abrir en Gmail"</strong> para enviar tu carta y CV directamente al reclutador.';
+        if (gmailBtn) {
+          gmailBtn.href = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(job.contactEmail) +
+                          '&su=' + encodeURIComponent('Postulación ' + job.title + ' - Meibi Mota') +
+                          '&body=' + encodeURIComponent(job.coverLetter || '');
           gmailBtn.classList.remove('hidden');
-        } else if (job.contactEmail) {
-          const gUrl = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(job.contactEmail) +
-                       '&su=' + encodeURIComponent('Postulación ' + job.title + ' - Meibi Mota') +
-                       '&body=' + encodeURIComponent(job.coverLetter || '');
-          gmailBtn.href = gUrl;
-          gmailBtn.classList.remove('hidden');
-        } else {
+        }
+        if (portalBtn && job.url) {
+          portalBtn.href = job.url;
+          if (portalBtnText) portalBtnText.innerText = 'Ver Anuncio en ' + (job.portal || 'Portal');
+          portalBtn.classList.remove('hidden');
+        }
+      } else {
+        const portalName = job.portal || 'portal oficial';
+        if (infoEl) infoEl.innerHTML = '<strong>Canal oficial de postulación:</strong> Esta vacante de <em>' + job.company + '</em> se gestiona mediante su plataforma en <strong>' + portalName + '</strong> (no por correo directo).<br>1) Pulsa <strong>"Copiar al Portapapeles"</strong> para copiar tu carta adaptada.<br>2) Pulsa <strong>"Ir a ' + portalName + '"</strong> y pégala en el formulario oficial.';
+        if (gmailBtn) {
           gmailBtn.classList.add('hidden');
+        }
+        if (portalBtn) {
+          portalBtn.href = job.url || '#';
+          if (portalBtnText) portalBtnText.innerText = 'Ir a ' + portalName + ' a Postularme';
+          portalBtn.classList.remove('hidden');
         }
       }
 
+      if (window.lucide) lucide.createIcons();
       openModal('letterModal');
     }
 

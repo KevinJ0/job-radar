@@ -629,8 +629,36 @@ La Romana, República Dominicana`;
 
         const escapedTitle = (job.title || '').replace(/'/g, "\\'");
         const escapedCompany = (job.company || '').replace(/'/g, "\\'");
-        const isEmailApply = Boolean(job.url && job.url.startsWith('mailto:'));
-        const targetUrl = formatApplyUrl(job.url);
+        const hasVerifiedEmail = Boolean(job.contactEmail);
+        let targetUrl = job.url;
+        let applyBtnText = 'Postularme';
+        let isEmailApply = false;
+        let applyBtnTitle = 'Ir al portal de postulación';
+
+        if (hasVerifiedEmail) {
+          const customBody = GENERAL_COVER_LETTER.replace('su vacante', 'la posición de ' + job.title + ' en ' + job.company);
+          targetUrl = 'https://mail.google.com/mail/?view=cm&fs=1' +
+                      '&to=' + encodeURIComponent(job.contactEmail) +
+                      '&su=' + encodeURIComponent('Postulación ' + job.title + ' - Kevin Rosario') +
+                      '&body=' + encodeURIComponent(customBody);
+          applyBtnText = 'Enviar por Gmail';
+          applyBtnTitle = 'Enviar correo directo verificado a ' + job.contactEmail;
+          isEmailApply = true;
+        } else if (job.url && job.url.startsWith('mailto:')) {
+          targetUrl = formatApplyUrl(job.url);
+          applyBtnText = 'Enviar por Gmail';
+          isEmailApply = true;
+        } else {
+          targetUrl = job.url;
+          if (job.portal && job.portal.includes('Popular')) {
+            applyBtnText = 'Postular en QIK';
+          } else if (job.portal && job.portal.includes('LinkedIn')) {
+            applyBtnText = 'Postular en LinkedIn';
+          } else {
+            applyBtnText = 'Postularme';
+          }
+          applyBtnTitle = 'Ir al portal oficial de postulación (' + (job.portal || 'Web') + ')';
+        }
 
         return `
         <article class="glass job-card rounded-[2.5rem] p-6 sm:p-7 flex flex-col justify-between reveal-item ${cardExtraClass}" style="transition-delay: ${(idx % 4) * 75}ms;">
@@ -733,10 +761,13 @@ La Romana, República Dominicana`;
               <button onclick="copyCustomCoverLetter('${escapedTitle}', '${escapedCompany}')" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-xs font-medium transition" title="Copiar carta personalizada para esta empresa">
                 ${icon("clipboard-copy", "w-3.5 h-3.5")} Copiar Carta
               </button>
-              <a href="${targetUrl}" target="_blank" rel="noopener noreferrer" onclick="handleApplyClick('${job.id}')" class="inline-flex items-center gap-1.5 px-5 py-2 rounded-full ${isEmailApply ? 'bg-red-600 hover:bg-red-500 shadow-red-600/20' : 'bg-orange-600 hover:bg-orange-500 shadow-orange-600/20'} text-white text-xs font-bold shadow-md transition" title="${isEmailApply ? 'Abrir borrador en Gmail con la carta y asunto listos' : 'Ir al portal de postulación'}">
+              <a href="${targetUrl}" target="_blank" rel="noopener noreferrer" onclick="handleApplyClick('${job.id}')" class="inline-flex items-center gap-1.5 px-5 py-2 rounded-full ${isEmailApply ? 'bg-red-600 hover:bg-red-500 shadow-red-600/20' : 'bg-orange-600 hover:bg-orange-500 shadow-orange-600/20'} text-white text-xs font-bold shadow-md transition" title="${applyBtnTitle}">
                 ${icon(isEmailApply ? "mail" : "external-link", "w-3.5 h-3.5")}
-                <span>${isEmailApply ? 'Enviar por Gmail' : 'Postularme'}</span>
-              </a>
+                <span>${applyBtnText}</span>
+              </a>${hasVerifiedEmail ? `
+              <a href="${job.url}" target="_blank" rel="noopener noreferrer" class="text-xs text-slate-400 hover:text-orange-400 underline decoration-slate-600 transition ml-1" title="Ver publicación original en ${job.portal}">
+                ${icon("external-link", "w-3 h-3 inline")} Ver portal
+              </a>` : ''}
             </div>
           </div>
         </article>

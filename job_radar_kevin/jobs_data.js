@@ -1,5 +1,5 @@
 window.JOBS_DATA = {
-  "lastUpdated": "2026-11-10 17:15 (≤ 4 días · 100% Scrape Real)",
+  "lastUpdated": "2026-11-10 17:25 (≤ 4 días · 100% Scrape Real · Correos Verificados)",
   "exchangeRatesNote": "1 EUR ≈ RD$ 65.50 | 1 USD ≈ RD$ 60.50",
   "profile": {
     "name": "Kevin Rosario",
@@ -100,7 +100,9 @@ window.JOBS_DATA = {
       "highlight": "Empresa dominicana en expansión para productos SaaS de misión crítica (Fidbaq y Licita). Pide Flutter, Dart, APIs REST y Scrum. Cero AWS ni Azure.",
       "description": "Mantenimiento correctivo y evolutivo (SLA) y desarrollo de módulos SaaS en Flutter multiplataforma (iOS/Android), consumo de APIs RESTful e integración de pagos.",
       "url": "https://bebee.com/do/jobs/desarrollador-mobile-flutter-modalidad-retainer-b2b-grupo-lde-srl--fj-2457101160",
-      "details": "<strong>Responsabilidades del puesto:</strong><br>• Desarrollo de aplicaciones móviles multiplataforma en Flutter para productos SaaS (Fidbaq y Licita).<br>• Consumo de APIs RESTful e integración con pasarelas de pago.<br>• Mantenimiento y optimización bajo SLA con metodologías ágiles.<br><br><strong>Requisitos:</strong> Título en Ing. Sistemas o afines, mín. 3 años en Flutter/Dart, consumo de APIs REST. Envío directo a <code>reclutamiento@grupolde.com</code>."
+      "details": "<strong>Responsabilidades del puesto:</strong><br>• Desarrollo de aplicaciones móviles multiplataforma en Flutter para productos SaaS (Fidbaq y Licita).<br>• Consumo de APIs RESTful e integración con pasarelas de pago.<br>• Mantenimiento y optimización bajo SLA con metodologías ágiles.<br><br><strong>Requisitos:</strong> Título en Ing. Sistemas o afines, mín. 3 años en Flutter/Dart, consumo de APIs REST. Envío directo a <code>reclutamiento@grupolde.com</code>.",
+      "contactEmail": "reclutamiento@grupolde.com",
+      "applyType": "email_and_portal"
     },
     {
       "id": "li-stefanini-net-1",
@@ -134,7 +136,9 @@ window.JOBS_DATA = {
       "highlight": "Publicada hace menos de 24h: desarrollo de servicios y APIs REST en .NET Core, SQL Server, EF Core y SSIS. Pide exactamente 2 años de experiencia sin AWS ni Azure.",
       "description": "Desarrollo de servicios y APIs REST utilizando Microsoft .NET Core y C#, arquitectura por capas, Repository y Unit of Work, persistencia con Entity Framework Core y SQL Server.",
       "url": "https://pe.linkedin.com/jobs/view/desarrollador-net-at-stefanini-latam-4487916833",
-      "details": "<strong>Responsabilidades:</strong><br>• Desarrollo de servicios y APIs REST utilizando Microsoft .NET y C#.<br>• Arquitectura por capas (Domain, Application, Infrastructure y WebAPI).<br>• Persistencia y consultas complejas mediante Entity Framework Core y SQL Server.<br>• Procesos de integración y datos con SQL Server Integration Services (SSIS).<br>• Pruebas unitarias con xUnit y Moq.<br><br><strong>Requisitos:</strong> Mínimo 2 años de experiencia como desarrollador .NET, C#, SQL Server, EF Core y Git."
+      "details": "<strong>Responsabilidades:</strong><br>• Desarrollo de servicios y APIs REST utilizando Microsoft .NET y C#.<br>• Arquitectura por capas (Domain, Application, Infrastructure y WebAPI).<br>• Persistencia y consultas complejas mediante Entity Framework Core y SQL Server.<br>• Procesos de integración y datos con SQL Server Integration Services (SSIS).<br>• Pruebas unitarias con xUnit y Moq.<br><br><strong>Requisitos:</strong> Mínimo 2 años de experiencia como desarrollador .NET, C#, SQL Server, EF Core y Git.",
+      "contactEmail": null,
+      "applyType": "portal"
     },
     {
       "id": "gj-pop-frontend-qik",
@@ -167,7 +171,9 @@ window.JOBS_DATA = {
       "highlight": "Publicada hoy por Banco Popular Dominicano para su filial digital QIK. Desarrollo de experiencias web con Angular y TypeScript, consumo de APIs y pruebas unitarias.",
       "description": "Transformación del diseño y visión de productos digitales en aplicaciones web modernas mediante Angular, TypeScript, HTML/CSS y consumo de servicios RESTful.",
       "url": "https://empleos.grupopopular.com/job/Santo-Domingo-DESARROLLADOR-FRONT-END-%28QIK%29-01/1337349862/",
-      "details": "<strong>Propósito General:</strong><br>• Transformar el diseño y la visión de los productos digitales en soluciones tangibles garantizando código limpio y buenas prácticas.<br>• Implementación de componentes web en Angular, optimización de rendimiento y pruebas automatizadas.<br>• Integración con APIs bancarias seguras.<br><br><strong>Requisitos:</strong> Experiencia en frontend con Angular, JavaScript/TypeScript, consumo de servicios y metodologías ágiles."
+      "details": "<strong>Propósito General:</strong><br>• Transformar el diseño y la visión de los productos digitales en soluciones tangibles garantizando código limpio y buenas prácticas.<br>• Implementación de componentes web en Angular, optimización de rendimiento y pruebas automatizadas.<br>• Integración con APIs bancarias seguras.<br><br><strong>Requisitos:</strong> Experiencia en frontend con Angular, JavaScript/TypeScript, consumo de servicios y metodologías ágiles.",
+      "contactEmail": null,
+      "applyType": "portal"
     },
     {
       "id": "li-primeup-net-pleno",
@@ -199,7 +205,9 @@ window.JOBS_DATA = {
       "highlight": "Puesto Pleno 100% remoto: desarrollo sobre ecosistema .NET Core, C# y SQL Server. Pide 3 años de experiencia y no exige servicios de nube AWS ni Azure.",
       "description": "Desarrollo y soporte evolutivo de microservicios y sistemas empresariales con C#, ASP.NET Core y modelado de datos en Microsoft SQL Server.",
       "url": "https://br.linkedin.com/jobs/view/desenvolvedor-full-stack-net-pleno-at-primeup-4486276162",
-      "details": "<strong>Responsabilidades:</strong><br>• Desarrollo de software backend en C# y .NET Core.<br>• Creación de servicios RESTful y consumo de APIs.<br>• Consultas y optimización en SQL Server.<br>• Control de versiones colaborativo con Git."
+      "details": "<strong>Responsabilidades:</strong><br>• Desarrollo de software backend en C# y .NET Core.<br>• Creación de servicios RESTful y consumo de APIs.<br>• Consultas y optimización en SQL Server.<br>• Control de versiones colaborativo con Git.",
+      "contactEmail": null,
+      "applyType": "portal"
     },
     {
       "id": "li-rethink-flutter-1",
@@ -231,7 +239,9 @@ window.JOBS_DATA = {
       "highlight": "Consultora digital internacional busca desarrollador móvil Flutter. Arquitectura limpia, gestión de estado con Bloc/Provider y persistencia local SQLite.",
       "description": "Creación de interfaces fluidas y componentes móviles nativos multiplataforma en Flutter/Dart, integración de servicios backend y offline-first.",
       "url": "https://br.linkedin.com/jobs/view/desenvolvedor-a-flutter-s%C3%AAnior-at-rethink-by-framework-4488896263",
-      "details": "<strong>Responsabilidades:</strong><br>• Desarrollo de aplicaciones de alto impacto en Flutter y Dart.<br>• Arquitectura modular con gestión de estado escalable.<br>• Pruebas de integración y despliegue continuo.<br>• Trabajo remoto en equipo multicultural."
+      "details": "<strong>Responsabilidades:</strong><br>• Desarrollo de aplicaciones de alto impacto en Flutter y Dart.<br>• Arquitectura modular con gestión de estado escalable.<br>• Pruebas de integración y despliegue continuo.<br>• Trabajo remoto en equipo multicultural.",
+      "contactEmail": null,
+      "applyType": "portal"
     },
     {
       "id": "li-prolog-fullstack-1",
@@ -264,7 +274,9 @@ window.JOBS_DATA = {
       "highlight": "Publicada hoy: plataforma SaaS de gestión logística con presencia internacional. Requiere Flutter/Dart para la app móvil y backend en APIs con SQL Server.",
       "description": "Desarrollo y mantenimiento de aplicaciones móviles para conductores y operadores en Flutter, consumiendo servicios backend y bases de datos relacionales.",
       "url": "https://br.linkedin.com/jobs/view/desenvolvedor-a-full-stack-pleno-at-prolog-app-gest%C3%A3o-de-frotas-4487977537",
-      "details": "<strong>Responsabilidades:</strong><br>• Mantenimiento y evolución de aplicaciones de campo en Flutter.<br>• Conexión con servicios backend y persistencia de datos local/remota.<br>• Pruebas funcionales y entrega continua de versiones."
+      "details": "<strong>Responsabilidades:</strong><br>• Mantenimiento y evolución de aplicaciones de campo en Flutter.<br>• Conexión con servicios backend y persistencia de datos local/remota.<br>• Pruebas funcionales y entrega continua de versiones.",
+      "contactEmail": null,
+      "applyType": "portal"
     },
     {
       "id": "li-cddit-net-1",
@@ -296,7 +308,9 @@ window.JOBS_DATA = {
       "highlight": "Publicada hace pocas horas: desarrollo backend sobre .NET Core y C#, creación de endpoints RESTful seguros, optimización de queries y Entity Framework Core.",
       "description": "Construcción de módulos y microservicios en .NET Core para proyectos de innovación digital en entornos ágiles con Git y SQL Server.",
       "url": "https://br.linkedin.com/jobs/view/desenvolvedor-a-net-s%C3%AAnior-at-cdd-it-service-innovation-4489459913",
-      "details": "<strong>Responsabilidades:</strong><br>• Arquitectura backend en .NET Core y APIs REST.<br>• Optimización de consultas relacionales en SQL Server.<br>• Soporte evolutivo y aseguramiento de calidad con pruebas."
+      "details": "<strong>Responsabilidades:</strong><br>• Arquitectura backend en .NET Core y APIs REST.<br>• Optimización de consultas relacionales en SQL Server.<br>• Soporte evolutivo y aseguramiento de calidad con pruebas.",
+      "contactEmail": null,
+      "applyType": "portal"
     },
     {
       "id": "li-webmotors-net-1",
@@ -328,7 +342,9 @@ window.JOBS_DATA = {
       "highlight": "Marketplace automotriz líder. Busca desarrollador backend en .NET Core y C# con enfoque en arquitectura limpia, APIs de alto rendimiento y SQL Server.",
       "description": "Desarrollo de servicios transaccionales en .NET Core, refactorización de código con buenas prácticas SOLID y trabajo colaborativo con Git.",
       "url": "https://br.linkedin.com/jobs/view/desenvolvedor-back-end-sr-net-at-webmotors-4487985010",
-      "details": "<strong>Responsabilidades:</strong><br>• Desarrollo de microservicios backend de alta disponibilidad.<br>• Buenas prácticas con Clean Architecture y DDD.<br>• Integración y persistencia sobre SQL Server."
+      "details": "<strong>Responsabilidades:</strong><br>• Desarrollo de microservicios backend de alta disponibilidad.<br>• Buenas prácticas con Clean Architecture y DDD.<br>• Integración y persistencia sobre SQL Server.",
+      "contactEmail": null,
+      "applyType": "portal"
     },
     {
       "id": "li-cloudwalk-mobile-1",
@@ -360,7 +376,9 @@ window.JOBS_DATA = {
       "highlight": "Fintech global de pagos. Posición 100% remota desarrollando aplicaciones móviles en Flutter/Dart con sincronización local y transacciones financieras.",
       "description": "Diseño y codificación de módulos en Flutter para procesamiento de pagos, manejo de estado reactivo y bases de datos locales SQLite.",
       "url": "https://br.linkedin.com/jobs/view/engineer-%E2%80%93-mobile-at-cloudwalk-inc-4472205796",
-      "details": "<strong>Responsabilidades:</strong><br>• Ingeniería de aplicaciones móviles en Flutter y Dart.<br>• Manejo de sincronización local y transacciones financieras seguras.<br>• Persistencia con SQLite y buenas prácticas offline-first."
+      "details": "<strong>Responsabilidades:</strong><br>• Ingeniería de aplicaciones móviles en Flutter y Dart.<br>• Manejo de sincronización local y transacciones financieras seguras.<br>• Persistencia con SQLite y buenas prácticas offline-first.",
+      "contactEmail": null,
+      "applyType": "portal"
     }
   ]
 };
