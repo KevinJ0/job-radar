@@ -331,6 +331,35 @@ La Romana, República Dominicana`;
       renderJobs();
     }
 
+    function formatApplyUrl(rawUrl) {
+      if (!rawUrl) return '#';
+      if (rawUrl.startsWith('mailto:')) {
+        try {
+          const u = new URL(rawUrl);
+          const to = u.pathname || '';
+          const subject = u.searchParams.get('subject') || '';
+          const body = u.searchParams.get('body') || '';
+          return 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(to) +
+                 '&su=' + encodeURIComponent(subject) +
+                 '&body=' + encodeURIComponent(body);
+        } catch (e) {
+          try {
+            const parts = rawUrl.replace(/^mailto:/i, '').split('?');
+            const to = parts[0];
+            const params = new URLSearchParams(parts[1] || '');
+            const subject = params.get('subject') || '';
+            const body = params.get('body') || '';
+            return 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(to) +
+                   '&su=' + encodeURIComponent(subject) +
+                   '&body=' + encodeURIComponent(body);
+          } catch (err) {
+            return rawUrl;
+          }
+        }
+      }
+      return rawUrl;
+    }
+
     function handleApplyClick(jobId) {
       const map = getSavedStatuses();
       map[jobId] = 'APPLIED';
@@ -523,6 +552,8 @@ La Romana, República Dominicana`;
 
         const escapedTitle = (job.title || '').replace(/'/g, "\\'");
         const escapedCompany = (job.company || '').replace(/'/g, "\\'");
+        const isEmailApply = Boolean(job.url && job.url.startsWith('mailto:'));
+        const targetUrl = formatApplyUrl(job.url);
 
         return `
         <article class="glass job-card rounded-2xl p-5 flex flex-col justify-between ${cardExtraClass}">
@@ -547,7 +578,7 @@ La Romana, República Dominicana`;
             </div>
 
             <h2 class="text-lg font-bold text-white leading-snug mb-1">
-              <a href="${job.url}" target="_blank" rel="noopener noreferrer" class="hover:text-orange-400 transition">
+              <a href="${targetUrl}" target="_blank" rel="noopener noreferrer" class="hover:text-orange-400 transition">
                 ${job.title}
               </a>
             </h2>
@@ -625,9 +656,9 @@ La Romana, República Dominicana`;
               <button onclick="copyCustomCoverLetter('${escapedTitle}', '${escapedCompany}')" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-xs font-medium transition" title="Copiar carta personalizada para esta empresa">
                 <i data-lucide="clipboard-copy" class="w-3.5 h-3.5"></i> Copiar Carta
               </button>
-              <a href="${job.url}" target="_blank" rel="noopener noreferrer" onclick="handleApplyClick('${job.id}')" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-orange-600 hover:bg-orange-500 text-white text-xs font-bold shadow-md shadow-orange-600/20 transition">
-                <span>Postularme</span>
-                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+              <a href="${targetUrl}" target="_blank" rel="noopener noreferrer" onclick="handleApplyClick('${job.id}')" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl ${isEmailApply ? 'bg-red-600 hover:bg-red-500 shadow-red-600/20' : 'bg-orange-600 hover:bg-orange-500 shadow-orange-600/20'} text-white text-xs font-bold shadow-md transition" title="${isEmailApply ? 'Abrir borrador en Gmail con la carta y asunto listos' : 'Ir al portal de postulación'}">
+                <i data-lucide="${isEmailApply ? 'mail' : 'external-link'}" class="w-3.5 h-3.5"></i>
+                <span>${isEmailApply ? 'Enviar por Gmail' : 'Postularme'}</span>
               </a>
             </div>
           </div>
