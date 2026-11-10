@@ -4,7 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Job Radar · Kevin Rosario — Postulación Rápida (RD$)</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -26,9 +28,73 @@
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
     body {
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      background: radial-gradient(circle at top right, #1e293b 0%, #0f172a 45%, #020617 100%);
+      background-color: #030712;
       min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
     }
+    
+    /* Background Ambient Animated Glows */
+    @keyframes pulseGlow1 {
+      0%, 100% { transform: translate3d(0, 0, 0) scale(1); opacity: 0.16; }
+      50% { transform: translate3d(50px, 35px, 0) scale(1.15); opacity: 0.26; }
+    }
+    @keyframes pulseGlow2 {
+      0%, 100% { transform: translate3d(0, 0, 0) scale(1.08); opacity: 0.14; }
+      50% { transform: translate3d(-40px, -30px, 0) scale(0.92); opacity: 0.22; }
+    }
+    @keyframes pulseGlow3 {
+      0%, 100% { transform: translate3d(0, 0, 0) scale(0.95); opacity: 0.12; }
+      50% { transform: translate3d(35px, -40px, 0) scale(1.18); opacity: 0.20; }
+    }
+    .bg-ambient-orb1 {
+      position: fixed;
+      top: -100px;
+      right: -80px;
+      width: 550px;
+      height: 550px;
+      background: radial-gradient(circle, #f97316 0%, rgba(249, 115, 22, 0) 70%);
+      filter: blur(85px);
+      animation: pulseGlow1 16s ease-in-out infinite;
+      pointer-events: none;
+      z-index: 0;
+      will-change: transform, opacity;
+    }
+    .bg-ambient-orb2 {
+      position: fixed;
+      bottom: -120px;
+      left: -80px;
+      width: 580px;
+      height: 580px;
+      background: radial-gradient(circle, #6366f1 0%, rgba(99, 102, 241, 0) 70%);
+      filter: blur(95px);
+      animation: pulseGlow2 20s ease-in-out infinite;
+      pointer-events: none;
+      z-index: 0;
+      will-change: transform, opacity;
+    }
+    .bg-ambient-orb3 {
+      position: fixed;
+      top: 45%;
+      left: 25%;
+      width: 450px;
+      height: 450px;
+      background: radial-gradient(circle, #10b981 0%, rgba(16, 185, 129, 0) 70%);
+      filter: blur(85px);
+      animation: pulseGlow3 24s ease-in-out infinite;
+      pointer-events: none;
+      z-index: 0;
+      will-change: transform, opacity;
+    }
+    .bg-grid-pattern {
+      position: fixed;
+      inset: 0;
+      background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+      background-size: 28px 28px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
     .glass {
       background: rgba(15, 23, 42, 0.78);
       backdrop-filter: blur(14px);
@@ -44,12 +110,20 @@
     }
   </style>
 </head>
-<body class="text-slate-100 antialiased selection:bg-orange-500 selection:text-white">
+<body class="text-slate-100 antialiased selection:bg-orange-500 selection:text-white relative">
+
+  <!-- Ambient Light Animated Elements -->
+  <div class="bg-ambient-orb1" aria-hidden="true"></div>
+  <div class="bg-ambient-orb2" aria-hidden="true"></div>
+  <div class="bg-ambient-orb3" aria-hidden="true"></div>
+  <div class="bg-grid-pattern" aria-hidden="true"></div>
 
   <!-- Toast Notification -->
   <div id="toast" class="fixed bottom-5 right-5 z-50 hidden max-w-md glass border border-emerald-500/50 rounded-2xl p-4 shadow-2xl text-sm text-white transition">
     <div class="flex items-start gap-3">
-      <span class="text-2xl" id="toastIcon">📋</span>
+      <div class="p-2 rounded-xl bg-emerald-500/20 text-emerald-400 shrink-0">
+        <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+      </div>
       <div>
         <div class="font-bold text-emerald-400" id="toastTitle">Copiado al portapapeles</div>
         <div id="toastMsg" class="text-xs text-slate-200 mt-0.5">Carta de presentación lista para pegar.</div>
@@ -58,33 +132,33 @@
   </div>
 
   <!-- Top Accent Bar -->
-  <div class="h-1.5 w-full bg-gradient-to-r from-orange-600 via-amber-500 to-emerald-500"></div>
+  <div class="h-1.5 w-full bg-gradient-to-r from-orange-600 via-amber-500 to-emerald-500 relative z-10"></div>
 
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-10">
 
     <!-- Header / Profile Banner -->
-    <header class="glass rounded-2xl p-6 mb-6 shadow-2xl">
+    <header class="glass rounded-2xl p-6 mb-6 shadow-2xl border border-slate-700/50">
       <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
         <div>
           <div class="flex flex-wrap items-center gap-2 mb-2.5">
-            <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-orange-500/20 text-orange-400 border border-orange-500/30">
-              Radar de Empleo Activo
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-orange-500/20 text-orange-400 border border-orange-500/30">
+              <i data-lucide="radar" class="w-3.5 h-3.5"></i> Radar Activo
             </span>
-            <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
-              📍 Presencial: Solo La Romana, RD
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
+              <i data-lucide="map-pin" class="w-3.5 h-3.5"></i> Presencial: Solo La Romana, RD
             </span>
-            <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-sky-500/15 text-sky-300 border border-sky-500/30">
-              🌐 Resto: 100% Remoto
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-sky-500/15 text-sky-300 border border-sky-500/30">
+              <i data-lucide="globe" class="w-3.5 h-3.5"></i> Resto: 100% Remoto
             </span>
-            <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-500/15 text-amber-300 border border-amber-500/30">
-              ⏱️ Experiencia: Máx. 4 años
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-500/15 text-amber-300 border border-amber-500/30">
+              <i data-lucide="clock" class="w-3.5 h-3.5"></i> Exp: Máx. 4 años
             </span>
-            <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-indigo-500/15 text-indigo-300 border border-indigo-500/30">
-              💵 Moneda: Pesos Dominicanos (RD$)
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-indigo-500/15 text-indigo-300 border border-indigo-500/30">
+              <i data-lucide="banknote" class="w-3.5 h-3.5"></i> Moneda: Pesos Dominicanos (RD$)
             </span>
           </div>
-          <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
-            KEVIN ROSARIO <span class="text-orange-400 font-normal text-lg sm:text-xl">· Radar & Postulación Directa</span>
+          <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-white flex items-center gap-2.5">
+            <span>KEVIN ROSARIO</span> <span class="text-orange-400 font-normal text-lg sm:text-xl">· Radar & Postulación Directa</span>
           </h1>
           <p class="text-slate-400 text-sm mt-1">
             Ingeniero en Sistemas y Computación · 4 años exp. (.NET Core, C#, Flutter/Dart, Angular, SQL Server, Oracle PL/SQL, Python)
@@ -92,17 +166,17 @@
         </div>
 
         <div class="flex flex-wrap items-center gap-2.5">
-          <button onclick="copyGeneralCoverLetter()" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-orange-600 hover:bg-orange-500 text-white text-xs sm:text-sm font-semibold shadow-lg shadow-orange-600/25 transition">
-            <span>📋</span> Copiar Carta de Presentación
+          <button onclick="copyGeneralCoverLetter()" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-orange-600 hover:bg-orange-500 text-white text-xs sm:text-sm font-semibold shadow-lg shadow-orange-600/25 transition">
+            <i data-lucide="clipboard-copy" class="w-4 h-4"></i> Copiar Carta de Presentación
           </button>
-          <button onclick="openTopMatches()" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs sm:text-sm font-semibold shadow-lg shadow-emerald-600/25 transition">
-            <span>🚀</span> Abrir Top 3 Mejores Ofertas
+          <button onclick="openTopMatches()" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs sm:text-sm font-semibold shadow-lg shadow-emerald-600/25 transition">
+            <i data-lucide="rocket" class="w-4 h-4"></i> Abrir Top 3 Ofertas
           </button>
-          <button onclick="exportCSV()" class="inline-flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-xs sm:text-sm font-medium transition">
-            <span>📥</span> CSV (RD$)
+          <button onclick="exportCSV()" class="inline-flex items-center gap-2 px-3.5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-xs sm:text-sm font-medium transition">
+            <i data-lucide="download" class="w-4 h-4"></i> CSV (RD$)
           </button>
-          <a href="CV_Kevin_Rosario.pdf" target="_blank" class="inline-flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-xs sm:text-sm font-medium transition">
-            <span>📄</span> Ver CV (PDF)
+          <a href="CV_Kevin_Rosario.pdf" target="_blank" class="inline-flex items-center gap-2 px-3.5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-xs sm:text-sm font-medium transition">
+            <i data-lucide="file-text" class="w-4 h-4"></i> Ver CV (PDF)
           </a>
         </div>
       </div>
@@ -110,11 +184,11 @@
       <!-- Interactive CV Stack Bar -->
       <div class="mt-5 pt-4 border-t border-slate-800/80">
         <div class="flex items-center justify-between mb-2">
-          <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">
-            Tecnologías de tu CV (Haz clic para filtrar):
+          <span class="text-xs font-semibold uppercase tracking-wider text-slate-400 flex items-center gap-1.5">
+            <i data-lucide="layers" class="w-3.5 h-3.5"></i> Tecnologías de tu CV (Haz clic para filtrar):
           </span>
-          <button onclick="clearTechFilter()" id="clearTechBtn" class="hidden text-xs text-orange-400 hover:underline">
-            Limpiar filtro de tecnología ✕
+          <button onclick="clearTechFilter()" id="clearTechBtn" class="hidden text-xs text-orange-400 hover:underline flex items-center gap-1">
+            <i data-lucide="x" class="w-3.5 h-3.5"></i> Limpiar filtro de tecnología
           </button>
         </div>
         <div id="cvStackContainer" class="flex flex-wrap gap-1.5"></div>
@@ -123,30 +197,42 @@
 
     <!-- KPI Cards -->
     <section class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-      <div class="glass rounded-xl p-4">
-        <div class="text-xs text-slate-400 uppercase font-medium">Vacantes Disponibles</div>
+      <div class="glass rounded-xl p-4 border border-slate-800">
+        <div class="flex items-center justify-between">
+          <div class="text-xs text-slate-400 uppercase font-medium">Vacantes Disponibles</div>
+          <i data-lucide="briefcase" class="w-4 h-4 text-slate-500"></i>
+        </div>
         <div id="kpiTotal" class="text-2xl sm:text-3xl font-extrabold text-white mt-1">0</div>
         <div class="text-xs text-emerald-400 mt-1">≤ 4 años de experiencia</div>
       </div>
-      <div class="glass rounded-xl p-4">
-        <div class="text-xs text-slate-400 uppercase font-medium">Match Promedio CV</div>
+      <div class="glass rounded-xl p-4 border border-slate-800">
+        <div class="flex items-center justify-between">
+          <div class="text-xs text-slate-400 uppercase font-medium">Match Promedio CV</div>
+          <i data-lucide="zap" class="w-4 h-4 text-orange-400"></i>
+        </div>
         <div id="kpiMatch" class="text-2xl sm:text-3xl font-extrabold text-orange-400 mt-1">0%</div>
         <div class="text-xs text-slate-400 mt-1">Alineado con tu stack</div>
       </div>
-      <div class="glass rounded-xl p-4">
-        <div class="text-xs text-slate-400 uppercase font-medium">Sueldo Promedio (RD$ / Mes)</div>
+      <div class="glass rounded-xl p-4 border border-slate-800">
+        <div class="flex items-center justify-between">
+          <div class="text-xs text-slate-400 uppercase font-medium">Sueldo Promedio (RD$ / Mes)</div>
+          <i data-lucide="banknote" class="w-4 h-4 text-emerald-400"></i>
+        </div>
         <div id="kpiAvgSalaryDOP" class="text-xl sm:text-2xl font-extrabold text-emerald-400 mt-1">RD$ 0</div>
         <div class="text-xs text-slate-400 mt-1">Tasa ref: 1 EUR ≈ RD$ 65.50</div>
       </div>
-      <div class="glass rounded-xl p-4">
-        <div class="text-xs text-slate-400 uppercase font-medium">Favoritas / Postuladas</div>
+      <div class="glass rounded-xl p-4 border border-slate-800">
+        <div class="flex items-center justify-between">
+          <div class="text-xs text-slate-400 uppercase font-medium">Favoritas / Postuladas</div>
+          <i data-lucide="star" class="w-4 h-4 text-amber-400"></i>
+        </div>
         <div id="kpiTracked" class="text-2xl sm:text-3xl font-extrabold text-amber-400 mt-1">0</div>
         <div class="text-xs text-slate-400 mt-1">Guardadas en tu navegador</div>
       </div>
     </section>
 
     <!-- Controls & Filters -->
-    <section class="glass rounded-2xl p-4 sm:p-5 mb-6">
+    <section class="glass rounded-2xl p-4 sm:p-5 mb-6 border border-slate-800">
       <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
         <!-- Search Input -->
         <div class="md:col-span-3 relative">
@@ -157,41 +243,41 @@
             placeholder="Buscar .NET, C#, Oracle, Python..."
             class="w-full pl-9 pr-3 py-2.5 rounded-xl bg-slate-900/90 border border-slate-700/80 text-xs sm:text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:border-orange-500"
           />
-          <span class="absolute left-3 top-2.5 text-slate-500">🔍</span>
+          <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3 top-3 pointer-events-none"></i>
         </div>
 
         <!-- Country Tabs -->
         <div class="md:col-span-5 flex flex-wrap gap-1.5" id="countryTabs">
-          <button onclick="setCountry('ALL')" data-country="ALL" class="country-btn px-3 py-2 rounded-xl text-xs font-semibold bg-orange-600 text-white transition">
-            🌎 Todos
+          <button onclick="setCountry('ALL')" data-country="ALL" class="country-btn px-3 py-2 rounded-xl text-xs font-semibold bg-orange-600 text-white transition inline-flex items-center gap-1.5">
+            <i data-lucide="globe" class="w-3.5 h-3.5"></i> Todos
           </button>
-          <button onclick="setCountry('DO')" data-country="DO" class="country-btn px-3 py-2 rounded-xl text-xs font-semibold bg-slate-800/90 text-slate-300 hover:bg-slate-700 transition">
-            🇩🇴 RD / La Romana
+          <button onclick="setCountry('DO')" data-country="DO" class="country-btn px-3 py-2 rounded-xl text-xs font-semibold bg-slate-800/90 text-slate-300 hover:bg-slate-700 transition inline-flex items-center gap-1.5">
+            <span class="font-bold">🇩🇴</span> RD / La Romana
           </button>
-          <button onclick="setCountry('ES')" data-country="ES" class="country-btn px-3 py-2 rounded-xl text-xs font-semibold bg-slate-800/90 text-slate-300 hover:bg-slate-700 transition">
-            🇪🇸 España
+          <button onclick="setCountry('ES')" data-country="ES" class="country-btn px-3 py-2 rounded-xl text-xs font-semibold bg-slate-800/90 text-slate-300 hover:bg-slate-700 transition inline-flex items-center gap-1.5">
+            <span class="font-bold">🇪🇸</span> España
           </button>
-          <button onclick="setCountry('LATAM')" data-country="LATAM" class="country-btn px-3 py-2 rounded-xl text-xs font-semibold bg-slate-800/90 text-slate-300 hover:bg-slate-700 transition">
-            🌎 LATAM Remoto
+          <button onclick="setCountry('LATAM')" data-country="LATAM" class="country-btn px-3 py-2 rounded-xl text-xs font-semibold bg-slate-800/90 text-slate-300 hover:bg-slate-700 transition inline-flex items-center gap-1.5">
+            <i data-lucide="compass" class="w-3.5 h-3.5"></i> LATAM Remoto
           </button>
-          <button onclick="setCountry('AR')" data-country="AR" class="country-btn px-3 py-2 rounded-xl text-xs font-semibold bg-slate-800/90 text-slate-300 hover:bg-slate-700 transition">
-            🇦🇷 Argentina
+          <button onclick="setCountry('AR')" data-country="AR" class="country-btn px-3 py-2 rounded-xl text-xs font-semibold bg-slate-800/90 text-slate-300 hover:bg-slate-700 transition inline-flex items-center gap-1.5">
+            <span class="font-bold">🇦🇷</span> Argentina
           </button>
         </div>
 
         <!-- Experience, Status & Sort -->
         <div class="md:col-span-4 grid grid-cols-3 gap-2">
           <select id="expFilter" onchange="renderJobs()" class="px-2.5 py-2.5 rounded-xl bg-slate-900/90 border border-slate-700/80 text-xs text-slate-200 focus:outline-none focus:border-orange-500">
-            <option value="4">⏱️ Máx. 4 años</option>
-            <option value="3">⏱️ Máx. 3 años</option>
-            <option value="2">⏱️ Máx. 2 años</option>
+            <option value="4">Exp: Máx. 4 años</option>
+            <option value="3">Exp: Máx. 3 años</option>
+            <option value="2">Exp: Máx. 2 años</option>
           </select>
           <select id="statusFilter" onchange="renderJobs()" class="px-2.5 py-2.5 rounded-xl bg-slate-900/90 border border-slate-700/80 text-xs text-slate-200 focus:outline-none focus:border-orange-500">
             <option value="ALL">Todas (Pendientes primero)</option>
             <option value="ACTIVE">Solo pendientes</option>
-            <option value="APPLIED">✅ Ya postuladas</option>
-            <option value="DISMISSED">❌ No interesantes</option>
-            <option value="FAV">⭐ Favoritas</option>
+            <option value="APPLIED">Ya postuladas</option>
+            <option value="DISMISSED">No interesantes</option>
+            <option value="FAV">Favoritas</option>
           </select>
           <select id="sortSelect" onchange="renderJobs()" class="px-2.5 py-2.5 rounded-xl bg-slate-900/90 border border-slate-700/80 text-xs text-slate-200 focus:outline-none focus:border-orange-500">
             <option value="MATCH">Orden: % Match</option>
@@ -206,12 +292,14 @@
     <main id="jobsContainer" class="grid grid-cols-1 md:grid-cols-2 gap-5"></main>
 
     <!-- Empty State -->
-    <div id="emptyState" class="hidden glass rounded-2xl p-12 text-center my-6">
-      <div class="text-4xl mb-3">🔎</div>
+    <div id="emptyState" class="hidden glass rounded-2xl p-12 text-center my-6 border border-slate-800">
+      <div class="w-12 h-12 rounded-2xl bg-slate-800 text-slate-400 mx-auto flex items-center justify-center mb-3">
+        <i data-lucide="search-x" class="w-6 h-6"></i>
+      </div>
       <h3 class="text-lg font-bold text-white">No hay vacantes que coincidan con este filtro</h3>
       <p class="text-slate-400 text-sm mt-1">Prueba limpiando el filtro de tecnología o ampliando el rango.</p>
-      <button onclick="resetAllFilters()" class="mt-4 px-4 py-2 rounded-xl bg-orange-600 hover:bg-orange-500 text-white text-sm font-semibold">
-        Restablecer filtros
+      <button onclick="resetAllFilters()" class="mt-4 px-4 py-2 rounded-xl bg-orange-600 hover:bg-orange-500 text-white text-sm font-semibold inline-flex items-center gap-1.5">
+        <i data-lucide="rotate-ccw" class="w-4 h-4"></i> Restablecer filtros
       </button>
     </div>
   </div>
@@ -246,12 +334,12 @@ Ingeniero en Sistemas y Computación
 Tel: 829-985-4341 | Email: kevinjooo59@gmail.com
 La Romana, República Dominicana`;
 
-    function showToast(title, msg, icon = '📋') {
+    function showToast(title, msg) {
       const t = document.getElementById('toast');
       document.getElementById('toastTitle').textContent = title;
       document.getElementById('toastMsg').textContent = msg;
-      document.getElementById('toastIcon').textContent = icon;
       t.classList.remove('hidden');
+      if (window.lucide) lucide.createIcons();
       setTimeout(() => t.classList.add('hidden'), 5000);
     }
 
@@ -327,12 +415,15 @@ La Romana, República Dominicana`;
         descEl.classList.remove('line-clamp-none');
         descEl.classList.add('line-clamp-3');
         if (detailsEl) detailsEl.classList.add('hidden');
-        btnEl.innerHTML = '<span>👁️ Ver descripción completa ▾</span>';
+        btnEl.innerHTML = '<i data-lucide="eye" class="w-3.5 h-3.5"></i> <span>Ver descripción completa</span> <i data-lucide="chevron-down" class="w-3 h-3"></i>';
       } else {
         descEl.classList.remove('line-clamp-3');
         descEl.classList.add('line-clamp-none');
         if (detailsEl) detailsEl.classList.remove('hidden');
-        btnEl.innerHTML = '<span>▴ Ver menos</span>';
+        btnEl.innerHTML = '<i data-lucide="chevron-up" class="w-3 h-3"></i> <span>Ver menos</span>';
+      }
+      if (window.lucide) {
+        lucide.createIcons();
       }
     }
 
@@ -479,11 +570,11 @@ La Romana, República Dominicana`;
           : 'bg-amber-500/20 text-amber-300 border-amber-500/40';
 
         const statusBadge = isApplied
-          ? '<span class="px-2.5 py-0.5 rounded-md text-[11px] font-bold bg-emerald-500/25 text-emerald-300 border border-emerald-500/40">✅ Ya postulado (al final)</span>'
+          ? '<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md text-[11px] font-bold bg-emerald-500/25 text-emerald-300 border border-emerald-500/40"><i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i> Ya postulado (al final)</span>'
           : isFav
-          ? '<span class="px-2.5 py-0.5 rounded-md text-[11px] font-bold bg-amber-500/25 text-amber-300 border border-amber-500/40">⭐ Favorito</span>'
+          ? '<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md text-[11px] font-bold bg-amber-500/25 text-amber-300 border border-amber-500/40"><i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i> Favorito</span>'
           : isDismissed
-          ? '<span class="px-2.5 py-0.5 rounded-md text-[11px] font-bold bg-rose-500/25 text-rose-300 border border-rose-500/40">❌ No interesante (al final)</span>'
+          ? '<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md text-[11px] font-bold bg-rose-500/25 text-rose-300 border border-rose-500/40"><i data-lucide="x-circle" class="w-3.5 h-3.5"></i> No interesante (al final)</span>'
           : '';
 
         const cardExtraClass = isDismissed
@@ -500,20 +591,20 @@ La Romana, República Dominicana`;
           <div>
             <div class="flex items-center justify-between gap-2 mb-3">
               <div class="flex items-center gap-2 flex-wrap">
-                <span class="text-lg">${job.flag || '🌐'}</span>
+                <span class="text-sm font-bold px-2 py-0.5 rounded-md bg-slate-800/90 text-slate-200 border border-slate-700">${job.countryCode || 'REMOTE'}</span>
                 <span class="text-xs font-semibold uppercase tracking-wider px-2.5 py-0.5 rounded-md bg-slate-800 text-slate-300 border border-slate-700">
                   ${job.portal}
                 </span>
-                <span class="text-xs font-medium px-2.5 py-0.5 rounded-md bg-sky-500/15 text-sky-300 border border-sky-500/30">
-                  ${job.modality}
+                <span class="inline-flex items-center gap-1 text-xs font-medium px-2.5 py-0.5 rounded-md bg-sky-500/15 text-sky-300 border border-sky-500/30">
+                  <i data-lucide="laptop" class="w-3 h-3"></i> ${job.modality}
                 </span>
-                <span class="text-xs font-semibold px-2.5 py-0.5 rounded-md bg-amber-500/15 text-amber-300 border border-amber-500/30">
-                  ⏱️ Exp: ${job.experienceLabel || (job.experienceYears + ' años')}
+                <span class="inline-flex items-center gap-1 text-xs font-semibold px-2.5 py-0.5 rounded-md bg-amber-500/15 text-amber-300 border border-amber-500/30">
+                  <i data-lucide="clock" class="w-3 h-3"></i> Exp: ${job.experienceLabel || (job.experienceYears + ' años')}
                 </span>
                 ${statusBadge}
               </div>
-              <span class="px-2.5 py-1 rounded-lg text-xs font-bold border ${matchColor}">
-                ⚡ ${job.matchScore}% Match CV
+              <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-bold border ${matchColor}">
+                <i data-lucide="zap" class="w-3.5 h-3.5 fill-current"></i> ${job.matchScore}% Match CV
               </span>
             </div>
 
@@ -523,16 +614,18 @@ La Romana, República Dominicana`;
               </a>
             </h2>
             <div class="text-sm text-slate-300 font-medium flex flex-wrap items-center gap-2 mb-3">
-              <span>🏢 ${job.company}</span>
+              <span class="inline-flex items-center gap-1.5"><i data-lucide="building-2" class="w-3.5 h-3.5 text-slate-400"></i> ${job.company}</span>
               <span class="text-slate-600">•</span>
-              <span class="text-slate-400 text-xs">📍 ${job.location}</span>
+              <span class="inline-flex items-center gap-1 text-slate-400 text-xs"><i data-lucide="map-pin" class="w-3 h-3 text-slate-500"></i> ${job.location}</span>
               <span class="text-slate-600">•</span>
-              <span class="text-slate-400 text-xs">🕒 ${job.postedLabel || job.postedAt}</span>
+              <span class="inline-flex items-center gap-1 text-slate-400 text-xs"><i data-lucide="calendar" class="w-3 h-3 text-slate-500"></i> ${job.postedLabel || job.postedAt}</span>
             </div>
 
             <div class="mb-3 px-3.5 py-2.5 rounded-xl bg-slate-900/85 border border-slate-800 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
               <div>
-                <span class="text-xs text-slate-400 font-medium block">💵 Sueldo en Pesos Dominicanos:</span>
+                <span class="inline-flex items-center gap-1 text-xs text-slate-400 font-medium block">
+                  <i data-lucide="banknote" class="w-3.5 h-3.5 text-emerald-400"></i> Sueldo en Pesos Dominicanos:
+                </span>
                 ${job.salaryOriginal ? `<span class="text-[11px] text-slate-500">Moneda original: ${job.salaryOriginal}</span>` : ''}
               </div>
               <div class="text-right">
@@ -544,8 +637,9 @@ La Romana, República Dominicana`;
             </div>
 
             ${job.highlight ? `
-              <div class="mb-3 px-3 py-2 rounded-xl bg-orange-500/10 border border-orange-500/20 text-xs text-orange-200">
-                🎯 <strong>Por qué encaja contigo:</strong> ${job.highlight}
+              <div class="mb-3 px-3 py-2 rounded-xl bg-orange-500/10 border border-orange-500/20 text-xs text-orange-200 flex items-start gap-1.5">
+                <i data-lucide="target" class="w-4 h-4 text-orange-400 shrink-0 mt-0.5"></i>
+                <div><strong>Por qué encaja contigo:</strong> ${job.highlight}</div>
               </div>
             ` : ''}
 
@@ -558,8 +652,10 @@ La Romana, República Dominicana`;
                   ${job.details}
                 </div>
               ` : ''}
-              <button onclick="toggleExpandDesc('${job.id}')" id="btn-expand-${job.id}" class="mt-2 text-[11px] font-semibold text-orange-400 hover:text-orange-300 hover:underline flex items-center gap-1 transition">
-                <span>👁️ Ver descripción completa ▾</span>
+              <button onclick="toggleExpandDesc('${job.id}')" id="btn-expand-${job.id}" class="mt-2 text-[11px] font-semibold text-orange-400 hover:text-orange-300 hover:underline inline-flex items-center gap-1 transition">
+                <i data-lucide="eye" class="w-3.5 h-3.5"></i>
+                <span>Ver descripción completa</span>
+                <i data-lucide="chevron-down" class="w-3 h-3"></i>
               </button>
             </div>
 
@@ -575,28 +671,36 @@ La Romana, República Dominicana`;
           <div class="pt-3 border-t border-slate-800/80 flex flex-wrap items-center justify-between gap-2">
             <div class="flex items-center gap-1.5 flex-wrap">
               <button onclick="setJobStatus('${job.id}', 'FAV')" title="Marcar como Favorito" class="px-2.5 py-1.5 rounded-lg text-xs font-medium border transition ${isFav ? 'bg-amber-500/25 border-amber-400 text-amber-200' : 'bg-slate-800/70 border-slate-700 text-slate-300 hover:bg-slate-700'}">
-                ⭐
+                <i data-lucide="star" class="w-4 h-4 ${isFav ? 'fill-amber-400 text-amber-300' : ''}"></i>
               </button>
-              <button onclick="setJobStatus('${job.id}', 'APPLIED')" title="${isApplied ? 'Desmarcar de postulados' : 'Marcar como ya postulado (se mueve al final)'}" class="px-3 py-1.5 rounded-lg text-xs font-semibold border transition flex items-center gap-1 ${isApplied ? 'bg-emerald-600 border-emerald-400 text-white' : 'bg-slate-800/70 border-slate-700 text-slate-300 hover:bg-emerald-950/40 hover:text-emerald-300'}">
-                <span>${isApplied ? '✅ Ya postulé' : '✓ Ya postulé'}</span>
+              <button onclick="setJobStatus('${job.id}', 'APPLIED')" title="${isApplied ? 'Desmarcar de postulados' : 'Marcar como ya postulado (se mueve al final)'}" class="px-3 py-1.5 rounded-lg text-xs font-semibold border transition inline-flex items-center gap-1.5 ${isApplied ? 'bg-emerald-600 border-emerald-400 text-white' : 'bg-slate-800/70 border-slate-700 text-slate-300 hover:bg-emerald-950/40 hover:text-emerald-300'}">
+                <i data-lucide="${isApplied ? 'check-circle-2' : 'check'}" class="w-3.5 h-3.5"></i>
+                <span>${isApplied ? 'Ya postulé' : 'Ya postulé'}</span>
               </button>
-              <button onclick="setJobStatus('${job.id}', 'DISMISSED')" title="${isDismissed ? 'Restaurar a pendientes' : 'Marcar como no interesante (se mueve al final)'}" class="px-2.5 py-1.5 rounded-lg text-xs font-semibold border transition flex items-center gap-1 ${isDismissed ? 'bg-rose-600 border-rose-400 text-white' : 'bg-slate-800/70 border-slate-700 text-slate-400 hover:bg-rose-950/40 hover:text-rose-300'}">
-                <span>${isDismissed ? '↩️ Restaurar' : '✕ No me interesa'}</span>
+              <button onclick="setJobStatus('${job.id}', 'DISMISSED')" title="${isDismissed ? 'Restaurar a pendientes' : 'Marcar como no interesante (se mueve al final)'}" class="px-2.5 py-1.5 rounded-lg text-xs font-semibold border transition inline-flex items-center gap-1.5 ${isDismissed ? 'bg-rose-600 border-rose-400 text-white' : 'bg-slate-800/70 border-slate-700 text-slate-400 hover:bg-rose-950/40 hover:text-rose-300'}">
+                <i data-lucide="${isDismissed ? 'rotate-ccw' : 'x'}" class="w-3.5 h-3.5"></i>
+                <span>${isDismissed ? 'Restaurar' : 'No me interesa'}</span>
               </button>
             </div>
 
             <div class="flex items-center gap-2">
-              <button onclick="copyCustomCoverLetter('${escapedTitle}', '${escapedCompany}')" class="inline-flex items-center gap-1 px-3 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-xs font-medium transition" title="Copiar carta personalizada para esta empresa">
-                📋 Copiar Carta
+              <button onclick="copyCustomCoverLetter('${escapedTitle}', '${escapedCompany}')" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-xs font-medium transition" title="Copiar carta personalizada para esta empresa">
+                <i data-lucide="clipboard-copy" class="w-3.5 h-3.5"></i> Copiar Carta
               </button>
               <a href="${job.url}" target="_blank" rel="noopener noreferrer" onclick="handleApplyClick('${job.id}')" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-orange-600 hover:bg-orange-500 text-white text-xs font-bold shadow-md shadow-orange-600/20 transition">
-                Postularme Aquí ↗
+                <span>Postularme</span>
+                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
               </a>
             </div>
           </div>
         </article>
         `;
       }).join('');
+
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+    }
     }
 
     function exportCSV() {
@@ -628,6 +732,9 @@ La Romana, República Dominicana`;
     function initUI() {
       renderStackBar();
       renderJobs();
+      if (window.lucide) {
+        lucide.createIcons();
+      }
     }
 
     initUI();
