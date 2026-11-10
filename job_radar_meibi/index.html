@@ -104,6 +104,38 @@
       background-color: #fda4af;
       border-radius: 9999px;
     }
+    /* Modal Backdrop & Content Transitions */
+    .app-modal {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .app-modal.is-active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .app-modal-dialog {
+      opacity: 0;
+      transform: scale(0.92) translateY(18px);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .app-modal.is-active .app-modal-dialog {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+
+    /* Scroll Reveal Animation */
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .reveal-on-scroll.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
   </style>
 </head>
 <body class="text-slate-800 antialiased font-sans flex flex-col justify-between">
@@ -120,7 +152,7 @@
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
 
     <!-- HERO HEADER -->
-    <header class="mb-10 text-center sm:text-left flex flex-col lg:flex-row items-center lg:items-center justify-between gap-6 bg-white/90 p-5 sm:p-8 rounded-3xl shadow-sm border border-rose-100">
+    <header class="reveal-on-scroll mb-10 text-center sm:text-left flex flex-col lg:flex-row items-center lg:items-center justify-between gap-6 bg-white/90 p-6 sm:p-8 rounded-[2.5rem] shadow-sm border border-rose-100">
       <div class="flex flex-col sm:flex-row items-center gap-5 min-w-0 max-w-full">
         <!-- Avatar / Photo placeholder -->
         <div class="relative shrink-0">
@@ -157,15 +189,15 @@
 
       <!-- Quick Action Buttons -->
       <div class="flex flex-wrap items-center justify-center sm:justify-start lg:justify-end gap-2.5 w-full lg:w-auto shrink-0">
-        <a href="cv/CV_Meibi_Mota_Analitica_Marketing.pdf" target="_blank" class="inline-flex items-center justify-center gap-2 px-3.5 py-2.5 rounded-xl bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white font-medium text-xs shadow-md shadow-rose-200 transition whitespace-nowrap" title="Ver CV de Analítica, Investigación y Marketing en PDF">
+        <a href="cv/CV_Meibi_Mota_Analitica_Marketing.pdf" target="_blank" class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white font-medium text-xs shadow-md shadow-rose-200 transition whitespace-nowrap" title="Ver CV de Analítica, Investigación y Marketing en PDF">
           <i data-lucide="file-text" class="w-4 h-4 shrink-0"></i>
           <span>CV Marketing (PDF)</span>
         </a>
-        <a href="cv/CV_Meibi_Mota_Administrativo_Financiero.pdf" target="_blank" class="inline-flex items-center justify-center gap-2 px-3.5 py-2.5 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-medium text-xs shadow-md shadow-purple-200 transition whitespace-nowrap" title="Ver CV Administrativo, Financiero y Operaciones en PDF">
+        <a href="cv/CV_Meibi_Mota_Administrativo_Financiero.pdf" target="_blank" class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-medium text-xs shadow-md shadow-purple-200 transition whitespace-nowrap" title="Ver CV Administrativo, Financiero y Operaciones en PDF">
           <i data-lucide="file-text" class="w-4 h-4 shrink-0"></i>
           <span>CV Financiero (PDF)</span>
         </a>
-        <button onclick="openModal('profile-info')" class="inline-flex items-center justify-center gap-2 px-3.5 py-2.5 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-700 font-medium text-xs border border-rose-200 transition whitespace-nowrap">
+        <button onclick="openModal('profile-info')" class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-rose-50 hover:bg-rose-100 text-rose-700 font-medium text-xs border border-rose-200 transition whitespace-nowrap">
           <i data-lucide="user-check" class="w-4 h-4 shrink-0"></i>
           <span>Ver Perfil & Word</span>
         </button>
@@ -173,9 +205,9 @@
     </header>
 
     <!-- METRICS BAR -->
-    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mb-8">
-      <div class="bg-white/95 p-4 rounded-2xl border border-rose-100 shadow-sm flex items-center gap-3">
-        <div class="w-10 h-10 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center text-xl shrink-0">
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mb-8 reveal-on-scroll">
+      <div class="bg-white/95 p-4 rounded-[2rem] border border-rose-100 shadow-sm flex items-center gap-3.5 p-4 sm:p-5">
+        <div class="w-12 h-12 rounded-full aspect-square bg-rose-100 text-rose-600 flex items-center justify-center text-xl shrink-0">
           <i data-lucide="graduation-cap" class="w-5 h-5"></i>
         </div>
         <div>
@@ -184,8 +216,8 @@
         </div>
       </div>
 
-      <div class="bg-white/95 p-4 rounded-2xl border border-pink-100 shadow-sm flex items-center gap-3">
-        <div class="w-10 h-10 rounded-xl bg-pink-100 text-pink-600 flex items-center justify-center text-xl shrink-0">
+      <div class="bg-white/95 p-4 rounded-[2rem] border border-pink-100 shadow-sm flex items-center gap-3.5 p-4 sm:p-5">
+        <div class="w-12 h-12 rounded-full aspect-square bg-pink-100 text-pink-600 flex items-center justify-center text-xl shrink-0">
           <i data-lucide="bar-chart-3" class="w-5 h-5"></i>
         </div>
         <div>
@@ -194,8 +226,8 @@
         </div>
       </div>
 
-      <div class="bg-white/95 p-4 rounded-2xl border border-purple-100 shadow-sm flex items-center gap-3">
-        <div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center text-xl shrink-0">
+      <div class="bg-white/95 p-4 rounded-[2rem] border border-purple-100 shadow-sm flex items-center gap-3.5 p-4 sm:p-5">
+        <div class="w-12 h-12 rounded-full aspect-square bg-purple-100 text-purple-600 flex items-center justify-center text-xl shrink-0">
           <i data-lucide="landmark" class="w-5 h-5"></i>
         </div>
         <div>
@@ -204,8 +236,8 @@
         </div>
       </div>
 
-      <div class="bg-white/95 p-4 rounded-2xl border border-amber-100 shadow-sm flex items-center gap-3">
-        <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-xl shrink-0">
+      <div class="bg-white/95 p-4 rounded-[2rem] border border-amber-100 shadow-sm flex items-center gap-3.5 p-4 sm:p-5">
+        <div class="w-12 h-12 rounded-full aspect-square bg-amber-100 text-amber-600 flex items-center justify-center text-xl shrink-0">
           <i data-lucide="headphones" class="w-5 h-5"></i>
         </div>
         <div>
@@ -216,13 +248,13 @@
     </div>
 
     <!-- FILTER & SEARCH BAR -->
-    <div class="bg-white/95 p-5 rounded-3xl border border-rose-100 shadow-sm mb-8 space-y-4">
+    <div class="reveal-on-scroll bg-white/95 p-5 sm:p-6 rounded-[2.2rem] border border-rose-100 shadow-sm mb-8 space-y-4">
       <div class="flex flex-col md:flex-row gap-3 items-stretch md:items-center justify-between">
         <!-- Search input -->
         <div class="relative flex-1">
           <i data-lucide="search" class="w-5 h-5 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none"></i>
           <input type="text" id="searchInput" placeholder="Buscar por cargo, empresa (APAP, Saint John...), destreza..." 
-                 class="w-full pl-11 pr-4 py-2.5 rounded-2xl bg-rose-50/50 border border-rose-200 text-sm focus:outline-none focus:ring-2 focus:ring-rose-400 focus:bg-white transition"
+                 class="w-full pl-11 pr-4 py-2.5 rounded-full bg-rose-50/50 border border-rose-200 text-sm focus:outline-none focus:ring-2 focus:ring-rose-400 focus:bg-white transition"
                  oninput="filterJobs()">
         </div>
 
@@ -255,19 +287,19 @@
 
       <!-- Category Filter Pills -->
       <div class="flex flex-wrap gap-2 pt-2 border-t border-rose-100">
-        <button onclick="setCategory('all')" id="tab-all" class="category-pill pill-active px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition inline-flex items-center gap-1.5">
+        <button onclick="setCategory('all')" id="tab-all" class="category-pill pill-active px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition inline-flex items-center gap-1.5">
           <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Todas (<span id="count-all">15</span>)
         </button>
-        <button onclick="setCategory('psicologia')" id="tab-psicologia" class="category-pill bg-rose-50 hover:bg-rose-100 text-slate-700 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition inline-flex items-center gap-1.5">
+        <button onclick="setCategory('psicologia')" id="tab-psicologia" class="category-pill bg-rose-50 hover:bg-rose-100 text-slate-700 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition inline-flex items-center gap-1.5">
           <i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i> Psicología Escolar & Educación
         </button>
-        <button onclick="setCategory('datos')" id="tab-datos" class="category-pill bg-rose-50 hover:bg-rose-100 text-slate-700 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition inline-flex items-center gap-1.5">
+        <button onclick="setCategory('datos')" id="tab-datos" class="category-pill bg-rose-50 hover:bg-rose-100 text-slate-700 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition inline-flex items-center gap-1.5">
           <i data-lucide="bar-chart-3" class="w-3.5 h-3.5"></i> Análisis de Datos & Power BI
         </button>
-        <button onclick="setCategory('banco')" id="tab-banco" class="category-pill bg-rose-50 hover:bg-rose-100 text-slate-700 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition inline-flex items-center gap-1.5">
+        <button onclick="setCategory('banco')" id="tab-banco" class="category-pill bg-rose-50 hover:bg-rose-100 text-slate-700 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition inline-flex items-center gap-1.5">
           <i data-lucide="landmark" class="w-3.5 h-3.5"></i> Banca & Entidades Financieras
         </button>
-        <button onclick="setCategory('servicio')" id="tab-servicio" class="category-pill bg-rose-50 hover:bg-rose-100 text-slate-700 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition inline-flex items-center gap-1.5">
+        <button onclick="setCategory('servicio')" id="tab-servicio" class="category-pill bg-rose-50 hover:bg-rose-100 text-slate-700 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition inline-flex items-center gap-1.5">
           <i data-lucide="headphones" class="w-3.5 h-3.5"></i> Servicio al Cliente & Asistencia
         </button>
       </div>
@@ -305,14 +337,14 @@
   </footer>
 
   <!-- MODAL: CARTA DE PRESENTACIÓN -->
-  <div id="letterModal" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
-    <div class="bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl border border-rose-100 relative animate-in fade-in zoom-in-95 duration-200">
-      <button onclick="closeModal('letterModal')" class="absolute top-5 right-5 text-slate-400 hover:text-slate-600 p-1">
+  <div id="letterModal" class="fixed inset-0 bg-slate-950/60 backdrop-blur-md z-50 flex items-center justify-center p-4 app-modal hidden">
+    <div class="app-modal-dialog bg-white rounded-[2.5rem] max-w-2xl w-full p-6 sm:p-8 shadow-2xl border border-rose-100 relative animate-in fade-in zoom-in-95 duration-200">
+      <button onclick="closeModal('letterModal')" class="absolute top-5 right-5 w-10 h-10 rounded-full aspect-square bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-slate-700 flex items-center justify-center transition shadow-sm">
         <i data-lucide="x" class="w-5 h-5"></i>
       </button>
 
       <div class="flex items-center gap-3 mb-4">
-        <div class="w-10 h-10 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center text-xl shrink-0">
+        <div class="w-12 h-12 rounded-full aspect-square bg-rose-100 text-rose-600 flex items-center justify-center text-xl shrink-0">
           <i data-lucide="mail" class="w-5 h-5"></i>
         </div>
         <div>
@@ -326,14 +358,14 @@
       </div>
 
       <div class="flex flex-col sm:flex-row gap-3 justify-end">
-        <button onclick="closeModal('letterModal')" class="px-5 py-2.5 rounded-xl border border-slate-200 text-slate-600 text-xs sm:text-sm font-semibold hover:bg-slate-50 transition">
+        <button onclick="closeModal('letterModal')" class="px-5 py-2.5 rounded-full border border-slate-200 text-slate-600 text-xs sm:text-sm font-semibold hover:bg-slate-50 transition">
           Cerrar
         </button>
-        <button onclick="copyLetterFromModal()" id="modalCopyBtn" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white text-xs sm:text-sm font-semibold shadow-md shadow-rose-200 transition inline-flex items-center justify-center gap-2">
+        <button onclick="copyLetterFromModal()" id="modalCopyBtn" class="px-5 py-2.5 rounded-full bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white text-xs sm:text-sm font-semibold shadow-md shadow-rose-200 transition inline-flex items-center justify-center gap-2">
           <i data-lucide="clipboard-copy" class="w-4 h-4"></i>
           <span>Copiar al Portapapeles</span>
         </button>
-        <a id="modalGmailBtn" href="#" target="_blank" rel="noopener noreferrer" class="hidden px-5 py-2.5 rounded-xl bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 text-white text-xs sm:text-sm font-semibold shadow-md shadow-red-200 transition inline-flex items-center justify-center gap-2">
+        <a id="modalGmailBtn" href="#" target="_blank" rel="noopener noreferrer" class="hidden px-5 py-2.5 rounded-full bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 text-white text-xs sm:text-sm font-semibold shadow-md shadow-red-200 transition inline-flex items-center justify-center gap-2">
           <i data-lucide="mail" class="w-4 h-4"></i>
           <span>Abrir en Gmail</span>
         </a>
@@ -342,9 +374,9 @@
   </div>
 
   <!-- MODAL: PERFIL COMPLETO -->
-  <div id="profile-info" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
-    <div class="bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl border border-rose-100 relative max-h-[90vh] overflow-y-auto custom-scroll">
-      <button onclick="closeModal('profile-info')" class="absolute top-5 right-5 text-slate-400 hover:text-slate-600 p-1">
+  <div id="profile-info" class="fixed inset-0 bg-slate-950/60 backdrop-blur-md z-50 flex items-center justify-center p-4 app-modal hidden">
+    <div class="app-modal-dialog bg-white rounded-[2.5rem] max-w-2xl w-full p-6 sm:p-8 shadow-2xl border border-rose-100 relative max-h-[90vh] overflow-y-auto custom-scroll">
+      <button onclick="closeModal('profile-info')" class="absolute top-5 right-5 w-10 h-10 rounded-full aspect-square bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-slate-700 flex items-center justify-center transition shadow-sm">
         <i data-lucide="x" class="w-5 h-5"></i>
       </button>
 
@@ -355,7 +387,7 @@
 
       <div class="space-y-5 text-sm">
         <!-- SECCIÓN DE DESCARGAS DE CVs -->
-        <div class="bg-gradient-to-r from-rose-50 via-purple-50 to-indigo-50 p-4 rounded-2xl border border-rose-200 shadow-sm">
+        <div class="bg-gradient-to-r from-rose-50 via-purple-50 to-indigo-50 p-4 rounded-[1.6rem] border border-rose-200 shadow-sm">
           <h4 class="font-bold text-slate-800 mb-2 flex items-center gap-2">
             <i data-lucide="file-text" class="w-4 h-4 text-rose-600"></i> Currículums Vitae Disponibles
           </h4>
@@ -363,13 +395,13 @@
           
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <!-- CV Marketing -->
-            <div class="bg-white p-3 rounded-xl border border-rose-100 shadow-xs flex flex-col justify-between">
+            <div class="bg-white p-3 rounded-2xl border border-rose-100 shadow-xs flex flex-col justify-between">
               <div>
                 <p class="text-xs font-bold text-rose-700">Analítica · Investigación · Marketing</p>
                 <p class="text-[10px] text-slate-500 mt-0.5">Enfoque: Research, Insights, Buyer Persona, Consumo de Medios y Tendencias.</p>
               </div>
               <div class="flex items-center gap-2 mt-2 pt-2 border-t border-rose-50">
-                <a href="cv/CV_Meibi_Mota_Analitica_Marketing.pdf" target="_blank" class="flex-1 text-center py-1.5 px-2 bg-rose-500 hover:bg-rose-600 text-white text-[11px] font-semibold rounded-lg transition inline-flex items-center justify-center gap-1">
+                <a href="cv/CV_Meibi_Mota_Analitica_Marketing.pdf" target="_blank" class="flex-1 text-center py-1.5 px-2 bg-rose-500 hover:bg-rose-600 text-white text-[11px] font-semibold rounded-full transition inline-flex items-center justify-center gap-1">
                   <i data-lucide="download" class="w-3.5 h-3.5"></i> PDF
                 </a>
                 <a href="cv/CV_Meibi_Mota_Analitica_Marketing.docx" download class="flex-1 text-center py-1.5 px-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-[11px] font-semibold rounded-lg border border-slate-200 transition inline-flex items-center justify-center gap-1">
@@ -379,13 +411,13 @@
             </div>
 
             <!-- CV Administrativo -->
-            <div class="bg-white p-3 rounded-xl border border-purple-100 shadow-xs flex flex-col justify-between">
+            <div class="bg-white p-3 rounded-2xl border border-purple-100 shadow-xs flex flex-col justify-between">
               <div>
                 <p class="text-xs font-bold text-purple-700">Administrativo · Financiero · Operaciones</p>
                 <p class="text-[10px] text-slate-500 mt-0.5">Enfoque: Banca (APAP), Cobranzas, Cuentas por Cobrar, Operaciones y Servicio.</p>
               </div>
               <div class="flex items-center gap-2 mt-2 pt-2 border-t border-purple-50">
-                <a href="cv/CV_Meibi_Mota_Administrativo_Financiero.pdf" target="_blank" class="flex-1 text-center py-1.5 px-2 bg-purple-600 hover:bg-purple-700 text-white text-[11px] font-semibold rounded-lg transition inline-flex items-center justify-center gap-1">
+                <a href="cv/CV_Meibi_Mota_Administrativo_Financiero.pdf" target="_blank" class="flex-1 text-center py-1.5 px-2 bg-purple-600 hover:bg-purple-700 text-white text-[11px] font-semibold rounded-full transition inline-flex items-center justify-center gap-1">
                   <i data-lucide="download" class="w-3.5 h-3.5"></i> PDF
                 </a>
                 <a href="cv/CV_Meibi_Mota_Administrativo_Financiero.docx" download class="flex-1 text-center py-1.5 px-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-[11px] font-semibold rounded-lg border border-slate-200 transition inline-flex items-center justify-center gap-1">
@@ -454,7 +486,7 @@
   </div>
 
   <!-- TOAST NOTIFICATION -->
-  <div id="toast" class="fixed bottom-6 right-6 bg-slate-900 text-white text-xs sm:text-sm px-4 py-3 rounded-2xl shadow-xl flex items-center gap-2.5 z-50 transform translate-y-20 opacity-0 transition-all duration-300">
+  <div id="toast" class="fixed bottom-6 right-6 bg-slate-900/95 backdrop-blur-md text-white text-xs sm:text-sm px-5 py-3 rounded-full shadow-2xl flex items-center gap-3 z-50 transform translate-y-20 opacity-0 transition-all duration-300 border border-slate-800">
     <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 shrink-0"></i>
     <span id="toastMsg">¡Carta copiada al portapapeles!</span>
   </div>
@@ -677,7 +709,7 @@
           : '';
 
         return `
-        <div class="glass-card rounded-3xl p-6 flex flex-col justify-between relative overflow-hidden ${cardExtraClass}">
+        <div class="glass-card rounded-[2.5rem] p-6 sm:p-7 flex flex-col justify-between relative overflow-hidden reveal-on-scroll ${cardExtraClass}">
           
           <!-- Top badge row -->
           <div>
@@ -718,7 +750,7 @@
             </div>
 
             <!-- Salary tag -->
-            <div class="bg-gradient-to-r from-rose-50 to-pink-50 border border-rose-100 rounded-xl p-2.5 mb-3.5">
+            <div class="bg-gradient-to-r from-rose-50 to-pink-50 border border-rose-100 rounded-[1.4rem] p-3 mb-3.5">
               <p class="inline-flex items-center gap-1 text-[11px] font-medium text-slate-500 uppercase tracking-wider">
                 <i data-lucide="banknote" class="w-3 h-3 text-rose-500"></i> Compensación estimada
               </p>
@@ -753,7 +785,7 @@
                 `).join('')}
               </div>
 
-              <button onclick="toggleExpandDesc('${job.id}')" id="btn-expand-${job.id}" class="mt-2 text-[11px] font-semibold text-rose-600 hover:text-rose-700 hover:underline inline-flex items-center gap-1 transition">
+              <button onclick="toggleExpandDesc('${job.id}')" id="btn-expand-${job.id}" class="mt-2.5 px-3 py-1 rounded-full bg-rose-50 hover:bg-rose-100 text-rose-600 hover:text-rose-700 text-[11px] font-semibold border border-rose-200/60 inline-flex items-center gap-1 transition">
                 <i data-lucide="eye" class="w-3.5 h-3.5"></i>
                 <span>Ver descripción completa</span>
                 <i data-lucide="chevron-down" class="w-3 h-3"></i>
@@ -769,21 +801,21 @@
           <!-- Actions -->
           <div class="pt-4 border-t border-rose-100 flex flex-wrap items-center justify-between gap-2">
             <div class="flex items-center gap-1.5 flex-wrap">
-              <button onclick="openLetterModal('${job.id}')" class="py-2 px-2.5 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-700 text-xs font-semibold transition inline-flex items-center justify-center gap-1.5" title="Ver carta de presentación adaptada">
+              <button onclick="openLetterModal('${job.id}')" class="py-2 px-3 rounded-full bg-rose-50 hover:bg-rose-100 text-rose-700 text-xs font-semibold transition inline-flex items-center justify-center gap-1.5" title="Ver carta de presentación adaptada">
                 <i data-lucide="clipboard-copy" class="w-3.5 h-3.5"></i>
                 <span>Carta</span>
               </button>
-              <button onclick="setJobStatus('${job.id}', 'APPLIED')" class="py-2 px-2.5 rounded-xl text-xs font-semibold transition inline-flex items-center justify-center gap-1.5 ${isApplied ? 'bg-emerald-600 text-white shadow-sm' : 'bg-slate-100 hover:bg-emerald-50 text-slate-700 hover:text-emerald-700 border border-slate-200'}" title="${isApplied ? 'Desmarcar de postulados' : 'Marcar como ya postulado (se mueve al final)'}">
+              <button onclick="setJobStatus('${job.id}', 'APPLIED')" class="py-2 px-3 rounded-full text-xs font-semibold transition inline-flex items-center justify-center gap-1.5 ${isApplied ? 'bg-emerald-600 text-white shadow-sm' : 'bg-slate-100 hover:bg-emerald-50 text-slate-700 hover:text-emerald-700 border border-slate-200'}" title="${isApplied ? 'Desmarcar de postulados' : 'Marcar como ya postulado (se mueve al final)'}">
                 <i data-lucide="${appliedIcon}" class="w-3.5 h-3.5"></i>
                 <span>${isApplied ? 'Ya postulé' : 'Ya postulé'}</span>
               </button>
-              <button onclick="setJobStatus('${job.id}', 'DISMISSED')" class="py-2 px-2.5 rounded-xl text-xs font-semibold transition inline-flex items-center justify-center gap-1.5 ${isDismissed ? 'bg-rose-600 text-white shadow-sm' : 'bg-slate-100 hover:bg-rose-50 text-slate-600 hover:text-rose-700 border border-slate-200'}" title="${isDismissed ? 'Restaurar a pendientes' : 'Marcar como no interesante (se mueve al final)'}">
+              <button onclick="setJobStatus('${job.id}', 'DISMISSED')" class="py-2 px-3 rounded-full text-xs font-semibold transition inline-flex items-center justify-center gap-1.5 ${isDismissed ? 'bg-rose-600 text-white shadow-sm' : 'bg-slate-100 hover:bg-rose-50 text-slate-600 hover:text-rose-700 border border-slate-200'}" title="${isDismissed ? 'Restaurar a pendientes' : 'Marcar como no interesante (se mueve al final)'}">
                 <i data-lucide="${dismissedIcon}" class="w-3.5 h-3.5"></i>
                 <span>${isDismissed ? 'Restaurar' : 'Descartar'}</span>
               </button>
             </div>
 
-            <a href="${targetUrl}" target="_blank" rel="noopener noreferrer" onclick="handleApplyClick('${job.id}')" class="py-2 px-4 rounded-xl ${isEmailApply ? 'bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 shadow-red-200' : 'bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 shadow-rose-200'} text-white text-xs font-bold transition text-center shadow-sm inline-flex items-center gap-1.5" title="${isEmailApply ? 'Abrir borrador en Gmail con la carta y asunto listos' : 'Ir al portal de postulación'}">
+            <a href="${targetUrl}" target="_blank" rel="noopener noreferrer" onclick="handleApplyClick('${job.id}')" class="py-2 px-5 rounded-full ${isEmailApply ? 'bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 shadow-red-200' : 'bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 shadow-rose-200'} text-white text-xs font-bold transition text-center shadow-sm inline-flex items-center gap-1.5" title="${isEmailApply ? 'Abrir borrador en Gmail con la carta y asunto listos' : 'Ir al portal de postulación'}">
               <i data-lucide="${isEmailApply ? 'mail' : 'external-link'}" class="w-3.5 h-3.5"></i>
               <span>${isEmailApply ? 'Enviar por Gmail' : 'Postular'}</span>
             </a>
@@ -796,6 +828,7 @@
       if (window.lucide) {
         lucide.createIcons();
       }
+      initScrollReveal();
     }
 
     function resetFilters() {
@@ -848,13 +881,50 @@
       });
     }
 
+    let revealObserver;
+    function initScrollReveal() {
+      if (!('IntersectionObserver' in window)) {
+        document.querySelectorAll('.reveal-on-scroll').forEach(el => el.classList.add('is-visible'));
+        return;
+      }
+      if (revealObserver) {
+        revealObserver.disconnect();
+      }
+      revealObserver = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+
+      document.querySelectorAll('.reveal-on-scroll:not(.is-visible)').forEach(el => {
+        revealObserver.observe(el);
+      });
+    }
+
     function openModal(id) {
-      document.getElementById(id).classList.remove('hidden');
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.classList.remove('hidden');
+      requestAnimationFrame(() => {
+        el.classList.add('is-active');
+      });
+      document.body.style.overflow = 'hidden';
       if (window.lucide) lucide.createIcons();
     }
 
     function closeModal(id) {
-      document.getElementById(id).classList.add('hidden');
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.classList.remove('is-active');
+      document.body.style.overflow = '';
+      setTimeout(() => {
+        if (!el.classList.contains('is-active')) {
+          el.classList.add('hidden');
+        }
+      }, 300);
     }
 
     function showToast(msg) {
