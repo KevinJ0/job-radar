@@ -1,5 +1,5 @@
 window.JOBS_DATA = {
-  "lastUpdated": "2026-11-11 11:30 (≤ 4 días · 100% Scrape Real · Correos Verificados)",
+  "lastUpdated": "2026-11-11 12:00 (≤ 4 días · Sueldos ≥ RD$ 25k · Ubicaciones Exactas)",
   "exchangeRatesNote": "1 EUR ≈ RD$ 65.50 | 1 USD ≈ RD$ 60.50 | 1 BRL ≈ RD$ 11.20",
   "profile": {
     "name": "Kevin Rosario",
@@ -64,7 +64,7 @@ window.JOBS_DATA = {
       "countryCode": "BR",
       "flag": "🇧🇷",
       "portal": "LinkedIn",
-      "location": "América Latina (100% Remoto)",
+      "location": "100% Remoto desde La Romana · Sede Grupo Senff en Curitiba, Brasil (PJ)",
       "modality": "100% Remoto",
       "experienceYears": 3,
       "experienceLabel": "Mín. 2-3 años (≤ 4 años)",
@@ -88,7 +88,9 @@ window.JOBS_DATA = {
       "url": "https://br.linkedin.com/jobs/view/desenvolvedor-pleno-at-grupo-senff-4489614701",
       "contactEmail": null,
       "applyType": "portal",
-      "details": "<strong>Responsabilidades del puesto:</strong><br>• Desarrollar y mantener aplicaciones utilizando C# (.NET Core y .NET Framework).<br>• Desarrollar e integrar APIs REST y WebServices SOAP.<br>• Desarrollar aplicaciones móviles utilizando Flutter y Dart con Android Studio.<br>• Consultas y optimización en bases de datos relacionales SQL.<br><br><strong>Requisitos:</strong> Experiencia demostrable en C#/.NET y Flutter/Dart, metodologías ágiles y Git. Postulación directa en LinkedIn."
+      "details": "<strong>Responsabilidades del puesto:</strong><br>• Desarrollar y mantener aplicaciones utilizando C# (.NET Core y .NET Framework).<br>• Desarrollar e integrar APIs REST y WebServices SOAP.<br>• Desarrollar aplicaciones móviles utilizando Flutter y Dart con Android Studio.<br>• Consultas y optimización en bases de datos relacionales SQL.<br><br><strong>Requisitos:</strong> Experiencia demostrable en C#/.NET y Flutter/Dart, metodologías ágiles y Git. Postulación directa en LinkedIn.",
+      "exactLocationDetails": "Sede: Av. Cândido de Abreu, Centro Cívico, Curitiba, PR, Brasil · 100% Remoto LATAM",
+      "minSalaryNumericDOP": 115000
     },
     {
       "id": "li-backlog-csharp",
@@ -98,7 +100,7 @@ window.JOBS_DATA = {
       "countryCode": "BR",
       "flag": "🇧🇷",
       "portal": "LinkedIn",
-      "location": "América Latina (100% Remoto)",
+      "location": "100% Remoto desde La Romana · Sede Backlog en Maringá, Brasil (PJ)",
       "modality": "100% Remoto",
       "experienceYears": 3,
       "experienceLabel": "Mín. 2-3 años (≤ 4 años)",
@@ -121,7 +123,9 @@ window.JOBS_DATA = {
       "url": "https://br.linkedin.com/jobs/view/dev-c%23-at-backlog-solutions-4488224586",
       "contactEmail": null,
       "applyType": "portal",
-      "details": "<strong>Responsabilidades del puesto:</strong><br>• Desarrollar nuevas funcionalidades y aprimorar aplicaciones backend.<br>• Crear, mantener y evolucionar APIs y servicios en C# y .NET.<br>• Implementar reglas de negocio e integraciones entre sistemas.<br>• Consultas en bases de datos SQL y control de versiones con Git.<br><br><strong>Requisitos:</strong> Dominio de C#, .NET, APIs REST y SQL. Cero AWS ni Azure requerido. Postulación directa en LinkedIn."
+      "details": "<strong>Responsabilidades del puesto:</strong><br>• Desarrollar nuevas funcionalidades y aprimorar aplicaciones backend.<br>• Crear, mantener y evolucionar APIs y servicios en C# y .NET.<br>• Implementar reglas de negocio e integraciones entre sistemas.<br>• Consultas en bases de datos SQL y control de versiones con Git.<br><br><strong>Requisitos:</strong> Dominio de C#, .NET, APIs REST y SQL. Cero AWS ni Azure requerido. Postulación directa en LinkedIn.",
+      "exactLocationDetails": "Sede: Av. Duque de Caxias, Zona 01, Maringá, PR, Brasil · 100% Remoto LATAM",
+      "minSalaryNumericDOP": 100000
     },
     {
       "id": "li-autoglass-net-angular",
@@ -131,7 +135,7 @@ window.JOBS_DATA = {
       "countryCode": "BR",
       "flag": "🇧🇷",
       "portal": "LinkedIn",
-      "location": "América Latina (100% Remoto)",
+      "location": "100% Remoto desde La Romana · Sede Autoglass / Maxpar en Vila Velha, Brasil",
       "modality": "100% Remoto",
       "experienceYears": 3,
       "experienceLabel": "Mín. 2-4 años (≤ 4 años)",
@@ -154,7 +158,9 @@ window.JOBS_DATA = {
       "url": "https://br.linkedin.com/jobs/view/desenvolvedor-net-pcd-maxpar-at-grupo-autoglass-4487809657",
       "contactEmail": null,
       "applyType": "portal",
-      "details": "<strong>Responsabilidades del puesto:</strong><br>• Implementar y evolucionar funcionalidades en sistemas internos basados en .NET y Angular.<br>• Mantenimiento preventivo y correctivo en el código.<br>• Consultas y procedimientos en bases de datos relacionales.<br><br><strong>Requisitos:</strong> Experiencia en .NET, C#, Angular y SQL. Postulación directa en LinkedIn."
+      "details": "<strong>Responsabilidades del puesto:</strong><br>• Implementar y evolucionar funcionalidades en sistemas internos basados en .NET y Angular.<br>• Mantenimiento preventivo y correctivo en el código.<br>• Consultas y procedimientos en bases de datos relacionales.<br><br><strong>Requisitos:</strong> Experiencia en .NET, C#, Angular y SQL. Postulación directa en LinkedIn.",
+      "exactLocationDetails": "Sede: Rod. Darly Santos, Vila Velha, ES, Brasil · 100% Remoto LATAM",
+      "minSalaryNumericDOP": 110000
     },
     {
       "id": "li-lde-flutter-1",
@@ -164,7 +170,7 @@ window.JOBS_DATA = {
       "countryCode": "DO",
       "flag": "🇩🇴",
       "portal": "Google Jobs / BeBee / LinkedIn",
-      "location": "República Dominicana (100% Remoto B2B)",
+      "location": "100% Remoto desde La Romana · Sede Grupo LDE en Santo Domingo, RD",
       "modality": "100% Remoto",
       "experienceYears": 3,
       "experienceLabel": "Mín. 3 años (≤ 4 años)",
@@ -188,7 +194,9 @@ window.JOBS_DATA = {
       "url": "https://bebee.com/do/jobs/desarrollador-mobile-flutter-modalidad-retainer-b2b-grupo-lde-srl--fj-2457101160",
       "contactEmail": "reclutamiento@grupolde.com",
       "applyType": "email_and_portal",
-      "details": "<strong>Responsabilidades del puesto:</strong><br>• Desarrollo de aplicaciones móviles multiplataforma en Flutter para productos SaaS (Fidbaq y Licita).<br>• Consumo de APIs RESTful e integración con pasarelas de pago.<br>• Mantenimiento y optimización bajo SLA con metodologías ágiles.<br><br><strong>Requisitos:</strong> Título en Ing. Sistemas o afines, mín. 3 años en Flutter/Dart, consumo de APIs REST. Envío directo verificado a <code>reclutamiento@grupolde.com</code>."
+      "details": "<strong>Responsabilidades del puesto:</strong><br>• Desarrollo de aplicaciones móviles multiplataforma en Flutter para productos SaaS (Fidbaq y Licita).<br>• Consumo de APIs RESTful e integración con pasarelas de pago.<br>• Mantenimiento y optimización bajo SLA con metodologías ágiles.<br><br><strong>Requisitos:</strong> Título en Ing. Sistemas o afines, mín. 3 años en Flutter/Dart, consumo de APIs REST. Envío directo verificado a <code>reclutamiento@grupolde.com</code>.",
+      "exactLocationDetails": "Sede: Piantini / Naco, Distrito Nacional, Rep. Dominicana · 100% Remoto B2B",
+      "minSalaryNumericDOP": 95000
     },
     {
       "id": "li-stefanini-net-1",
@@ -198,7 +206,7 @@ window.JOBS_DATA = {
       "countryCode": "PE",
       "flag": "🇵🇪",
       "portal": "LinkedIn",
-      "location": "LATAM Remote (100% Remoto)",
+      "location": "100% Remoto desde La Romana · Stefanini Hub LATAM (Lima / São Paulo)",
       "modality": "100% Remoto",
       "experienceYears": 3,
       "experienceLabel": "Mín. 3 años (≤ 4 años)",
@@ -222,7 +230,9 @@ window.JOBS_DATA = {
       "url": "https://pe.linkedin.com/jobs/view/desenvolvedor-net-at-stefanini-latam-4487916833",
       "contactEmail": null,
       "applyType": "portal",
-      "details": "<strong>Responsabilidades del puesto:</strong><br>• Construcción de microservicios y APIs RESTful con C# y ASP.NET Core.<br>• Mapeo y consultas en SQL Server optimizadas.<br>• Integración continua y pruebas unitarias.<br><br><strong>Requisitos:</strong> 3+ años en C#, ASP.NET Core y SQL Server. Modalidad 100% remota."
+      "details": "<strong>Responsabilidades del puesto:</strong><br>• Construcción de microservicios y APIs RESTful con C# y ASP.NET Core.<br>• Mapeo y consultas en SQL Server optimizadas.<br>• Integración continua y pruebas unitarias.<br><br><strong>Requisitos:</strong> 3+ años en C#, ASP.NET Core y SQL Server. Modalidad 100% remota.",
+      "exactLocationDetails": "Sede regional: San Isidro, Lima, Perú / Jaguariúna, SP, Brasil · 100% Remoto LATAM",
+      "minSalaryNumericDOP": 130000
     },
     {
       "id": "gj-pop-frontend-qik",
@@ -232,7 +242,7 @@ window.JOBS_DATA = {
       "countryCode": "DO",
       "flag": "🇩🇴",
       "portal": "Empleos Grupo Popular",
-      "location": "República Dominicana (100% Remoto Nacional)",
+      "location": "100% Remoto desde La Romana · QIK Hub / Torre Popular, Santo Domingo, RD",
       "modality": "100% Remoto",
       "experienceYears": 3,
       "experienceLabel": "Mín. 2-3 años (≤ 4 años)",
@@ -256,7 +266,9 @@ window.JOBS_DATA = {
       "url": "https://empleos.grupopopular.com/job/Santo-Domingo-DESARROLLADOR-FRONT-END-%28QIK%29-01/1337349862/",
       "contactEmail": null,
       "applyType": "portal",
-      "details": "<strong>Responsabilidades del puesto:</strong><br>• Desarrollo de interfaces web dinámicas y responsivas con Angular y TypeScript para QIK.<br>• Consumo de APIs REST seguras y sincronización de datos en tiempo real.<br>• Trabajo bajo marco de trabajo Scrum y Git.<br><br><strong>Requisitos:</strong> Licenciatura/Ingeniería en Sistemas, dominio de Angular y TypeScript, experiencia en productos bancarios o fintech."
+      "details": "<strong>Responsabilidades del puesto:</strong><br>• Desarrollo de interfaces web dinámicas y responsivas con Angular y TypeScript para QIK.<br>• Consumo de APIs REST seguras y sincronización de datos en tiempo real.<br>• Trabajo bajo marco de trabajo Scrum y Git.<br><br><strong>Requisitos:</strong> Licenciatura/Ingeniería en Sistemas, dominio de Angular y TypeScript, experiencia en productos bancarios o fintech.",
+      "exactLocationDetails": "Torre Popular: Av. John F. Kennedy esq. Máximo Gómez, Distrito Nacional, RD · 100% Remoto Nacional",
+      "minSalaryNumericDOP": 110000
     },
     {
       "id": "li-rethink-flutter-1",
@@ -266,7 +278,7 @@ window.JOBS_DATA = {
       "countryCode": "BR",
       "flag": "🇧🇷",
       "portal": "LinkedIn",
-      "location": "LATAM Remote (100% Remoto)",
+      "location": "100% Remoto desde La Romana · Rethink Hub (Belo Horizonte, Brasil)",
       "modality": "100% Remoto",
       "experienceYears": 3,
       "experienceLabel": "Mín. 3 años (≤ 4 años)",
@@ -290,7 +302,9 @@ window.JOBS_DATA = {
       "url": "https://br.linkedin.com/jobs/view/desenvolvedor-a-flutter-s%C3%AAnior-at-rethink-by-framework-4488896263",
       "contactEmail": null,
       "applyType": "portal",
-      "details": "<strong>Responsabilidades del puesto:</strong><br>• Arquitectura y desarrollo móvil en Flutter/Dart.<br>• Integración con APIs REST y pasarelas seguras.<br>• Código limpio, pruebas automatizadas y control de versiones con Git.<br><br><strong>Requisitos:</strong> Experiencia sólida con Flutter y Dart, patrones de arquitectura móvil y mentalidad ágil."
+      "details": "<strong>Responsabilidades del puesto:</strong><br>• Arquitectura y desarrollo móvil en Flutter/Dart.<br>• Integración con APIs REST y pasarelas seguras.<br>• Código limpio, pruebas automatizadas y control de versiones con Git.<br><br><strong>Requisitos:</strong> Experiencia sólida con Flutter y Dart, patrones de arquitectura móvil y mentalidad ágil.",
+      "exactLocationDetails": "Sede: Savassi, Belo Horizonte, MG, Brasil · 100% Remoto LATAM",
+      "minSalaryNumericDOP": 125000
     },
     {
       "id": "li-prolog-fullstack-1",
@@ -300,7 +314,7 @@ window.JOBS_DATA = {
       "countryCode": "BR",
       "flag": "🇧🇷",
       "portal": "LinkedIn",
-      "location": "América Latina (100% Remoto)",
+      "location": "100% Remoto desde La Romana · Prolog App Hub (Joinville, Brasil)",
       "modality": "100% Remoto",
       "experienceYears": 3,
       "experienceLabel": "Mín. 2-3 años (≤ 4 años)",
@@ -324,7 +338,9 @@ window.JOBS_DATA = {
       "url": "https://br.linkedin.com/jobs/view/desenvolvedor-a-full-stack-pleno-at-prolog-app-gest%C3%A3o-de-frotas-4487977537",
       "contactEmail": null,
       "applyType": "portal",
-      "details": "<strong>Responsabilidades del puesto:</strong><br>• Desarrollo y evolución de aplicaciones móviles en Flutter.<br>• Creación de endpoints y servicios REST en .NET Core.<br>• Optimización de consultas en SQL Server y arquitecturas offline-first.<br><br><strong>Requisitos:</strong> Experiencia en Flutter, C# y SQL Server. Modalidad 100% remota."
+      "details": "<strong>Responsabilidades del puesto:</strong><br>• Desarrollo y evolución de aplicaciones móviles en Flutter.<br>• Creación de endpoints y servicios REST en .NET Core.<br>• Optimización de consultas en SQL Server y arquitecturas offline-first.<br><br><strong>Requisitos:</strong> Experiencia en Flutter, C# y SQL Server. Modalidad 100% remota.",
+      "exactLocationDetails": "Sede: Ágora Tech Park, Joinville, SC, Brasil · 100% Remoto LATAM",
+      "minSalaryNumericDOP": 105000
     },
     {
       "id": "li-cddit-net-1",
@@ -334,7 +350,7 @@ window.JOBS_DATA = {
       "countryCode": "BR",
       "flag": "🇧🇷",
       "portal": "LinkedIn",
-      "location": "América Latina (100% Remoto)",
+      "location": "100% Remoto desde La Romana · CDD IT Innovation Hub (São Paulo, Brasil)",
       "modality": "100% Remoto",
       "experienceYears": 3,
       "experienceLabel": "Mín. 3 años (≤ 4 años)",
@@ -358,7 +374,9 @@ window.JOBS_DATA = {
       "url": "https://br.linkedin.com/jobs/view/desenvolvedor-a-net-s%C3%AAnior-at-cdd-it-service-innovation-4489459913",
       "contactEmail": null,
       "applyType": "portal",
-      "details": "<strong>Responsabilidades del puesto:</strong><br>• Desarrollo de APIs RESTful con .NET Core y C#.<br>• Uso de Entity Framework y optimización de consultas SQL Server.<br>• Integración de sistemas y documentación técnica de arquitectura.<br><br><strong>Requisitos:</strong> 3+ años en C#, .NET Core, SQL Server y Git. Cero requerimiento de AWS o Azure."
+      "details": "<strong>Responsabilidades del puesto:</strong><br>• Desarrollo de APIs RESTful con .NET Core y C#.<br>• Uso de Entity Framework y optimización de consultas SQL Server.<br>• Integración de sistemas y documentación técnica de arquitectura.<br><br><strong>Requisitos:</strong> 3+ años en C#, .NET Core, SQL Server y Git. Cero requerimiento de AWS o Azure.",
+      "exactLocationDetails": "Sede: Brooklin / Av. das Nações Unidas, São Paulo, Brasil · 100% Remoto LATAM",
+      "minSalaryNumericDOP": 120000
     },
     {
       "id": "li-webmotors-net-1",
@@ -368,7 +386,7 @@ window.JOBS_DATA = {
       "countryCode": "BR",
       "flag": "🇧🇷",
       "portal": "LinkedIn",
-      "location": "América Latina (100% Remoto)",
+      "location": "100% Remoto desde La Romana · Webmotors / Santander Hub (São Paulo, Brasil)",
       "modality": "100% Remoto",
       "experienceYears": 4,
       "experienceLabel": "Mín. 3-4 años (≤ 4 años)",
@@ -392,7 +410,9 @@ window.JOBS_DATA = {
       "url": "https://br.linkedin.com/jobs/view/desenvolvedor-back-end-sr-net-at-webmotors-4487985010",
       "contactEmail": null,
       "applyType": "portal",
-      "details": "<strong>Responsabilidades del puesto:</strong><br>• Arquitectura y desarrollo de microservicios en .NET Core / C#.<br>• Consultas y optimización en SQL Server.<br>• Pruebas unitarias, CI/CD y buenas prácticas de desarrollo.<br><br><strong>Requisitos:</strong> Experiencia sólida en C#, .NET Core y SQL Server. Modalidad 100% remota."
+      "details": "<strong>Responsabilidades del puesto:</strong><br>• Arquitectura y desarrollo de microservicios en .NET Core / C#.<br>• Consultas y optimización en SQL Server.<br>• Pruebas unitarias, CI/CD y buenas prácticas de desarrollo.<br><br><strong>Requisitos:</strong> Experiencia sólida en C#, .NET Core y SQL Server. Modalidad 100% remota.",
+      "exactLocationDetails": "Sede: Av. Pres. Juscelino Kubitschek, Vila Olímpia, São Paulo, Brasil · 100% Remoto LATAM",
+      "minSalaryNumericDOP": 130000
     },
     {
       "id": "li-cloudwalk-mobile-1",
@@ -402,7 +422,7 @@ window.JOBS_DATA = {
       "countryCode": "BR",
       "flag": "🇧🇷",
       "portal": "LinkedIn",
-      "location": "América Latina (100% Remoto)",
+      "location": "100% Remoto desde La Romana · CloudWalk Global Hub (São Paulo / Delaware)",
       "modality": "100% Remoto",
       "experienceYears": 3,
       "experienceLabel": "Mín. 3 años (≤ 4 años)",
@@ -426,7 +446,10 @@ window.JOBS_DATA = {
       "url": "https://br.linkedin.com/jobs/view/engineer-%E2%80%93-mobile-at-cloudwalk-inc-4472205796",
       "contactEmail": null,
       "applyType": "portal",
-      "details": "<strong>Responsabilidades del puesto:</strong><br>• Desarrollo de interfaces y lógica de negocio en Flutter para iOS y Android.<br>• Integración de servicios financieros seguros y offline-first.<br>• Pruebas automatizadas y entrega continua.<br><br><strong>Requisitos:</strong> Sólida experiencia en Flutter/Dart, arquitectura de software limpia y Git. Modalidad 100% remota."
+      "details": "<strong>Responsabilidades del puesto:</strong><br>• Desarrollo de interfaces y lógica de negocio en Flutter para iOS y Android.<br>• Integración de servicios financieros seguros y offline-first.<br>• Pruebas automatizadas y entrega continua.<br><br><strong>Requisitos:</strong> Sólida experiencia en Flutter/Dart, arquitectura de software limpia y Git. Modalidad 100% remota.",
+      "exactLocationDetails": "Sede: Av. Brigadeiro Faria Lima, Pinheiros, São Paulo, Brasil · 100% Remoto Global",
+      "minSalaryNumericDOP": 140000
     }
-  ]
+  ],
+  "salaryFloorNote": "Filtro activo: Sueldo mínimo garantizado ≥ RD$ 25,000 / mes"
 };

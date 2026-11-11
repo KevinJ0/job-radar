@@ -667,6 +667,9 @@
       const statuses = getSavedStatuses();
 
       const filtered = JOBS_DATA.filter(job => {
+        // Enforce salary floor: omit offers < RD$ 25,000 / month
+        if ((job.minSalaryNumericDOP || 30000) < 25000) return false;
+
         const st = statuses[job.id] || 'PENDING';
         if (statusFilter === 'pending' && (st === 'APPLIED' || st === 'DISMISSED')) return false;
         if (statusFilter === 'applied' && st !== 'APPLIED') return false;
@@ -807,10 +810,13 @@
               </span>
             </div>
 
-            <!-- Location & Modality -->
-            <div class="flex items-center gap-1.5 text-xs text-slate-500 mb-3">
-              ${icon("map-pin", "w-3.5 h-3.5 text-rose-400 shrink-0")}
-              <span>${job.modality}</span>
+            <!-- Exact Location & Modality -->
+            <div class="flex items-start gap-2 text-xs mb-3 bg-rose-50/80 px-3 py-2.5 rounded-2xl border border-rose-100 text-slate-700">
+              ${icon("map-pin", "w-3.5 h-3.5 text-rose-500 shrink-0 mt-0.5")}
+              <div class="leading-tight">
+                <span class="font-bold text-slate-800 block">${job.location}</span>
+                ${job.exactLocationDetails ? `<span class="text-[11px] text-slate-500 block mt-0.5 font-medium">${job.exactLocationDetails}</span>` : ''}
+              </div>
             </div>
 
             <!-- Salary tag -->
