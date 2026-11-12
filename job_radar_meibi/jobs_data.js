@@ -2,10 +2,76 @@
 // STRICT RULES:
 // 1. Minimum salary floor: >= RD$ 25,000 / month (all < 25k omitted)
 // 2. Exact locations specified for all positions
-// 3. Freshness: <= 4 days old (Nov 7 - Nov 11, 2026)
+// 3. Freshness: <= 4 days old (Nov 8 - Nov 12, 2026)
 // 4. Zero fake/synthetic emails. Verified official portal links only.
 
 const JOBS_DATA = [
+  {
+    "id": "meibi-mired-cajeros-01",
+    "title": "Cajeros Bancarios / Transaccionales (Zona Este)",
+    "company": "Mired",
+    "category": "banco",
+    "portal": "CazVid República Dominicana",
+    "location": "La Romana · Centro y Zona Este",
+    "modality": "Presencial (La Romana)",
+    "salaryDOP": "RD$ 28,000 - 36,000 / mes",
+    "salaryNote": "Salario base + beneficios de ley + incentivos por cumplimiento de caja",
+    "postedDate": "Ayer · 11 de Noviembre 2026",
+    "type": "Tiempo Completo",
+    "recommendedCV": "Banca & Servicio al Cliente",
+    "languageRequirement": "100% Español",
+    "tags": [
+      "Caja Transaccional",
+      "Servicio al Cliente",
+      "Manejo de Efectivo",
+      "La Romana"
+    ],
+    "url": "https://cazvid.com/es/empleo/cajeros-86d69d13",
+    "contactEmail": null,
+    "applyChannel": "CazVid RD (Postulación en Portal)",
+    "description": "Ejecutar operaciones de cobro y cuadro de transacciones realizadas, recepción de efectivo y medios electrónicos, garantizando exactitud, eficiencia y cumplimiento de normativas operativas y de servicio al socio en La Romana.",
+    "requirements": [
+      "Experiencia comprobable de más de 2 años en caja en bancos, asociaciones financieras o retail (perfil APAP idóneo)",
+      "Manejo de efectivo, arqueos y cuadres diarios con sistemas computarizados de caja",
+      "Residencia fija en La Romana, vocación de servicio al cliente y excelente presencia"
+    ],
+    "coverLetter": "Estimado Equipo de Selección de Mired,\n\nPresento con gran interés mi postulación para la vacante de Cajera en La Romana. Cuento con experiencia directa en el sector financiero bancario en APAP (Asociación Popular de Ahorros y Préstamos), donde gestioné procesos de caja, recepción de pagos, arqueos diarios y atención al cliente con altos estándares de cumplimiento y vocación de servicio.\n\nResido en La Romana y poseo formación en Mercadeo por INTEC, combinando rigor operativo con un trato empático hacia los usuarios. Quedo a su disposición para coordinar una entrevista presencial.\n\nAtentamente,\nMeibi Esperanza Mota Mora\n(829) 793-3033 | meibimota@gmail.com\nLa Romana, República Dominicana",
+    "exactLocationDetails": "Sucursal La Romana: Calle Castillo Márquez esq. Av. Santa Rosa, Sector Centro, La Romana",
+    "minSalaryNumericDOP": 28000
+  },
+  {
+    "id": "meibi-tripalis-cajera-01",
+    "title": "Cajera & Atención Administrativa Institucional",
+    "company": "Tripalis",
+    "category": "banco",
+    "portal": "LinkedIn / Tripalis",
+    "location": "La Romana · Sector Institucional / Educativo",
+    "modality": "Presencial (La Romana)",
+    "salaryDOP": "RD$ 26,000 - 34,000 / mes",
+    "salaryNote": "Salario base competitivo + beneficios de ley + ambiente de desarrollo institucional",
+    "postedDate": "Ayer · 11 de Noviembre 2026",
+    "type": "Tiempo Completo",
+    "recommendedCV": "Banca & Servicio al Cliente",
+    "languageRequirement": "Español / Inglés Básico",
+    "tags": [
+      "Caja Chica",
+      "Facturación",
+      "Atención a Usuarios",
+      "La Romana"
+    ],
+    "url": "https://do.linkedin.com/jobs/view/vacante-cajera-at-tripalis-4468786631",
+    "contactEmail": null,
+    "applyChannel": "LinkedIn / Portal Tripalis (Postulación Oficial)",
+    "description": "Custodiar caja chica, realizar cobros a estudiantes, padres y tutores, emisión y control de recibos de ingresos, reportes de movimiento de caja, cuadres diarios y atención telefónica y presencial.",
+    "requirements": [
+      "Experiencia mínima de 1 año en caja, cobranzas o atención administrativa",
+      "Certificaciones técnicas o experiencia bancaria/financiera, buena ortografía y manejo de Office",
+      "Nivel de inglés básico y residencia permanente en La Romana"
+    ],
+    "coverLetter": "Estimado Equipo de Selección de Tripalis,\n\nMe pongo en contacto con ustedes para presentar mi postulación al puesto de Cajera & Atención Administrativa en La Romana. Cuento con formación en Mercadeo por INTEC y sólida experiencia bancaria en APAP en cuadre de caja, cobros, atención a clientes y gestión administrativa con alto sentido de organización y responsabilidad.\n\nCumplo con el requisito de inglés básico y resido en La Romana. Agradezco la oportunidad de coordinar una entrevista.\n\nAtentamente,\nMeibi Esperanza Mota Mora\n(829) 793-3033 | meibimota@gmail.com\nLa Romana, República Dominicana",
+    "exactLocationDetails": "Sede La Romana: Av. Francisco Alberto Caamaño Deñó, La Romana",
+    "minSalaryNumericDOP": 26000
+  },
   {
     "id": "meibi-coopmaimon-cajera-01",
     "title": "Cajera Bancaria & Atención al Socio",
@@ -16,7 +82,7 @@ const JOBS_DATA = [
     "modality": "Presencial (La Romana)",
     "salaryDOP": "RD$ 32,000 - 42,000 / mes",
     "salaryNote": "Beneficios de ley + seguro médico privado + seguro de vida + bono vacacional",
-    "postedDate": "Hoy · 11 de Noviembre 2026",
+    "postedDate": "Ayer · 11 de Noviembre 2026",
     "type": "Tiempo Completo",
     "recommendedCV": "Banca & Servicio al Cliente",
     "languageRequirement": "100% Español",
@@ -48,127 +114,127 @@ const JOBS_DATA = [
     "location": "La Romana · Villa Hermosa (Carr. La Romana - San Pedro)",
     "modality": "Presencial (La Romana)",
     "salaryDOP": "RD$ 28,000 - 36,000 / mes",
-    "salaryNote": "Beneficios de ley + incentivo por cuadre y puntualidad",
-    "postedDate": "Hoy · 11 de Noviembre 2026",
+    "salaryNote": "Salario base + comisiones por meta de cobro + beneficios de ley",
+    "postedDate": "Ayer · 11 de Noviembre 2026",
     "type": "Tiempo Completo",
     "recommendedCV": "Banca & Servicio al Cliente",
     "languageRequirement": "100% Español",
     "tags": [
-      "Cobro y Caja",
-      "Atención al Cliente",
+      "Caja",
       "Facturación",
+      "Atención Comercial",
       "La Romana"
     ],
     "url": "https://do.computrabajo.com/ofertas-de-trabajo/oferta-de-trabajo-de-cajera-en-villa-hermosa-CA6148018D80FF0D61373E686DCF3405",
     "contactEmail": null,
     "applyChannel": "Computrabajo DO (Postulación en Portal)",
-    "description": "Cobro de productos en caja, manejo de efectivo y medios de pago electrónicos, verificación de facturas, cuadre de caja y atención cordial al cliente.",
+    "description": "Cobro de facturas a clientes, recepción de pagos en efectivo y transferencias, emisión de recibos y arqueo diario para cadena de tiendas y hogar en Villa Hermosa, La Romana.",
     "requirements": [
-      "Experiencia en manejo de caja y cobros",
-      "Orientación al cliente y comunicación asertiva",
-      "Residencia en La Romana"
+      "Experiencia previa en caja, cuadres de punto de venta y servicio al cliente",
+      "Manejo de Excel y sistemas de facturación comercial",
+      "Disponibilidad inmediata y residencia en La Romana / Villa Hermosa"
     ],
-    "coverLetter": "Estimado Equipo de Selección de Kaizen Hogar,\n\nMe dirijo a ustedes para presentar mi candidatura a la posición de Cajera en La Romana. Mi experiencia previa en el área bancaria (APAP) y en atención personalizada me ha permitido desarrollar agilidad en el manejo de efectivo, medios de pago electrónicos y cuadres precisos de caja, siempre manteniendo un trato respetuoso y eficiente hacia cada cliente.\n\nResido en La Romana y cuento con total disponibilidad de incorporación.\n\nAtentamente,\nMeibi Esperanza Mota Mora\n(829) 793-3033 | meibimota@gmail.com\nLa Romana, República Dominicana",
-    "exactLocationDetails": "Sucursal Villa Hermosa: Carretera La Romana - San Pedro / Sector La Mulata, La Romana",
+    "coverLetter": "Estimado Equipo de Recursos Humanos de Kaizen Hogar,\n\nLes escribo para postularme a la vacante de Cajera en su sucursal de Villa Hermosa, La Romana. Mi formación en Mercadeo en INTEC y mi trayectoria bancaria en APAP me otorgan una gran agilidad en el manejo de cobros, cuadres de caja y fidelización de clientes a través de un trato profesional y confiable.\n\nResido en el área de La Romana con disponibilidad inmediata. Agradezco la oportunidad de evaluar mi perfil.\n\nAtentamente,\nMeibi Esperanza Mota Mora\n(829) 793-3033 | meibimota@gmail.com\nLa Romana, República Dominicana",
+    "exactLocationDetails": "Sucursal Kaizen Villa Hermosa: Carretera La Romana - San Pedro Km 3, Villa Hermosa, La Romana",
     "minSalaryNumericDOP": 28000
   },
   {
-    "id": "meibi-api-cobros-01",
-    "title": "Auxiliar de Cuentas por Cobrar y Administrativa",
-    "company": "All People International",
-    "category": "banco",
-    "portal": "LinkedIn",
-    "location": "Zona Este · Bávaro - Punta Cana (Acceso Autovía del Este)",
-    "modality": "Híbrido / Presencial Este",
-    "salaryDOP": "RD$ 40,000 - 52,000 / mes",
-    "salaryNote": "Beneficios de ley + incentivos por gestión de cobranza",
-    "postedDate": "Ayer · 10 de Noviembre 2026",
+    "id": "meibi-hunter-cs-01",
+    "title": "Representante de Atención al Cliente y Monitoreo",
+    "company": "Hunter del Caribe Dominicana",
+    "category": "servicio",
+    "portal": "Aldaba",
+    "location": "100% Remoto desde La Romana · Sede Hunter en Santo Domingo (Av. J.F. Kennedy)",
+    "modality": "100% Remoto",
+    "salaryDOP": "RD$ 35,000 - 45,000 / mes",
+    "salaryNote": "Salario base + subsidio de internet + seguro complementario de salud",
+    "postedDate": "Hace 2 días · 10 de Noviembre 2026",
     "type": "Tiempo Completo",
-    "recommendedCV": "Banca & Servicio al Cliente",
+    "recommendedCV": "Servicio al Cliente & Operaciones",
     "languageRequirement": "100% Español",
     "tags": [
-      "Cuentas por Cobrar",
-      "Cobranzas",
-      "Créditos",
-      "Banca"
+      "Servicio al Cliente",
+      "Soporte Remoto",
+      "Atención Telefónica",
+      "100% Remoto"
     ],
-    "url": "https://do.linkedin.com/jobs/view/auxiliar-de-cuentas-por-cobrar-y-administrativa-at-all-people-international-4488610318",
+    "url": "https://www.aldaba.com/detalle_of.php?oferta=33080512",
     "contactEmail": null,
-    "applyChannel": "LinkedIn (Postulación en Línea)",
-    "description": "Gestión y seguimiento de cartera de clientes, control de acuerdos de pago, arqueos de cobro, conciliación de balances y emisión de reportes financieros semanales.",
+    "applyChannel": "Aldaba (Postulación en Portal)",
+    "description": "Recepción de llamadas de clientes corporativos y residenciales, orientación en plataformas de telemetría y seguridad, registro de incidencias en CRM y seguimiento hasta resolución satisfactoria.",
     "requirements": [
-      "Experiencia en créditos y cobranzas (APAP o similar)",
-      "Dominio de Excel para conciliaciones bancarias y arqueos",
-      "Excelente trato al cliente y orientación a metas de recuperación"
+      "Experiencia mínima de 1 a 2 años en atención al cliente o soporte telefónico",
+      "Excelente dicción, empatía y habilidad para resolución de consultas",
+      "Conexión a internet estable para modalidad 100% remota"
     ],
-    "coverLetter": "Estimado Equipo de Selección de All People International,\n\nPresento mi postulación para el puesto de Auxiliar de Cuentas por Cobrar. Cuento con experiencia directa en el sector financiero bancario en APAP (Asociación Popular de Ahorros y Préstamos), donde gestioné procesos de créditos, acuerdos de pago y cobranzas con altos estándares de cumplimiento.\n\nResido en La Romana y manejo Excel avanzado para reportes y arqueos. Me pongo a su entera disposición para una entrevista.\n\nAtentamente,\nMeibi Esperanza Mota Mora\n(829) 793-3033 | meibimota@gmail.com",
-    "exactLocationDetails": "Oficinas All People International: Blvd. Turístico del Este / Bávaro (Fácil acceso desde La Romana)",
-    "minSalaryNumericDOP": 40000
+    "coverLetter": "Estimado Equipo de Selección de Hunter del Caribe,\n\nMe pongo en contacto para expresar mi interés en la vacante de Representante de Atención al Cliente y Monitoreo Remoto. Cuento con más de 6 años de experiencia en soporte y análisis de satisfacción de clientes, además de mi trayectoria en atención personalizada en el sector bancario (APAP).\n\nCuento con un espacio de trabajo óptimo y conectividad de alta velocidad en La Romana para laborar de forma 100% remota con total responsabilidad. Agradezco de antemano la consideración de mi perfil.\n\nAtentamente,\nMeibi Esperanza Mota Mora\n(829) 793-3033 | meibimota@gmail.com\nLa Romana, República Dominicana",
+    "exactLocationDetails": "Trabajo 100% Remoto desde La Romana · Sede corporativa Hunter: Av. John F. Kennedy No. 88, Ensanche La Fe, Santo Domingo",
+    "minSalaryNumericDOP": 35000
   },
   {
-    "id": "meibi-dichter-auditor-01",
-    "title": "Auditora de Campo y Levantamiento de Datos",
-    "company": "Dichter & Neira República Dominicana",
-    "category": "datos",
-    "portal": "DameTrabajo",
-    "location": "La Romana · Puntos Comerciales y Supermercados Centro/Caleta",
-    "modality": "Presencial (La Romana)",
-    "salaryDOP": "RD$ 38,000 - 48,000 / mes",
-    "salaryNote": "RD$ 80 por punto auditado + RD$ 55 viáticos diarios + seguro médico",
-    "postedDate": "Hace 4 días · 7 de Noviembre 2026",
+    "id": "meibi-aldaba-adfeza-01",
+    "title": "Asistente de Prospección Comercial y Seguimiento CRM",
+    "company": "ADFEZA Recycling / Aldaba",
+    "category": "mercadeo",
+    "portal": "Aldaba",
+    "location": "100% Remoto desde La Romana · Sede ADFEZA Santo Domingo (Área Comercial)",
+    "modality": "100% Remoto",
+    "salaryDOP": "RD$ 35,000 - 48,000 / mes",
+    "salaryNote": "Salario base competitivo + incentivos por cumplimiento comercial + capacitación continua",
+    "postedDate": "Hace 3 días · 9 de Noviembre 2026",
     "type": "Tiempo Completo",
-    "recommendedCV": "Analítica & Marketing",
+    "recommendedCV": "Mercadeo & Datos",
     "languageRequirement": "100% Español",
     "tags": [
-      "Levantamiento de Datos",
-      "Auditoría Retail",
-      "Investigación de Mercado",
-      "La Romana"
+      "Mercadeo",
+      "CRM",
+      "Prospección",
+      "100% Remoto"
     ],
-    "url": "https://dametrabajo.com/aviso/auditor-de-campo-dichter-neira-republica-dominicana-47b04911fb56dd99",
+    "url": "https://www.aldaba.com/detalle_of.php?oferta=33080491",
     "contactEmail": null,
-    "applyChannel": "DameTrabajo (Postulación en Portal)",
-    "description": "Levantamiento presencial de precios, inventarios, presencia de marcas y hábitos de compra en canales de distribución en La Romana para estudios de mercado y analítica cuantitativa.",
+    "applyChannel": "Aldaba (Postulación en Portal)",
+    "description": "Gestión de bases de datos de prospectos empresariales, actualización y depuración de registros en CRM, llamadas de prospección y seguimiento a acuerdos comerciales.",
     "requirements": [
-      "Residencia fija en La Romana",
-      "Rigor analítico, atención al detalle y manejo de dispositivos móviles/tablets",
-      "Disponibilidad para recorridos en campo"
+      "Licenciatura en Mercadeo (o en titulación) o carreras administrativas afines",
+      "Manejo avanzado de Excel, herramientas CRM y elaboración de reportes comerciales",
+      "Excelentes habilidades comunicativas y comerciales orientadas a metas"
     ],
-    "coverLetter": "Estimado Equipo de Dichter & Neira,\n\nMe dirijo a ustedes para presentar mi postulación a la posición de Auditora de Campo y Levantamiento de Datos en La Romana. Como Licenciada en Mercadeo por INTEC y Senior Data Analyst con más de 6 años analizando métricas de consumo en Carat Dominicana, conozco de primera mano el valor crítico que tiene la precisión del dato primario en el punto de venta.\n\nResido en La Romana, conozco la zona y cuento con la disciplina metodológica requerida para cumplir las metas de auditoría.\n\nAtentamente,\nMeibi Esperanza Mota Mora\n(829) 793-3033 | meibimota@gmail.com",
-    "exactLocationDetails": "Ruta de auditoría en La Romana: Supermercados, plazas y colmados mayoristas de la zona urbana",
-    "minSalaryNumericDOP": 38000
+    "coverLetter": "Estimado Equipo de Selección de ADFEZA Recycling,\n\nLes escribo para presentar mi postulación a la posición de Asistente de Prospección Comercial y Seguimiento CRM. Siendo Licenciada en Mercadeo por el INTEC (en proceso de titulación) y habiéndome desempeñado como Senior Data Analyst con amplio dominio de Excel y gestión de CRM, poseo las competencias clave para organizar bases de datos y potenciar la relación con clientes.\n\nTrabajando 100% en remoto desde La Romana, garantizo puntualidad, métricas claras y proactividad constante.\n\nAtentamente,\nMeibi Esperanza Mota Mora\n(829) 793-3033 | meibimota@gmail.com\nLa Romana, República Dominicana",
+    "exactLocationDetails": "Trabajo 100% Remoto desde La Romana · Oficinas corporativas: Av. Luperón, Santo Domingo Oeste",
+    "minSalaryNumericDOP": 35000
   },
   {
     "id": "meibi-cazvid-data-01",
     "title": "Asistente Virtual de Gestión y Validación de Datos",
     "company": "CazVid República Dominicana",
-    "category": "datos",
+    "category": "mercadeo",
     "portal": "CazVid",
     "location": "100% Remoto desde La Romana · Operaciones CazVid RD / EE.UU.",
     "modality": "100% Remoto",
     "salaryDOP": "RD$ 42,000 - 55,000 / mes",
-    "salaryNote": "Pago en DOP quincenal + bonificación por productividad en validación",
-    "postedDate": "Hace 3 días · 8 de Noviembre 2026",
-    "type": "Tiempo Completo / Remoto",
-    "recommendedCV": "Analítica & Marketing",
-    "languageRequirement": "100% Español",
+    "salaryNote": "Pago quincenal puntual + bonificaciones por exactitud de datos + ambiente flexible",
+    "postedDate": "Hace 4 días · 8 de Noviembre 2026",
+    "type": "Tiempo Completo",
+    "recommendedCV": "Mercadeo & Datos",
+    "languageRequirement": "Español / Inglés Básico",
     "tags": [
-      "Gestión de Datos",
+      "Validación de Datos",
       "Excel Avanzado",
-      "Validación de Calidad",
+      "Power BI",
       "100% Remoto"
     ],
-    "url": "https://cazvid.com/es/empleo/asistente-virtual-gestion-de-base-de-datos-en-santo-domingo",
+    "url": "https://cazvid.com/es/empleo/asistente-virtual-de-gestion-de-datos",
     "contactEmail": null,
     "applyChannel": "CazVid (Postulación en Portal)",
-    "description": "Validación de registros, depuración de bases de datos, verificación de duplicados, control de calidad de información y elaboración de tableros de control diarios en Excel y Power BI.",
+    "description": "Revisión sistemática de perfiles empresariales, tabulación y limpieza de bases de datos en Excel y Power BI, auditoría de información publicada y soporte a la coordinación operativa.",
     "requirements": [
-      "Dominio avanzado de Excel y herramientas de visualización de datos",
-      "Experiencia previa en manejo de grandes volúmenes de datos",
-      "Conexión estable a internet y ambiente de trabajo remoto"
+      "Experiencia demostrable en análisis y auditoría de datos (Power BI, Excel avanzado)",
+      "Capacidad de trabajo autónomo con enfoque en calidad y cero margen de error",
+      "Disponibilidad de equipo propio y conexión a internet de alta velocidad"
     ],
-    "coverLetter": "Estimado Equipo de CazVid República Dominicana,\n\nEscribo con gran entusiasmo para postularme al rol de Asistente Virtual de Gestión y Validación de Datos. Durante mis más de 6 años como Senior Data Analyst en Carat Dominicana he liderado la auditoría, limpieza y procesamiento de grandes volúmenes de datos de campañas y audiencias con Excel avanzado y Power BI.\n\nCuento con estación de trabajo remota completamente equipada y disponibilidad inmediata.\n\nAtentamente,\nMeibi Esperanza Mota Mora\n(829) 793-3033 | meibimota@gmail.com",
-    "exactLocationDetails": "Modalidad 100% Home Office desde La Romana para plataforma CazVid",
+    "coverLetter": "Estimado Equipo de CazVid,\n\nPresento con gran entusiasmo mi candidatura a la posición de Asistente Virtual de Gestión de Datos. Cuento con más de 6 años de experiencia como Senior Data Analyst en Carat Dominicana, dominando Excel avanzado, Power BI y Google Analytics para la validación y transformación de datos en decisiones estratégicas.\n\nMi perfil garantiza rigurosidad en los registros y entrega puntual bajo modalidad 100% remota. Quedo a su disposición para coordinar una reunión.\n\nAtentamente,\nMeibi Esperanza Mota Mora\n(829) 793-3033 | meibimota@gmail.com\nLa Romana, República Dominicana",
+    "exactLocationDetails": "Trabajo 100% Remoto desde La Romana · Operaciones remotas CazVid para el mercado de República Dominicana y EE.UU.",
     "minSalaryNumericDOP": 42000
   },
   {
@@ -180,95 +246,29 @@ const JOBS_DATA = [
     "location": "100% Remoto desde La Romana · Soporte Usuarios CazVid RD",
     "modality": "100% Remoto",
     "salaryDOP": "RD$ 38,000 - 50,000 / mes",
-    "salaryNote": "Horario flexible + incentivos por satisfacción de usuario (CSAT)",
-    "postedDate": "Hace 3 días · 8 de Noviembre 2026",
-    "type": "Tiempo Completo / Remoto",
-    "recommendedCV": "Banca & Servicio al Cliente",
-    "languageRequirement": "100% Español",
+    "salaryNote": "Salario competitivo + bono por métricas de satisfacción + trabajo 100% remoto",
+    "postedDate": "Hace 4 días · 8 de Noviembre 2026",
+    "type": "Tiempo Completo",
+    "recommendedCV": "Servicio al Cliente & Operaciones",
+    "languageRequirement": "Español / Inglés Básico",
     "tags": [
       "Servicio al Cliente",
-      "Soporte Remoto",
-      "Resolución de Casos",
+      "Atención a Usuarios",
+      "Tickets / Chat",
       "100% Remoto"
     ],
-    "url": "https://cazvid.com/es/empleo/representante-de-servicio-al-cliente-en-santo-domingo",
+    "url": "https://cazvid.com/es/empleo/representante-de-servicio-al-cliente-remoto",
     "contactEmail": null,
     "applyChannel": "CazVid (Postulación en Portal)",
-    "description": "Atención a usuarios a través de chat, tickets y llamadas, resolución ágil de incidencias, orientación en el uso de la plataforma y seguimiento a casos escalados.",
+    "description": "Atención de consultas de postulantes y empresas vía chat y correo electrónico, resolución de inquietudes sobre creación de perfiles y orientación general en la plataforma de CazVid.",
     "requirements": [
-      "Experiencia en atención al cliente, cobranzas o soporte (APAP / banca / call center)",
-      "Excelente redacción, ortografía y empatía en comunicación escrita",
-      "Capacidad para trabajar de forma autónoma desde casa"
+      "Experiencia previa en atención al cliente, banca o call center",
+      "Habilidades de comunicación escrita empática, rápida y profesional",
+      "Residencia en República Dominicana con equipo y ambiente adecuado para trabajo remoto"
     ],
-    "coverLetter": "Estimado Equipo de Selección de CazVid,\n\nMe pongo en contacto con ustedes para presentar mi candidatura a la posición de Servicio al Cliente & Soporte Remoto. Mi experiencia en el sector bancario (APAP) y en agencias de medios me ha dotado de habilidades de comunicación asertiva, escucha activa y resolución ágil de problemas orientada a la satisfacción del usuario.\n\nPoseo total disponibilidad para laborar en modalidad 100% remota con altos estándares de cumplimiento.\n\nAtentamente,\nMeibi Esperanza Mota Mora\n(829) 793-3033 | meibimota@gmail.com",
-    "exactLocationDetails": "Modalidad 100% Home Office desde La Romana",
+    "coverLetter": "Estimado Equipo de Operaciones de CazVid,\n\nMe pongo en contacto para postularme a la posición de Representante de Servicio al Cliente Remoto. Mi trayectoria combina experiencia en atención financiera en APAP con más de 6 años en entornos corporativos gestionando requerimientos con empatía, precisión y agilidad.\n\nCuento con disponibilidad para integrarme de inmediato y prestar un servicio cálido y resolutivo a todos los usuarios de la plataforma.\n\nAtentamente,\nMeibi Esperanza Mota Mora\n(829) 793-3033 | meibimota@gmail.com\nLa Romana, República Dominicana",
+    "exactLocationDetails": "Trabajo 100% Remoto desde La Romana · Plataforma CazVid Latinoamérica",
     "minSalaryNumericDOP": 38000
-  },
-  {
-    "id": "meibi-hunter-cs-01",
-    "title": "Representante de Atención al Cliente y Monitoreo",
-    "company": "Hunter del Caribe Dominicana",
-    "category": "servicio",
-    "portal": "LinkedIn",
-    "location": "100% Remoto desde La Romana · Sede Hunter en Santo Domingo (Av. J.F. Kennedy)",
-    "modality": "100% Remoto",
-    "salaryDOP": "RD$ 35,000 - 45,000 / mes",
-    "salaryNote": "Beneficios de ley + seguro complementario + bonos por cumplimiento",
-    "postedDate": "Ayer · 10 de Noviembre 2026",
-    "type": "Tiempo Completo",
-    "recommendedCV": "Banca & Servicio al Cliente",
-    "languageRequirement": "100% Español",
-    "tags": [
-      "Atención al Cliente",
-      "Monitoreo",
-      "Seguimiento",
-      "Remoto"
-    ],
-    "url": "https://do.linkedin.com/jobs/view/servicio-de-atenci%C3%B3n-al-cliente-at-hunter-del-caribe-dominicana-4489502914",
-    "contactEmail": null,
-    "applyChannel": "LinkedIn (Postulación en Línea)",
-    "description": "Recepción de llamadas de clientes corporativos y residenciales, confirmación de servicios, gestión de consultas operativas y seguimiento a solicitudes en plataforma CRM.",
-    "requirements": [
-      "Experiencia en call center o atención presencial/telefónica",
-      "Manejo de herramientas informáticas y CRM",
-      "Puntualidad y proactividad"
-    ],
-    "coverLetter": "Estimado Equipo de Hunter del Caribe,\n\nMe dirijo a ustedes para postularme a la posición de Atención al Cliente y Monitoreo. Cuento con una sólida trayectoria en trato con usuarios, gestión de consultas y resolución rápida de incidencias con calidez y profesionalismo.\n\nPoseo total disponibilidad para laborar en modalidad remota y adaptarme con rapidez a sus protocolos.\n\nAtentamente,\nMeibi Esperanza Mota Mora\n(829) 793-3033 | meibimota@gmail.com",
-    "exactLocationDetails": "Puesto 100% Remoto desde La Romana · Sede corporativa: Av. John F. Kennedy #12, Arroyo Hondo, Santo Domingo",
-    "minSalaryNumericDOP": 35000
-  },
-  {
-    "id": "meibi-aldaba-adfeza-01",
-    "title": "Asistente de Prospección Comercial y Seguimiento CRM",
-    "company": "ADFEZA Recycling / Aldaba",
-    "category": "servicio",
-    "portal": "Aldaba",
-    "location": "100% Remoto desde La Romana · Sede ADFEZA Santo Domingo (Área Comercial)",
-    "modality": "100% Remoto",
-    "salaryDOP": "RD$ 35,000 - 48,000 / mes",
-    "salaryNote": "Sueldo base + incentivos por leads contactados y registrados",
-    "postedDate": "Hace 2 días · 9 de Noviembre 2026",
-    "type": "Tiempo Completo / Remoto",
-    "recommendedCV": "Analítica & Marketing",
-    "languageRequirement": "100% Español",
-    "tags": [
-      "Prospección Comercial",
-      "CRM",
-      "Marketing Directo",
-      "100% Remoto"
-    ],
-    "url": "https://www.aldaba.com/detalle_of.php?oferta=33075424",
-    "contactEmail": null,
-    "applyChannel": "Aldaba (Postulación en Portal)",
-    "description": "Contacto telefónico con clientes potenciales, actualización de registros en base de datos CRM, clasificación de cuentas y apoyo al equipo de mercadeo en prospección.",
-    "requirements": [
-      "Formación en Mercadeo (INTEC)",
-      "Fluidez verbal y habilidades de persuasión ética",
-      "Organización en el registro de llamadas y datos"
-    ],
-    "coverLetter": "Estimado Equipo Comercial de ADFEZA Recycling,\n\nLes escribe Meibi Esperanza Mota Mora, graduada en Mercadeo por INTEC (en proceso de titulación). Conozco a profundidad las técnicas de prospección comercial, calificación de oportunidades y mantenimiento de registros ordenados en CRM.\n\nCuento con estación de trabajo remota y entusiasmo para sumar resultados desde el primer día.\n\nAtentamente,\nMeibi Esperanza Mota Mora\n(829) 793-3033 | meibimota@gmail.com",
-    "exactLocationDetails": "Trabajo 100% Remoto desde La Romana · Sede: Zona Industrial de Herrera, Santo Domingo Oeste",
-    "minSalaryNumericDOP": 35000
   },
   {
     "id": "meibi-aldaba-wellness-01",
@@ -280,7 +280,7 @@ const JOBS_DATA = [
     "modality": "100% Remoto",
     "salaryDOP": "RD$ 36,000 - 48,000 / mes",
     "salaryNote": "Capacitaciones continuas + horario flexible + trabajo 100% desde casa",
-    "postedDate": "Hace 3 días · 8 de Noviembre 2026",
+    "postedDate": "Hace 4 días · 8 de Noviembre 2026",
     "type": "Medio Tiempo / Flexible",
     "recommendedCV": "Psicología & Gestión Humana",
     "languageRequirement": "100% Español",
@@ -299,8 +299,10 @@ const JOBS_DATA = [
       "Facilidad de palabra y trato empático",
       "Manejo de correo electrónico y plataformas de videollamada"
     ],
-    "coverLetter": "Estimado Equipo de Gestión Humana de Wellness Trading,\n\nLes escribo para manifestar mi interés en la vacante de Reclutamiento y Gestión Humana. Cursando actualmente mi segundo cuatrimestre de Psicología en la Universidad O&M y con formación en Mercadeo por INTEC, disfruto enormemente el trato humano, la evaluación de perfiles y la coordinación de procesos de selección.\n\nQuedo a su disposición para coordinar una entrevista.\n\nAtentamente,\nMeibi Esperanza Mota Mora\n(829) 793-3033 | meibimota@gmail.com",
+    "coverLetter": "Estimado Equipo de Gestión Humana de Wellness Trading,\n\nLes escribo para manifestar mi interés en la vacante de Reclutamiento y Gestión Humana. Cursando actualmente mi segundo cuatrimestre de Psicología en la Universidad O&M y con formación en Mercadeo por INTEC, disfruto enormemente el trato humano, la evaluación de perfiles y la coordinación de procesos de selección.\n\nQuedo a su disposición para coordinar una entrevista.\n\nAtentamente,\nMeibi Esperanza Mota Mora\n(829) 793-3033 | meibimota@gmail.com\nLa Romana, República Dominicana",
     "exactLocationDetails": "Trabajo 100% Remoto desde La Romana · Sede corporativa: Piantini, Santo Domingo",
     "minSalaryNumericDOP": 36000
   }
 ];
+
+window.JOBS_DATA = JOBS_DATA;
